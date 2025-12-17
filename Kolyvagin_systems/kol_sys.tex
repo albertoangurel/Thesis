@@ -826,34 +826,84 @@ Let $\FF\leq \GG$ be two Selmer structures with $\chi(\FF)=0$ and $\chi(\GG)=1$ 
 
 The quantities $\delta_n$ can be used to define the $\Theta$ ideals of rank $0$.
 
+
 \begin{definition}
 Let $\FF\leq \GG$ be two Selmer structures with $\chi(\FF)=0$ and $\chi(\GG)=1$ differing at the prime $\ell$ and let $\kappa\in \KS(\GG)$. We can define
 \[\Theta_i^{(0)}(\kappa,\FF):=\sum_{n\in \NN_i}\ind\biggl(\delta_n(\kappa,\FF),H^1_{\GG}(K_\ell, T)\bigm/H^1_{\FF}(K_\ell, T)\biggr)\]
 \end{definition}
 
-\begin{theorem}
+The comparison between the ideals $\Theta_i^{(0)}(\kappa,\FF)$ and the Fitting ideals of $H^1_{\FF}(K,T)$ leads to the first main result of this thesis.
 
+\begin{theorem}
 Let $R$ be a principal, artinian, local ring with finite residue field, let $T$ be an $R[[G_K]]$-module unramified only at finitely many places, and let $\FF\leq \GG$ be a cartesian Selmer structures on $T$ satisfying that $\chi(\FF)=0$ and $\chi(\GG)=1$. If $\kappa\in \KS(\GG)$ is a primitive Kolyvagin system, then 
 \begin{equation}
-\Theta_i^{(0)}(\kappa,\FF)\subset\Fitt_i^R\Bigl(H^1_{\mathcal F}(\mathbb Q, T)\Bigr)
+\Theta_i^{(0)}(\kappa,\FF)\subset\Fitt_i^R\Bigl(H^1_{\mathcal F}(K, T)\Bigr)
 \label{eq:theta}
 \end{equation}
  Moreover, if one of the following conditions is satisfied
 \begin{enumerate}[(i)]
-\item $i=\rank_R(H^1_{\FF}(\Q,T))=:r$
-\item $\Theta_{i-1}^{(0)}(\kappa,\FF)\subsetneq \Fitt_{i-1}^R\left(H^1_{\mathcal F}(\mathbb Q, T)\right)$
+\item $i=\rank_R(H^1_{\FF}(K,T))=:r$
+\item $\Theta_{i-1}^{(0)}(\kappa,\FF)\subsetneq \Fitt_{i-1}^R\left(H^1_{\mathcal F}(K, T)\right)$
 \item There is some $k\in \N$ and some $n\in\mathcal N$ such that $\nu(n)=i-1$, $\Theta_{i-1}(\kappa)=\delta_n R$ and 
 $$H^1_{\mathcal F(n)}(\Q,T/\m^k)\approx R/\m^{e_1}\times \cdots \times R/\m^{e_s}$$
 for some $e_1>e_2\geq \cdots\geq e_s$.
 \end{enumerate}
-then we have the equality $\Theta_i^{(0)}(\kappa)=\Fitt_i^R\Bigl(H^1_{\mathcal F}(\mathbb Q, T)\Bigr)$.
+then we have the equality $\Theta_i^{(0)}(\kappa,\FF)=\Fitt_i^R\Bigl(H^1_{\mathcal F}(\mathbb Q, T)\Bigr)$.
 \label{th:str_chi0}
 \end{theorem}
 
-\textcolor{red}{Divide proof in lemmas}
+Similarly to the core rank case, the proof is divided in the following two lemmas:
 
 
+\begin{lemma}
+If $\kappa\in \KS(\GG)$ is a primitive Kolyvagin system and $n\in \NN$, then
+\[\ind(\delta_n)=\Fitt^0\Bigl(H^1_{\FF(n)}(K,T)\Bigr)\]
+\label{lem:deltan_trn}
+\end{lemma}
 
+\begin{lemma}
+If $\FF$ is a cartesian 
+\[\sum_{n\in \NN_i}\Fitt^0\Bigl(H^1_{\FF^*}(K,T^*)\Bigr)\subset \Fitt_i^R\Bigl(H^1_{\FF^*}(K,T^*)\Bigr)\]
+\label{lem:fitti_sub_fitt0trn}
+\end{lemma}
+
+\textcolor{red}{lemma for equality}
+
+\subsection{Proof of Lemma \ref{lem:deltan_trn}}
+
+The proof of Lemma \ref{lem:deltan_trn} involves comparing the indices of $\kappa_n$ and $\delta_n$, so we can then apply Lemma \ref{lem:kn_trn}. 
+
+
+\begin{lemma}
+For every $n\in\mathcal N$, let 
+\[C_n:=\coker\left(\loc_\ell:\ H^1_{\GG}(K,T)\to H^1_{\GG/\FF}(K_\ell, T)\right)\]
+Then $\ind(\delta_n)=\ind(\kappa_n)\cdot \Fitt^{(0)}(\kappa_n)$.
+\label{lem:delta_kappa_C}
+\end{lemma}
+
+\begin{proof}
+Note that \textcolor{red}{cite} there is a non-canonical isomorphism
+\begin{equation}
+H^1_{\GG}(K,T)\approx R\oplus H^1_{\FF^*}(K,T^*)
+\label{eq:selmerG_decomp}
+\end{equation}
+Let $(x_n,y_n)$ be the components of $\kappa_n$ under this identification. Since $\ind(\kappa_n)=\Fitt_0^R\Bigl( H^1_{\FF^*}(K,T^*)\Bigr)$, then $y_n=0$ and $x_n$ is a generator of $\ind(\kappa_n)$. The decomposition in \eqref{eq:selmerG_decomp} induces a map in $R^+$ defined by
+\[\xymatrix{R\ar[r] & H^1_{\GG}(K,T)\ar[r]^{\loc_\ell} & \ar[r] H^1_{\GG/\FF}(K_\ell,T)  \ar[r]^{\cong} &R}\]
+Let $a\in R$ be the image of one under this map, which coincides with \(\Fitt^0(C_n)\). Therefore,
+\[\ind(\delta_n)=\ind(\kappa_n) \Fitt_0^R(C_n)\]
+\textcolor{red}{local coh. free of rk 1}
+\end{proof}
+
+\begin{proof}[Proof of Lemma \ref{lem:deltan_trn}]
+The exact sequence in Proposition \ref{prop:global_duality} induces a short exact sequence
+\[\xymatrix{0\ar[r] & C_n \ar[r]  & H^1_{\FF^*(n)}(K,T)\ar[r] & H^1_{\GG^*(n)}(K,T)\ar[r] & 0}\]
+We then have the identity of Fitting ideals
+\[\Fitt_0^R\Bigl(H^1_{\FF^*(n)}(K,T)\Bigr)=\Fitt_0^R\Bigl(C_n\Bigr)\Fitt_0^R\Bigl(H^1_{\GG^*(n)}(K,T)\Bigr)=\Fitt_0^R\Bigl(C_n\Bigr)\ind(\kappa_n)=\ind(\delta_n)\]
+where the second inequality follows from Lemma \ref{lem:kn_trn} and the last one from Lemma \ref{lem:delta_kappa_C}.
+\end{proof}
+
+
+\section{Old stuff}
 
 In the rest of the section, we state some lemmas from \cite[\textsection 5.2]{Kim23}. However, the convention of orders in that article is slightly different and the proofs are trickier in our case. For the sake of completeness, we also include them here.
 

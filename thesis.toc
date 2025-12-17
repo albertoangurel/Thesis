@@ -17,34 +17,40 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.4}Selmer structures of rank 0}{18}{section.1.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.4.1}Fitting ideals of Selmer groups of core rank zero}{22}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.1}Proof of Lemma \ref {lem:deltan_trn}}{20}{subsection.1.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.4.2}Non-self-dual case}{25}{subsection.1.4.2}%
+\contentsline {section}{\numberline {1.5}Old stuff}{21}{section.1.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Patched Cohomology}{29}{chapter.2}%
+\contentsline {subsection}{\numberline {1.5.1}Fitting ideals of Selmer groups of core rank zero}{23}{subsection.1.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Ultrafilters}{29}{section.2.1}%
+\contentsline {subsection}{\numberline {1.5.2}Non-self-dual case}{26}{subsection.1.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.1}Definition}{29}{subsection.2.1.1}%
+\contentsline {chapter}{\numberline {2}Patched Cohomology}{31}{chapter.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.2}Analogy between ultrafilters and ideals}{30}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.1}Ultrafilters}{31}{section.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.3}Ultraproducts}{31}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.1}Definition}{31}{subsection.2.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.4}Ultraprimes}{33}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.2}Analogy between ultrafilters and ideals}{32}{subsection.2.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Patched cohomology}{35}{section.2.2}%
+\contentsline {subsection}{\numberline {2.1.3}Ultraproducts}{33}{subsection.2.1.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.1}Construction}{35}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.1.4}Ultraprimes}{35}{subsection.2.1.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.2}Local patched cohomology}{36}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.2}Patched cohomology}{37}{section.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Kolyvagin systems and biduals}{37}{chapter.3}%
+\contentsline {subsection}{\numberline {2.2.1}Construction}{37}{subsection.2.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Preliminaries on exterior powers}{37}{section.3.1}%
+\contentsline {subsection}{\numberline {2.2.2}Local patched cohomology}{38}{subsection.2.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Stark Systems}{37}{section.3.2}%
+\contentsline {section}{\numberline {2.3}Patched Selmer structures}{39}{section.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.1}Core vertex}{38}{subsection.3.2.1}%
+\contentsline {chapter}{\numberline {3}Kolyvagin systems and biduals}{41}{chapter.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{References}{40}{theorem.3.2.8}%
+\contentsline {section}{\numberline {3.1}Preliminaries on exterior powers}{41}{section.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Stark Systems}{41}{section.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.1}Core vertex}{42}{subsection.3.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{References}{44}{theorem.3.2.8}%
