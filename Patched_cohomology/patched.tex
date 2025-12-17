@@ -1,0 +1,337 @@
+\chapter{Patched Cohomology}
+
+\section{Ultrafilters}
+
+\subsection{Definition}
+
+\begin{definition}
+A \emph{filter} in the natural numbers is a collection of sets $\UU$ in in the power set $\mathcal P(\N)$ such that 
+\begin{itemize}
+\item \namedlabel{filter_empty}{(F0)} The empty set does not belong to $\UU$.
+\item \namedlabel{filter_intersection}{(F1)} If $S_1\subset S_2$ and $S_1\in \UU$, then $S_2\in \UU$.
+\item \namedlabel{filter_supset}{(F2)} If $S_1,S_2\in \UU$, then $S_1\cap S_2\in \UU$.
+\end{itemize}
+We say that a filter is an \emph{ultrafilter} if it also satisfies the following condition
+\begin{itemize}
+\item \namedlabel{ultrafilter_axiom}{(UF)} For every set $S\in \PP(\N)$, either $S\in \UU$ or $\N\setminus S\in \UU$.
+\end{itemize}
+\end{definition}
+
+
+
+The key property of ultrafilters is that \ref{ultrafilter_axiom} generalises to finite partitions, i.e., ultrafilters contain exactly one set in every finite partion of $\N$.
+
+\begin{proposition}
+Let $\UU$ be an ultrafilter and let $\{P_1,\ldots,P_s\}$ be a partition of $\N$. Then there exists a unique $i$ such that $P_i\in \UU$.
+\label{prop:ultrafilter_finite}
+\end{proposition}
+
+\begin{proof}
+It follows from an inductive application of \ref{ultrafilter_axiom}.
+\end{proof}
+
+Last proposition can be reinterpreted in the following form:
+
+\begin{corollary} (\cite[proposition 2.1.2]{Sweeting})
+Let $\UU$ be an ultrafilter, let $S\in \UU$ and let $C$ be a finite set. For every map $f:\ S\to C$, there exists a unique $c\in C$ such that $f^{-1}(c)\in \UU$.
+\label{cor:ultrafilter_finite}
+\end{corollary}
+
+The only ultrafilters we can explicitly describe are those formed by the subsets of the naturals containing one specific element, known as principal ultrafilters.
+
+\begin{definition}
+Let $a\in \N$. The collection of sets
+\[\UU_a=\{S\subset \N:\ a\in S\}\]
+is an ultrafilter. These are known as \emph{principal ultrafilters}.
+\end{definition}
+
+In fact, principal ultrafilters are the only ones containing finite sets.
+
+\begin{proposition}
+Let $\UU$ be an ultrafilter and assume there is a finite set $S$ that belongs to $\UU$. Then there exists an element $a\in S$ such that $\UU=\UU_a$.
+\end{proposition}
+
+\begin{proof}
+Consider the finite union 
+\[\N=(\N\setminus S)\cup \bigcup_{a\in S} \{a\}\]
+By proposition \ref{prop:ultrafilter_finite}, one of the above sets belong to $\UU$. Since $(\N\setminus S)$ does not, there is some $a\in S$ such that $\{a\}\in \UU$. By \ref{filter_supset}, $\UU_a\in \UU$.
+
+In order to show the equality, assume there exists $T\in \UU\setminus \UU_a$. Then $T\cap \{a\}=\emptyset\in \UU$, contradicting \ref{filter_empty}. Therefore, $\UU=\UU_a$.
+\end{proof}
+
+However, those ultrafilters which are interesting for our purposes are the non-principal ones. Although they cannot be explicitly constructed, its existence is guaranteed, assuming the axiom of choice, by the analogy between ultrafilters and maximal ideals shown in Proposition \ref{prop:ultrafilter_maximal} below. They are those ultrafilters containing the Fréchet filter consisting of sets with finite complement.
+
+\begin{definition}
+The \emph{Fréchet filter} is the collection of subsets of the natural number defined as
+\[\FF=\{S\subset \N:\ \N\setminus S\ \textrm{finite}\}\]
+\end{definition}
+
+\subsection{Analogy between ultrafilters and ideals}
+
+The set $\Pb(\N)$ can be endowed with a natural structure of a boolean ring. In order to do that, we define a set-theoretic bijection to the functions on the naturals with values on the finite field with two elements $\F_2$:
+\[\Pb(\N)\to \CC(\N,\F_2):\ A\mapsto 1-\chi_A\]
+where $\chi_A$ is the characteristic function. The natural boolean structure in $\CC(\N,\F_2)$ induces, via the above bijection, a boolean ring structure in $Pb(\N)$. It is possible to explicitly describe the operations in $\Pb(\N)$.
+
+\begin{definition}
+The \emph{filtered} boolean structure $\BB(\N)$ in $\Pb(\N)$ is given by the operations
+\[\begin{array}{cc}
+    A+B=(A\cap B)\cup (A^c\cap B^c), &A\cdot B=(A\cup B)
+\end{array}\]
+where $S^c$ denotes the complementary set and $\Delta$ denotes the symmetric difference.
+\label{def:bool_str}
+\end{definition}
+
+\begin{remark}
+The boolean ring structure in \ref{def:bool_str} is not the standard one in the literature, but it is the conjugation by the involution obtained by sending each set to its complementary.
+\end{remark}
+
+We can now identify filters and ultrafilters with ideals and maximal ideals\footnote{With the standard convention, filters (resp. ultrafilters) are the set of complements of ideals (resp. maximal ideals)}.
+\begin{proposition}
+The filters coincides with the ideals in the boolean ring in $\Pb(\N)$ which are different to $1$.
+\label{prop:filter_ideal}
+\end{proposition}
+
+\begin{proof}
+Let $\FF$ be a filter in $\Pb(\N)$ and let $A,B \in \FF$. Then 
+\[A+B=(A\cap B)\cup (A^c\cap B^c)\supset A\cap B\in \FF\]
+by \ref{filter_intersection}. Therefore, $A+B\in \FF$ by \ref{filter_supset}. If $T\subset N$, then 
+\[A\cdot T=A\cup T\supset A\in \FF\]
+by \ref{filter_supset}. Finally, \ref{filter_empty} implies that $\FF$ is not the full $\PP(\NN)$.
+
+Conversely, assume $\FF$ is an ideal strictly contained in $\Pb(\N)$. Since the unit element in $\Pb(\N)$ is the empty set, then \ref{filter_empty} needs to hold.
+Assume that $S\in \FF$ and $S\subset T$, then $T=S\cdot T$, so it belongs to $\FF$, which proves \ref{filter_supset}. Finally, if $A,B\in \FF$, then
+\[A\cap B\subset (A\cap B) \cup (A^c\cap B^c)=A+B\in \FF\]
+Then $A\cap B=(A+B)\cdot (A\cap B)$, so \ref{filter_intersection} holds.
+\end{proof}
+
+\begin{proposition}
+The ultrafilters in $\Pb(\N)$ are exactly the maximal ideals of $\BB(\N)$.
+\label{prop:ultrafilter_maximal}
+\end{proposition}
+
+\begin{proof}
+Let $\UU$ be an ultrafilter. By Proposition \ref{prop:filter_ideal}, $\UU$ is an ideal of $\BB(\N)$. Let $A=\P(\N)/\UU$ be its quotient ring. Note that, for any $S\subset \N$, then either $S\in \UU$ or 
+\[S=\emptyset+S^c\in \emptyset+\UU\]
+because $S^c\in \UU$ by \ref{ultrafilter_axiom}. Hence $A$ is the ring with two elements, so its a field and hence $\UU$ is a maximal ideal.
+
+Conversely, assume $\UU$ is a maximal ideal, so $A=\Pb(\N)/\UU$ is a boolean field. Then $A=\F_2$ since every element is a root of $x(x-1)$. Then, for any $S\subset \N$, either $S\in \UU$ or $1+S\in \UU$. This is equivalent to \ref{ultrafilter_axiom} since $1+S=\emptyset+S=S^c$.
+\end{proof}
+
+\subsection{Ultraproducts}
+
+In this section, we will use the concept of ultrafilters to patch sequences of sets.
+
+\begin{definition}
+Let $\UU$ be an ultrafilter and let $(M_n)_{n\in \mathbb N}\in \CC^\N$. The \emph{ultraproduct} $\UU(M_n)$ is defined as
+\[\UU(M_n)=\prod_{n\in \N} M_n\biggm /\sim\]
+where $\sim$ is the equivalence relation defined as $(m_n)\sim (m'_n)$ if $m_n=m'_n$ for $\UU$-many $n$.
+\end{definition}
+\begin{proposition} (Functoriality of the ultraproduct, \cite[Proposition 2.1.4]{Sweeting})
+The ultraproduct $\UU$ defines a functor $\CC^\N\to \CC$.
+\end{proposition}
+
+\begin{notation}
+If $M$ is a set, we will denote by $\UU(M)$ to the ultraproduct of the sequence $(M_n)$ in which $M_n=M$ for all $n$.
+\end{notation}
+
+\begin{remark}
+If $M_n$ have some extra structure such as pointed sets, groups or rings, the ultraproduct $\UU(M_n)$ would also be endowed with such structure.
+\end{remark}
+
+\begin{proof}
+Let $\varphi:\ (A_n)\to (B_n)$ be a morphism in $\CC^\N$. By definition, $\varphi$ is a collection of morphisms $\varphi_i:\ A_i\to B_i$. Their product induces a morphism
+\[\overline{\varphi}=\prod_{n\in \N} \varphi_n:\ \prod_{n\in \N} A_n\to \prod_{n\in \N} B_n\]
+This product morphism restricts well to the ultraproduct, resulting in a map
+\[\varphi^{\UU}:\ \UU(A_n)\to \UU(B_n)\]
+Indeed, if $(\alpha_i), (\alpha'_i)\in \prod_{n\in \N} A_n$ are two equivalent sequences, then $\alpha_i=\alpha'_i$ for $\UU$-many $i$. Then $\varphi(\alpha_i)=\varphi(\alpha'_i)$ for $\UU$-many $i$. It implies that $\overline{\varphi}(\alpha_i)$ and $\overline\varphi(\alpha'_i)$ are equivalent sequences in $\prod_{n\in \N} B_n$. Hence, $\varphi^{\UU}$ is well defined and, since it clearly behaves well with the composition, the ultraproduct is functorial.
+\end{proof}
+
+
+
+
+
+\begin{proposition}(\cite[proposition 2.1.5]{Sweeting})
+Assume $\CC$ is a category of pointed sets. Then the ultraproduct $\UU$ is an exact functor.
+\label{prop:ultrafilter_exact}
+\end{proposition}
+
+\begin{proof}
+We will denote by $0$ the distinguished point in every object of $\CC$. Assume we have an exact sequence in $\CC^\N$,
+\[\xymatrix{0\ar[r] & (A_n)\ar[r]^{\overline{\mu}} & B_n\ar[r]^{\overline{\varepsilon}} & C_n\ar[r]^{0} & 0}\]
+
+We start by showing the injectivity of $\mu^{\UU}$. Let $\alpha=(\alpha_n)\in \ker(\mu^{\UU})$, which means that $\mu_i(\alpha_i)=0$ for $\UU$-many $i$. Since $\mu_i$ are injective maps, then $\alpha_i=0$ for $\UU$-many $i$, so $(\alpha_i)\equiv 0$ in $\UU(A_n)$. Thus $\mu^{\UU}$ is injective.
+
+The composition of $\varepsilon^{\UU}\circ \mu^{\UU}$ vanishes, since $\overline{\varepsilon}\circ \overline{\mu}$ also does. Conversely, let $\beta=(\beta_n)\in \ker (\varepsilon^{\UU})$. Let $S_\beta$ be the set of indices such that $\varepsilon_i(\beta_i)=0$. For those indices, $\beta_i\in \textrm{Im}(\mu_i)$. We can thus define $\alpha=(\alpha_i)$ by
+\[\left\{\begin{aligned}
+&\alpha_i\in \mu_i^{-1}(\beta_i) & \textrm{ if }i\in S_\beta\\
+&\alpha_i=0& \textrm{ if }i\notin S_\beta\\
+\end{aligned}\right.\]
+Clearly $(\mu_i(\alpha_i))$ is equivalent to $(\beta_i)$, so $\beta\in \mu^{\UU}$.
+
+Finally, the surjectivity of $\varepsilon^{\UU}$ follows from being a quotient map of the surjective map $\overline{\varepsilon}$.
+\end{proof}
+
+In general, it is difficult to compute the ultraproduct, but there is a special case in which it is explicit, when we have sequence of finite sets of bounded order.
+
+\begin{lemma}
+Let $(M_n)$ be a sequence of sets satisfying that there is a finite set such that $M_n=M$ for all $n$. Then the diagonal map $\Delta:\ M\to \UU(M_n)$ is an isomorphism.
+\label{lem:ultrafilter_finite_diagonal}
+\end{lemma}
+
+\begin{proof}
+By \ref{filter_empty}, the above map is clearly injective, so we only need to check surjectivity. A sequence $(m_n)\in \prod_{n\in \N} M$ induces a map
+\[f:\ \N\to M:\ m\mapsto m_n\]
+Since $M$ is finite, corollary \ref{cor:ultrafilter_finite} implies that there exists a unique $m\in M$ such that $f^{-1}(\{m\})\in \UU$. Hence $(m_n)$ is equivalent to the constant sequence $(m)$, so it belongs to the image of $\Delta$.
+\end{proof}
+
+\begin{corollary}
+Let $M_n$ be a sequence of finite sets whose orders are bounded above by some constant $C$. Then the ultraproduct $\UU(M_n)$ is finite with order less by $C$.
+\end{corollary}
+
+\begin{proof}
+Let $S$ be a set of cardinality $C$. For each $n\in \N$, fix an injection
+\[\mu_n:\ M_n\hookrightarrow S\]
+By Proposition \ref{prop:ultrafilter_exact} and Lemma \ref{lem:ultrafilter_finite_diagonal}, there is an injection
+\[\UU(M_n)\hookrightarrow \UU(S)\cong S\]
+Thus, $\UU(M_n)$ is finite with order bounded by $C$.
+\end{proof}
+
+\subsection{Ultraprimes}
+
+An example of ultraproduct of infinite sets leads to the concept of ultraprimes, which are the elements in the ultraproduct of the constant sequence of the set of prime numbers. We will not attempt to give a description of this ultraproduct, but its elements will play an important role in this theory.
+
+Fix a non-principal ultrafilter $\UU$ and a number field $K$. Denote by $\Pb$ the set of primes in $K$.
+
+\begin{definition}
+An \emph{ultraprime} $\ku$ is an element of $\UU(\Pb)$. More specifically, it is represented by a sequence of prime numbers $(\ell_n)_{n\in \N}$, and two sequences represent the same ultraprime if they coindice in $\UU$-many primes.
+\end{definition}
+
+\begin{remark}
+The primes $\Pb$ are contained in the ultraprimes $\UU(\Pb)$ via the diagonal map, i.e., a prime $\ell$ is identified with the equivalence class of the constant sequence $(\ell)$. The image of $\Pb\hookrightarrow \UU(\Pb)$ is sometimes referred as \emph{constant ultraprimes}.
+\end{remark}
+
+
+
+We can use Corollary \ref{cor:ultrafilter_finite} to define the Frobenius element associated to an ultraprime $\ku$ in the absolute Galois group $G_K$.
+
+\begin{proposition}
+Let $\ku=(\ell_n)$ be an ultraprime and let $L/K$ be a finite Galois extension of number fields. Then there exists a unique element $\sigma$ such that 
+$\Frob_{\ell_n}|_{L/K}=\sigma$ for $\UU$-many $n$. This element is called the \emph{Frobenius} automorphism of $\ku$ at $L/K$.
+\end{proposition}
+
+\begin{proof}
+The sequence $(\ell_n)$ defines a map
+\[F:\ \N\to \Gal(L/K):\ n\mapsto \Frob_{\ell_n}\]
+Since $\Gal(L/K)$ is finite, Corollary \ref{cor:ultrafilter_finite} says that there exists a unique $\sigma\in \Gal(L/K)$ such that $F^{-1}(\{\sigma\})\in \UU$.
+
+If we take an equivalent sequence $\ell_n'$, the set
+\[S=\{n\in \N:\ \ell_n=\ell_n'\}\in \UU\]
+Then, by \ref{filter_intersection} and \ref{filter_supset}
+\[S\cap F^{-1}(\{\sigma\})\subset \{n\in \N:\ \Frob_{\ell_n'}=\sigma\}\in \UU\]
+Hence the definition of $\Frob_\ku$ is independent of the sequence representing it.
+\end{proof}
+
+\begin{definition}
+Let $\ku=(\ell_n)$ be an ultraprime. The Frobenius automorphism $\Frob_\ku$ is defined as
+\[\Frob_{\ku}=\left(\Frob_{\ku}|_{L/K}\right)_{L/K}\in \varprojlim_{L/K} \Gal(L/K)=G_K\]
+\label{def:frobenius}
+\end{definition}
+
+\begin{remark}
+In order to guarantee that Definition \ref{def:frobenius} is consistent, we need to show that $\Frob_{\ku}$ behaves well under the restriction of finite extensions $L'\L$. Let $(\ell_n)$ be a sequence representing $\ku$ such that $\Frob_{\ell_n}\mid_{L'}=\sigma$, for some $\sigma\in \Gal(L'/K)$ for $\UU$-many $n$. For all those $n$, $\Frob_{\ell_n}\mid_L=\sigma\mid_L$, so $\sigma\mid_L$ coincides with $\Frob_{\ell_n}$ for $\UU$-many $n$.
+\end{remark}
+
+\begin{remark}
+    Definition \ref{def:frobenius} is consistent with the standard definition of Frobenius automorphims: if $\ku=(\ell)$ is a constant ultraprime, then $\Frob_\ku=\Frob_\ell$.
+\end{remark}
+
+Ultraprimes have their own version of Chebotarev density theorem, which is stronger than the classical version. Its main advantage is that it is not longer restricted to finite extensions.
+
+\begin{definition}
+Let $K$ be a number field and let $\sigma\in G_K$, there exists an ultraprime $\ku$ such that $\Frob_\ku=\sigma$.
+\end{definition}
+
+\begin{proof}
+Let $(L_n)_{n\in \mathbb N}$ be an ordering of all the finite extensions of $K$. For every $n\in \N$, define $E_n=L_1\cdots L_n$. By Chebotarev's density theorem, there exists a prime $\ell_n$ such that $\Frob_{\ell_n}=\sigma|_{E_n}$. 
+
+Consider the prime $\ku=(\ell_n)$. Let $L$ be a number field. Then there exists a natural number $n_0$ such that $L=L_{n_0}$. Then $\Frob_{\ell_n}|_{L}=\sigma_{L}$ for all $n\geq n_0$ and, therefore, for $\UU$-many $\NN$. Hence $\Frob_{\ku}|_L=\sigma_{L}$ for all number fields $L$, so $\Frob_{\ku}=\sigma$.
+\end{proof}
+
+The construction of the Frobenius is used to artificially define the local Galois group at the ultraprime. It is a generalization of the tame quotient of the classical local Galois groups.
+
+\begin{definition}
+Let $\ku$ be a non-constant ultraprime. The \emph{local Galois group} $G_\ku$ is defined as the semidirect product $\widehat \Z(1)\rtimes \langle \Frob_\ku\rangle$, where $\langle \Frob_\ku\rangle $ is the free profinite group generated by one element which acts by $\Frob_\ku\in G_K$ on $\widehat Z(1)$.
+
+The \emph{inertia subgroup} $I_\ku\subset G_\ku$ is the normal subgroup $\widehat \Z(1)$.
+\end{definition}
+
+\begin{remark}
+Note that, when $\ku$ is a constant ultraprime, the semidirect product $\widehat Z(1)\rtimes \langle \Frob_\ku\rangle$ coincides with the tame inertia quotient of the Galois group $G_\ku$.
+\end{remark}
+
+We impose that $G_\ku$ acts unramifiedly on Galois modules.
+
+\begin{definition}
+Let $T$ be a $G_K$-module. We define an action of $G_\ku$ on $T$ via the quotient $G_\ku\twoheadrightarrow \langle \Frob_\ku\rangle$.
+\end{definition}
+
+\section{Patched cohomology}
+
+\subsection{Construction}
+
+In this section, we use the ultraproduct defined in the previous one to introduce the notion of patched cohomology. In order to have control over the patched cohomology groups, we define if first for finite coefficient rings as an ultraproduct of cohomology groups, and then we extend the definition to either profinite or ind-finite coefficient rings by taking limits.
+
+\begin{definition}
+Let $T$ be a finite group endowed with actions from a sequence group $G=(G_n)_{n\in \mathbb N}$ (technically, it is only needed that the action is well defined for $\UU$-many $n$). The $\UU$-patched cohomology group is defined as
+\[\bH^i(G,T)=\UU(H^i(G_n,T))\]
+If $T$ is a profinite group, we define the patched cohomology as
+\[\bH^i(G,T)=\varprojlim_{T\twoheadrightarrow T'}\bH^i(\Q,T/T')\]
+where the limit is taken over all the finite quotients of $T$.
+
+Similarly, when $T$ is an ind-finite group, the patched cohomology is defined as
+\[\bH^i(G,T)=\varinjlim_{T'\hookrightarrow T} \bH^i(\Q,T')\]
+where the limit is taken over all the finite subgroups of $T$.
+\end{definition}
+
+\begin{proposition}
+The assignment 
+\[T\mapsto \bH^i(G,T)\]
+is a functor from the category of either finite groups, pro-finite groups and ind-finite groups to the category of groups.
+\end{proposition}
+
+\begin{proof}
+It follows from the functorial properties of cohomology groups, ultraproducts and inverse and direct limits.
+\end{proof}
+
+\begin{proposition}
+Let 
+\[\xymatrix{0\ar[r] & A\ar[r]^{\mu} & B\ar[r]^{\varepsilon} & C\ar[r] & 0}\]
+be an exact sequence of continuous maps of profinite groups. Assume $A$, $B$ and $C$ are endowed with an action of $G=(G_n)$. Then there is a long cohomological exact sequence
+
+\textcolor{red}{diagram of long cohomology sequence}
+\end{proposition}
+
+\begin{proof}
+Let $I$ be a directed set indexing the finite quotients of $B$, i.e., all the finite quotients of $B$ are of the form $B/\beta_i$, for some $i\in I$. Since $B$ is profinite, we have that
+\[\bigcap_{i\in I} \beta_i=0\]
+Since $\mu$ is injective,
+\[\bigcap_{i\in I} \mu^{-1}(\beta_i)=0\]
+Hence they $A$ can be computed as the inverse limit
+\[H^i(G,A)=\varprojlim_{A\twoheadrightarrow A'} \bH^i(G,A')=\varprojlim_{i\in I} \bH^i(G,A/\mu^{-1}(\beta_i))\]
+Similarly,
+\[\bigcap_{i\in I} \varepsilon(\beta_i)=0\]
+Thus,
+\[H^i(G,C)=\varprojlim_{C\twoheadrightarrow C'} \bH^i(G,C/C')=\varprojlim_{i\in I} \bH^i(G,C/\varepsilon(\beta_i))\]
+\textcolor{red}{review null intersection and inverse limit (cofinal)}
+For each $i\in I$, there is an exact sequence
+\[\xymatrix{0\ar[r] & A/\mu^{-1}(\beta_i)\ar[r]^\mu & B/\beta_i \ar[r]^\varepsilon & C/\varepsilon(\beta_i)\ar[r] & 0}\]
+For each $n$ there is a long exact sequence in the cohomology of $G_n$. Since the $\UU$-patching is an exact functor, it induces a long exact sequence in the patching cohomology of the finite quotients:
+\textcolor{red}{diagram}
+
+\textcolor{red}{Conditions for inverse limit to be exact}
+\end{proof}
+
+\subsection{Local patched cohomology}
+
+
+

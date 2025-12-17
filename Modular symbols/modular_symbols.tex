@@ -1,0 +1,190 @@
+
+\documentclass[a4paper,11pt]{book}
+
+\usepackage[usenames]{xcolor} %for the color
+\usepackage{amssymb} %maths
+\usepackage{mathtools} %maths
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{authblk}
+\usepackage[utf8]{inputenc} %useful to type directly diacritic characters
+\usepackage[british]{babel}
+
+%\usepackage[spanish,es-tabla]{babel} %spanish language
+\usepackage{array} %tablas
+\usepackage{multirow} %para las tablas
+%\selectlanguage{spanish}
+\newcommand{\abs}[1]{\lvert#1\rvert}
+\newcommand{\norm}[1]{\lVert#1\rVert}
+\DeclareMathOperator{\Sel}{Sel}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\cor}{cor}
+\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\Ind}{Ind}
+\DeclareMathOperator{\Gl2}{GL_2}
+\DeclareMathOperator{\im}{\textrm{Im}}
+\newcommand{\Frob}{\textrm{Frob}}
+\newcommand{\Fitt}{\textrm{Fitt}}
+\newcommand{\ord}{\textrm{ord}}
+\renewcommand{\char}{\textrm{char}}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Map}{Map}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\KS}{KS}
+\DeclareMathOperator{\ES}{ES}
+\newcommand{\loc}{\textrm{loc}}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\p}{\mathfrak{p}}
+\newcommand{\du}{^\vee}
+\newcommand{\coker}{\textrm{coker}}
+\newcommand{\length}{\textrm{length}}
+\newcommand{\kk}{^{(k)}}
+\newcommand{\dinf}{\delta^{(\infty)}}
+\newcommand{\corank}{\textrm{corank}}
+\newcommand{\rank}{\textrm{rank}}
+\DeclareMathOperator{\cond}{cond}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\F}{\mathbb F}
+\newcommand{\N}{\mathbb N}
+\newcommand{\FF}{\mathcal F}
+\newcommand{\Fcl}{{\mathcal{F}_{\textrm{cl}}}}
+\newcommand{\Fcan}{{\mathcal{F}^{\textrm{can}}}}
+\newcommand{\FLambda}{{\mathcal{F}_\Lambda}}
+\newcommand{\FBK}{{\mathcal{F}_{\textrm{BK}}}}
+\newcommand{\PP}{\mathcal P}
+\newcommand{\NN}{\mathcal N}
+\newcommand{\DD}{\mathcal D}
+\newcommand{\GG}{\mathcal G}
+\newcommand{\RR}{\mathcal R}
+\newcommand{\OO}{\mathcal O}
+\newcommand{\LL}{\mathcal L}
+\newcommand{\II}{\mathcal I}
+\newcommand{\mupi}{\mu_{p^\infty}}
+\newcommand{\mupn}{\mu_{p^N}}
+\newcommand{\tr}{\textrm{tr}}
+\newcommand{\ur}{\textrm{ur}}
+\newcommand{\f}{\textrm{f}}
+\newcommand{\s}{\textrm{s}}
+\newcommand{\Tr}{\textrm{Tr}}
+\newcommand{\fs}{\textrm{fs}}
+\renewcommand{\f}{\textrm{f}}
+\newcommand{\Iw}{\textrm{Iw}}
+\newcommand{\GL}{\textrm{GL}}
+\newcommand{\tors}{\textrm{tors}}
+\newcommand{\per}{\textrm{per}}
+\newcommand{\crys}{\textrm{crys}}
+\newcommand{\dR}{\textrm{dR}}
+\renewcommand{\sf}{\textrm{sf}}
+\newcommand{\chibar}{{\overline{\chi}}}
+\newcommand{\psibar}{{\overline{\psi}}}
+
+\usepackage[margin=1.2in]{geometry}
+\usepackage{enumerate}
+
+
+%referencias interactivas
+\usepackage{parskip}
+\usepackage[all,cmtip]{xy}
+
+\usepackage{tikz}
+\usetikzlibrary{matrix,arrows}
+
+    \DeclareFontFamily{U}{wncy}{}
+    \DeclareFontShape{U}{wncy}{m}{n}{<->wncyr10}{}
+    \DeclareSymbolFont{mcy}{U}{wncy}{m}{n}
+\DeclareMathSymbol{\Sha}{\mathord}{mcy}{"58} 
+
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[subsection]
+\newtheorem{theorem*}{Theorem}[section]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remark*}[theorem*]{Remark}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+
+\makeatletter
+\def\namedlabel#1#2{\begingroup
+    #2%
+    \def\@currentlabel{#2}%
+    \phantomsection\label{#1}\endgroup
+}
+\makeatother
+
+
+\usepackage[backend=biber, style=alphabetic]{biblatex}
+%\bibliographystyle{plain}
+\addbibresource{refs.bib}
+\usepackage{csquotes}
+
+\usepackage{hyperref} 
+
+\begin{document}
+
+
+\chapter{Modular symbols}
+
+
+\section{Neron lattice}
+
+Let 
+\[y^2+a_1 xy+a_3 y=x^3+a_2 x^2+a_4 x+a_6\]
+be a minimal Weierstrass equation for the elliptic curve. The Néron differential on $E$ is defined as 
+\[\omega_E=\frac{dx}{2y+a_1x+a_3} \in \Omega_E\]
+
+$E(\C)$ is a Riemann surface of genus $1$, so its fundamental group
+\[\pi^1(E,O)\cong \Z\oplus \Z\]
+
+\begin{definition}
+The Néron lattice of $E$ is defined as 
+\[\LL:=\Biggl\{\int_{\gamma} \omega_E\Biggm| \gamma\in \pi^1(E,O)\Biggr\}\] 
+\end{definition}
+
+\cite{angurel}
+%For every $\Q\in E(\C)$, let $\tau_Q$ be the endomorphism of $E$ describing the translation by $Q$, i.e.,
+%\[\tau_Q:\ E\to E,\ P\mapsto P+Q\]
+
+%By \cite[proposition III.5.1]{Silverman1}, there exists a differential f
+
+\section{Modular symbols}
+
+Throughout this section, let $E$ be an elliptic curve defined over $\Q$ and let $N$ be its conductor.By the modularity theorem from \cite{Wiles}, there exists a Hecke eigenform $f\in S_k(\Gamma_0(N))$ with Fourier expansion $f=\sum_{n} a_n q^n$ such that for all primes $p$ of good reduction,
+\[a_p=(p+1)-\# \widetilde E(\F_p)\]
+where $\widetilde E(\F_p)$ is the number of points in the reduced curve at $p$. In this section, $f$ 
+
+\begin{definition}
+Let $r$ be a rational number. The modular symbol $\left[\frac{a}{m}\right]$ is defined as 
+\[\lambda:=\int_{\infty}^{a/m} f(z)\,dz\]
+where the integral is taking along any path in the upper half plane from the cusp at infinity to the cusp at $\frac{a}{m}$.
+\end{definition}
+
+\begin{proposition}
+The modular symbols of $\frac{a}{m}$ and $\frac{-a}{m}$ are conjugates of each other:
+\[\lambda(-r)=\overline{\lambda(r)}\]
+\end{proposition}
+
+In order to define the algebraic part of modular symbols, we need to consider first its real and imaginary part:
+\[\begin{aligned}
+&\lambda^+(r):=\frac{\lambda(r)+\lambda(-r)}{2}=\textrm{Re}\left(\lambda(r)\right)\\
+&\lambda^-(r):=\frac{\lambda(r)-\lambda(-r)}{2}=\textrm{Im}\left(\lambda(r)\right)
+\end{aligned}\]
+
+The algebraic modular symbols are the above quantities normalized by the Néron periods.
+\begin{definition}
+Let $\frac{a}{m}$ be a rational number expressed in its simplest terms. The algebraic modular symbols of $\frac{a}{m}$ are:
+\[\begin{array}{ccc}
+\displaystyle{\left[\frac{a}{m}\right]^+:=\frac{\lambda^+\left(\frac{a}{m}\right)}{\Omega_E^+}};
+& &\displaystyle{\left[\frac{a}{m}\right]^-:=\frac{\lambda^-\left(\frac{a}{m}\right)}{\Omega_E^-}}
+\end{array}\]
+\end{definition}
+
+
+\end{document}

@@ -1,0 +1,20 @@
+[0] Config.pm:311> INFO - This is Biber 2.16
+[0] Config.pm:314> INFO - Logfile is 'modular_symbols.blg'
+[89] biber-darwin:340> INFO - === Mon Oct 13, 2025, 23:35:16
+[106] Biber.pm:415> INFO - Reading 'modular_symbols.bcf'
+[207] Biber.pm:952> INFO - Found 2 citekeys in bib section 0
+[222] Biber.pm:4340> INFO - Processing section 0
+[233] Biber.pm:4531> INFO - Looking for bibtex format file 'refs.bib' for section 0
+[235] bibtex.pm:1689> INFO - LaTeX decoding ...
+[292] bibtex.pm:1494> INFO - Found BibTeX data source 'refs.bib'
+[298] Utils.pm:395> WARN - Possible typo (case mismatch) between citation and datasource keys: 'angurel' and 'Angurel' in file 'refs.bib'
+[299] Utils.pm:395> WARN - BibTeX subsystem: /var/folders/g1/z84mbf9s6qd3r09nph4w515h0000gn/T/biber_tmp_erNI/8fe4c9854184545302f21ebf0d47516c_2174.utf8, line 256, warning: 1 characters of junk seen at toplevel
+[299] Utils.pm:395> WARN - I didn't find a database entry for 'angurel' (section 0)
+[299] Utils.pm:395> WARN - I didn't find a database entry for 'Wiles' (section 0)
+[307] UCollate.pm:68> INFO - Overriding locale 'en-GB' defaults 'variable = shifted' with 'variable = non-ignorable'
+[307] UCollate.pm:68> INFO - Overriding locale 'en-GB' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[307] Biber.pm:4168> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-GB'
+[307] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-GB'
+[308] bbl.pm:654> INFO - Writing 'modular_symbols.bbl' with encoding 'UTF-8'
+[308] bbl.pm:757> INFO - Output to modular_symbols.bbl
+[308] Biber.pm:128> INFO - WARNINGS: 4

@@ -1,0 +1,212 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{anyt/global//global/global}
+    \entry{BlochKato}{incollection}{}
+      \name{author}{2}{}{%
+        {{hash=d70f290633620a3a63a318f4b0e912f1}{%
+           family={Bloch},
+           familyi={B\bibinitperiod},
+           given={Spencer},
+           giveni={S\bibinitperiod}}}%
+        {{hash=d17898f46dcc8922e71c199b1619b8db}{%
+           family={Kato},
+           familyi={K\bibinitperiod},
+           given={Kazuya},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Birkhäuser Boston, Boston, MA}%
+      }
+      \strng{namehash}{b0ee9516a543ca4053ea3672370a51a4}
+      \strng{fullhash}{b0ee9516a543ca4053ea3672370a51a4}
+      \strng{bibnamehash}{b0ee9516a543ca4053ea3672370a51a4}
+      \strng{authorbibnamehash}{b0ee9516a543ca4053ea3672370a51a4}
+      \strng{authornamehash}{b0ee9516a543ca4053ea3672370a51a4}
+      \strng{authorfullhash}{b0ee9516a543ca4053ea3672370a51a4}
+      \field{labelalpha}{BK90}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The {G}rothendieck {F}estschrift, {V}ol.\ {I}}
+      \field{series}{Progr. Math.}
+      \field{title}{{$L$}-functions and {T}amagawa numbers of motives}
+      \field{volume}{86}
+      \field{year}{1990}
+      \field{pages}{333\bibrangedash 400}
+      \range{pages}{68}
+    \endentry
+    \entry{Kim23}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=5972b3b70a7d748aa6623178105ea418}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Chan-Ho},
+           giveni={C\bibinithyphendelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{5972b3b70a7d748aa6623178105ea418}
+      \strng{fullhash}{5972b3b70a7d748aa6623178105ea418}
+      \strng{bibnamehash}{5972b3b70a7d748aa6623178105ea418}
+      \strng{authorbibnamehash}{5972b3b70a7d748aa6623178105ea418}
+      \strng{authornamehash}{5972b3b70a7d748aa6623178105ea418}
+      \strng{authorfullhash}{5972b3b70a7d748aa6623178105ea418}
+      \field{labelalpha}{Kim25}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.NT}
+      \field{eprinttype}{arXiv}
+      \field{title}{The structure of Selmer groups and the Iwasawa main conjecture for elliptic curves}
+      \field{year}{2025}
+      \verb{eprint}
+      \verb 2203.12159
+      \endverb
+    \endentry
+    \entry{MazurRubin}{article}{}
+      \name{author}{2}{}{%
+        {{hash=bbbc6e9371aca03f048f5012bdab5885}{%
+           family={Mazur},
+           familyi={M\bibinitperiod},
+           given={Barry},
+           giveni={B\bibinitperiod}}}%
+        {{hash=36c8e0559efe2dd98d3833fcaf2a18d5}{%
+           family={Rubin},
+           familyi={R\bibinitperiod},
+           given={Karl},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{4ab0615438898614c4fe6a06097f34fc}
+      \strng{fullhash}{4ab0615438898614c4fe6a06097f34fc}
+      \strng{bibnamehash}{4ab0615438898614c4fe6a06097f34fc}
+      \strng{authorbibnamehash}{4ab0615438898614c4fe6a06097f34fc}
+      \strng{authornamehash}{4ab0615438898614c4fe6a06097f34fc}
+      \strng{authorfullhash}{4ab0615438898614c4fe6a06097f34fc}
+      \field{labelalpha}{MR04}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Mem. Amer. Math. Soc.}
+      \field{number}{799}
+      \field{title}{Kolyvagin systems}
+      \field{volume}{168}
+      \field{year}{2004}
+      \field{pages}{viii+96}
+      \range{pages}{-1}
+    \endentry
+    \entry{Rubin}{book}{}
+      \name{author}{1}{}{%
+        {{hash=36c8e0559efe2dd98d3833fcaf2a18d5}{%
+           family={Rubin},
+           familyi={R\bibinitperiod},
+           given={Karl},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Princeton University Press, Princeton, NJ}%
+      }
+      \strng{namehash}{36c8e0559efe2dd98d3833fcaf2a18d5}
+      \strng{fullhash}{36c8e0559efe2dd98d3833fcaf2a18d5}
+      \strng{bibnamehash}{36c8e0559efe2dd98d3833fcaf2a18d5}
+      \strng{authorbibnamehash}{36c8e0559efe2dd98d3833fcaf2a18d5}
+      \strng{authornamehash}{36c8e0559efe2dd98d3833fcaf2a18d5}
+      \strng{authorfullhash}{36c8e0559efe2dd98d3833fcaf2a18d5}
+      \field{labelalpha}{Rub00}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Hermann Weyl Lectures. The Institute for Advanced Study}
+      \field{series}{Annals of Mathematics Studies}
+      \field{title}{Euler systems}
+      \field{volume}{147}
+      \field{year}{2000}
+      \field{pages}{xii+227}
+      \range{pages}{-1}
+    \endentry
+    \entry{Sakamoto18}{article}{}
+      \name{author}{1}{}{%
+        {{hash=cb73ace61a4173770d59c0a95305476d}{%
+           family={Sakamoto},
+           familyi={S\bibinitperiod},
+           given={Ryotaro},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Mathematical Sciences Publishers}%
+      }
+      \strng{namehash}{cb73ace61a4173770d59c0a95305476d}
+      \strng{fullhash}{cb73ace61a4173770d59c0a95305476d}
+      \strng{bibnamehash}{cb73ace61a4173770d59c0a95305476d}
+      \strng{authorbibnamehash}{cb73ace61a4173770d59c0a95305476d}
+      \strng{authornamehash}{cb73ace61a4173770d59c0a95305476d}
+      \strng{authorfullhash}{cb73ace61a4173770d59c0a95305476d}
+      \field{labelalpha}{Sak18}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Algebra and Number Theory}
+      \field{number}{10}
+      \field{title}{Stark systems over Gorenstein local rings}
+      \field{volume}{12}
+      \field{year}{2018}
+      \field{pages}{2295\bibrangedash 2326}
+      \range{pages}{32}
+    \endentry
+    \entry{Sweeting}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=552f0584a8cdcbbd4adf8b668a7d389a}{%
+           family={Sweeting},
+           familyi={S\bibinitperiod},
+           given={Naomi},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{552f0584a8cdcbbd4adf8b668a7d389a}
+      \strng{fullhash}{552f0584a8cdcbbd4adf8b668a7d389a}
+      \strng{bibnamehash}{552f0584a8cdcbbd4adf8b668a7d389a}
+      \strng{authorbibnamehash}{552f0584a8cdcbbd4adf8b668a7d389a}
+      \strng{authornamehash}{552f0584a8cdcbbd4adf8b668a7d389a}
+      \strng{authorfullhash}{552f0584a8cdcbbd4adf8b668a7d389a}
+      \field{labelalpha}{Swe22}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.NT}
+      \field{eprinttype}{arXiv}
+      \field{title}{Kolyvagin's Conjecture and patched Euler systems in anticyclotomic Iwasawa theory}
+      \field{year}{2022}
+      \verb{eprint}
+      \verb 2012.11771
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2012.11771
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2012.11771
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

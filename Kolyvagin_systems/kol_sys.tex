@@ -1,0 +1,1328 @@
+\section{Galois cohomology}
+\label{sec:gc}
+
+\subsection{Local Galois cohomology}
+
+
+Let $R$ be a complete, noetherian, local principal ring with finite residue field of characteristic $p>2$ and let $\m$ denote its maximal ideal.\footnote{Some results are valid only when $R$ is artinian. In those cases, we will state the result for $R/\m^k$ for some positive integer $k$.} Let $T$ be a free $R$-module of finite rank with an $R$-linear continuous action of the absolute Galois group $G_\Q$ of the rational numbers. We will denote the Cartier dual of $T$ by $T^*=\Hom(T,\mu_{p^\infty})$.
+
+For every rational prime $\ell$, we fix an inclusion of the algebraic closures $\overline \Q\hookrightarrow \overline \Q_\ell$. This choice determines an inclusion $G_{\Q_\ell}\subset G_\Q$. We will consider the Galois cohomology group
+$$H^1(\Q_\ell, T):=H^1(G_{\Q_\ell}, T)$$
+
+Let $\II_\ell$ be the inertia subgroup of $G_{\Q_\ell}$, i.e., the absolute Galois group of the maximal unramified extension $\Q_{\ell, \textrm{ur}}$ of $\Q_\ell$.% There is an important subgroup of the local Galois cohomology group.
+\begin{definition}
+Let $\ell$ be a prime different form $p$. The \emph{finite} cohomology subgroup $H^1_\f(\Q_\ell, T)\subset H^1(\Q_\ell, T)$ is the kernel of the restriction map
+$$H^1(\Q_\ell, T)\to H^1(\II_\ell, T\otimes \mathbb Q_p)$$
+We will also denote
+$$H^1_\s(\Q_\ell, T)\cong H^1(\Q_\ell, T)/H^1_\f(\Q_\ell,T)$$
+\end{definition}
+
+\begin{proposition}(\cite[lemma 1.3.5]{Rubin})
+If $T$ is unramified at $\ell\neq p$, then 
+$$H^1_\f(\Q_\ell, T)=H^1(\Q_{\ell, ur}/\Q_\ell, T^{G_{\Q_{\ell, \textrm{ur}}}})=\ker\left(H^1(\Q_\ell, T)\to H^1(\II_\ell, T)\right)$$
+\end{proposition}
+
+
+For certain primes, the finite cohomology group helps to describe the whole cohomology group. 
+
+\begin{definition} 
+Fix a natural number $k\in \N$. Let $\PP_k$ be the set of prime numbers $\ell$ satisfying the following assumptions:
+\begin{itemize}
+\item\namedlabel{P1modp}{(P1)} $\ell\equiv 1\mod p^k$.
+\item\namedlabel{P1dim}{(P2)} $T/(\m^k, \Frob_\ell-1) T$ is a free $R/\m^k$-module of rank $1$, where $\Frob_\ell$ is te¡he arithmetic Frobenius at $\ell$.
+\end{itemize}
+The set of square-free products of primes in $\PP_k$ will be denoted by $\NN_k=\NN(\PP_k)$. For every $n\in \NN_k$, we write $\nu(n)$ for the number ofx primes dividing $n$.
+\end{definition}
+
+In order to make the computations of the primes $\PP_k$ in the particular example described in \textsection \ref{sec:EC}, it is interesting to define $\PP_k$ relative to an extension $F/\Q$.
+
+\begin{definition}
+Let $k\in \N$ be a natural number and let $F/\Q$ be a Galois extension. Define $\PP_{k,F}$ as the subset of primes $\ell$ in $\PP_k$ such that 
+\begin{itemize}
+\item \namedlabel{Psplits}{(P3)} $\ell$ splits completely in $F/\Q$.
+\end{itemize}
+\end{definition}
+
+\begin{remark}
+Let $L$ be the field associated to the kernel of the map $G_\Q\to \textrm{Aut}(E[p^k])$. By the Chebotarev density theorem, if $\PP_k$ is non-empty and $L\cap F=\Q$, then $\PP_{k,F}$ is an infinite set.
+\end{remark}
+
+
+\begin{lemma} (\cite[lemma 1.2.1]{MazurRubin})
+Assume $\ell$ satisfies \ref{P1modp} and denote by $\GG_\ell$ the $p$-primary part of the Galois group of $\Q(\mu_\ell)/\Q$, where $\mu_\ell$ is the set of $\ell^{\textrm{th}}$ roots of unity. Then there are canonical functorial isomorphisms:
+\begin{itemize}
+\item $H^1_\f(\Q_\ell, T/\m^k)\cong T/(\m^k,\Frob_\ell-1) T$.
+\item $H^1_\s(\mathbb Q_\ell, T/\m^k)\otimes \GG_\ell \cong (T/\m^kT)^{\Frob_\ell=1}$.
+\end{itemize}
+\label{lem:mr121}
+\end{lemma}
+
+
+For every prime $\ell$ in $\PP_k$, it is possible to define the finite-singular map $\phi_\ell^\fs$ as follows. Consider the polynomial
+$$P_\ell(x):=\det(1-\Frob_\ell\, x|T/\m^k)\in R/\m^k[x]$$
+Assume $P_\ell(1)=0$. Then there is a unique polynomial $Q(x)\in R/\m^k[x]$ such that $P_\ell(x)=(x-1) Q(x)$. By the Cayley-Hamilton theorem, $P_\ell(\Frob_{\ell}^{-1})$ annihilates $T/\m^kT$, so $Q(\Frob_\ell^{-1}) T/\m^k\subset (T/\m^k T)^{\Frob_\ell=1}$. Hence we can define the map $\phi_\ell^{\fs}$ as the composition
+%$$\mathclap{\xymatrix{H^1_f(\Q_\ell, T/\m^k)\ar[r]^{\sim\ \ \ \ \ \ } & T/(\m^k,\Frob_\ell-1) T\ar[r]^{Q} & (T/\m^k T)^{\Frob_\ell=1} \ar[r]^{\sim\ \ \ \ \ \ }&H^1_s(\Q_\ell, T/\m^k)\otimes G_\ell} }$$
+
+\begin{center}
+    \begin{tikzpicture}[descr/.style={fill=white,inner sep=1.5pt}]
+    
+            \matrix (m) [
+                matrix of math nodes,
+                row sep=4em,
+                column sep=3em,
+                text height=1.5ex, text depth=0.25ex
+            ]
+            {H^1_\f\left(\Q_\ell, \frac{T}{\m^kT}\right)&
+            \frac{T}{(\m^k,\Frob_\ell-1) T}&
+            \left(\frac{T}{\m^k T}\right)^{\Frob_\ell=1}&
+            H^1_\s\left(\Q_\ell, \frac{T}{\m^kT}\right)\otimes \GG_\ell\\
+            };
+    
+            \path[overlay,->, font=\scriptsize,>=latex]
+            (m-1-1) edge node[auto]{$\sim$} (m-1-2)
+            (m-1-2) edge node[auto]{$Q(\Frob_\ell^{-1}$)} (m-1-3)
+            (m-1-3) edge node[auto]{$\sim$} (m-1-4);
+    \end{tikzpicture}
+\end{center}
+
+
+\begin{lemma}(\cite[lemma 1.2.3]{MazurRubin})
+If $\ell\in \PP_k$, then $\det(1-\Frob_\ell|T/\m^k)=0$ and the map $\phi_\ell^{\fs}$ is an isomorphism.
+\label{lem:mr123}
+\end{lemma}
+
+
+
+Another important subgroup of the local Galois cohomology group is the transverse subgroup, which is defined via the cohomological inflation
+$$H^1_\tr(\Q_\ell, T/\m^k)=\textrm{Im}\left(\textrm{Inf}: H^1(\Q_\ell(\mu_\ell)/\Q_\ell, T/\m^k)\hookrightarrow H^1(\Q_\ell, T/\m^k)\right)$$
+
+
+\begin{lemma}(\cite[lemma $1.2.4$]{MazurRubin})
+Assume $\ell$ satisfies \ref{P1modp}. Then there is a functorial splitting
+$$H^1(\Q_\ell, T/\m^k)=H^1_\f(\Q_\ell, T/\m^k)\oplus H^1_{\tr}(\Q_\ell, T/\m^k)$$
+\label{lem:local_split}
+\end{lemma}
+
+
+The most important feature about the finite local cohomology is that it behaves well under Tate duality.
+\begin{proposition}(\cite[proposition 1.3.2]{MazurRubin})
+Let $\ell$ be a finite prime. The cup product induces a perfect pairing
+$$H^1(\Q_\ell,T)\times H^1(\Q_\ell, T^*)\to H^2(\Q_\ell, \mu_{p^\infty})\cong \Q_p/\Z_p$$
+If $T$ is unramified at $\ell\neq p$, then
+\begin{enumerate}
+\item $H^1_\f(\Q_\ell,T)$ and $H^1_\f(\Q_\ell, T^*)$ are orthogonal complements under this pairing.
+\item If $\ell$ satisfies \ref{P1modp} for some $k\in \N$, then $H^1_{\tr}(\Q_\ell, T/\m^k)$ and $H^1_{\tr}(\Q_\ell, T^*[\m^k])$ are orthogonal complements.
+\end{enumerate}
+\label{prop:local_duality}
+\end{proposition}
+
+\begin{corollary}
+Given a prime $\ell\in \PP_k$, the finite and singular cohomology groups $H^1_\f(\Q_\ell,T/\m^k)$, $H^1_\s(\Q_\ell, T/m^k)$, $H^1_\f(\Q_\ell,T^*[\m^k])$ and $H^1_\s(\Q_\ell,T^*[\m^k])$ are free $R/\m^k$-modules of rank one.
+\label{cor:local_coh_cyclic}
+\end{corollary}
+
+\begin{proof}
+By \ref{P1dim} and lemma \ref{lem:mr121}, $H^1_\f(\Q_\ell, T/\m^k)$ is free of rank one over $R/\m^k$. By lemma \ref{lem:mr123}, the finite-singular map $\phi_\ell^{\fs}$ is an isomorphism, so $H^1_\s(\Q_\ell,T)$ is a rank one free $R/\m^k$-module too.
+
+Proposition \ref{prop:local_duality} implies the following:
+\[\begin{array}{cc}
+H^1_\f(\Q_\ell,T^*[\m^k])\cong H^1_\s(\Q_\ell, T/\m^k)^\vee;\ \ \ &
+H^1_\s(\Q_\ell,T^*[\m^k])\cong H^1_\f(\Q_\ell, T/\m^k)^\vee.\ \ \end{array}\]
+Hence $H^1_\f(\Q_\ell,T^*[\m^k])$ and $H^1_\s(\Q_\ell,T^*[\m^k])$ are also free $R/\m^k$-modules of rank one.
+\end{proof}
+
+
+
+
+
+
+\subsection{Selmer structures}
+\label{sec:global}
+
+
+
+An important tool to study the cohomology of the global absolute Galois group is the use of Selmer structures. Assume that $T$ is unramified outside a finite set of primes $S$, i.e., that for every $\ell\notin S$, the inertia group $\II_\ell$ acts trivially on $T$.
+
+
+\begin{definition}
+A \emph{Selmer structure} $\mathcal F$ on $T$ is a collection of the following data
+\begin{itemize}
+\item a finite set $\Sigma(\mathcal F)$ of places of $\Q$, including $\infty$, $p$ and all primes where $T$ is ramified.
+\item for every $\ell\in \Sigma(\mathcal F)$, an $R[[G_{\Q_\ell}]]$-submodule $H^1_\mathcal F(\Q_\ell,T)\subset H^1(\Q_\ell, T)$, where $G_{\Q_\ell}$ is the absolute Galois group of $\Q_\ell$. This choice is usually referred to as a \emph{local condition} at the prime $\ell$.
+\end{itemize}
+\label{def:selmer_structure}
+\end{definition}
+
+\begin{definition}
+The \emph{Selmer module} $H^1_\FF(\Q,T)\subset H^1(\Q,T)$ associated to a Selmer structure $\FF$ is the kernel of the sum of restriction maps
+$$H^1(\Q_{\Sigma(\FF)}/\Q,T)\to \bigoplus_{\ell\in \Sigma(\FF)} H^1(\Q_\ell,T)/H^1_\FF(\Q_\ell,T)$$
+where $\Q_\Sigma(\FF)$ is the maximal extension of $\Q$ unramified outside $\Sigma(\FF)$.
+\end{definition}
+
+\begin{remark}
+Given a Selmer structure $\FF$, we will denote $H^1_\FF(\Q_\ell, T)=H^1_\f(\Q_\ell,T)$ for every prime $\ell\notin \Sigma(\FF)$.
+\end{remark}
+
+\begin{definition}
+Let $\FF$ be a Selmer structure defined on $T$. If $T'\hookrightarrow T$ is an injection, $\FF$ induces a Selmer structure where the local conditions $H^1_\FF(\Q_\ell, T')$ are the inverse images of $H^1_\FF(\Q_\ell,T)$ under the natural map $H^1(\Q_\ell,T')\to H^1(\Q_\ell, T)$.\\
+If $T\twoheadrightarrow T''$ is a surjection, $\FF$ induces a Selmer structure on $T''$ where the local conditions $H^1(\Q_\ell, T'')$ are the images $H^1(\Q_\ell, T)$ under the map $H^1(\Q_\ell,T)\to H^1(\Q_\ell, T'')$.
+\label{def:induced_str}
+\end{definition}
+
+\begin{definition}
+Given a Selmer structure $\FF$ on $T$, there is a dual Selmer structure $\FF^*$ on $T^*$ where, for every prime $\ell$, the local conditions $H^1_{\FF^*}(\Q_\ell,T^*)$ is the orthogonal complement of $H^1_\FF(\Q_\ell,T)$ under the pairing defined in proposition \ref{prop:local_duality}. Note $\FF^*$ is well defined by proposition \ref{prop:local_duality}
+\end{definition}
+
+
+In order to compare Selmer structures, Poitou-Tate global duality is helpful.
+\begin{proposition}(\cite[theorem 2.3.4]{MazurRubin})
+Let $\FF$ and $\GG$ be Selmer structures of $T$ such that $H^1_{\FF}(\Q_\ell, T)\subset H^1_{\GG}(\Q_\ell,T)$ for every prime $\ell$. Then the following sequence is exact.
+
+
+\begin{center}
+\begin{tikzpicture}[descr/.style={fill=white,inner sep=1.5pt}]
+        \matrix (m) [
+            matrix of math nodes,
+            row sep=3.5em,
+            column sep=3em,
+            text height=1.5ex, text depth=0.25ex
+        ]
+        { 0 & H^1_{\FF}(\Q,T) & H^1_{\GG}(\Q,T) & \displaystyle{\bigoplus_{\ell\in \Sigma(\FF)\cup\Sigma(\GG)} \frac{H^1_{\GG}(\Q_\ell,T)}{H^1_{\FF}(\Q_\ell,T)}} \\
+            & H^1_{\FF^*}(\Q,T^*)^\vee & H^1_{\GG^*}(\Q,T^*)^\vee& 0 &\\
+        };
+
+        \path[overlay,->, font=\scriptsize,>=latex]
+        (m-1-1) edge (m-1-2)
+        (m-1-2) edge (m-1-3)
+        (m-1-3) edge (m-1-4)
+        (m-1-4) edge [out=355,in=175] (m-2-2) 
+        (m-2-2) edge (m-2-3)
+        (m-2-3) edge (m-2-4);
+        
+\end{tikzpicture}
+\end{center}
+where the third map is induced by proposition \ref{prop:local_duality}.
+\label{prop:global_duality}
+\end{proposition}
+
+
+
+
+In order to compute the structure of a Selmer group, it is helpful to make use of slightly modified Selmer structures.
+\begin{definition}
+Given a Selmer structure $\mathcal F$ defined on $T$ and square-free and pairwise relatively prime integers $a$, $b$ and $c$, we define a new Selmer structure $\mathcal F_a^b(c)$ given by the following data\footnote{If any of $a$, $b$ or $c$ is not explicitly written, we will assume it to be one.}
+\begin{itemize}
+\item $\Sigma(\FF_a^b(c)):=\Sigma(\mathcal F)\cup\{\ell|abc\}$
+\item $H^1_{\FF_a^b(c)}(\Q,T)=\left\{\begin{aligned}
+&H^1(\Q_\ell,T)\ &\textrm{if }\ell|a\\
+&0\ &\textrm{if }\ell|b\\
+&H^1_{\tr}(\Q_\ell,T)\ &\textrm{if }\ell|c\\
+&H^1_\FF(\Q_\ell,T)\ &\textrm{otherwise}
+\end{aligned}\right.$
+\end{itemize}
+\end{definition}
+
+
+
+
+
+
+We now define the notion of Selmer triples
+\begin{definition}
+A \emph{Selmer triple} is a triple $(T,\FF,\PP)$ where $\FF$ is a Selmer structure on $T$ and $\mathcal P$ is a set of rational primes disjoint from $\Sigma(\FF)$.
+\end{definition}
+
+
+
+
+
+
+For technical reasons, we need to assume the following mild hypotheses in our Selmer triples:
+\begin{itemize}
+\item\namedlabel{Hffr}{(H0)} $T$ is a free $R$-module of finite rank.
+\item\namedlabel{Hirred}{(H1)} $T/\m T$ is an absolutely irreducible $R/\m[G_\Q]$-representation.%, where $\m$ is the maximal ideal of $R$ and $k$ its residue field.
+\item\namedlabel{Hcoh0}{(H2)} $H^1(\Q(T,\mu_{p^\infty})/\Q,T/\m T)=H^1(\Q(T,\mupi)/\Q,T^*[\m])=0$, where $\Q(T,\mu_{p^\infty})$ is the minimal extension of $\Q$ whose Galois group acts trivially on $T$, $T^*$ and $\mu_{p^\infty}$.
+
+\item\namedlabel{Hsur}{(H3)} There is a $\tau\in G_\Q$ such that $\tau=1$ on $\mu_{p^\infty}$ and $T/(\tau-1)T$ is free of rank one over $R$.
+\item\namedlabel{Hchev}{(H4)} Either
+\begin{itemize}
+\item\namedlabel{Hchev_hom}{(H4a)} $\Hom_{\F_p[G_\Q]}(T/\m T,T^*[\m])=0$ or
+\item\namedlabel{Hchev_5}{(H4b)} $p\geq 5$.
+\end{itemize}
+\item\namedlabel{Hloc}{(H5)} There is a prime $q$ such that $H^1_{\s}(\Q_q,T)\cong R$ and $H^2(\Q_q, T)=0$.
+
+\item\namedlabel{Hcartesian}{(H6)} For every $\ell\in\Sigma(\mathcal F)$, the local condition of $\mathcal F$ at $\ell$ is cartesian in the category of quotients of $T$, in the sense of \cite[definition 1.1.4]{MazurRubin}.
+\item\namedlabel{Hcore0}{(H7)} The core rank $\chi(\FF)$ is zero (see theorem \ref{th:core_rank}), i.e., for every $n\in\mathcal N(\mathcal P)$ and $j\in \Z_{\geq0}$ there is a non-canonical isomorphism
+$$H^1_{\mathcal F(n)}(\Q,T/\m^j)\cong H^1_{\mathcal F^*(n)}(\Q,T^*[\m^j])$$
+
+\item \namedlabel{Hprimes}{(H8)} There exists some $k\in \mathbb N$ and some Galois extension $F/\Q$ such that $F\cap \Q(T/p^k)=\Q$ and $\left(\PP_{k,F}\setminus \Sigma(\FF)\right)\subset \PP\subset \PP_1 $.
+\end{itemize}
+
+\begin{remark} (\cite[remark 3.5.1]{MazurRubin})
+Suppose that $(T,\FF,\PP)$ satisfies hypotheses \ref{Hffr}-\ref{Hprimes}. Then $(T/\m^k, \FF,\PP)$ also satisfies \ref{Hffr}-\ref{Hprimes} for every $k\in \Z_{\geq}0$.
+\label{rem:Hi_quot}
+\end{remark}
+
+
+All of the above hypothesis except for \ref{Hloc} and \ref{Hcore0} were imposed by Mazur and Rubin in \cite[\textsection $3.5$]{MazurRubin} to develop the basic theory of Kolyvagin systems when $\chi(\FF)=1$. 
+
+\ref{Hirred}, \ref{Hcoh0} and \ref{Hcartesian} are necessary to ensure that the Selmer group in the cohomology with torsion coefficient rings $H^1_\FF(\Q,T/\m^j)$ (resp. $H^1_{\FF^*}(\Q,T^*[\m^j])$) coincides with the $\m^j$-torsion of the full Selmer group $H^1_{\FF}(\Q,T)$ (resp. $H^1_{\FF^*}(\Q,T^*)$). This is explained in the following lemmas.
+
+\begin{lemma}(\cite[lemma 3.5.3]{MazurRubin})
+Assume that \ref{Hirred} and \ref{Hcoh0} hold. For every $j\in \Z_{\geq 0}$, the inclusion $T^*[\m^j]\hookrightarrow T$ induces an isomorphism:
+\[H^1_{\FF^*}(\Q,T^*[\m^j])\cong H^1_{\FF^*}(\Q,T^*)[\m^j]\]
+\label{lem:mr353}
+\end{lemma}
+
+\begin{lemma}(\cite[lemma 3.5.4]{MazurRubin})
+    Assume further that $R$ is artinian of length $k$ and that \ref{Hirred}, \ref{Hcoh0} and \ref{Hcartesian} hold. If $\pi$ be a generator of $\m$, the multiplication by $\pi^{k-j}$ induces a map $T/\m^j\hookrightarrow T$, which in turn induces an isomorphism in the cohomology groups:
+    \[H^1_{\FF^*}(\Q,T/\m^j)\cong H^1_{\FF^*}(\Q,T)[\m^j]\]
+    \label{lem:mr354}
+    \end{lemma}
+
+
+\ref{Hsur}, \ref{Hchev} and \ref{Hprimes} are required to ensure there exists infinitely many Kolyvagin primes satisfying \ref{P1modp} and \ref{P1dim} that bound the Selmer group appropriately. Assumption \ref{Hprimes} is slightly weaker than the corresponding hypothesis in \cite{MazurRubin}. It does not suppose any inconvenience in the proofs of this reference and permits a cleaner description of the Kolyvagin primes in the example in \textsection\ref{sec:EC}.
+
+\ref{Hcore0} is imposed because we want to generalise the theory in \cite{MazurRubin} to the case of core rank 0. However, those Selmer structures do not admit any non-trivial Kolyvagin systems. Therefore, \ref{Hloc} is required to modify the structure in order to link it with a Selmer structure of rank one, $\FF_q$, which the theory in \cite{MazurRubin} can be applied to. Note that, by local Tate duality, the condition $H^2(\Q_q,T)$ is equivalent to $H^0(\Q_q, T^*)=0$. 
+
+
+
+
+
+
+Assumption \ref{Hloc} can be understood in terms of the cohomology groups with torsion coefficients. The long exact sequence implies the following lemma.
+
+\begin{lemma}
+Assume that a prime $q$ satisfies \ref{Hloc}. Then for every $j\in \Z_{\geq 0}$ there is an isomorphism
+$$H^1_\s(\Q_q,T/\m^j)\cong R/\m^j$$
+\label{lem:Hloc_tors}
+\end{lemma}
+
+\begin{proof}
+Since $H^2(\Q_q,T)=0$, the long exact sequence induces an isomorphism
+$$H^1(\Q_q,T)/\m^j H^1(\Q_q,T)\xrightarrow{\sim} H^1(\Q_q,T/\m^jT)$$
+Since $H^1_\f(\Q_q, T/\m^j T)$ is the image of $H^1_\f(\Q_q,T)$, we get that
+$$H^1_\s(\Q_q, T/\m^j T)\cong H^1_\s(\Q_q, T)/\m^j H^1_\s(\Q_q, T)\cong R/\m^j$$\qedhere
+\end{proof}
+
+
+
+
+
+
+
+Some elements in $\NN(\PP)$ will play an important role in the theory of Kolyvagin systems.
+
+\begin{definition}
+An element $n\in \NN(\PP)$ is said to be a \emph{core vertex} if either $H^1_{\FF(n)}(\Q,T)=0$ or $H^1_{\FF^*(n)}(\Q,T^*)=0$.
+\end{definition}
+
+\begin{proposition}(\cite[corollary 4.1.9]{MazurRubin})
+For every $n\in \NN(\PP)$, there is some core vertex $m\in \NN(\PP)$ such that $n|m$.
+\label{prop:core_vertex}
+\end{proposition}
+
+The concept of core rank plays a vital role in the study of Selmer structures.
+
+\begin{theorem}(\cite[theorem 4.1.5]{MazurRubin})
+    There exists some $x,y\in \Z_{\geq 0}$, one of which can be taken to be $0$, such that for every $n\in \NN(\PP)$ and every $j\in \Z_{\geq0}$ there is a non-canonical isomorphism
+    $$H^1_{\FF(n)}(\Q,T/\m^j)\oplus (R/\m^j)^x\approx H^1_{\FF^*(n)}(\Q,T^*[\m^j])\oplus (R/\m^j)^y$$
+    The integer $\chi(T,\FF)=y-x$ is said to be the \emph{core rank} of $\FF$.
+    \label{th:core_rank}
+    \end{theorem}
+
+
+\begin{proposition}(\cite[corollary 3.21]{Sakamoto18})
+    Let $(T,\FF,\PP)$ be a Selmer triple and let $a,b,c\in \NN_k$ be pairwise relatively prime. Then
+    $$\chi(T/\m^k,\FF_a^b(c))=\chi(T/\m^k,\FF)+\nu(b)-\nu(a)$$
+    \label{prop:core_abc}
+    \end{proposition}
+    
+    
+    \begin{remark}
+    Proposition \ref{prop:core_abc} is also true when $a,b\in \mathcal N(\PP')$, where $\PP'$ denotes the set of primes $\ell$ such that $H^1_\s(\Q_\ell,T/\m^k)$ is free of rank one over $R/\m^k$. 
+    \label{rem:core_abc}
+    \end{remark}
+
+
+
+The key idea of this work is that we can bound the Selmer group by using appropriate primes, whose existence is known due to the Chebotarev density theorem. To be precise, we will now state the result needed.
+
+
+
+\begin{proposition}(\cite[proposition 3.6.1]{MazurRubin})
+Let $c_1,c_2\in H^1(\Q,T)\setminus\{0\}$ and let $c_3,c_4\in H^1(\Q,T^*)\setminus\{0\}$. For every $k\in \N$, there exists an infinite set of primes $S\subset \PP_k$ such that
+$$\loc_\ell(c_i)\neq 0\ \ \forall \ell\in S,\ \forall i=1,2,3,4$$
+\label{prop:mr361}
+\end{proposition}
+
+The main consequence of this proposition is that it can be used to find primes whose finite localisation maps are surjective.
+
+\begin{corollary}
+Let $(T,\FF,\PP)$ be a Selmer triple satisfying \ref{Hffr}-\ref{Hprimes} and let $j\in\NN$ be such that $\m^{j-1} H^1_\FF(\Q,T)\neq 0$. Then there are infinitely many primes $\ell \in \PP$ such that 
+\[\loc_\ell\bigl(H^1_{\FF}(\Q,T/\m^j)\bigr)=H^1_f(\Q_\ell,T/\m^j)\]
+Assume further than $\m^{j-1} H^1_\FF(\Q,T^*)\neq 0$. Then there are infinitely many primes $\ell\in \PP$ such that both localisation maps
+\[\begin{array}{cc}
+    \loc_\ell^\f\bigl(H^1_{\FF}(\Q,T/\m^j)\bigr)=H^1_\f(\Q_\ell,T/\m^j),\ &
+    \loc_\ell^\f\bigl(H^1_{\FF}(\Q,T^*[\m^j])\bigr)=H^1_\f(\Q_\ell,T^*[\m^j])
+\end{array}\]
+are surjective.
+\label{cor:loc_sur}
+\end{corollary}
+
+\begin{proof}
+By lemmas \ref{lem:mr353} and \ref{lem:mr354}, we can find some elements $d_1\in H^1_\FF(\Q,T/m^j)$ and $d_3\in H^1_{\FF}(\Q,T^*[\m])$ such that $\m^{j-1} d_1\neq 0$ and $\m^{j-1} d_3\neq 0$. Consider $c_1=\pi^{j-1} d_1$ and $c_3=\pi^{j-1} d_3$, where $\pi$ is some generator of $\m$. Since both $c_1$ and $c_3$ are nonzero, proposition \ref{prop:mr361} guarantees the existence of infinitely many primes $\ell\in\PP\cap \PP_j$ such that $\loc_\ell(c_1)$ and $\loc_\ell(c_3)$ are non-zero. Moreover, since $c_1$ and $c_3$ belong to the Selmer groups, their localisation belong to the finite cohomology groups, so $\loc_\ell^\f(c_1)\neq 0$ and $\loc_\ell^\f(c_3)\neq 0$. By corollary \ref{cor:local_coh_cyclic}, $H^1_f(\Q_\ell,T/\m^j)$ and $H^1_f(\Q_\ell, T^*[\m^j])$ are free of rank one over $R/\m^j$. Therefore, the only way the localizations of $c_1$ and $c_3$ do not vanish is when $\loc_\ell^f(d_1)$ generates $H^1_f(\Q_\ell, T/\m^j)$ and $\loc_\ell^f(d_3)$ generates $H^1_f(\Q_\ell,T^*[\m^j])$.
+\end{proof}
+
+
+
+This result alongside the following lemma plays a central role in the proof of theorem \ref{th:mr459} below.
+
+\begin{lemma}(\cite[lemma 4.1.7(ii)]{MazurRubin})
+Let $\ell\in \PP_k$ be a prime not dividing $n\in\NN_k$. If the localisation map $$\loc_\ell^\f: H^1_{\FF(n)}(\Q,T/\m^k)\to H^1_{\f}(\Q_\ell, T/\m^k)$$ is surjective, then
+$$H^1_{\FF^*(n\ell)}(\Q,T^*[\m^k])=H^1_{\FF^*_\ell(n)}(\Q,T^*[\m^k])$$
+\label{lem:mr417}
+\end{lemma}
+
+
+The above two results imply the following
+\begin{corollary}(\cite[proposition 4.5.8]{MazurRubin})
+Assume that $\chi(\FF)>0$ and that $H^1_{\FF^*}(\Q,T^*[\m^k])\approx R/\m^{e_1}\times \cdots\times R/\m^{e_s}$ for some integers $e_1\geq e_2\geq\ldots \geq e_s$. Then there are infinitely many primes $\ell$ such that 
+$$H^1_{\FF^*(\ell)}(\Q,T^*[\m^k])\approx R/\m^{e_2}\times \cdots\times R/\m^{e_s}$$
+\label{cor:mr458}
+\end{corollary}
+
+
+However, the above lemma is only useful when $\chi(\FF)\geq 0$ because we can generate, due to Chebotarev density theorem, primes $\ell$ such that $\loc_\ell^\f$ is surjective. In the case $\chi(\FF)=0$, those primes might not exist but we can still get the following partial result.
+
+\begin{lemma}
+Assume that $\chi(\FF)=0$ and that $H^1_{\FF^*}(\Q,T^*[\m^k])\cong R/\m^{e_1}\times \cdots\times R/\m^{e_s}$ for some integers $e_1\geq e_2\geq\ldots \geq e_s$. Then there are infinitely many primes $\ell\in \PP_k$ such that 
+$$H^1_{\FF^*(\ell)}(\Q,T^*[\m^k])\approx R/{\m^j}\times R/\m^{e_3}\times \cdots\times R/\m^{e_s}$$
+where $e_2\leq j\leq k$. In the case when $e_1>e_2$, then $j=e_2$ holds true for infinitely many primes $\ell\in \PP_k$.
+\label{lem:cr0}
+\end{lemma}
+
+\begin{proof}
+Since $\chi(\FF)=0$, 
+$$H^1_{\FF}(\Q,T/\m^k)\approx R/\m^{e_1}\times\cdots \times R/\m^{e_s}$$
+Applying proposition \ref{prop:mr361} for some nonzero $c_1\in \m^{e_1-1} H^{1}_{\FF}(\Q,T/\m^{e_1})$ and some nonzero $c_3\in \m^{e_1-1} H^{1}_{\FF^*}(\Q,T[\m^{e_1}]^*)$, we can find infinitely many primes $\ell\in \PP_{k}\subset \PP_{e_1}$ such that the localisation maps
+$$\begin{array}{cc}
+\loc_\textrm f^\ell: H^1_{\FF}(\Q,T/\m^{e_1})\to H^1_\textrm{f}(\Q_\ell, T/\m^{e_1}),\ \ & \loc_\textrm f^\ell:H^1_{\FF^*}(\Q,T^*[\m^{e_1}])\to H^1_\f(\Q,T^*[\m^{e_1}])
+\end{array}$$
+are surjective. Since $\ell\in \PP_{e_1}$, both $H^1_\f(\Q_\ell, T/\m^{e_1})$ and $H^1_\f(\Q_\ell,T^*[e_1])$ are free $R/\m^{e_1}$-modules of rank one by corollary \ref{cor:local_coh_cyclic}. 
+
+By lemma \ref{lem:mr417},
+\[H^1_{\FF^*(\ell)}(\Q,T^*[\m^k])[\m^{e_1}]\cong H^1_{\FF^*(\ell)}(\Q,T^*[\m^{e_1}])=H^1_{\FF^*_\ell}(\Q,T^*[\m^{e_1}])\approx R/\m^{e_2}\times \cdots \times R/\m^{e_s}\]
+
+By lemma \ref{lem:mr353},
+\[H^1_{\FF^*(\ell)}(\Q,T^*[\m^k])[\m^{e_1}]\cong H^1_{\FF^*_\ell}(\Q,T^*[\m^{e_1}])\approx R/\m^{e_2}\times \cdots \times R/\m^{e_s}\]
+
+Since $\chi(\FF^\ell)=1$ by proposition \ref{prop:core_abc}, then theorem \ref{th:core_rank} implies that
+$$H^1_{\FF^*(\ell)}(\Q,T^*[\m^k])\approx H^1_{\FF(\ell)}(\Q,T/\m^k)\subset H^1_{\FF^\ell}(\Q,T/\m^k)\approx R/\m^k\oplus H^1_{\FF_\ell^*}(\Q,T^*[\m^k])$$
+Therefore, $H^1_{\FF^*(\ell)}(\Q,T^*[\m^k])$ is an $R/\m^k$-module which can be injected into $R/\m^k\times R/\m^{e_2}\times\cdots \times R/\m^{e_s}$ and whose $\m^{e_1}$-torsion is isomorphic to $R/\m^{e_2}\times \cdots \times R/\m^{e_s}$. Under those considerations, the lemma follows by the structure theorem of $R/\m^k$-modules. 
+\end{proof}
+
+
+
+Given a Galois representation $T$ defined over a discrete valuation ring $\OO$, there are some natural Selmer structures that can be defined on $T$. The first example is called the \emph{canonical Selmer structure}. The finite cohomology group is a well behaved local condition for primes different from $p$ and $\infty$. The idea behind the canonical example is to consider the local conditions at those primes to be the whole local cohomology groups.
+
+\begin{definition}
+    Let $T$ be a Galois representation over a discrete valuation ring of residual characteristic $p>0$. Then the canonical local conditions are defined as
+    $$\left\{\begin{aligned}
+& H^1_{\Fcan}(\Q_\ell,T)=H^1_\f(\Q_\ell, T)\ \ \textrm{if}\ \ell\neq p\\
+&H^1_{\Fcan}(\Q_p,T)=H^1(\Q_p,T)\\
+&H^1_{\Fcan}(\R,T)=H^1(\R,T)
+\end{aligned}\right.$$
+\label{def:Fcan_str}
+\end{definition}
+
+The canonical structure is the one that can be studied directly by using Euler systems. However, it is usually different to the Selmer groups that appear naturally in artihmetic geometry, because they differ in the local conditions at $p$ and $\infty$. The infinite prime is usually not an issue since $H^1(\R,T)=0$ when $p>2$. At $p$, S.~Bloch and K.~Kato gave in \cite{BlochKato} a definition of a local condition at $p$, based purely on the Galois representation $T$. In the most arithmetically important cases, it coincides the local condition at $p$ defined geometrically. Their definition uses Fontaine's period rings from $p$-adic Hodge theory. Moreover, Bloch-Kato Selmer group is conjecturally directly related to the special values of the motivic $L$-function.
+
+
+
+\begin{definition}
+Let $T$ be a Galois representation over a local ring of residual characteristic $p>0$. Then the Bloch-Kato local conditions are defined as
+$$\left\{\begin{aligned}
+& H^1_{\FBK}(\Q_\ell,T)=H^1_\f(\Q_\ell, T)\ \ \textrm{if}\ \ell\neq p\\
+&H^1_{\FBK}(\Q_p,T)=\ker\left(H^1(\Q_\ell, T)\to H^1(\Q_\ell, T\otimes_{\Z_p} B_\textrm{crys})\right)
+\end{aligned}\right.$$
+\label{def:BK_str}
+\end{definition}
+
+
+
+
+
+
+
+\chapter{Kolyvagin systems}
+
+
+
+
+
+\section{Local cohomology and Kolyvagin primes}
+
+
+
+\begin{notation}
+Let $K$ be a number field. Fix an algebraic closure $\overline K$ of $K$. For every finite extension $F/K$, denote its absolute Galois group by $G_F=\Gal(\overline K/F)$.
+\end{notation}
+
+\begin{notation}
+Let $R$ be a finite, local, artinian and self-injective ring with maximal ideal $\m$ and residue field $k$ of characteristic $p$. Let $T$ be an $R[[G_K]]$-module, which is finitely generated as an $R$-module and is only ramified at finitely many primes.
+\end{notation}
+
+
+
+\begin{notation}
+We denote by $K(T)$ to the minimal Galois extension such that $G_{K(T)}$ acts trivially on $T$. Let $M$ be the minimal $n\in \N$ such that $p^n R=0$ and let $K(1)$ be the maximal $p$-extension inside the Hilbert class field of $K$. Denote
+\[\begin{array}{cc}
+K_M=K\Bigl(\mu_M,(\OO_K^\times)^{1/M}\Bigr)K(1),\ & K(T)_M=K(T)K_M
+\end{array}\]
+\end{notation}
+
+\textcolor{red}{Define Cartier dual}
+
+We assume the following assumptions:
+\begin{assumption}
+We assume the following assumptions:
+\begin{itemize}
+\item \namedlabel{Tirred}{(T1)} $T/\m T$ is an irreducible $k[[G_K]]$-module.
+\item \namedlabel{Ttau}{(T2)} There exists $\tau\in G_{K_M}$ such that $T/(\tau-1)T\cong R$ as $R$-modules.
+\item \namedlabel{Tcoh}{(T3)} $H^1(K(T)_M/K,T)=H^1(K(T)_M/K,T^*(1))=0$.
+\end{itemize}
+\end{assumption}
+
+There is a set of primes playing a crucial role in this theory.
+
+\begin{definition}
+A prime $q$ is said to be a \emph{Kolyvagin prime} if $\Frob_q$ is conjugate to $\tau$ in $\Gal(K(T)_M/K)$.
+\end{definition}
+
+\begin{notation}
+We define the following sets:
+\begin{itemize}
+\item $\PP^{(R)}$: set of Kolyvagin primes.
+\item $\NN^{(R)}$: set of square-free product of Kolyvagin primes.
+\item $\NN_i^{(R)}$: set of products of $i$ Kolyvagin primes.
+\end{itemize}
+When there is no risk of confussion, we will drop the reference to $R$.
+\end{notation}
+
+The reason to choose these primes is that we can control its local cohomology, since the finite and singular cohomology groups, defined below, are free cyclic $R$-modules.
+
+\begin{definition}(Finite cohomology)
+Let $\ell$ be a finite place of $K$, not dividing $p$. Assume $T$ is unramified at $\ell$. The \emph{finite cohomology} group at $\ell$ is defined as 
+\[H^1_\f(K_\ell,T):=H^1(K_\ell^{\ur},T)=\ker\biggl(H^1(K_\ell,T)\to H^1(\II_\ell,T)\biggr)\]
+where $K_\ell^\ur/K$ is the maximal unramified extension of $K$, $\II_\ell$ is the inertia subgroup of $G_{K_\ell}$ and the second equality follows from the infration restriction sequence. 
+\label{def:finite}
+\end{definition}
+
+\begin{definition}
+Let $\ell$ be a finite place of $K$ as in Definition \ref{def:finite}. The \emph{singular cohomology} at $\ell$ is the quotients
+\[H^1_\s(K_\ell,T)=H^1(K_\ell,T)\biggm/H^1_\f(K_\ell,T)\]
+\end{definition}
+
+When $\ell$ is a Kolyvagin prime, the singular cohomology can be also identified with a subgroup of $H^1(K_\ell,T)$.
+
+
+\begin{proposition} (\cite[Lemma 1.2.1]{MazurRubin})
+If $\ell\in \PP$, the canonical short exact sequence
+\begin{equation}
+\xymatrix{0\ar[r] & H^1_\f(K_\ell,T)\ar[r] & H^1(K_\ell,T)\ar[r] & H^1_s(K_\ell,T)\ar[r] & 0}
+\label{eq:finite-singular}
+\end{equation}
+splits canonically. Moreover, there exists isomorphisms of free cyclic $R$-modules
+\[\begin{array}{cc}
+H^1_\f(K_\ell,T)\cong T/(\tau-1)T,\ H^1_\s(K_\ell,T)\cong T^{\tau=1}
+\end{array}\]
+\end{proposition}
+
+\begin{remark}
+    The first isomorphism is canonical from the identification
+    \[H^1_\f(K_\ell,T)\cong T/(\Frob_\ell-1) T\cong T/(\tau-1)T\]
+    However, the second one is only canonical after tensoring with the Galois group \(\GG_\ell=\Gal(K(\ell)/K(1))\), where $K(\ell)$ is defined as the maximal $p$-extension inside the ray class field modulo $\ell$. Following \cite[Lemma 1.2.1]{MazurRubin}:
+    \[H^1_\s(K_\ell,T)\otimes_{\Z} \GG_\ell \cong \Hom(\II_\ell,T^{\Frob_\ell=1})\otimes \GG_\ell\cong T^{\Frob_\ell=1}\cong T^{\tau=1}\]
+\end{remark}
+
+\begin{notation}
+In order to simplify notation, we fix once and for all, and for each Kolyvagin prime $\ell\in \PP$, a generator $\tau_\ell$ of $\GG_\ell$. This choice fixes an isomorphism $H^1_s(K_\ell,T)$.
+%Moreover, pick isomorphisms
+%\[\begin{array}{cc}
+%T/(\tau-1)T\approx R,\ & T^{\tau=1}\approx R
+%\end{array}\]
+\end{notation}
+
+\begin{definition}
+Let $\ell\in \PP$. The transverse cohomology sugbgroup is defined as
+\[H^1_{\tr}(K_\ell,T):=H^1(K(\ell)_\ell,T^{G_{K(\ell)_\ell}})\hookrightarrow H^1(K_\ell,T)\]
+\end{definition}
+
+\begin{proposition}(\cite[Lemma 1.2.4]{MazurRubin})
+$H^1_{\tr}(K_\ell,T)$ is the image of the canonical splitting in Equation \eqref{eq:finite-singular}.
+\end{proposition}
+
+
+
+
+\section{Selmer modules}
+
+In this section, we introduce the concepts of Selmer structures and their associated Selmer modules. They are subgroups of the Global Galois cohomolgy which are cut out by local conditions. The can be used to determine the structure of important arithmetic objects like class groups of number fields or Mordell-Weil groups of abelian varieties.
+
+
+
+\begin{definition}
+A \emph{Selmer structure} $\FF$ on $T$ is a collection of the following data:
+\begin{itemize}
+\item A finite set $\Sigma(\FF)$ of places of $K$, including all archimedean and $p$-adic prime and all the primes where $T$ is ramified.
+\item For every $\ell \in \Sigma(\FF)$, a choice of an $R[[G_{K_\ell}]]$-submodule
+\[H^1_{\FF}(K_\ell, T)\subset H^1(K_\ell,T)\]
+This choice is known as \emph{local condition} at $\ell$.
+\end{itemize}
+\end{definition}
+
+\begin{definition}
+The \emph{Selmer module} associated to a Selmer structure is 
+\[H^1_{\FF}(K,T)=\ker\left( H^1(K,T)\to \prod_{\ell\in \Sigma} H^1(K_\ell, T)\right)\]
+\end{definition}
+
+
+
+\begin{remark}
+When $\ell\not \in \Sigma(\FF)$, we say the local condition at $\ell$ is 
+\[H^1_\FF(K_\ell,T)=H^1_f(K_\ell,T)\]
+Under this identification, the Selmer module only depends on the local conditions, and not on the set $\Sigma(\FF)$.
+\end{remark}
+
+In order to compare Selmer structures, Poitou-Tate global duality is helpful.
+\begin{proposition}(\cite[theorem 2.3.4]{MazurRubin})
+Let $\FF$ and $\GG$ be Selmer structures of $T$ such that $H^1_{\FF}(K_\ell, T)\subset H^1_{\GG}(K_\ell,T)$ for every prime $\ell$. Then the following sequence, where the third map is induced by proposition \ref{prop:local_duality}, is exact.
+
+\[\xymatrix{H^1_{\FF}(K,T)\ar@{>->}[r] & H^1_{\GG}(K,T)\ar[r] & \displaystyle{\bigoplus_{\ell\in \Sigma_\FF\cup\Sigma_\GG} \frac{H^1_{\GG}(K_\ell,T)}{H^1_{\FF}(K_\ell,T)}} \ar[r] & H^1_\GG(K,T^*)^\vee\ar@{->>}[r]& H^1_\FF(K,T^*)^\vee}\]
+
+ \textcolor{red}{local duality and dual Selmer structures}.
+\label{prop:global_duality}
+\end{proposition}
+
+\begin{notation}
+Let $\FF$ and $\GG$ be Selmer structures. We say $\FF\leq \GG$ if $H^1_{\FF}(K_\ell, T)\subset H^1_{\GG}(K_\ell,T)$ for all places $\ell$.
+\end{notation}
+
+Local conditions propagates naturally to submodules and quotients of $T$.
+
+\begin{definition}(Propagation to submodules)
+Let $\ T'\hookrightarrow T$ be a submodule. This inclusion induces a map
+\[\mu:\ H^1(K,T')\to H^1(K,T)\]
+
+A local condition at $T$ propagates to $T'$ as
+\[H^1_\FF(K_\ell,T')=\mu^{-1}\Bigl(H^1_\FF(K_\ell,T)\Bigr)\]
+\end{definition}
+
+\begin{definition}(Propagation to quotients)
+Let $\ T\hookrightarrow T''$ be a quotient map. It a map
+\[\varepsilon:\ H^1(K,T)\to H^1(K,T'')\]
+
+A local condition at $T$ propagates to $T'$ as
+\[H^1_\FF(K_\ell,T'')=\varepsilon\Bigl(H^1_\FF(K_\ell,T)\Bigr)\]
+\end{definition}
+
+\begin{remark}
+Let $T_1\subset T_2\subset T$ be two submodules of $T$. The propagation of a local condition to the subquotient $T_2/T_1$ is independent of the order in which we perform the operations.
+\end{remark}
+
+In this theory, it is required to impose a technical condition on the Selmer structures that guarantees a good behaviour under the propagation.
+
+\begin{definition}(Cartesian Selmer structure)
+A Selmer structure $\FF$ is said to be \emph{cartesian} if the map
+\[H^1_{/\FF}(K_\ell,T\otimes k)\to H^1_{/\FF}(K_\ell,T)\]
+is injective for every prime $\ell$. \textcolor{red}{review with assumptions on $R$.}
+\end{definition}
+
+\begin{remark}
+It is enough to check the cartesian condition for $\ell\in \Sigma(\FF)$. Indeed, if $H^1_\FF(K_q,T)=H^1_\f(K_q, T)$, then $H^1_\s(K_q, T)=\Hom(\II_q, T^{\Frob_\ell=1})$. Then the cartesian condition holds for $q$ because $\Hom$ is a left exact functor.
+\end{remark}
+
+The theory of Kolyvagin systems is dependent on one invariant associated to the Selmer structure, the core rank, that measures the difference in dimension between the Selmer module and the Selmer module of the dual structure.
+\begin{definition}(Core rank)
+Let $\FF$ be a Selmer strucure on $T$. The \emph{core rank} of $\FF$ is the integer
+\[\chi(\FF):=\dim_k H^1_{\FF}(K,T\otimes k)-\dim_k H^1_{\FF}(K,T^*[\m])\]
+\label{def:core_rank}
+\end{definition}
+
+\begin{remark}
+We will assume $\chi(\FF)$ is non-negative. Otherwise, one could swap the roles of $F^*$ and $T^*$ since $\chi(\FF^*)=-\chi(\FF)$.
+\end{remark}
+
+
+The argument to compute the structure of a Selmer group involve modifying the local conditions suitabily at certain primes. In order to do that, we will set the following definition.
+
+\begin{definition}
+Let $\FF$ be a Selmer structure and let $a$, $b$ and $c$ be pairwise coprime square-free integers. Assume $c\in \NN$. Define the Selmer structure $\FF_a^b(c)$ by the local conditions
+\[H^1_{\FF_a^b(c)}(\Q,T)=\left\{\begin{aligned}
+&H^1(\Q_\ell,T)\ &\textrm{if }\ell|a\\
+&0\ &\textrm{if }\ell|b\\
+&H^1_{\tr}(\Q_\ell,T)\ &\textrm{if }\ell|c\\
+&H^1_\FF(\Q_\ell,T)\ &\textrm{otherwise}
+\end{aligned}\right.\]
+\end{definition}
+
+
+\section{Classical Kolyvagin systems}
+\label{sec:kol}
+
+\textcolor{red}{Fix the canonical homomorphism for the local cohomology}
+
+In this section, we outline the classical theory of Kolyvagin systems, as described in \cite{MazurRubin}. This theory is limited to principal coefficient rings $R$ and core rank being equal to one.
+
+\begin{assumption}
+Assume that $R$ is a principal, artinian, local ring with maximal ideal $\m$ generated by some $\pi$ and finite residue field $k$ of characteristic $p$. In addition, assume $\FF$ is a cartesian Selmer structure such that $\chi(\FF)=1$.
+\label{ass:Rprin_chi1}
+\end{assumption}
+
+\begin{definition}
+A \emph{Kolyvagin system} for a Selmer structure $\FF$
+$$\kappa=\left\{\kappa_n\in H^1_{\mathcal F(n)}(\Q,T):\ n\in \NN\right\}$$
+satisfying the following relation for every $n\in \NN$ and $\ell\in \PP$ not dividing $n$. By the definition of Selmer module, we have that 
+\[\begin{array}{cc}
+\loc_\ell(\kappa_n)\in H^1_{\FF(n)}(K_\ell,T)=H^1_\f(K_\ell,T),\ &\loc_\ell(\kappa_{n\ell})\in H^1_{\FF(n\ell)}(K_\ell,T)=H^1_\tr(K_\ell,T)
+\end{array}\]
+The collection $\kappa$ is a Kolyvagin system if the following is satisfied
+\begin{equation}
+\loc_\ell(\kappa_{n\ell})=\phi_\ell^{\fs}\circ \loc_\ell(\kappa_n)
+\label{eq:kol_cond}
+\end{equation}
+for every $n\in \NN$ and $\ell\in \PP$ not dividing $n$.
+\label{def:kol}
+\end{definition}
+
+\textcolor{red}{Modified Selmer structures and finite-singular map}
+
+\begin{remark}
+The set of Kolyvagin systems has a natural structure of $R$-module. It will be denoted by $\KS(\FF)$.
+\end{remark}
+
+
+
+Kolyvagin systems carry information about the structure of the Selmer group. The key idea is to look at the classes $\kappa_n$, where $n\in \NN_i$ for the different non-negative integers $i$. The information carried by a single class $\kappa_n$ is seen in its index.
+
+\textcolor{red}{dual $M^+$}
+
+\begin{definition}
+Let $M$ be an $R$-module and let $a\in M$. Consider the canonical map into the bidual module
+\[\Phi:\ M\to M^{++}: a\in M\mapsto \Bigl[\varphi\in \Hom(M,R)\mapsto \varphi(a)\Bigr]\]
+The \emph{index} of $a$ is defined as
+\[\ind(a,M)=\Im(\Phi(a))\]
+\label{def:index}
+\end{definition}
+
+\begin{remark}
+When $R$ is a principal, local, artinian ring with maximal ideal $\m$, the index of an element $a\in M$ coincides
+\[\ind(a)=\m^{\max\{j\in \N:\ a\in \m^jM\}}\]
+\end{remark}
+
+\begin{notation}
+When there is no risk of confussion, we will denote $\ind(a)$ instead of $\ind(a,M)$.
+\end{notation}
+
+We can now define the ideals $\Theta_i$ as the ideals in $R$ generated by the indices of all $\kappa_n$ where $n\in \NN_i$.
+
+\begin{definition}
+Let $\kappa\in \KS(\FF)$. The theta ideals of $\kappa$ are defined as
+\[\Theta_i(\kappa):=\sum_{n\in \NN_i} \ind\biggl(\kappa_n, H^1_{\FF(n)}(K,T)\biggr)\]
+\end{definition}
+
+
+
+
+\begin{theorem} (\cite[Theorem 4.3.3]{MazurRubin})
+Under Assumption \ref{ass:Rprin_chi1}, $\KS(\FF)$ is a free, cyclic $R$-module.
+\label{th:KS_chi1}
+\end{theorem}
+
+The generators of $\KS(\FF)$ are the Kolyvagin systems carrying information about the Selmer group.
+
+\begin{definition}
+A Kolyvagin system is said to be \emph{primitive} if it generates $\textrm{KS}(\FF)$ as an $R$-module.
+\end{definition}
+
+We can now state the main theorem of loc. cit., which relates the theta ideals of a primitive Kolyvagin systems with the (higher) Fitting ideals of the Selmer group.
+
+\begin{theorem}(\cite[Theorem 4.5.9]{MazurRubin})
+Let $R$ be a principal, artinian, local ring with finite residue field, let $T$ be an $R[[G_K]]$-module unramified only at finitely many places, and let $\FF$ be a cartesian Selmer structure on $T$ satisfying that $\chi(\FF)=1$. If $\kappa\in \KS(\FF)$ is a primitive Kolyvagin system, then 
+\[\Theta_i(\kappa)=\Fitt^R_i(H^1_{\FF^*}(\Q,T^*))\]
+\label{th:str_chi1}
+\end{theorem}
+
+\textcolor{red}{Introduce Fitting ideals}
+
+The proof of Theorem \ref{th:str_chi1} is divided in the following two lemmas:
+
+\begin{lemma}
+Under Assumption \ref{ass:Rprin_chi1}, if $\kappa\in \KS(T)$ is a Kolyvagin system and $n\in \NN$, then
+\[\ind(\kappa_n)=\Fitt^0\Bigl(H^1_{\FF^*(n)}(K,T^*)\Bigr)\]
+\label{lem:kn_trn}
+\end{lemma}
+
+\begin{lemma}
+Under Assumption \ref{ass:Rprin_chi1}, then 
+\[\Fitt_i^R\Bigl(H^1_{\FF^*}(K,T^*)\Bigr)=\sum_{n\in \NN_i}\Fitt^0\Bigl(H^1_{\FF^*}(K,T^*)\Bigr)\]
+\label{lem:fitti_fitt0trn}
+\end{lemma}
+
+
+
+
+
+
+
+
+
+
+
+\section{Selmer structures of rank 0}
+
+When $\FF$ is a cartesian Selmer structure of core rank $0$, we cannot apply the argument above since the only Kolyvagin system is the trivial one.
+
+\begin{theorem}(\cite[Theorem 4.2.2]{MazurRubin})
+Let $\FF$ be a cartesian Selmer structure such that $\chi(\FF)=0$. Then $\KS(\FF)=0$.
+\end{theorem}
+
+
+The method we will use for the computation of the Selmer module $H^1_{\FF}(K,T)$ involves considering an auxiliary Selmer structure $\GG\geq \FF$, also cartesian, such that $\chi(\GG)=1$. One can show that $\FF$ and $\GG$ only differ in one local condition.
+
+\begin{proposition}
+There exists a unique prime $\ell$ such that $H^1_{\FF}(K_q,T)\subsetneq H^1_{\GG}(K_q,T)$. Moreover, there is a non-canonical homomorphism
+\[H^1_{\GG}(K_q,T)\Bigm/ H^1_{\FF}(K_q,T)\approx R\]
+\end{proposition}
+
+\begin{proof}
+By Proposition \ref{prop:global_duality}, there is an global-duality exact sequence for $\Tbar:=T\otimes k$
+\[\xymatrix{H^1_{\FF}(K,\Tbar)\ar@{>->}[r] & H^1_{\GG}(K,\Tbar)\ar[r] & \displaystyle{\bigoplus_{q\in \Sigma_\FF\cup\Sigma_\GG} \frac{H^1_{\GG}(K_q,\Tbar)}{H^1_{\FF}(K_q,\Tbar)}} \ar[r] & H^1_\GG(K,\Tbar^*)^\vee\ar@{->>}[r]& H^1_\FF(K,\Tbar^*)^\vee}\]
+
+Since $\chi(\FF)=0$ and $\chi(\GG)=1$, Definition \ref{def:core_rank} and dimension counting implies that 
+\[\dim_k\left(\displaystyle{\bigoplus_{q\in \Sigma_\FF\cup\Sigma_\GG} \frac{H^1_{\GG}(K_q,\Tbar)}{H^1_{\FF}(K_q,\Tbar)}}\right)=1\]
+Therefore, there exists a unique prime $\ell$ such that ${H^1_{\FF}(K_\ell,\Tbar)}\subsetneq {H^1_{\GG}(K_\ell,\Tbar)}$.
+Hence ${H^1_{\FF}(K_\ell,T)}\subsetneq {H^1_{\GG}(K_\ell,T)}$.
+
+For all other primes $q\neq \ell$, we can apply \cite[Lemma 1.1.5]{MazurRubin}, which says that for every pair of cartesian Selmer structures $\FF$ and $GG$, the quantity
+\[\length(H^1_{\GG}(K_q,T\otimes R/\m^i))-\length(H^1_{\FF}(K_q,T\otimes R/\m^i))\]
+is linearly dependent on $i$. Since it vanishes for $i=1$, then $H^1_{\FF}(K_q,T)=H^1_{\GG}(K_q,T)$.
+\end{proof}
+
+\begin{remark}
+If we choose a Kolyvagin prime, or any other prime $\ell$ such that $H^1_{/\FF}(K_\ell,T)\cong R$, the Selmer structure $\GG=\FF^\ell$ is cartesian with $\chi(\FF^\ell)=1$.
+
+\textcolor{red}{prove quotient at l is free of rank one}
+\end{remark}
+
+
+Now, we describe a process in which Kolyvagin systems for $\GG$ describe the Selmer module $H^1_{\FF}(K,T)$. In order to do that, we need to localise the Kolyvagin systems at the prime at which $\FF$ and $\GG$ differ.
+
+\begin{definition}
+Let $\FF\leq \GG$ be two Selmer structures with $\chi(\FF)=0$ and $\chi(\GG)=1$ differing at the prime $\ell$ and let $\kappa\in \KS(\GG)$. Define the quantities $\delta$ associated to $\kappa$ by
+\[\delta_n(\kappa,\FF):=\loc_\ell(\kappa_n)\in H^1_{\GG}(K_\ell, T)\bigm/H^1_{\FF}(K_\ell, T)\ \forall n\in \NN\]
+\end{definition}
+
+The quantities $\delta_n$ can be used to define the $\Theta$ ideals of rank $0$.
+
+\begin{definition}
+Let $\FF\leq \GG$ be two Selmer structures with $\chi(\FF)=0$ and $\chi(\GG)=1$ differing at the prime $\ell$ and let $\kappa\in \KS(\GG)$. We can define
+\[\Theta_i^{(0)}(\kappa,\FF):=\sum_{n\in \NN_i}\ind\biggl(\delta_n(\kappa,\FF),H^1_{\GG}(K_\ell, T)\bigm/H^1_{\FF}(K_\ell, T)\biggr)\]
+\end{definition}
+
+\begin{theorem}
+
+Let $R$ be a principal, artinian, local ring with finite residue field, let $T$ be an $R[[G_K]]$-module unramified only at finitely many places, and let $\FF\leq \GG$ be a cartesian Selmer structures on $T$ satisfying that $\chi(\FF)=0$ and $\chi(\GG)=1$. If $\kappa\in \KS(\GG)$ is a primitive Kolyvagin system, then 
+\begin{equation}
+\Theta_i^{(0)}(\kappa,\FF)\subset\Fitt_i^R\Bigl(H^1_{\mathcal F}(\mathbb Q, T)\Bigr)
+\label{eq:theta}
+\end{equation}
+ Moreover, if one of the following conditions is satisfied
+\begin{enumerate}[(i)]
+\item $i=\rank_R(H^1_{\FF}(\Q,T))=:r$
+\item $\Theta_{i-1}^{(0)}(\kappa,\FF)\subsetneq \Fitt_{i-1}^R\left(H^1_{\mathcal F}(\mathbb Q, T)\right)$
+\item There is some $k\in \N$ and some $n\in\mathcal N$ such that $\nu(n)=i-1$, $\Theta_{i-1}(\kappa)=\delta_n R$ and 
+$$H^1_{\mathcal F(n)}(\Q,T/\m^k)\approx R/\m^{e_1}\times \cdots \times R/\m^{e_s}$$
+for some $e_1>e_2\geq \cdots\geq e_s$.
+\end{enumerate}
+then we have the equality $\Theta_i^{(0)}(\kappa)=\Fitt_i^R\Bigl(H^1_{\mathcal F}(\mathbb Q, T)\Bigr)$.
+\label{th:str_chi0}
+\end{theorem}
+
+\textcolor{red}{Divide proof in lemmas}
+
+
+
+
+In the rest of the section, we state some lemmas from \cite[\textsection 5.2]{Kim23}. However, the convention of orders in that article is slightly different and the proofs are trickier in our case. For the sake of completeness, we also include them here.
+
+
+%Also, denote
+%
+%$$
+%\dinf(\kappa):=\min\{\ord(\kappa_n):n\in\mathcal N\},\ \ 
+%%\dinf(\loc_s^\ell(\kappa))=\min\{\ord(\loc_s^\ell\kappa_n):n\in\mathcal N\}
+%\dinf(\delta):=\min\{\ord(\delta_n):n\in\mathcal N\}
+%$$
+
+\begin{lemma} (\cite[proposition 5.2]{Kim23})
+For every $n\in\mathcal N$, let 
+$$C_n:=\coker\left(\loc_q^s: H^1_{\mathcal F^q(n)}(\mathbb Q,T/\m^{k_n})\to H^1_\s(\mathbb Q_q,T/\m^{k_n})\cong R/\m^{k_n}\right)$$
+If $\ord(\kappa_n)+\length(C_n)<k_n$, then 
+$$\ord(\kappa_n)+\length(C_n)= \ord(\delta_n)$$
+Otherwise, $\ord(\delta_n)$ is infinite, i.e., $\delta_n=0$.
+\label{lem:ordkappadelta}
+\end{lemma}
+
+\begin{proof}
+
+
+%By definition, $H^1_{\mathcal F_\ell(n)}\subset \ker(\loc_\ell^s)$, so this map induces another map
+%\begin{equation}
+%\loc_\ell^s:\ H^1_{\mathcal F^\ell(n)}(\Q,T/\m^k)/H^1_{\mathcal F_\ell(n)}(\Q,T/\m^k) \to R/\m^k
+%\label{eq:locs}
+%\end{equation}
+%
+%where the class of $\kappa_n$ is mapped to $\delta_n$.
+
+Since $\chi(\mathcal F^q)=1$, we have a non-canonical isomorphism
+\begin{equation}
+H^1_{\mathcal F^q(n)}(\Q,T/\m^{k_n})\approx R/\m^{k_n}\oplus H^1_{\mathcal F^*_q(n)}(\Q,T^*[\m^{k_n}])
+\label{eq:core1}
+\end{equation}
+Hence we can find an element $z\in H^1_{\FF^q(n)}(\Q,T/\m^{k_n})$ and a submodule $A$ isomorphic to $H^1_{\mathcal F^*_q(n)}(\Q,T^*[\m^{k_n}])$ such that 
+\[H^1_{\mathcal F^q(n)}(\Q,T/\m^{k_n})=(R/\m^{k_n})\, z\oplus A\]
+
+%Since $\ell$ is a Kolyvagin prime, then $H^1(\Q_\ell,T/\mathfrak m^k)\cong (R/\m^k)^2$.
+%\begin{equation}
+%H^1_{\mathcal F^\ell(n)}(\Q,T/\m^k)/H^1_{\mathcal F_\ell(n)}(\Q,T/\m^k)\cong R/\m^{k_1}\times R/\m^{k_2}
+%\label{eq:qstr}
+%\end{equation}
+%where $k_1\geq k_2$. 
+
+By theorem \ref{th:mr459},
+\begin{equation}
+\ord(\kappa_n)\geq \length\Bigl(H^1_{\mathcal F^*_q(n)}(\Q,T^*[\m^{k_n}])\Bigr)
+\label{eq:ordk2}
+\end{equation}
+so $\kappa_n\in (R/\m^{k_n})\, z$. In particular, there is some unit $u\in R^\times$ such that
+\begin{equation}
+\kappa_n=up^{\ord(\kappa_n)}z
+\label{eq:kn_ord}
+\end{equation}
+
+Assume first that $\loc_q^s(\kappa_n)=\delta_n\neq 0$. Then 
+\[\length\Biggl(\loc_q^s\Bigl(H^1_{\FF^q(n)}(\Q,T/\m^{k_n})\Bigr)\Biggr)\geq \length\Bigl(H^1_{\mathcal F^*_q(n)}(\Q,T^*[\m^{k_n}])\Bigr)\]
+
+
+
+Since $H^1_s(\Q_q,T/\m^{k_n})$ is isomorphic to $R/\m^{k_n}$ by lemma \ref{lem:Hloc_tors}, the above implies that 
+$$\loc_q^s\left(H^1_{\mathcal F^q(n)}(\Q,T/\m^{k_n})\right)=(R/\m^{k_n})\loc_q^s\left(z\right)$$
+By equation \ref{eq:kn_ord},
+\[p^{\ord(\kappa_n)}\loc_q^s\left(H^1_{\mathcal F^q(n)}(\Q,T/\m^{k_n})\right)=(R/\m^{k_n})\delta_n\]
+Since $H^1_s(\Q_q,T/\m^{k_n})$ is a cyclic $R/\m^{k_n}$-module, the following equality holds true:
+$$\length\left(\loc_q^s(H^1_{\mathcal F^q(n)}(\Q,T/\m^{k_n}))\right)-\ord(\kappa_n)=k_n-\ord(\delta_n)$$
+Since $\length(C_n)=k_n-\length\left(\loc_q^s(H^1_{\mathcal F^q(n)}(\Q,T/\m^{k_n}))\right)$, then
+$$\ord(\kappa_n)+\length(C_n)=\ord(\delta_n)$$
+
+Now assume that $\delta_n=0$. It means that $\loc_q^s(\kappa_n)=0$. Using \eqref{eq:kn_ord},
+$$\length\biggl(R/\m^{k_n}\loc_q^s(z)\biggr)\leq \ord(\kappa_n)$$
+Note that
+\[\begin{aligned}&\length\left(\loc_q^s\left(H^1_{\mathcal F^q(n)}(\Q,T/\m^{k_n})\right)\right)=\\ &\max\Biggl\{\length\biggl(R/\m^{k_n}\loc_q^s(z)\biggr),\length\biggl(\loc_q^s\Bigl(H^1_{\mathcal F^*_q(n)}(\Q,T^*[\m^{k_n}])\Bigr)\biggr)\Biggr\}\end{aligned}\]
+Hence by \eqref{eq:ordk2}, 
+$$\length\left(\loc_q^s\left(H^1_{\mathcal F^q(n)}(\Q,T/\m^{k_n})\right)\right)\leq\ord(\kappa_n)$$
+Therefore, 
+$$\ord(\kappa_n)+\length(C_n)\geq k_n$$
+\end{proof}
+
+\begin{lemma}(\cite[lemma 5.3]{Kim23})
+If $\kappa$ is a primitive Kolyvagin system, there is some $n\in \NN$ such that $\delta_n\in R^*$.
+\label{lem:dinf}
+\end{lemma}
+
+\begin{proof}
+%Since $\delta_n$ is the image of $\kappa_n$ under certain homomorphism $H^1_{\mathcal F^\ell(n)}(\mathbb Q,T/\m^k)\to R/\m^k$, it is clear that $\ord(\kappa_n)\leq \ord(\delta_n)$ for every $n\in\mathcal N$. Thus $\dinf(\kappa)\leq\dinf(\delta)$.
+%
+%Suppose that $\dinf(\kappa)<\dinf(\delta)$. Then there is some $n\in\mathcal N$ such that $\ord(\kappa_n)=\dinf(\kappa)<\infty$. 
+%
+%By Poitou-Tate duality, for every $n\in\mathcal N$, there is an exact sequence
+%\begin{equation}
+%\xymatrix{0\ar[r]&H^1_{\mathcal F_\ell(n)}(\Q,T^*[\m^k])\ar[r] & H^1_{\mathcal F(n)}(\Q,T^*[\m^k])\ar[r] & C_n\du\ar[r] & 0}
+%\label{eq:dualseq}
+%\end{equation}
+%
+%Applying proposition \ref{prop:mr361} and lemma \ref{lem:mr417}, we can find some $n'\in \mathcal N$ such that $H^1_{\mathcal F^*_{\ell}(n')}(\Q,T^*[\m^k])=0$. Then
+%$$H^1_{\mathcal F^*(n')}(\Q,T^*[\m^k])\cong H^1_{\mathcal F(n')}(\Q,T/\m^k)\subset H^1_{\mathcal F^{\ell}(n')}(\Q,T/\m^k)\cong R/\m^k$$
+%
+%Let $k'$ be the length of $H^1_{\mathcal F(n')}(\Q,T/\m^k)$, so $H^1_{\mathcal F(n')}(\Q,T/\m^{k'})\cong R/\m^{k'}$. Thus we can apply again proposition \ref{prop:mr361} and lemma \ref{lem:mr417} to find some $\ell\in \mathcal P$ such that $n=n'\ell \in \mathcal N$ satisfies that
+%$$H^1_{\mathcal F^*(n)}(\Q,T^*[\m^{k'}])=0$$
+%It implies that
+%$$H^1_{\mathcal F^*(n)}(\Q,T^*[\m^{k}])=0$$
+
+By proposition \ref{prop:local_duality}, for every $n\in \NN$ there is an exact sequence
+\begin{equation}
+\xymatrix{0\ar[r]&H^1_{\mathcal F^*_q(n)}(\Q,T^*[\m^{k_n}])\ar[r] & H^1_{\mathcal F^*(n)}(\Q,T^*[\m^{k_n}])\ar[r] & C_n\du\ar[r] & 0}
+\label{eq:dualseq}
+\end{equation}
+
+
+By proposition \ref{prop:core_vertex}, there is some $n_0\in \NN$ such that 
+$$H^1_{\mathcal F^*(n_0)}(\Q,T^*)=0$$
+
+By lemma \ref{lem:mr353},
+\[H^1_{\FF^*(n_0)}(\Q,T^*[\m^{k_{n_0}}])=H^1_{\mathcal F^*(n_0)}(\Q,T^*)[\m^{k_{n_0}}]=0\]
+
+Therefore, \eqref{eq:dualseq} implies that $C_{n_0}=0$. Moreover, by lemma \ref{lem:ordkappadelta} and theorem \ref{th:mr459}, $\ord(\delta_{n_0})=\ord(\kappa_{n_0})=0$.
+
+%However, by theorem \ref{th:mr459}, 
+%$$\ord(\kappa_n)=\dinf(\kappa)<\dinf(\delta)\leq\ord(\delta_n)$$
+%contradicting the assumption and thus proving the lemma.
+\end{proof}
+
+
+\begin{lemma}
+Assume $\kappa \in \textrm{KS}(T,\FF,\PP)$ is a primitive Kolyvagin system. For every $n\in\mathcal N$, we have that
+$$\ord(\delta_n)=\length(H^1_{\mathcal F(n)}(\mathbb Q,T/\m^{k_n}))$$
+%\label{lem:sel(n)}
+if the latter is less than $k_n$. Otherwise, $\ord(\delta_n)=\infty$.
+\label{lem:ord_delta}
+\end{lemma}
+
+\begin{proof}
+Since $\chi(\FF)=0$, \eqref{eq:dualseq} implies thatx
+\begin{equation}
+\begin{aligned}\length\left(H^1_{\mathcal F(n)}(\mathbb Q,T/\m^{k_n})\right)=\length\left(H^1_{\mathcal F^*(n)}(\mathbb Q,T^*[\m^{k_n}])\right)=\\
+\length\left(H^1_{\mathcal F^*_q(n)}(\mathbb Q,T^*[\m^{k_n}])\right)+\length(C_n)=\kappa_n+\length(C_n)\end{aligned}
+\label{eq:dual_lengths}
+\end{equation}
+
+If $\length\left(H^1_{\mathcal F(n)}(\mathbb Q,T/\m^{k_n})\right)<k_n$, then lemma \ref{lem:ordkappadelta} implies that
+$$\length\left(H^1_{\mathcal F(n)}(\mathbb Q,T/\m^{k_n})\right)=\length\left(H^1_{\mathcal F^*_q(n)}(\mathbb Q,T^*[\m^{k_n}])\right)-\ord({\kappa_n})+\ord(\delta_n)$$
+By theorem \ref{th:mr459}
+$$\length\left(H^1_{\mathcal F(n)}(\mathbb Q,T/\m^k)\right)=\ord(\delta_n)$$
+
+Assume now that $\length(H^1_{\mathcal F(n)}(\mathbb Q,T/\m^{k_n}))\geq k_n$. By theorem \ref{th:mr459} and \eqref{eq:dual_lengths},
+\[\ord(\kappa_n)+\length(C_n)=\length\left(H^1_{\mathcal F^*_q(n)}(\mathbb Q,T^*[\m^{k_n}])\right)+\length(C_n)\geq k_n\]
+
+By the second part of lemma \ref{lem:ordkappadelta}, $\ord(\delta_n)=\infty$.
+\end{proof}
+
+
+
+
+
+
+\subsection{Fitting ideals of Selmer groups of core rank zero}
+\label{sec:fitd}
+
+Throughout this section, the concept of rank of a finitely generated module will play a role. With the aim of avoiding confusion, specially when $R$ is artinian, we clarify this concept in the following definition.
+
+\begin{definition}
+Let $M$ be an $R$-module. We define the rank of $M$ as the maximium number of linearly independent elements in $M$. In case that $R$ is local, principal and artinian of lenght $k$, this quantity coincides with the following:
+\[\rank_R(M)=\dim_{R/\m}\m^{k-1} M\]
+\label{def:rank}
+\end{definition}
+
+The main purpose of this section is to prove the following theorem.
+
+\begin{theorem}
+Assume $R$ is a discrete valuation ring. For every $i\in \Z_{\geq0}$, we have that
+\begin{equation}
+\Theta_i(\kappa)\subset\Fitt_i^R\left(H^1_{\mathcal F^*}(\mathbb Q, T^*)\du\right)
+\label{eq:theta}
+\end{equation}
+where $\Theta_i(\kappa)$ was defined in definition \ref{def:theta}. Moreover, if one of the following conditions is satisfied
+\begin{enumerate}[(i)]
+\item $i=\rank_R(H^1_{\FF^*}(\Q,T^*)\du)=:r$
+\item $\Theta_{i-1}(\kappa)\subsetneq \Fitt_{i-1}^R\left(H^1_{\mathcal F^*}(\mathbb Q, T^*)\du\right)$
+\item There is some $k\in \N$ and some $n\in\mathcal N$ such that $\nu(n)=i-1$, $\Theta_{i-1}(\kappa)=\delta_n R$ and 
+$$H^1_{\mathcal F(n)}(\Q,T/\m^k)\approx R/\m^{e_1}\times \cdots \times R/\m^{e_s}$$
+for some $e_1>e_2\geq \cdots\geq e_s$.
+\end{enumerate}
+then we have the equality $\Theta_i(\kappa)=\Fitt_i^R\left(H^1_{\mathcal F^*}(\mathbb Q, T^*)\du\right)$.
+\label{th:kur_par}
+\end{theorem}
+
+
+\begin{remark}
+Assume either
+\begin{itemize}
+\item $R$ is a discrete valuation ring.
+\item $\length(R)\geq \length\left(H^1_\FF(\Q,T)_{\tors}\right)$.
+\end{itemize}
+Then $\rank_R(H^1_{\FF^*}(\Q,T^*)\du)$ is the minimal $i$ such that $\Theta_i\neq 0$.
+\end{remark}
+
+Provided that we know the ideals $\Theta_i(\kappa)$, theorem \ref{th:kur_par} determines the Fitting ideals of the dual Selmer group
+\begin{corollary}
+Assume $R$ is a discrete valuation ring and write $\Theta_i(\kappa)=\mathfrak m^{n_i}$. Then
+$$\Fitt_i^R\left(H^1_{\mathcal F^*}(\mathbb Q, T^*)\du\right)=\mathfrak m^{\min\left\{n_i,\frac{n_{i+1}+n_{i-1}}{2}\right\}}$$
+\label{cor:kur_par}
+\end{corollary}
+
+\begin{proof}
+Write $\Fitt_i^R\left(H^1_{\mathcal F^*}(\mathbb Q, T^*)\du\right)=\m^{m_i}$, so the inequality in theorem \ref{th:kur_par} implies that $n_i\geq m_i$. By the structure theorem of finitely generated modules over principal ideal domains, the following inequality holds for $i\in \N$:
+
+\[m_{i+1}-m_i\geq m_i-m_{i-1}\]
+Hence the index $m_i$ can be upper bounded using $m_{i-1}$ and $m_{i+1}$:
+\begin{equation}
+m_i\leq \frac{m_{i+1}+m_{i-1}}{2}
+\label{eq:Fitting_ineq}
+\end{equation}
+
+
+Assume that $n_i=m_i$. Then 
+\[m_i\leq \frac{m_{i+1}+m_{i-1}}{2}\leq \frac{n_{i+1}+n_{i-1}}{2}\Rightarrow m_i=\min\left\{n_i,\frac{n_{i+1}+n_{i-1}}{2}\right\}\]
+
+Assume that $n_i> m_i$. Theorem \ref{th:kur_par} can be applied to $i+1$. Since condition (ii) in this theorem holds by our assumption, we obtain that $m_{i+1}=n_{i+1}$. On the other hang, assume by contradiction that $n_{i-1}>m_{i-1}$. In this case, theorem \ref{th:kur_par}, would imply that $n_i=m_i$, contradicting our assumption. Therefore, $n_{i-1}=m_{i-1}$. Moreover, condition (iii) in theorem \ref{th:kur_par} cannot be satisfied since, otherwise, our assumption would not be true. Hence, the equality holds in equation \eqref{eq:Fitting_ineq} and we obtain
+\[m_i=\frac{m_{i+1}+m_{i-1}}{2}=\frac{n_{i+1}+n_{i-1}}{2}=\min\left\{n_i,\frac{n_{i+1}+n_{i-1}}{2}\right\}\]
+\end{proof}
+
+
+
+
+\begin{proof}[Proof of theorem \ref{th:kur_par}]
+
+
+
+
+
+%Assume first that
+%$$\length(R)\geq\length(H^1_{\mathcal F}(\mathbb Q, T^*)\du_{/\textrm{div}})$$
+
+If $R$ is artinian, choose $k=\length(R)$. If $R$ is a discrete valuation ring, we can choose some $k\in \N$ such that $\PP_k\subset \PP$ and
+\begin{equation}
+k\geq \length(H^1_{\mathcal F}(\mathbb Q, T^*)\du_{\tors})
+\label{eq:k_cond}
+\end{equation}
+
+ It is enough to study the Fitting ideals of $H^1_{\FF^*}(\Q,T^*[\m^k]\du)$. Indeed, let $\alpha_i\in \Z_{\geq 0}$ be such that $\Fitt_i^{R}\left(H^1_{\mathcal F^*}(\mathbb Q, T^*)\du\right)=\mathfrak m^{\alpha_i}$. By lemma \ref{lem:mr353}, 
+\[\Fitt_i^{R/\m^k}\left(H^1_{\mathcal F^*}(\mathbb Q, T^*[\m^k])\right)=\Fitt_i^{R/\m^k}\left(H^1_{\mathcal F^*}(\mathbb Q, T^*)\du[\m^j]\right)=\mathfrak m^{\min\{k,\alpha_i\}}\]
+Since $k$ has been chosen satisfying \eqref{eq:k_cond}, then $\min\{k,\alpha_i\}=0$ if and only if $\alpha_i=0$.
+
+For every $n\in\NN$, consider the exact sequence
+$$\xymatrix{0\ar[r] & H^1_{\mathcal F_n}(\mathbb Q,T/\m^{k_n})\ar[r] & H^1_{\mathcal F}(\Q,T/\m^{k_n})\ar[r] & \bigoplus_{\ell\mid n} H^1_\f(\Q_\ell,T/\m^{k_n})}$$
+Note the last term is a free $R/\m^{k_n}$-module of rank $\nu(n)$ by corollary \ref{cor:local_coh_cyclic}. Since $\chi(\mathcal F)=0$, we have that
+$$\min\{k_n,\alpha_i\}\leq \length\left(H^1_{\mathcal F_n}(\mathbb Q,T/\m^{k_n})\right)\leq \length\left( H^1_{\mathcal F(n)}(\mathbb Q,T/\m^{k_n})\right)$$
+since $H^1_{\mathcal F_n}(\mathbb Q,T/\m^{k_n})\subset H^1_{\mathcal F(n)}(\mathbb Q,T/\m^{k_n})$. By lemma \ref{lem:ord_delta}, for every $n\in \NN$ such that $\nu(n)=i$, we then have that
+$$\ord(\delta_n)\geq \alpha_i\Rightarrow \delta_n\in \mathfrak m^{\alpha_i}$$
+Therefore,
+$$\Theta_i(\kappa)\subset \Fitt_i^{R/\m^k}\left(H^1_{\mathcal F^*}(\mathbb Q, T^*[\m^k])\du\right)$$
+
+
+To prove the equality in \eqref{eq:theta} for some $i\in \mathbb Z_{\geq 0}$, we need to find some $n\in\mathcal N_k$ such that $\nu(n)=i$ and $\length(H^1_{\mathcal F(n)}(\mathbb Q,T))=\alpha_i$.
+
+If $\Fitt_i^{R/\m^k}\left(H^1_{\mathcal F^*}(\mathbb Q, T^*[\m^k])\du\right)=0$, then $\alpha_i=k$ and the result is clear. So let $i$ be the rank of $H^1_{\mathcal F}(\Q,T/\m^k)\cong H^1_{\mathcal F^*}(\Q,T^*[\m^k])$ as an $R/\m^k$-module. 
+
+ Using an inductive application of corollary \ref{cor:loc_sur}, we can choose primes $\ell_1,\ldots, \ell_i$ such that the maps
+$$H^1_{\mathcal F}(\mathbb Q,T/\mathfrak m^k)\to \bigoplus_{k=1}^i H^1_\f(\mathbb Q_{\ell_i},T/\mathfrak m^k),\ \ 
+H^1_{\mathcal F^*}(\mathbb Q,T^*[\mathfrak m^k])\to \bigoplus_{k=1}^i H^1_\f(\mathbb Q_{\ell_i},T^*[\mathfrak m^k])$$
+are surjective. By lemma \ref{lem:mr417}, for $n_r:=\ell_1\cdots\ell_i$ we have that $H^1_{\mathcal F^*(n_r)}(\mathbb Q,T^*[\mathfrak m^k])=H^1_{\mathcal F^*_{n_r}}(\mathbb Q,T^*[\mathfrak m^k])$. Thus
+$$\ord(\delta_{n_r})=\length\left(H^1_{\mathcal F^*({n_r})}(\mathbb Q,T^*[\mathfrak m^k])\right)=\length\left( H^1_{\mathcal F^*_{n_r}}(\mathbb Q,T^*[\mathfrak m^k])\right)=\alpha_i$$
+where the last equality comes from the structure theorem of finitely generated $R/\m^k$-modules. Therefore, the equality holds for $i=r$.
+
+For every $i>r$, construct $n_i\in \NN$ and $h_i\in \N$ inductively as follows. Note that $n_r$ was already constructed and let $h_r$ be the exponent of $H^1_{\FF^*(n_r)}(\Q,T^*[\m^k])$
+
+Assume that $n_i\in \mathcal N$ was already constructed satisfying that $\nu(n_i)=i$.xx
+
+%Now suppose that $n\in \mathcal N$ is such that $\nu(n)=i$ and  $\m^{\ord(\delta_n)}=\Fitt_i^{R/\m^k}\left(H^1_{\mathcal F^*}(\mathbb Q, T^*[\m^k])\du\right)$. 
+%By \cite{MazurRubin}, theorem 5.2.5., 
+%$$H^1_{\mathcal F(n)}(\Q,T/\m^k)\subset H^1_{\mathcal F^\ell(n)}(\Q,T/\m^k)\cong R/\m^k\oplus H^1_{\mathcal F_\ell(n)}(\Q,T)$$
+Write the structure of the Selmer group as
+$$H^1_{\mathcal F(n_i)}(\Q,T/\m^k)\approx H^1_{\mathcal F^*(n_i)}(\Q,T^*[\m^k])\approx R/\mathfrak m^{h_i}\times R/\m^{e_{i+2}}\times \cdots\times R/\m^{e_{s}}$$
+for some integers $e_{i+2},\ldots, e_s$. 
+%By proposition 3.6.1 in \cite{MazurRubin}, we can find a prime $\ell_{i+1}$ such that the localisation maps
+%$$H^1_{\mathcal F(n)}(\Q,T/\m^{e_1})\to H^1_{f}(\Q_{\ell_{i+1}},T/\m^{e_1}),\ \ 
+%H^1_{\mathcal F^*(n)}(\Q,T^*[\m^{e_1}])\to H^1_{f}(\Q_{\ell_{i+1}},T^*[\m^{e_1}])
+%$$
+%are surjective. Hence by lemma \ref{lem:mr417}, we have that
+%$$H^1_{\mathcal F(n\ell_{i+1})}(\mathbb Q,T/\m^{e_1})\cong H^1_{\mathcal F^*(n\ell_{i+1})}(\mathbb Q,T^*[\m^{e_1}])=H^1_{\mathcal F^*_{\ell_{i+1}}(n)}(\mathbb Q,T^*[\m^{e_1}])\cong
+%R/\mathfrak m^{e_2}\times\cdots\times R/\m^{e_s}$$
+%
+%Hence we can control the $\m^{e_1}$-torsion of the Selmer group $H^1_{\mathcal F(\ell_{i+1})}(\Q,T/\m^k)\cong H^1_{\mathcal F^*(n\ell_{i+1})}(\Q,T^*[\m^k])$, but that might not be the whole Selmer group. However, that is the case when $e_1>e_2$. When $e_1=e_2$, we find that
+%$$H^1_{\mathcal F(n\ell_{i+1})}(\Q,T/\m^k)\subset H^1_{\mathcal F^{\ell_{i+1}}(n)}(\Q,T/\m^k)\cong R/\m^k \times H^1_{\mathcal F^*_{\ell_{i+1}}(n)}(\Q,T^*[\m^k])\cong R/\m^k\times \prod_{j=2}^s R/\m^{e_j}$$
+%Since we know the $\m^{e_1}$-torsion of this group, the structure theorem implies that
+By lemma \ref{lem:cr0}, there are infinitely many primes $\ell_{i+1}\in \PP_k$ satisfying that
+$$H^1_{\mathcal F^*(n\ell_{i+1})}(\Q,T^*[\m^k])\approx R/\m^{h_{i+1}}\times R/\m^{e_{i+3}}\times \cdots \times R/\m^{e_s}$$
+for $e_{i+2}\leq h_{i+1}\leq k$. We can choose the prime $\ell_{i+1}$ minimising $h_{i+1}$ and define $n_{i+1}:=n_i\ell_{i+1}$.
+
+By lemma \ref{lem:ord_delta} 
+$$\delta_{n_i}R=\m^{h_i}\prod_{j=i+2}^s \m^{e_j}\subset\prod_{j=i+1}^s \m^{e_j}=\Fitt_{i+1}^{R/\m^k}\left(H^1_{\mathcal F^*}(\Q,T^*[\m^k])\right)$$
+When $h_{i}= e_{i+i}$,
+$$\Theta_{i+1}(\kappa)=\Fitt_{i+1}^{R/\m^k}\left(H^1_{\mathcal F^*}(\Q,T^*[\m^k])\right)$$
+
+When $h_i>e_{i+1}\geq e_{i+2}$ or $h_i\geq e_{i+1}>e_{i+2}$, lemma \ref{lem:cr0} implies the existence $\ell_{i+1}$ such that $h_{i+1}=e_{i+2}$.
+
+If assumption (ii) holds true, then $\Theta_i(\kappa)\subsetneq \Fitt_i^R(H^1_{\FF^*}(\Q,T^*[\m^k]))$ and $h_i>e_{i+1}$, so $h_{i+1}=e_{i+2}$. 
+
+Same result can be obtained assuming hypothesis (iii). In this case, $e_i>e_2$ and we obtain that 
+\[\Theta_{i+1}(\kappa)=\Fitt_{i+1}^R(H^1_{\FF^*}(\Q,T^*[\m^k]))\qedhere\]
+
+%Finally, if $\Theta_{i}(\kappa)=\Fitt_{i}^R\left(H^1_{\mathcal F^*}(\Q,T^*)\du\right)$ and $\Theta_{i+1}(\kappa)\subsetneq\Fitt_{i+1}^R\left(H^1_{\mathcal F^*}(\Q,T^*)\du\right)$, this method constructs some $n\in\mathcal N$ such that $\nu(n_{i+1})=i+1$ and 
+%$$H^1_{\mathcal F(n_{i+1})}(\Q,T/\m^k)\cong H^1_{\mathcal F^*(n_{i+1})}(\Q,T^*[\m^k])\cong R/\m^{k'}\times R/\m^{e_{i+3}}\times \cdots \times R/\m^{e_s}$$
+%for some $k'>e_{i+2}\geq e_{i+3}$.
+
+%Applying lemma \ref{lem:cr0} again, we can choose a prime $\ell_{i+2}$ such that 
+%$$H^1_{\FF(n_{i+1}\ell_{i+2})}(\Q,T/\m^k)\cong R/\m^{e_3}\times \cdots\times R/\m^{e_s}$$
+%the localisation maps
+%$$H^1_{\mathcal F(n_{i+1})}(\Q,T/\m^{k'})\to H^1_{f}(\Q_{\ell_{i+2}},T/\m^{k'}),\ \ 
+%H^1_{\mathcal F^*(n_{i+1})}(\Q,T^*[\m^{k'}])\to H^1_{f}(\Q_{\ell_{i+2}},T^*[\m^{k'}])
+%$$
+%are surjective. By lemma \ref{lem:mr417}, 
+%$$H^1_{\mathcal F(n_{i+1}\ell_{i+2})}(\Q,T/\m^{k'})\cong H^1_{\mathcal F^*(n_{i+1}\ell_{i+2})}(\Q,T^*[\m^{k'}])=H^1_{\mathcal F^*_{\ell_{i+2}}(n_{i+1})}(\Q,T^*[\m^{k'}])\cong \prod_{j=i+3-r}^s R/\m^{e_j}$$
+%Since $k'$ is larger than all the exponents $e_j$, then 
+%$$H^1_{\mathcal F(n_{i+1}\ell_{i+2})}(\Q,T/\m^{k})\cong \prod_{j=i+3-r}^s R/\m^{e_j}$$
+%By lemma \ref{lem:ord_delta}
+%$$\delta_{n_{i+1}\ell_{i+2}}R=\Fitt_0^R\left(H^1_{\mathcal F(n_{i+1}\ell_{i+2})}(\Q,T/\m^k)\right)=\prod_{j=i+3-r}^s \m^{e_j}=\Fitt_{i+1}^R\left(H^1_{\mathcal F^*}(\Q,T^*)\du\right)$$
+%Thus
+%$$\Theta_{i+1}(\kappa)=\Fitt_{i+1}^R\left(H^1_{\mathcal F^*}(\Q,T^*)\du\right)$$
+
+%Finally, under the third assumption, lemma \ref{lem:cr0} would imply the desired equality after an analogue argument.
+\end{proof}
+
+\subsection{Non-self-dual case}
+\label{sec:fitn}
+
+In the case when $T$ is not residually self-dual, we can improve the previous result to get the equality in \eqref{eq:theta} for every $i\in \Z_{\geq 0}$. More precisely, assume the following extra assumptions.
+\begin{itemize}
+\item\namedlabel{Nsd}{(N1)} $\Hom_{\F_p[G_\Q]}(T/\m T,T^*[\m])=0$.
+\item\namedlabel{Nsur}{(N2)} The image of the homomorphism $R\to \textrm{End}(T)$ is contained in the image of $\Z_p[[G_\Q]]\to \textrm{End}(T)$.
+\end{itemize}
+
+Under those assumptions, the following improvement of theorem \ref{th:kur_par} is true. Sakamoto proves the equality \eqref{eq:theta_nd} below under stronger assumptions when the coefficient ring $R$ is a Gorenstein ring of dimension zero. In particular, R. Sakamoto's result only worked when $H^1_{\FF}(\Q,T)=0$. However, when $R$ is a principal ring, we can weaken the assumptions to obtain the following result.
+
+\begin{theorem}
+Let $(T,\FF,\PP)$ be a Selmer triple satisfying \ref{Hffr}-\ref{Hprimes} and \ref{Nsd}-\ref{Nsur}. Then for every $i\in \Z_{\geq 0}$, the following equality is satisfied:
+\begin{equation}
+\Theta_i(\kappa)=\Fitt_i^R\left(H^1_{\mathcal F^*}(\mathbb Q, T^*)\du\right)
+\label{eq:theta_nd}
+\end{equation}
+\label{th:kur}
+\end{theorem}
+
+The reason assuming \ref{Nsd}-\ref{Nsur} is that we can apply the following result.
+
+\begin{proposition}(\cite[proposition 3.6.2]{MazurRubin})
+Assume that $T$ satisfies \ref{Hffr}-\ref{Hchev} and \ref{Nsd}-\ref{Nsur}. Let $C\subset H^1(\Q,T)$ and $D\subset H^1(\Q,T^*)$ be finite submodules and choose some homomorphisms
+$$\begin{array}{cc}
+\phi:\ C\to R,\ \ &\psi:D\to R
+\end{array}$$
+There exists a set $S\subset \PP_k$ of positive density such that for all $\ell\in S$
+$$\begin{aligned}
+C\cap \ker\left[\loc_\ell:\ H^1(\Q,T)\to H^1(\Q_\ell,T)\right]=\ker(\phi)\\
+ D\cap \ker\left[\loc_\ell:\ H^1(\Q,T^*)\to H^1(\Q_\ell,T^*)\right]=\ker(\psi)
+ \end{aligned}$$
+\label{prop:mr362}
+\end{proposition}
+
+
+
+
+
+The proof of theorem \ref{th:kur} is based on the following lemma.
+
+\begin{lemma}
+Let $(T,\FF,\PP)$ be a Selmer triple satisfying \ref{Hffr}-\ref{Hprimes} and \ref{Nsd}-\ref{Nsur}. Assume that
+$$H^1_{\FF}(\Q,T)\approx H^1_{\FF^*}(\Q,T^*)\approx R/\m^{e_1}\times \cdots\times R/\m^{e_s}$$
+for some $e_1\geq \ldots \geq e_s\in\N$. Then there are infinitely many primes $\ell\in \PP_k$ such that 
+$$H^1_{\FF(\ell)}(\Q,T)\approx H^1_{\FF^*(\ell)}(\Q,T^*)\approx R/\m^{e_2}\times \cdots\times R/\m^{e_s}$$
+\label{lem:nd}
+\end{lemma}
+
+
+
+\begin{proof}
+%Assume that
+%$$H^1_{\FF}(\Q,T)\cong H^1_{\FF^*}(\Q,T^*)\cong R/\m^{e_1}\times \cdots\times R/\m^{e_s}$$
+%for some $e_1\geq \cdots\geq e_s\in \N$. 
+
+Our assumption implies that $\length(R)>e_1$, so we can choose some $k\in \N$ such that $\length(R)\geq k>e_1$ and $\PP_k\subset \PP$.
+
+By corollary \ref{cor:loc_sur}, we can find an auxiliary prime $b\in \NN_k$ such that the localisation maps
+$$\begin{array}{cc}
+\loc_b^\f:\ H^1_{\FF}(\Q,T/\m^{e_1})\to H^1_\f(\Q_b,T/\m^{e_1}),\ \ &\loc_b^\f:\ H^1_{\FF^*}(\Q,T^*[\m^{e_1}])\to H^1_\f(\Q_b,T^*[\m^{e_1}])
+\end{array}$$
+are surjective. By corollary \ref{cor:local_coh_cyclic}, $H^1_\f(\Q_\ell, T/\m^k)$ is isomorphic to $R/\m^{e_1}$ and 
+\[H^1_{\FF^*}(\Q,T^*[\m^{e_1}])\approx R/\m^{e_2}\times \cdots\times R/\m^{e_s}\]
+Since $\chi(\FF^b)=1$ by proposition \ref{prop:core_abc}, we have that
+\begin{equation}
+H^1_{\FF^b}(\Q,T/\m^k)\approx R/\m^k\times R/\m^{e_2}\times \cdots\times R/\m^{e_s}
+\label{eq:str_Fb}
+\end{equation}
+By proposition \ref{prop:mr362}, we can find a prime $\ell$ satisfying the following:
+\begin{itemize}
+\item The kernel of the localisations $\loc_\ell$ and $\loc_b$ defined on $H^1_{\FF^*}(\Q,T^*[\m^k])$ are the same. By fixing generators $x_b$ and $x_\ell$ of $H^1_\f(\Q_b,T^*[\m^k])$ and $H^1_\f(\Q_\ell,T^*[\m^k])$, respectively, we are defining an isomorphism
+$$H^1_\f(\Q_b,T^*[\m^k])\cong R/\m^k\cong H^1_\f(\Q_\ell,T^*[\m^k])$$
+Under this isomorphism, we can understand $\loc_b^\f,\loc_\ell^\f\in \Hom(H^1_{\FF^*}(\Q,T^*[\m^k]),R/\m^k)$. In this setting, the above condition implies that there exists a unit $u\in (R/\m^k)^\times$ such that $\loc_\ell= u\loc_b$.
+
+\item The kernel of the finite localisation map 
+$$\loc_\ell:\ H^1_{\FF}(\Q,T/\m^k)\to H^1_\f(\Q_\ell,T/\m^k)$$ 
+coincides with $H^1_{\FF_b}(\Q,T/\m^k)$. It implies that
+\[H^1_{\FF_{b\ell}}(\Q,T/\m^k)=H^1_{\FF_b}(\Q,T/\m^k)\approx R/\m^{e_2}\times \cdots\times R/\m^{e_s}\]
+\end{itemize}
+Since $\chi(\FF^{\ell b})=2$ by proposition \ref{prop:core_abc}, there is an isomorphism
+$$H^1_{\FF^{\ell b}}(\Q,T)\approx R/\m^k\times R/\m^{k}\times R/\m^{e_2}\times \cdots\times R/\m^{e_s}$$
+
+By proposition \ref{prop:global_duality}, we can consider the following exact sequence
+$$\xymatrix{H^1_{\FF^{\ell b}}(\Q,T/\m^k)\ar[r] & H^1_{\s}(\Q_b, T/\m^k)\oplus H^1_{\s}(\Q_\ell, T/\m^k) \ar[r] & H^1_{\FF^*}(\Q,T^*[\m^k])}$$
+Let $\widehat{x_b}\in H^1_s(\Q_b,T/\m^k)$ and $\widehat{x_\ell}\in H^1_s(\Q_\ell,T/\m^k)$ be the dual elements of $x_b$ and $x_\ell$ under the pairing given in proposition \ref{prop:local_duality}. The element $(\widehat{x_b},-u\widehat{x_\ell})\in H^1_{\s}(\Q_b, T/\m^k)\oplus H^1_{\s}(\Q_\ell, T/\m^k)$ belongs to the kernel of the second map, so there is an element $z\in H^1_{\FF^{\ell b}}(\Q,T/\m^k)$ such that $\loc_b^s(z)=\widehat{x_b}$ and $\loc_\ell^s(z)=-u\widehat{x_\ell}$. The relaxed Selmer groups splits as follows.
+$$H^1_{\FF^{\ell b}}(\Q,T/\m^k)=(R/\m^k) z\oplus H^1_{\FF^b}(\Q,T/\m^k)=(R/\m^k) z\oplus H^1_{\FF^\ell}(\Q,T/\m^k)$$
+
+We want to show now that 
+$$\loc_\ell^{\f}:\ H^1_{\FF^\ell}(\Q,T/\m^k)\to H^1_\f(\Q_\ell,T/\m^k)$$ 
+is also surjective. Indeed, let $x\in H^1_{\FF^\ell}(\Q,T/\m^k)$ be such that $\pi^{k-1}x\neq 0$, where $\pi $ is a generator of $\m$. Then there is a unique decomposition $x=\alpha z+\beta$, where $\alpha\in R/\m^k$ and $\beta\in H^1_{\FF^b}(\Q,T/\m^k)$. Since
+$$H^1_{\FF^\ell}(\Q,T/\m^k)\cong R/\m^k\times R/\m^{e_2}\times \cdots\times R/\m^{e_s}$$
+ then $\pi^{k-e_1}x\in H^1_\FF(\Q,T/\m^k)\subset H^1_{\FF^b}(\Q,T/\m^k)$ so $\alpha\in \m^{e_1}/\m^k$. Then $\pi^{k-1} \beta\neq 0$. Since $\loc_\ell^\f(H^1_{\FF^b}(\Q,T/\m^k))$ is equal to $H^1_\f(\Q_\ell, T/\m^k)$, the isomorphism in \eqref{eq:str_Fb} implies that $\loc_\ell^\f(\beta )$ generates $H^1_\f(\Q_\ell, T/\m^k)$.
+
+As $\loc_\ell^\f(x)-\loc_\ell^\f(\beta)= \alpha\loc_\ell^\f(z)\in \m^{e_1} H^1_\f(\Q_\ell, T/\m^k)$, then $\loc_\ell^\f(x)$ is also a generator and thus $\loc_{\ell}^\f$ is surjective when considered as a map from $H^1_{\FF^\ell}(\Q,T/\m^k)$. Then the structure theorem over principal ideal domains implies
+\[H^1_{\FF(\ell)}(\Q,T/\m^k)=\ker\left(\loc_\ell^\f:\ H^1_{\FF^\ell}(\Q,T/\m^k)\to H^1_\f(\Q_\ell,T/\m^k)\right)\cong R/\m^{e_2}\times\cdots\times R/\m^{e_s}\qedhere\]
+\end{proof}
+
+
+\begin{proof}[Proof of theorem \ref{th:kur}] 
+
+Assume that
+$$H^1_{\FF^*}(\Q,T^*)\du\cong R^r\times R/\m^{e_1}\times \cdots\times R/\m^{e_s}$$
+
+By theorem \ref{th:kur_par},
+$$\Theta_i(\kappa)\subset\Fitt_i^R\left(H^1_{\mathcal F^*}(\mathbb Q, T^*)\du\right)$$
+
+
+By lemma \ref{lem:ord_delta}, for every $i\in \Z_{\geq0}$ we just need to find some $n\in \NN$ such that $\nu(n)=i$ and $\Fitt_i^R\left(H^1_{\mathcal F^*}(\mathbb Q, T^*)\du\right)=\m^{\lambda(n)}$, where $\lambda(n)=\length(H^1_{\FF(n)}(\Q,T^*[\m^{k_n}]))$. For every $i\in\{0,\ldots,s\}$, we will construct some $n_i\in \NN_k$ such that $\nu(n_i)=i$ and
+$$H^1_{\FF^*(n_i)}(\Q,T^*)\du\cong  R/\m^{e_{i+1}}\times \cdots\times R/\m^{e_s}$$
+The process for constructing the $n_i$ was described in the proof of theorem \ref{th:kur_par} and, under assumptions \ref{Nsd} and \ref{Nsur}, lemma \ref{lem:nd} guarantees that $h_i=e_{i+1}$ for all $i$, so the Selmer group for $\FF^*(n_i)$ has the desired structure.
+
+%The product $n_0$ was constructed in the proof of theorem \ref{th:kur_par}. By induction, once constructed $n_i$, we can apply lemma \ref{lem:nd} to the Selmer structure $\FF(n_i)$ to find the prime $\ell$ such that $n_{i+1}=\ell n_i$ satisfies the required property.
+\end{proof}
+
+%\begin{theorem}
+%Assume $T$ satisfies hypothesis (H1)-(H8) in addition to (H4a). Then 
+%\begin{equation}
+%\Theta_i(\kappa)=\Fitt_i^R\left(H^1_{\mathcal F^*}(\mathbb Q, T^*[\m^k])\du\right)\ \forall i \in \Z^{\geq 0}
+%\label{eq:theta}
+%\end{equation}
+%\label{th:kur}
+%\end{theorem}
+%
+%\begin{proof}
+%Let $r=\corank_{\Z_p}(H^1_{\mathcal F^*}(\Q, T^*))$. By theorem \ref{th:kur_par}, there is some $n\in \NN(\PP_k)$ such that $\nu(n)=r$ and 
+%$$\delta_n R=\Fitt_0^R(H^1_{\FF^*(n)}(\Q,T^*))=\Fitt_i^R(H^1_{\FF^*}(\Q,T^*))$$
+%
+%Consider the Selmer structure $\GG=\FF(n)$. We have a non-canonical isomorphism
+%$$H^1_{\GG^*}(\Q,T^*)\oplus R^*\cong H^1_{\FF}(\Q,T^*)$$
+%
+%Kolyvagin systems for $\GG^q$ can be constructed from those for $\FF^\ell$ as follows. For every $m\in \NN(\PP\setminus\{q:q|n\})$, we define 
+%$$\kappa_m^{\GG}:=\kappa_{nm}\in H^1_{\FF(nm)}(\Q,T)=H^1_{\GG(m)}(\Q,T)$$
+%%Since $\textrm{KS}(T,\FF^q,\PP)\cong R\cong \textrm{KS}(T,\GG^q, \PP\setminus\{q:q|n\})$, the above correspondence is an isomorphism so, in particular, it
+%By proposition \ref{prop:mr452}, the above identification $\textrm{KS}(T,\FF^\ell,\PP)\to \textrm{KS}(T,\GG^\ell,\PP\setminus\{q:q|n\})$ preserves the primality of the Kolyvagin systems,
+%
+%Since $H^1_{\GG^*}(\Q,T^*)$ is finite, the Selmer structure $\GG$ satisfies the assumption of \cite[Theorem $1.1$]{Sakamoto24} so for every $i\in \Z^{\geq0}$ there exists some $n_i\in \NN(\PP_k)$ such that 
+%$$\delta_{nn_i} R=\Fitt_i^R(H^1_{\GG^*}(\Q, T^*))=\Fitt_{n+i}^R(H^1_{\FF^*}(\Q,T^*))$$
+%\end{proof}
+%
+%\begin{remark}
+%\textcolor{red}{Sakamoto does it for Kolyvagin systems of rank $0$. Transpose to this case, hopefully including $p$}
+%\end{remark}
+
+

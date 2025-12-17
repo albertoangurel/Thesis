@@ -1,0 +1,157 @@
+%%%Packages%%%
+
+\usepackage[usenames]{xcolor} %for the color
+\usepackage{amssymb} %maths
+\usepackage{mathtools} %maths
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage[utf8]{inputenc} %useful to type directly diacritic characters
+\usepackage[british]{babel}
+\usepackage{array} %tablas
+\usepackage{multirow} %para las tablas
+\usepackage{float} %colocacion de tablas y figuras
+\usepackage[margin=1.3in]{geometry}
+\usepackage{multirow}
+\usepackage{enumerate}
+\usepackage{parskip}
+\usepackage[all,cmtip]{xy}
+\usepackage{tikz}
+\usetikzlibrary{matrix,arrows}
+
+
+%%%Commands%%%
+\newcommand{\abs}[1]{\lvert#1\rvert}
+\newcommand{\norm}[1]{\lVert#1\rVert}
+\DeclareMathOperator{\Sel}{Sel}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\cor}{cor}
+\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\ind}{ind}
+\DeclareMathOperator{\Gl2}{GL_2}
+\renewcommand{\Im}{\textrm{Im}}
+\newcommand{\Frob}{\textrm{Frob}}
+\newcommand{\Fitt}{\textrm{Fitt}}
+\newcommand{\ord}{\textrm{ord}}
+\renewcommand{\char}{\textrm{char}}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Map}{Map}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\KS}{KS}
+\DeclareMathOperator{\ES}{ES}
+\newcommand{\loc}{\textrm{loc}}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\p}{\mathfrak{p}}
+\newcommand{\du}{^\vee}
+\newcommand{\coker}{\textrm{coker}}
+\newcommand{\length}{\textrm{length}}
+\newcommand{\kk}{^{(k)}}
+\newcommand{\dinf}{\delta^{(\infty)}}
+\newcommand{\corank}{\textrm{corank}}
+\newcommand{\rank}{\textrm{rank}}
+\DeclareMathOperator{\cond}{cond}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\F}{\mathbb F}
+\newcommand{\N}{\mathbb N}
+\newcommand{\FF}{\mathcal F}
+\newcommand{\Pb}{\mathbb P}
+\newcommand{\Fcl}{{\mathcal{F}_{\textrm{cl}}}}
+\newcommand{\Fcan}{{\mathcal{F}^{\textrm{can}}}}
+\newcommand{\FLambda}{{\mathcal{F}_\Lambda}}
+\newcommand{\FBK}{{\mathcal{F}_{\textrm{BK}}}}
+\newcommand{\PP}{\mathcal P}
+\newcommand{\NN}{\mathcal N}
+\newcommand{\DD}{\mathcal D}
+\newcommand{\GG}{\mathcal G}
+\newcommand{\RR}{\mathcal R}
+\newcommand{\OO}{\mathcal O}
+\newcommand{\LL}{\mathcal L}
+\newcommand{\II}{\mathcal I}
+\newcommand{\UU}{\mathcal U}
+\newcommand{\CC}{\mathcal C}
+\newcommand{\BB}{\mathcal B}
+\newcommand{\mupi}{\mu_{p^\infty}}
+\newcommand{\mupn}{\mu_{p^N}}
+\newcommand{\tr}{\textrm{tr}}
+\newcommand{\ur}{\textrm{ur}}
+\newcommand{\f}{\textrm{f}}
+\newcommand{\s}{\textrm{s}}
+\newcommand{\Tr}{\textrm{Tr}}
+\newcommand{\fs}{\textrm{fs}}
+\renewcommand{\f}{\textrm{f}}
+\newcommand{\Iw}{\textrm{Iw}}
+\newcommand{\GL}{\textrm{GL}}
+\newcommand{\tors}{\textrm{tors}}
+\newcommand{\per}{\textrm{per}}
+\newcommand{\crys}{\textrm{crys}}
+\newcommand{\dR}{\textrm{dR}}
+\renewcommand{\sf}{\textrm{sf}}
+\newcommand{\chibar}{{\overline{\chi}}}
+\newcommand{\psibar}{{\overline{\psi}}}
+\newcommand{\Tbar}{{\overline{T}}}
+
+\newcommand{\bH}{\textbf{H}}
+\newcommand{\bSS}{\textbf{SS}}
+\newcommand{\bKS}{\textbf{KS}}
+\newcommand{\bell}{\bold{\ell}}
+\newcommand{\bT}{\textbf{T}}
+\newcommand{\bM}{\textbf{M}}
+
+\newcommand{\ku}{\mathfrak u}
+\newcommand{\kn}{\mathfrak n}
+\newcommand{\kv}{\mathfrak v}
+
+\newcommand{\Ann}{\textrm{Ann}}
+\renewcommand{\Im}{\textrm{Im}}
+
+
+
+
+%%%Sha
+
+    \DeclareFontFamily{U}{wncy}{}
+    \DeclareFontShape{U}{wncy}{m}{n}{<->wncyr10}{}
+    \DeclareSymbolFont{mcy}{U}{wncy}{m}{n}
+\DeclareMathSymbol{\Sha}{\mathord}{mcy}{"58} 
+
+
+%%%Theorems
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{theorem*}{Theorem}[section]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remark*}[theorem*]{Remark}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{assumption}[theorem]{Assumption}
+
+%%%Interactive labels
+
+\makeatletter
+\def\namedlabel#1#2{\begingroup
+    #2%
+    \def\@currentlabel{#2}%
+    \phantomsection\label{#1}\endgroup
+}
+\makeatother
+
+
+%%%Bibliography
+
+
+\usepackage[backend=biber, style=alphabetic]{biblatex}
+%\bibliographystyle{plain}
+\addbibresource{refs.bib}
+\usepackage{csquotes}
+
+\usepackage[pdfencoding=auto]{hyperref} 
+
