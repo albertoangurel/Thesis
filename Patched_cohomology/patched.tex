@@ -1,4 +1,5 @@
 \chapter{Patched Cohomology}
+\label{ch:patched}
 
 \section{Ultrafilters}
 
@@ -336,11 +337,11 @@ For each $n$ there is a long exact sequence in the cohomology of $G_n$. Since th
 
 \subsection{Local patched cohomology}
 
-In this section, we outline the basic properties of the local cohomology at an ultraprime $\ku$, defined as the patching of the local cohomology of the primes defining $\ku$.
+In this section, we outline the basic properties of the local cohomology at an ultraprime $\ku$, defined as the patching of the local cohomology of the primes defining $\ku$. 
 
 \begin{definition}
-Let $T$ be an $R[[G_K]]$-module and let $\ku$ be an ultraprime represented by the sequence $(\ell_n)$. The local patched cohomology group is defined as
-\[\bH^i(K_\ku,T):=\bH^i((G_{K_{\ell_n}}),T)\]
+Let $\ku$ be an ultraprime represented by the sequence $(\ell_n)$. The local patched cohomology group is defined as
+\[\bH^i(K_\ku,T):=\bH^i\Bigl((G_{K_{\ell_n}}),T\Bigr)\]
 \end{definition}
 
 In the local case, the local patched cohomology coincides the group cohomology of the local Galois group defined in Definition \ref{def:local_galois_group}.
@@ -360,19 +361,19 @@ where $G_{\ell_n}^{\textrm{t}}$ is Galois group of the maximal tamely ramified e
 
 
 
-\textcolor{red}{talk about $R$}
+\section{Global patched cohomology}
 
-\section{Patched Selmer structures}
+
 
 The first goal of this section is defining the concept of the patched cohomology group outside the square-free (formal) product of ultraprimes.
 
 \begin{definition}
-Let $\ku_1=\left(\ell^{(1)}_k\right)_{k\in \N},\ldots, \ku_s=\left(\ell^{(s)}_k\right)_{k\in \N}$ be a finite set of (distinct)  ultraprimes. Its product is defined as
+Let $\ku_1=\left(\ell^{(1)}_k\right)_{k\in \N},\ldots, \ku_s=\left(\ell^{(s)}_k\right)_{k\in \N}$ be a finite set of (distinct) ultraprimes. Its product is defined as
 \[\ku_1\cdots\ku_s =(\ell^{1}_n\cdots \ell^{(s)}_n)_{n\in \N}\in \UU(\N)\]
 The set of square-free products of Kolyvagin ultraprimes is denoted by $\NN$.
 \end{definition}
 
-\begin{definition}
+\begin{definition}(\cite[Definition 2.4.2]{Sweeting})
 Let $T$ be either a finite, profinite or ind-finite $R[[G_K]]$ module and let $\kn\in \NN$ be represented by the sequence $(n_i)$. We defined the maximal patched cohomology group unramified at $\kn$ by
 \[\bH^i(K^\kn/K,T):=\bH^i(\Gal(K^{n_i}/K),T)\]
 where $K^{n_i}$ represents the maximal extension of $K$ unramified outside the prime divisors of $n_i$. Note that this definition is independent of the sequence representing $\kn$.
@@ -381,6 +382,42 @@ where $K^{n_i}$ represents the maximal extension of $K$ unramified outside the p
 \begin{notation}
 If $S$ is a finite set of distinct ultraprimes and $n$ is the product of all the ultraprimes in $S$, we will also denote $\bH^i(K^\kn/K,T)$ by $\bH^i(K^\Sigma/K,T)$.
 \end{notation}
+
+The basic property of the global patched finite groups is its finiteness.
+
+\begin{proposition}(\cite[Lemma 2.4.5.]{Sweeting})
+Let $T$ be a finite group unramified outside a finite set $S\subset \UU(\Pb)$. The patched cohomology groups $\bH^i(K^S/K,T)$ are finite for all $i\geq 0$.
+\end{proposition}
+
+\textcolor{red}{Proof}
+
+\begin{remark}
+If $S_1\subset S_2\subset \UU(\Pb)$ are two finite sets of ultraprimes. Then there is a natural map
+\[\bH^1(K^{S_1}/K,T)\hookrightarrow \bH^1(K^{S_2}/K,T)\]
+When $T$ is finite, it is induced by a sequence of inflation maps. The general case, when $T$ is profinite and ind-finite, follows by taking limits.
+\label{rem:patched_global_maps}
+\end{remark}
+
+\begin{definition}(\cite[2.4.6.]{Sweeting})
+Assume that $T$ is unramified outside a finite set of primes $S_0$. The absolute global patched cohomology group is defined as 
+\[\bH^1(K,T)=\varinjlim_{S_0\subset S\subset \UU(\Pb)} \bH(K^{S}/K,T)\]
+where the limit is taken over all the finite sets and the transition maps are the ones defined in Remark \ref{rem:patched_global_maps}.
+\end{definition}
+
+\begin{definition}
+Let $S$ be a finite set of ultraprimes and let $\ku$ be an ultraprime. There exists a restriction map
+\[\res:\ \bH^1(K^S/K,T)\to \bH^1(K_\ku,T)\]
+induced, when $T$ is finite, by the restriction map in every factor of the ultraproduct. When $T$ is profinite (resp. ind-finite), $\res$ is obtained as the limit of the restriction map in the cohomology of the finite quotients (resp. submodules).
+\end{definition}
+
+We now show that the above definition is, in fact, the unramified subgroup of the global patched cohomology.
+
+\begin{proposition}(\cite[Proposition 2.4.11.]{Sweeting})
+Let $S\subset \UU(\Pb)$ be a finite set of ultraprimes and let $T$ be unramified outside $S_0$. Then 
+\[\bH^1(K^S/K,T)=\ker\biggl(\bH^1(K,T)\to \prod_{\ku\in \UU(\Pb)\setminus S} \frac{\bH^1(K_\ku,T)}{\bH^1(\II_\ku,T)}\biggr)\]
+\end{proposition}
+
+\section{Patched Selmer structures}
 
 Following \cite{Sweeting}, we can now define the Selmer structures in this setting. The main innovation is they also include local conditions at non-constant ultraprimes.
 

@@ -54,6 +54,68 @@
       \field{pages}{333\bibrangedash 400}
       \range{pages}{68}
     \endentry
+    \entry{BurnsSakamotoSano2}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=efc7b5e28e331906f58cf841742758e6}{%
+           family={Burns},
+           familyi={B\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=cb73ace61a4173770d59c0a95305476d}{%
+           family={Sakamoto},
+           familyi={S\bibinitperiod},
+           given={Ryotaro},
+           giveni={R\bibinitperiod}}}%
+        {{hash=9ec558b7a57259185cffa3853cb70492}{%
+           family={Sano},
+           familyi={S\bibinitperiod},
+           given={Takamichi},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{a83c3e7e54eed2ce8d59b9a69df088a2}
+      \strng{fullhash}{a83c3e7e54eed2ce8d59b9a69df088a2}
+      \strng{bibnamehash}{a83c3e7e54eed2ce8d59b9a69df088a2}
+      \strng{authorbibnamehash}{a83c3e7e54eed2ce8d59b9a69df088a2}
+      \strng{authornamehash}{a83c3e7e54eed2ce8d59b9a69df088a2}
+      \strng{authorfullhash}{a83c3e7e54eed2ce8d59b9a69df088a2}
+      \field{labelalpha}{BSS18}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.NT}
+      \field{eprinttype}{arXiv}
+      \field{title}{On the theory of higher rank Euler, Kolyvagin and Stark systems, II}
+      \field{year}{2018}
+      \verb{eprint}
+      \verb 1805.08448
+      \endverb
+    \endentry
+    \entry{Eisenbud}{book}{}
+      \name{author}{1}{}{%
+        {{hash=1249d4c8877c098355d267da038c837b}{%
+           family={Eisenbud},
+           familyi={E\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer New York, NY}%
+      }
+      \strng{namehash}{1249d4c8877c098355d267da038c837b}
+      \strng{fullhash}{1249d4c8877c098355d267da038c837b}
+      \strng{bibnamehash}{1249d4c8877c098355d267da038c837b}
+      \strng{authorbibnamehash}{1249d4c8877c098355d267da038c837b}
+      \strng{authornamehash}{1249d4c8877c098355d267da038c837b}
+      \strng{authorfullhash}{1249d4c8877c098355d267da038c837b}
+      \field{labelalpha}{Eis95}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Commutative Algebra}
+      \field{year}{1995}
+    \endentry
     \entry{Kim23}{misc}{}
       \name{author}{1}{}{%
         {{hash=5972b3b70a7d748aa6623178105ea418}{%
