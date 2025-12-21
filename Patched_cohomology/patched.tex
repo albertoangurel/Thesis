@@ -359,6 +359,58 @@ Hence we can assume that $\UU$ is a non-constant ultraprime. For $\UU$-many $n$,
 where $G_{\ell_n}^{\textrm{t}}$ is Galois group of the maximal tamely ramified extension. \textcolor{red}{complete}
 \end{proof}
 
+\begin{definition}(Cohomology of the inertia subgroup)
+Let $\ku$ an ultraprime represented by the sequence $(\ell_n)$. The cohomology of the inertia subgroup is the patching 
+\[\bH^i(\II_\ku,T)=\bH^i\Bigl(I_{\ell_n},T\Bigr)\]
+\end{definition}
+
+\begin{definition}(Finite cohomology)
+We define the \emph{finite cohomology} group as
+\[\bH^1_{\f}(K_\ku,T)=\ker\biggl(\bH^1(K_\ku,T)\to \bH^1(I_\ku,T)\biggr)\]
+\end{definition}
+
+\textcolor{red}{local duality}
+
+
+
+We can generalise the concept of Kolyvagin primes to this setting, with the advantage that there are Kolyvagin ultraprimes even for infinite coefficient rings. In order to define this notion, we need to set some assumptions
+
+\begin{assumption}
+Let $R$ be a profinite, local ring that can be described as 
+\[R=\varprojlim R_n\]
+where $R_n$ is a self-injective, finite, local ring. In addition, let $T$ be a $R[[G_K]]$-module that is finitely generated as $R$-module.
+\end{assumption}
+
+\begin{notation}
+Recall that $K(T)$ is the kernel of the action $\rho:\ G_K\to \Aut(T)$ and let 
+\[K(T)_{p^\infty}=K(T)K(1)(\mu_{p^\infty})\]
+\end{notation}
+
+\begin{assumption}
+In addition, we assume the following assumptions:
+\begin{itemize}
+\item \namedlabel{Tirred}{(T1)} $T/\m T$ is an irreducible $k[[G_K]]$-module.
+\item \namedlabel{Ttau}{(T2)} There exists $\tau\in G_{K_M}$ such that $T/(\tau-1)T\cong R$ as $R$-modules.
+\item \namedlabel{Tcoh}{(T3)} $H^1(K(T)_{p^\infty}/K,T)=H^1(K(T)_{p^\infty}/K,T^*(1))=0$. 
+\end{itemize}
+\label{ass:patched:basic}
+\end{assumption}
+
+
+
+\begin{definition}
+An ultraprime is said to be a \emph{Kolyvagin ultraprime} is $\Frob_ku$ is conjugate to $\tau$ in $\Gal(K(T)_{p^\infty}/K)$.
+\end{definition}
+
+
+We can describe explicitly the local cohomology of Kolyvagin ultraprimes.
+\begin{proposition}
+Let $\ku$ be a Kolyvagin ultraprime. Then there is an homomorphism
+\[\bH^1_\f(K_\ku,T)\cong T/(\Frob_\ku -1)T\]
+\end{proposition}
+
+
+
 
 
 \section{Global patched cohomology}
@@ -415,6 +467,7 @@ We now show that the above definition is, in fact, the unramified subgroup of th
 \begin{proposition}(\cite[Proposition 2.4.11.]{Sweeting})
 Let $S\subset \UU(\Pb)$ be a finite set of ultraprimes and let $T$ be unramified outside $S_0$. Then 
 \[\bH^1(K^S/K,T)=\ker\biggl(\bH^1(K,T)\to \prod_{\ku\in \UU(\Pb)\setminus S} \frac{\bH^1(K_\ku,T)}{\bH^1(\II_\ku,T)}\biggr)\]
+\label{prop:patched:unramified}
 \end{proposition}
 
 \section{Patched Selmer structures}
@@ -424,7 +477,7 @@ Following \cite{Sweeting}, we can now define the Selmer structures in this setti
 \begin{definition}
 A \emph{Selmer structure} $\FF$ is a consists of the following data:
 \begin{itemize}
-\item A finite set $\Sigma$ of $\UU(\Pb)$ containing all constant ultraprimes lying over $p$, $\infty$ or ramified primes of $T$.
+\item A finite set $\Sigma_\FF$ of $\UU(\Pb)$ containing all constant ultraprimes lying over $p$, $\infty$ or ramified primes of $T$.
 \item For each $\ku\in S$, a closed $R$-submodule
 \[\bH^1_\FF(K_\ku,T) \subset \bH^1(K_\ku,T)\]
 \end{itemize}
@@ -435,10 +488,40 @@ The Selmer module of a Selmer structure $\FF$ is
 \[\bH^1_{\FF}(K,\bT)=\ker\Biggl(\bH^1(K^\Sigma/K,\bT) \to \prod_{\ku\in \Sigma} \frac{\bH^1(K_\ku,\bT)}{\bH^1_{\FF}(K_\ku,\bT)}\Biggr)\]
 \end{definition}
 
+\begin{remark}
+By Proposition \ref{prop:patched:unramified}, a Selmer structure depend only on the local conditions. If we set $\bH^1_{\FF}(K_\ku,T):=\bH^1_\f(K_\ku,T)$ whenever $\ku\notin \FF$, then 
+\[\bH^1_{\FF}(K,\bT)=\ker\Biggl(\bH^1(K,\bT) \to \prod_{\ku\in \UU(\Pb)} \frac{\bH^1(K_\ku,\bT)}{\bH^1_{\FF}(K_\ku,\bT)}\Biggr)\]
+\end{remark}
+
+The next technical proposition plays a central role in this theory.
+\begin{proposition}(\cite[Proposition 2.5.6]{Sweeting})
+Let $T$ be a profinite group and let $\FF$ be a Selmer structure defined on $T$. Then
+\[\bH^1_{\FF}(K,T)=\varprojlim_{T\twoheadrightarrow T'} \bH^1_{\FF}(K,T')\]
+where the limit is taken over the finite quotients $T'$ of $T$ and $\bH^1_{\FF}(K,T')$ is the Selmer group of the propagated Selmer structure, as defined in Definition \ref{def:propagation_quotients}.
+\end{proposition}
+
+\begin{proof}
+Since the inverse limit is exact on finite groups,
+\[\begin{aligned}
+\lim_{T\twoheadrightarrow T'} \bH^1_{\FF}(K,T) =\varprojlim_{T\twoheadrightarrow T'}\ker\Biggl(\bH^1\Bigl(K^{\Sigma_{\FF}}/K,T'\Bigr)\to \prod_{\ku\in \Sigma_{\FF^*}}{\bH^1_{/\FF}(K_\ku,T)}\Biggr)\\
+=\ker\Biggl(\bH^1\Bigl(K^{\Sigma_{\FF}}/K,T\Bigr)\to \prod_{\ku\in \Sigma_{\FF^*}}\varprojlim_{T\twoheadrightarrow T'} \bH^1_{/\FF}(K_\ku,T') \Biggr)
+\end{aligned}\]
+By the definition of propagated Selmer structure and the closedness of $\bH^1_{\FF}(K_\ku,T)$, we obtain that
+\[\bH^1_{/\FF}(K_\ku,T)=\varprojlim_{T\twoheadrightarrow T'} \bH^1_{/\FF}(K_\ku,T')\]
+which finish the proof of this proposition.
+\end{proof}
+
+The next dual proposition is proven similarly.
+\begin{proposition}(\cite[Proposition 2.5.6]{Sweeting})
+Let $T$ be an ind-finite group and let $\FF$ be a Selmer structure defined on $T$. Then
+\[\bH^1_{\FF}(K,T)=\varinjlim_{T'\hookrightarrow  T} \bH^1_{\FF}(K,T')\]
+where the limit is taken over the finite submodules $T'$ of $T$ and $\bH^1_{\FF}(K,T')$ is the Selmer group of the propagated Selmer structure, as defined in Definition \ref{def:propagation_submodules}.
+\end{proposition}
+
 \textcolor{red}{local duality}
 
 \begin{definition}
-    Let $\FF$ be a Selmer structure on $T$. The we can define a \emph{dual Selmer structure} $\FF^*$ on $T^*$ by defining the local condition $\bH^1(K_\ku,\bT^*)$ as the the annihilator of $\bH^1_{\FF}(K_\ku,\bT)$ under the local duality pairing in Proposition \ref{prop:local_duality}.
+    Let $\FF$ be a Selmer structure on $T$. The we can define a \emph{dual Selmer structure} $\FF^*$ on $T^*$ by defining the local condition $\bH^1(K_\ku,\bT^*)$ as the the annihilator of $\bH^1_{\FF}(K_\ku,\bT)$ under the local duality pairing in Proposition \ref{}\textcolor{red}{patched local duality}.
 \end{definition}
 
 \begin{proposition}(Global duality)

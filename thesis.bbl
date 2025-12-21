@@ -175,6 +175,44 @@
       \field{pages}{viii+96}
       \range{pages}{-1}
     \endentry
+    \entry{NSW}{book}{}
+      \name{author}{3}{}{%
+        {{hash=9dc9a53b50c612ebed946e5825058585}{%
+           family={Neukirch},
+           familyi={N\bibinitperiod},
+           given={Jürgen},
+           giveni={J\bibinitperiod}}}%
+        {{hash=eae8e84585cf2e15f4e98904aa5aeb11}{%
+           family={Schmidt},
+           familyi={S\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=62ee5aec502efa372597218e01704bbc}{%
+           family={Wingberg},
+           familyi={W\bibinitperiod},
+           given={Key},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Berlin, Heidelberg}%
+      }
+      \strng{namehash}{897ab68d7aa4d69269dd55e6a0f8bb6f}
+      \strng{fullhash}{897ab68d7aa4d69269dd55e6a0f8bb6f}
+      \strng{bibnamehash}{897ab68d7aa4d69269dd55e6a0f8bb6f}
+      \strng{authorbibnamehash}{897ab68d7aa4d69269dd55e6a0f8bb6f}
+      \strng{authornamehash}{897ab68d7aa4d69269dd55e6a0f8bb6f}
+      \strng{authorfullhash}{897ab68d7aa4d69269dd55e6a0f8bb6f}
+      \field{labelalpha}{NSW00}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Grundlehren der mathematischen Wissenschaften}
+      \field{title}{Cohomology of number fields}
+      \field{year}{2000}
+      \field{pages}{xv\bibrangedash 826}
+      \range{pages}{812}
+    \endentry
     \entry{Rubin}{book}{}
       \name{author}{1}{}{%
         {{hash=36c8e0559efe2dd98d3833fcaf2a18d5}{%

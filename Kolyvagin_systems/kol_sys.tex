@@ -505,6 +505,7 @@ There is a set of primes playing a crucial role in this theory.
 
 \begin{definition}
 A prime $q$ is said to be a \emph{Kolyvagin prime} if $\Frob_q$ is conjugate to $\tau$ in $\Gal(K(T)_M/K)$.
+\label{def:kolyvagin_primes}
 \end{definition}
 
 \begin{notation}
@@ -648,6 +649,7 @@ Let $\ T'\hookrightarrow T$ be a submodule. This inclusion induces a map
 
 A local condition at $T$ propagates to $T'$ as
 \[H^1_\FF(K_\ell,T')=\mu^{-1}\Bigl(H^1_\FF(K_\ell,T)\Bigr)\]
+\label{def:propagation_quotients}
 \end{definition}
 
 \begin{definition}(Propagation to quotients)
@@ -656,6 +658,7 @@ Let $\ T\hookrightarrow T''$ be a quotient map. It a map
 
 A local condition at $T$ propagates to $T'$ as
 \[H^1_\FF(K_\ell,T'')=\varepsilon\Bigl(H^1_\FF(K_\ell,T)\Bigr)\]
+\label{def:propagation_submodules}
 \end{definition}
 
 \begin{remark}
@@ -828,6 +831,7 @@ The Fitting ideals $\Fitt_i^R(M)$ are independent of the chosen resolution.
 When the coefficient ring $R$ is simple enough, the sequence of Fitting ideals can recover $M$ up to pseudo-isomorphism.
 \begin{proposition}
 Let $R$ be a discrete valuation ring and let $M$ be a finitely generated $R$-module. Then the Fitting ideals determine $M$ up to isomorphism.
+\label{prop:fitting_dvr}
 \end{proposition}
 
 \begin{proof}
@@ -1028,7 +1032,7 @@ Let $R$ be a principal, artinian, local ring with finite residue field, let $T$ 
 \end{equation}
  Moreover, if one of the following conditions is satisfied
 \begin{enumerate}[(i)]
-\item $i=\rank_R(H^1_{\FF}(K,T))=:r$
+\item $i=\dim_k\biggl(H^1_{\FF}(K,T)\biggm/H^1_{\FF}(K,T)[\m^{k-1}]\biggr)=:r$
 \item $\Theta_{i-1}^{(0)}(\kappa,\FF)\subsetneq \Fitt_{i-1}^R\left(H^1_{\mathcal F}(K, T)\right)$
 \item There is some $k\in \N$ and some $n\in\mathcal N$ such that $\nu(n)=i-1$, $\Theta_{i-1}(\kappa)=\delta_n R$ and 
 $$H^1_{\mathcal F(n)}(\Q,T/\m^k)\approx R/\m^{e_1}\times \cdots \times R/\m^{e_s}$$
@@ -1043,17 +1047,50 @@ Similarly to the core rank case, the proof is divided in the following two lemma
 
 \begin{lemma}
 If $\kappa\in \KS(\GG)$ is a primitive Kolyvagin system and $n\in \NN$, then
-\[\ind(\delta_n)=\Fitt^0\Bigl(H^1_{\FF(n)}(K,T)\Bigr)\]
+\[\ind(\delta_n)=\Fitt_0^R\Bigl(H^1_{\FF(n)}(K,T)\Bigr)\]
 \label{lem:deltan_trn}
 \end{lemma}
 
 \begin{lemma}
 If $\FF$ is a cartesian 
-\[\sum_{n\in \NN_i}\Fitt^0\Bigl(H^1_{\FF^*}(K,T^*)\Bigr)\subset \Fitt_i^R\Bigl(H^1_{\FF^*}(K,T^*)\Bigr)\]
+\[\sum_{n\in \NN_i}\Fitt_0^R\Bigl(H^1_{\FF^*(n)}(K,T^*)\Bigr)\subset \Fitt_i^R\Bigl(H^1_{\FF^*}(K,T^*)\Bigr)\]
 \label{lem:fitti_sub_fitt0trn}
 \end{lemma}
 
-\textcolor{red}{lemma for equality}
+In order to prove the other inclusion, whenever it holds, we will construct a vertex $n_i\in \NN_i$ such that 
+\[\Fitt_0^R\Bigl(H^1_{\FF^*(n_i)}(K,T^*)\Bigr)= \Fitt_i^R\Bigl(H^1_{\FF^*}(K,T^*)\Bigr)\]
+
+Note that the equality holds trivially when $i<r$, since $\Fitt_i^R\Bigl(H^1_{\FF^*}(K,T^*)\Bigr)$ vanishes. For $i=r$, the equality is proven in the following lemma.
+
+\begin{lemma}
+There exists some vertex $n_r\in \NN_r$ such that 
+\[\Fitt_0^R\Bigl(H^1_{\FF^*(n_r)}(K,T)\Bigr)=\Fitt_i^R\Bigl(H^1_{\FF}(K,T)\Bigr)\]
+\label{lem:fitti_eq_fitt0_rank}
+\end{lemma}
+
+Note that Lemma \ref{lem:fitti_eq_fitt0_rank} determines the structure of the modified Selmer group. Indeed, assume there is a structural homomorphism
+\[H^1_{\FF}(K,T)\approx R^r\times R/\m^{e_1}\times \cdots \times R/\m^{e_s}\]
+for some exponents $e_1\geq \cdots \geq e_s$, all being at most $k-1$. Then there is an homomorphism 
+\[H^1_{\FF}(K,T)\approx  R/\m^{e_1}\times \cdots \times R/\m^{e_s}\]
+We can extend this construction to higher values of $i$.
+
+\begin{lemma}
+For every $j\geq 0$, we can either construct a vertex
+\begin{itemize}
+\item $n_{r+j}\in \NN_{r+j}$ such that $H^1_{\FF(n_{r+j})}(K,T)\cong R/\m^{e_{j+1}}\times \cdots \times R/\m^{e_s}$.
+\item $n_{r+j+1}\in \NN_{r+j+1}$ such that $H^1_{\FF(n_{r+j+1})}(K,T)\cong R/\m^{e_{j+1}}\times \cdots \times R/\m^{e_s}$.
+\end{itemize}
+\label{lem:fitti_eq_fitt0_higher}
+\end{lemma}
+
+Note that such vertices guarantee the equality in Theorem \ref{th:str_chi0} for their respective indices.
+
+\begin{corollary}
+For the indices $k\geq 0$ such that there exists an element $n_r\in\NN_r$ as in Lemma \ref{lem:fitti_eq_fitt0_higher}, there is an equality
+\[\sum_{n\in \NN_{r+k}}\Fitt_0^R\Bigl(H^1_{\FF^*(n)}(K,T^*)\Bigr)\subset \Fitt_{r+k}^R\Bigl(H^1_{\FF^*}(K,T^*)\Bigr)\]
+\end{corollary}
+
+\textcolor{red}{Final comments}
 
 \subsection{Proof of Lemma \ref{lem:deltan_trn}}
 
@@ -1063,7 +1100,7 @@ The proof of Lemma \ref{lem:deltan_trn} involves comparing the indices of $\kapp
 \begin{lemma}
 For every $n\in\mathcal N$, let 
 \[C_n:=\coker\left(\loc_\ell:\ H^1_{\GG}(K,T)\to H^1_{\GG/\FF}(K_\ell, T)\right)\]
-\textcolor{red}{Explain notation $\GG/\FF$.} Then $\ind(\delta_n)=\ind(\kappa_n)\cdot \Fitt^{(0)}(\kappa_n)$.
+Then $\ind(\delta_n)=\ind(\kappa_n)\cdot \Fitt^{(0)}(\kappa_n)$.
 \label{lem:delta_kappa_C}
 \end{lemma}
 
@@ -1090,6 +1127,20 @@ where the second inequality follows from Lemma \ref{lem:kn_trn} and the last one
 
 \subsection{Proof of Lemma \ref{lem:fitti_sub_fitt0trn}}
 
+In order to prove Lemma \ref{lem:fitti_sub_fitt0trn}, we need to show, for any $n\in \NN_i$, the inclusion
+\[\Fitt_0^R\Bigl(H^1_{\FF^*(n)}(K,T^*)\Bigr)\subset \Fitt_i^R\Bigl(H^1_{\FF^*}(K,T^*)\Bigr)\]
+
+Consider the exact sequence
+\[\xymatrix{0\ar[r] &  H^1_{\FF_n^*}(K,T)\ar[r] & H^1_{\FF^*}(K,T)\ar[r] & \prod_{\ell\mid n} H^1_{\f}{\FF^*}(K,T)  }\]
+Since all the prime divisors of $n$ are Kolyvagin primes, the last term is isomorphic to $R^{\nu(n)}$. The description of Fitting ideals over principal rings in Proposition \ref{prop:fitting_dvr} \textcolor{red}{(not fully exact, revise)} implies that 
+\[\Fitt_0^R\Bigl(H^1_{\FF_n^*}(K,T)\Bigr)\subset \Fitt_{\nu(n)}^R\Bigl(H^1_{\FF^*}(K,T)\Bigr)\]
+Since $H^1_{\FF_n^*}(K,T)\subset H^1_{\FF^*(n)}(K,T)$, then 
+\[\Fitt_0^R\Bigl(H^1_{\FF^*(n)}(K,T)\Bigr)\subset \Fitt_0^R\Bigl(H^1_{\FF_n^*}(K,T)\Bigr)\]
+Combining both inclusions, we can conclude the proof of Lemma \ref{lem:fitti_sub_fitt0trn}.
+
+\subsection{Proof of Lemma \ref{lem:fitti_eq_fitt0_rank}}
+
+\subsection{Proof of Lemma \ref{lem:fitti_eq_fitt0_higher}}
 
 \section{Old stuff}
 

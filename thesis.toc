@@ -1,0 +1,66 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {british}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {0.1}Galois cohomology}{4}{section.0.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {0.1.1}Local Galois cohomology}{4}{subsection.0.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {0.1.2}Selmer structures}{6}{subsection.0.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Kolyvagin systems}{13}{chapter.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Local cohomology and Kolyvagin primes}{13}{section.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}Selmer modules}{15}{section.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.3}Fitting ideals}{19}{section.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.4}Classical Kolyvagin systems}{21}{section.1.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.5}Selmer structures of rank 0}{22}{section.1.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.5.1}Proof of Lemma \ref {lem:deltan_trn}}{25}{subsection.1.5.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.5.2}Proof of Lemma \ref {lem:fitti_sub_fitt0trn}}{26}{subsection.1.5.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.5.3}Proof of Lemma \ref {lem:fitti_eq_fitt0_rank}}{26}{subsection.1.5.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.5.4}Proof of Lemma \ref {lem:fitti_eq_fitt0_higher}}{26}{subsection.1.5.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.6}Old stuff}{26}{section.1.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.6.1}Fitting ideals of Selmer groups of core rank zero}{27}{subsection.1.6.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.6.2}Non-self-dual case}{30}{subsection.1.6.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Patched Cohomology}{35}{chapter.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Ultrafilters}{35}{section.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.1}Definition}{35}{subsection.2.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.2}Analogy between ultrafilters and ideals}{36}{subsection.2.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.3}Ultraproducts}{37}{subsection.2.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.4}Ultraprimes}{39}{subsection.2.1.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Patched cohomology}{41}{section.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.1}Construction}{41}{subsection.2.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.2}Local patched cohomology}{42}{subsection.2.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Global patched cohomology}{43}{section.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Patched Selmer structures}{45}{section.2.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Kolyvagin systems over the Iwasawa algebra}{47}{chapter.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Preliminaries on exterior powers}{47}{section.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Stark Systems}{49}{section.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.1}Core vertex}{50}{subsection.3.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{References}{52}{theorem.3.2.8}%
