@@ -1,0 +1,31 @@
+\chapter{Cartesian systems}
+
+\section{The graph of cartesian Selmer structures}
+
+\begin{definition}
+We consider the graph $\CART$ whose vertices are the cartesian Selmer structures on $T$ and there is an arrow $\GG\to \FF$ joining two Selmer structures $\FF$ and $\GG$ whenever $\FF\leq \GG$.
+\end{definition}
+
+\begin{proposition}
+Let $\FF\leq\GG$ be cartesian Selmer structures. Then the module
+\[\LL_{\GG/\FF}=\bigoplus_{\ku\in \UU(\Pb)} \bH^1_{\GG/\FF}(K_\ku,T)=\bigoplus_{\ku\in \UU(\Pb)} \frac{\bH^1_{\GG}(K_\ku,T)}{\bH^1_{\FF}(K_\ku,T)}\]
+is a free, finitely generated $R$-module of rank $\chi(\GG)-\chi(\FF)$.
+\end{proposition}
+
+\begin{proof}
+Since $\GG$ is cartesian, the $R$-module
+\[\bigoplus_{\ku\in \UU(\Pb)}\bH^1_{/\GG}(K_\ku,T)\] 
+is torsion-free. Since $\LL_{\GG/\FF}$ is a finitely-generated submodule, it is free by the structure theorem. By Proposition \ref{prop:patched:global_duality}, there is an exact sequence
+\[\xymatrix{H^1_{\FF}(K,T)\ar@{>->}[r] & H^1_{\GG}(K,T)\ar[r] & \LL_{\GG/\FF} \ar[r] & H^1_{\GG^*}(K,T^*)^\vee\ar@{->>}[r]& H^1_{\FF^*}(K,T^*)^\vee}\]
+By Proposition \ref{prop:patched:core_rank_limit}, we see that the rank of $\LL_{\GG/\FF}$ is $\chi(\GG)-\chi(\FF)$.
+\end{proof}
+
+\begin{proposition}
+Let $\FF\leq \GG$ be cartesian Selmer structures. There is a canonical homomorphism
+\[\bigcap^{\chi(\GG)} \bH^1_{\GG}(K,T)\otimes \det(\LL_{\GG/\FF})\to \bigcap^{\chi(\FF)} \bH^1_{\GG}(K,T)\]
+\label{prop:cartesian_bidual_map}
+\end{proposition}
+
+\begin{proof}
+\textcolor{red}{use general properties of biduals}
+\end{proof}

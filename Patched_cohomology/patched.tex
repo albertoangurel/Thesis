@@ -139,6 +139,43 @@ This product morphism restricts well to the ultraproduct, resulting in a map
 Indeed, if $(\alpha_i), (\alpha'_i)\in \prod_{n\in \N} A_n$ are two equivalent sequences, then $\alpha_i=\alpha'_i$ for $\UU$-many $i$. Then $\varphi(\alpha_i)=\varphi(\alpha'_i)$ for $\UU$-many $i$. It implies that $\overline{\varphi}(\alpha_i)$ and $\overline\varphi(\alpha'_i)$ are equivalent sequences in $\prod_{n\in \N} B_n$. Hence, $\varphi^{\UU}$ is well defined and, since it clearly behaves well with the composition, the ultraproduct is functorial.
 \end{proof}
 
+The ultraproduct also behave well with direct products.
+\begin{proposition}
+If $(A_n)$ and $(B_n)$ are sequences of sets, modules or rings, there is a canonical identification
+\[\UU(A_n\times B_n)=\UU(A_n)\times \UU(B_n)\]
+\label{prop:ultraproduct_product}
+\end{proposition}
+
+\begin{proof}
+The canonical map
+\[\prod_{n\in \N} A_n\times B_n \to \left(\prod_{n\in \N} A_n\right)\times \prod_{n\in \N} B_n,\ (a_n,b_n)_{n\in \N}\mapsto \Bigl[(a_n)_{n\in \N},(b_n)_{n\in \N}\Bigr]\]
+respects the equivalence relation given by the ultrafilter. Indeed, if two sequences $\{(a_n,b_n)\}_{n\in\N}$ and $\{(a_n',b_n')\}_{n\in\N}$ are equivalent, the set
+\[S:=\{n\in \N:\ (a_n,b_n)=(a_n',b_n')\}\in \UU\]
+Therefore, by \ref{filter_supset},
+\[S_a=\{n\in \N:\ a_n=a_n'\}\in \UU\]
+since it contains $S$. Hence $(a_n)$ is equivalent to $(a_n')$. Similarly, $(b_n)$ and $(b_n')$ are also equivalent. Then the map $\UU(A_n\times B_n)\to\UU(A_n)\times \UU(B_n)$ is well defined.
+
+Conversely, if we have two pair of equivalent sequences $(a_n)$ and $(a_n')$, and $(b_n)$ and $(b_n')$. We denote by $S_a$ and $S_b$ the set of indices in which they coincide, then
+\[\{n\in \N: (a_n,b_n)=(a_n',b_n')\}=S_a\cap \S_b\in \UU\]
+by \ref{filter_intersection}. Then $(a_n,b_n)$ and $(a_n',b_n')$ are two equivalent sequences in $(A_n\times B_n)$, so the inverse map $\UU(A_n)\times \UU(B_n)\to \UU(A_n\times B_n)$ is also well defined.
+\end{proof}
+
+The behavior of the ultrafilter with the $\Hom$ functor is not as satisfying, since we only get an injective map.
+\begin{proposition}
+Let $A_n$, $B_n$ be two sequences in $\CC^{\mathbb{N}}$. Then there is an injection
+\[\Psi:\ \UU(\Hom(A_n,B_n))\hookrightarrow \Hom\Bigl(\UU(A_n),\UU(B_n)\Bigr)\]
+\label{prop:ultraproduct_hom}
+\end{proposition}
+
+\begin{proof}
+Let $(\varphi_n)$ be the sequence representing an element in $\UU(\Hom(A_n,B_n))$ and let $(a_n)$ be a sequence representing an element in $B_n$. We assign the sequence $\varphi_n(a_n)\in \UU(B_n)$. Clearly, this assignment behaves well under the ultrafilter equivalences in both $\UU(\Hom(A_n,B_n))$ and $\UU(A_n)$, so it defines a map
+\[\Psi: \UU(\Hom(A_n,B_n))\to \Hom\Bigl(\UU(A_n),\UU(B_n)\Bigr)\]
+
+In order to check injectivity, consider another sequence $(\psi_n)$ induces the same element in $\Hom\Bigl(\UU(A_n),\UU(B_n)\Bigr)$. For the sake of contradiction, assume that $(\varphi_n)$ and $(\psi_n)$ are not equivalent, i.e., the set
+\[S=\{n\in \N:\ \varphi_n\neq \psi_n\}\in \UU\]
+Choose a sequence $(a_n)\in (A_n)$ where $\varphi_n(a_n)\neq \psi_n(a_n)$ for every $n\in S$. Hence $(\varphi_n(a_n))$ and $(\psi_n(a_n))$ represent different elements in $\UU(B_n)$, so $\Psi(\varphi_n)\neq \Psi(\psi_n)$.
+\end{proof}
+
 \begin{notation}
 If $M$ is a set, we will denote by $\UU(M)$ to the ultraproduct of the sequence $(M_n)$ in which $M_n=M$ for all $n$.
 \end{notation}
@@ -270,7 +307,7 @@ The \emph{inertia subgroup} $I_\ku\subset G_\ku$ is the normal subgroup $\wideha
 \end{definition}
 
 \begin{remark}
-Note that, when $\ku$ is a constant ultraprime, the semidirect product $\widehat Z(1)\rtimes \langle \Frob_\ku\rangle$ coincides with the tame inertia quotient of the Galois group $G_\ku$.
+Note that, when $\ku$ is a constant ultraprime, the semidirect product $\widehat \Z(1)\rtimes \langle \Frob_\ku\rangle$ coincides with the tame inertia quotient of the Galois group $G_\ku$.
 \end{remark}
 
 We impose that $G_\ku$ acts unramifiedly on Galois modules.
@@ -359,6 +396,14 @@ Hence we can assume that $\UU$ is a non-constant ultraprime. For $\UU$-many $n$,
 where $G_{\ell_n}^{\textrm{t}}$ is Galois group of the maximal tamely ramified extension. \textcolor{red}{complete}
 \end{proof}
 
+From this prove, we can prove the following corollary.
+
+\begin{corollary}
+Let $\ku=(\ell_n)$ be an ultraprime and let $T$ be a finite group endowed with an action of $G_\ku$. For $\UU$-many $n$, there is an isomorphism
+\[\varphi_i^\ku:\ \bH^1(K_\ku,T)\cong H^1(K_{\ell_i},T)\]
+\label{cor:patched:local_constant}
+\end{corollary}
+
 \begin{definition}(Cohomology of the inertia subgroup)
 Let $\ku$ an ultraprime represented by the sequence $(\ell_n)$. The cohomology of the inertia subgroup is the patching 
 \[\bH^i(\II_\ku,T)=\bH^i\Bigl(I_{\ell_n},T\Bigr)\]
@@ -399,7 +444,7 @@ In addition, we assume the following assumptions:
 
 
 \begin{definition}
-An ultraprime is said to be a \emph{Kolyvagin ultraprime} is $\Frob_ku$ is conjugate to $\tau$ in $\Gal(K(T)_{p^\infty}/K)$.
+An ultraprime is said to be a \emph{Kolyvagin ultraprime} is $\Frob_\ku$ is conjugate to $\tau$ in $\Gal(K(T)_{p^\infty}/K)$.
 \end{definition}
 
 
@@ -410,10 +455,36 @@ Let $\ku$ be a Kolyvagin ultraprime. Then there is an homomorphism
 \end{proposition}
 
 
+Local Tate duality extend to patched cohomology.
+
+\begin{proposition}(Local duality)
+Let $T$ be either a finite, profinite or ind-finite group and let $\ku=(\ell_n)$ be an ultraprime. Then there is a non-degenerate pairing 
+\[\bH^1(K_\ku,T)\times \bH^1(K_\ku,T^*) \to \Q/\Z\]
+\label{prop:patched:local_duality}
+\end{proposition}
+
+\begin{proof}
+Assume first that $T$ is finite. Then 
+\[\begin{array}{cc}
+\bH^1(K_\ku,T)=\UU\Bigl(H^1(K_{\ell_n},T)\Bigr),\ &\bH^1(K_\ku,T^*)=\UU\Bigl(H^1(K_{\ell_n},T^*)\Bigr)
+\end{array}\]
+Hence, by Proposition \ref{prop:ultraproduct_product}
+\[\bH^1(K_\ku,T)\times \bH^1(K_\ku,T^*)=\UU\biggl(H^1(K_{\ell_n},T)\times H^1(K_{\ell_n},T^*)\biggr)\]
+Classical Tate duality, together with the functoriality of the ultraproduct, induces a pairing
+\[\bH^1(K_\ku,T)\times \bH^1(K_\ku,T^*)\to \UU\left(\frac{(\# T)^{-1} \Z}{\Z}\right)=\frac{(\# T)^{-1} \Z}{\Z}\]
+Since classical local duality is non-degenerate, and the ultraproduct is an exact functor, there is an injection
+\[\UU\Bigl(H^1(K_{\ell_n},T)\Bigr)\hookrightarrow \UU\left(\Hom\left(H^1(K_{\ell_n},T^*),\frac{(\# T)^{-1} \Z}{\Z}\right)\right)\]
+Applying Proposition \ref{prop:ultraproduct_hom}, we also obtain the injection
+\[\UU\Bigl(H^1(K_{\ell_n},T)\Bigr)\hookrightarrow \Hom\left(\UU\Bigl(H^1(K_{\ell_n},T^*)\Bigr),\UU\left(\frac{(\# T)^{-1} \Z}{\Z}\right)\right)\]
+Therefore, the patched local duality pairing is non-degenerate on the left. Similarly, it is also non-degenerate on the right factor.
+\end{proof}
+
+\textcolor{red}{finite cohomology annihilators}
 
 
 
-\section{Global patched cohomology}
+
+\subsection{Global patched cohomology}
 
 
 
@@ -470,7 +541,7 @@ Let $S\subset \UU(\Pb)$ be a finite set of ultraprimes and let $T$ be unramified
 \label{prop:patched:unramified}
 \end{proposition}
 
-\section{Patched Selmer structures}
+\subsection{Patched Selmer structures}
 
 Following \cite{Sweeting}, we can now define the Selmer structures in this setting. The main innovation is they also include local conditions at non-constant ultraprimes.
 
@@ -484,16 +555,21 @@ A \emph{Selmer structure} $\FF$ is a consists of the following data:
 \end{definition}
 
 \begin{definition}
-The Selmer module of a Selmer structure $\FF$ is
-\[\bH^1_{\FF}(K,\bT)=\ker\Biggl(\bH^1(K^\Sigma/K,\bT) \to \prod_{\ku\in \Sigma} \frac{\bH^1(K_\ku,\bT)}{\bH^1_{\FF}(K_\ku,\bT)}\Biggr)\]
+The Selmer group of a Selmer structure $\FF$ is defined as
+\[\bH^1_{\FF}(K,T):=\ker\Biggl(\bH^1(K^\Sigma/K,T) \to \prod_{\ku\in \Sigma} \frac{\bH^1(K_\ku,T)}{\bH^1_{\FF}(K_\ku,T)}\Biggr)\]
 \end{definition}
 
 \begin{remark}
 By Proposition \ref{prop:patched:unramified}, a Selmer structure depend only on the local conditions. If we set $\bH^1_{\FF}(K_\ku,T):=\bH^1_\f(K_\ku,T)$ whenever $\ku\notin \FF$, then 
-\[\bH^1_{\FF}(K,\bT)=\ker\Biggl(\bH^1(K,\bT) \to \prod_{\ku\in \UU(\Pb)} \frac{\bH^1(K_\ku,\bT)}{\bH^1_{\FF}(K_\ku,\bT)}\Biggr)\]
+\[\bH^1_{\FF}(K,T)=\ker\Biggl(\bH^1(K,T) \to \prod_{\ku\in \UU(\Pb)} \frac{\bH^1(K_\ku,T)}{\bH^1_{\FF}(K_\ku,T)}\Biggr)\]
 \end{remark}
 
-The next technical proposition plays a central role in this theory.
+\begin{remark}
+Local conditions propagate to quotients and submodules as in Definitions \ref{def:propagation_quotients} and \ref{def:propagation_submodules}.
+\end{remark}
+
+We can recover the Selmer group as the limit of the propagated Selmer groups with finite coefficients.
+
 \begin{proposition}(\cite[Proposition 2.5.6]{Sweeting})
 Let $T$ be a profinite group and let $\FF$ be a Selmer structure defined on $T$. Then
 \[\bH^1_{\FF}(K,T)=\varprojlim_{T\twoheadrightarrow T'} \bH^1_{\FF}(K,T')\]
@@ -518,35 +594,157 @@ Let $T$ be an ind-finite group and let $\FF$ be a Selmer structure defined on $T
 where the limit is taken over the finite submodules $T'$ of $T$ and $\bH^1_{\FF}(K,T')$ is the Selmer group of the propagated Selmer structure, as defined in Definition \ref{def:propagation_submodules}.
 \end{proposition}
 
-\textcolor{red}{local duality}
-
-\begin{definition}
-    Let $\FF$ be a Selmer structure on $T$. The we can define a \emph{dual Selmer structure} $\FF^*$ on $T^*$ by defining the local condition $\bH^1(K_\ku,\bT^*)$ as the the annihilator of $\bH^1_{\FF}(K_\ku,\bT)$ under the local duality pairing in Proposition \ref{}\textcolor{red}{patched local duality}.
-\end{definition}
-
-\begin{proposition}(Global duality)
-    Let $\FF\leq\GG$ be two Selmer stuctures. Then there is a global duality exact sequence 
-\[\xymatrix{H^1_{\FF}(K,T)\ar@{>->}[r] & H^1_{\GG}(K,T)\ar[r] & \displaystyle{\bigoplus_{\ell\in \Sigma_\FF\cup\Sigma_\GG} \frac{H^1_{\GG}(K_\ell,T)}{H^1_{\FF}(K_\ell,T)}} \ar[r] & H^1_\GG(K,T^*)^\vee\ar@{->>}[r]& H^1_\FF(K,T^*)^\vee}\]
-\end{proposition}
+The next technical lemma shows that patched Selmer groups can be obtained from patching classical Selmer groups.
+\begin{lemma}
+Let $\FF\leq \GG$ be two Selmer structures defined on a finite Galois module $T$. Then there are sequences of classical Selmer structures $(\FF_i)$ and $(\GG_i)$ such that $\FF_i\leq \GG_i$ for all $i\in \N$ and 
+\[\begin{array}{cc}
+\bH^1_{\FF}(K,T)=\UU\Bigl(H^1_{\FF_i}(K,T)\Bigr),\ \bH^1_{\GG}(K,T)=\UU\Bigl(H^1_{\GG_i}(K,T)\Bigr)
+\end{array}\]
+\end{lemma}
 
 \begin{proof}
-Let $T$ be a finite quotient of $\bT$ and let $\mathfrak n=(n_k)_{k\in \N}$ be the square-free product of all ultraprimes in $\Sigma_\FF\cup \Sigma_{\GG}$.  
+For an ultraprime $\ku \in \Sigma_\FF\cup \Sigma_\GG$, fix a representing sequence $(\ku_i)$ and let $W_\ku$ be the set of indices such that there is an isomorphism $\varphi_i^\ku:\ H^1(K_{\ell_i},T)\cong \bH^1(K_\ku,T)$. Note that Corollary \ref{cor:patched:local_constant} implies that $W_\ku\in \UU$. 
 
-For a prime $\ku=(\ku_i)$ in $\Sigma_\FF\cup \Sigma_\GG$, let $W_\ku$ be the set of indices such that there is an isomorphism $\varphi_i^\ku:\ H^1(K_{\ell_i},T)\cong \bH^1(K_\ku,T)$. Note that $W_\ku\in \UU$. For every $i\in \NN$, define the classical Selmer structre by $\Sigma_{\FF_i}=\{\ku_i:\ \ku\in \Sigma_\FF\cup \Sigma_{GG}\}$ and local conditions 
+For every $i\in \N$, define the classical Selmer structre by $\Sigma_{\FF_i}=\{\ku_i:\ \ku\in \Sigma_\FF\cup \Sigma_{\GG}\}$ and local conditions 
 \[\begin{aligned}
-&H^1_{\FF_i}(K_{\ku_i},T)=(\varphi_i^\ku)^{-1} \bH^1(K_\ku,T)&\textrm{ if $i\in W_\ku$}\\
+&H^1_{\FF_i}(K_{\ku_i},T)=(\varphi_i^\ku)^{-1} \bH^1_{\FF}(K_\ku,T)&\textrm{ if $i\in W_\ku$}\\
 &H^1_{\FF_i}(K_{\ku_i},T)=0&\textrm{ if $i\notin W_\ku$}
 \end{aligned}\]
 
+This definition implies that $\bH^1_\FF(K_\ku,T)=\UU\Bigl(H^1_{\FF}(K_{\ku_i},T)\Bigr)$. Therefore, Proposition \ref{prop:ultrafilter_exact} implies that
+\[\ker\Biggl[\bH^1(K^\kn/K,T)\to \prod_{\ku\mid \kn} \bH^1_{/FF}(K_\ku,T)\Biggr]=\ker\Biggl[\UU\Bigl(H^1(K^{n_i}/K,T)\Bigr)\to \prod_{\ku_i\mid \kn_i} \UU\Bigl(H^1_{/\FF}(K_{\ku_i},T)\Bigr)\Biggr]\]
+Again by the exactness of the ultraproduct given in Proposition \ref{prop:ultrafilter_exact} implies that 
+\[\bH^1_{\FF}(K,T)=\UU\Bigl(H^1_{\FF_i}(K,T)\Bigr)\]
+
 Similarly, define Selmer structures $\GG_i$ by $\Sigma_{\GG_i}=\{\ku_i:\ \ku\in \Sigma_\FF\cup \Sigma_\GG\}$ and local conditions
 \[\begin{aligned} 
-&H^1_{\GG_i}(K_{\ku_i},T)=(\varphi_i^\ku)^{-1} \bH^1(K_\ku,T)&\textrm{ if $i\in W_\ku$}\\
+&H^1_{\GG_i}(K_{\ku_i},T)=(\varphi_i^\ku)^{-1} \bH^1_{\GG}(K_\ku,T)&\textrm{ if $i\in W_\ku$}\\
 &H^1_{\GG_i}(K_{\ku_i},T)=H^1(K_{\ku_i},T)&\textrm{ if $i\notin W_\ku$}
 \end{aligned}\]
+By construction $\FF_i\leq \GG_i$ and, analogously, 
+\[\bH^1_{\GG}(K,T)=\UU\Bigl(H^1_{\GG_i}(K,T)\Bigr)\]
+\end{proof}
 
-Note that $\FF\subset \GG$ implies that $\FF_i\subset \GG_i$ as Selmer structures for all $i$, so they induce a global exact sequence. The exactness of the patching functor implies that 
+
+
+We can use local duality to define dual Selmer structures as in Definition \ref{def:dual_selmer_structure}
+\begin{definition}
+    Let $\FF$ be a Selmer structure on $T$. The we can define a \emph{dual Selmer structure} $\FF^*$ on $T^*$ by defining the local condition $\bH^1(K_\ku,\bT^*)$ as the the annihilator of $\bH^1_{\FF}(K_\ku,\bT)$ under the local duality pairing in Proposition \ref{prop:patched:local_duality}
+\end{definition}
+
+Dual patched Selmer structures can be also obtained by patching the dual Selmer structures in the classical setting.
+\begin{lemma}
+Let $\FF$ a patched Selmer structure and let $\FF_i$ be a sequence of classical Selmer structures patching to $\FF$. Then the dual Selmer structures $\FF_i^*$ also patches to $\FF$.
+\end{lemma}
+
+There is also a global duality exact sequence in this setting.
+
+\begin{proposition}(Global duality)
+Let $\FF\leq\GG$ be two Selmer stuctures. Then there is a global duality exact sequence 
+\[\xymatrix{H^1_{\FF}(K,T)\ar@{>->}[r] & H^1_{\GG}(K,T)\ar[r] & \displaystyle{\bigoplus_{\ell\in \Sigma_\FF\cup\Sigma_\GG} \frac{H^1_{\GG}(K_\ell,T)}{H^1_{\FF}(K_\ell,T)}} \ar[r] & H^1_{\GG^*}(K,T^*)^\vee\ar@{->>}[r]& H^1_{\FF^*}(K,T^*)^\vee}\]
+\label{prop:patched:global_duality}
+\end{proposition}
+
+\begin{proof}
+Assume first that $T$ is finite. Let $\mathfrak n=(n_k)_{k\in \N}$ be the square-free product of all ultraprimes in $\Sigma_\FF\cup \Sigma_{\GG}$.  
+
+
+
+Note that $\FF\leq \GG$ implies that $\FF_i\leq \GG_i$ as Selmer structures for all $i$, so they induce a global exact sequence. The exactness of the patching functor implies that 
 \[\begin{array}{cc}
     \Sel_\FF(\Q,T)=\UU(\Sel_{\FF_i}(\Q,T))   & \Sel_\GG(\Q,T)=\UU(\Sel_{\FF_i}(\Q,T)) \\
     \Sel_{\FF^*}(\Q,T^*)^\vee=\UU(\Sel_{\FF_i^*}(\Q,T^*)^\vee)   & \Sel_\GG(\Q,T^*)=\UU(\Sel_{\GG_i^*}(\Q,T)) 
 \end{array}\]
 \end{proof}
+
+\subsection{Patched Selmer modules}
+
+In this section, we endow the group $T$ with an $R$-module structure, for some discrete valuation ring $R$.
+
+\begin{notation}
+Let $R$ be a discrete valuation ring and let $T$ be an $R[[G_K]]$-module that is free and finitely generated as an $R$-module.
+\end{notation}
+
+\begin{remark}
+Note that we can compute the patched cohomology groups as the limits
+\[\begin{array}{cc}
+    \bH^1(G,T)=\varprojlim_{n} \bH^1\left(G,T/\m^i T\right),\ & \bH^1(G,T)=\varinjlim_{n} \bH^1\left(G,T[\m^i]\right)
+\end{array}\]
+since $T/m^i T$ (resp. $T^*[m^i]$) is a cofinal sequence in the finite quotients of $T$ (resp. finite submodules of $T^*$).
+\end{remark}
+
+We will be interested in studying local conditions that are cartesian.
+
+\begin{definition}(Cartesian local condition)
+A local condition $\bH^1_{\FF}(K_\ku,T)\subset \bH^1(K_\ku,T)$ is called \emph{cartesian} if $H^1_{/\FF}(K_\ku,T)$ is a torsion-free $R$-module. A Selmer structure is said to be cartesian is all of its local conditions are cartesian.
+\label{def:patched_cartesian}
+\end{definition}
+
+\begin{remark}
+By \cite[Lemma 3.7.1]{MazurRubin}, if a Selmer structure on $T$ is cartesian as in Definition \ref{def:patched_cartesian}, the propagated Selmer structure to a finite quotient $T/\m^i$ will be cartesian in the sense of Definition \ref{def:cartesian}.
+\end{remark}
+
+\textcolor{red}{finite cohomology}
+
+When a Selmer structure is cartesian, the propagated Selmer group of quotients of $T$ can be described as a quotient of the Selmer group of $T$.
+
+\begin{proposition}
+Let $\FF$ be a cartesian Selmer structure. For $k\in \NN$, there is an injection with finite cokernel $C$
+\[\bH^1_\FF(K,T)/\m^k\hookrightarrow \bH^1_\FF(K,T/\m^k)\]
+\label{prop:patched:quotients}
+\end{proposition}
+
+\begin{proof}
+Let $\pi$ be a generator of $\m$. Consider the exact sequence
+\[\xymatrix{0\ar[r] & T\ar[r]^{\pi^k} & T\ar[r] &T/\m^k}\]
+It induces an injection 
+\[\bH^1(K,T)/\m^k\hookrightarrow \bH^1(K,T/\m^k)\]
+By the definition of Selmer group, there is an injection
+\[\frac{\bH^1(K,T)}{\bH^1_{\FF}(K,T)}\to \prod_{\UU(\PP)} \frac{\bH^1(K_\ku,T)}{\bH^1_{\FF}(K_\ku,T)}\]
+Since the Selmer structure is cartesian, the product is torsion-free, so the domain is torsion free as well. By the snake's lemma, it implies that the top vertical map in the following diagram is injective.
+\[\xymatrix{\bH^1_\FF(K,T)/\m^k \ar[r] \ar@{>->}[d]& \bH^1_\FF(K,T/\m^k) \ar@{>->}[d]\\
+\bH^1(K,T)/\m^k\ar@{>->}[r] & \bH^1(K,T/\m^k)
+}\]
+Hence the top horizontal map is also injective. Snake's lemma shows that
+\[\length(C)\leq \length \bH^2(K,T[\m^k])\]
+\textcolor{red}{explain further, long exact sequence of patched cohomology, Mazur Rubin 3.7.1}
+
+
+
+\end{proof}
+
+We now prove an analogue of Proposition \ref{prop:core_rank_str} for patched Selmer structures.
+
+\begin{proposition}
+Let $\FF$ be a cartesian Selmer structure on $T$ of core rank $\chi(\FF)$. For every $k\geq 0$, there is a non-canonical isomorphism
+\[\bH^1(K,T/\m^k)\cong \left(R/\m^k\right)^{\chi(\FF)} \oplus \bH^1(K,T^*[\m^k])\]
+\label{prop:patched:core_rank_finite}
+\end{proposition}
+
+\begin{proof}
+\textcolor{red}{write}
+\end{proof}
+
+\textcolor{red}{assumptions on $H^0$}
+
+\begin{proposition}
+Let $\FF$ be a cartesian Selmer structure on $T$ of core rank $\chi(\FF)$. Then 
+\[\rank_R\bH^1(K,T)-\rank_R \bH^1(K,T^*)^\vee=\chi(\FF)\]
+\label{prop:patched:core_rank_limit}
+\end{proposition}
+
+\begin{proof}
+For every $k\geq 0$, there is an isomorphism \textcolor{red}{proof needed}
+\[\bH^1_{\FF}(K,T^*[\m^k])\cong \bH^1(K,T^*)[\m^k]\]
+Therefore, $\bH^1(K,T^*)$ is cofinitely generated, so there are constants $a$ and $b$ such that 
+\[\length\Bigl(\bH^1_{\FF}(K,T^*[\m^k])\Bigr)=ak+b\]
+By Proposition \ref{prop:patched:core_rank_finite}, then 
+\[\length\Bigl(\rank_R\bH^1(K,T/\m^k)\Bigr)=(a+\chi(\FF))k+b\]
+By Proposition \ref{prop:patched:quotients}, there is a constant $f$ such that
+\[(a+\chi(\FF))k+b-f\leq \length\Bigl(\rank_R\bH^1(K,T)/\m^k\Bigr) \leq (a+\chi(\FF))k+b\]
+Hence $\bH^1(K,T)$ is also finitely generated of rank $a+\chi(\FF)$.
+\end{proof}
+
+
+
+

@@ -78,9 +78,13 @@ where the first map is induced by the homomorphism $(\Lambda^{r+s})^*\to N^*$ an
 \section{Stark Systems}
 
 Let $m,n\in \NN$ be square-free products of Kolyvagin ultraprimes such that $m\mid n$. There is an exact sequence
-\[\xymatrix{0\ar[r] & \bH^1_{\FF^m}(\Q,T)\ar[r] & \bH^1_{\FF^n}(\Q,T)\ar[r] & \prod_{\ell\mid \frac{n}{m}} \bH^1_{s}(\Q,T)}\]
+\[\xymatrix{0\ar[r] & \bH^1_{\FF^m}(K,T)\ar[r] & \bH^1_{\FF^n}(K,T)\ar[r] & \prod_{\ell\mid \frac{n}{m}} \bH^1_{\s}(K_\ell,T)}\]
 By proposition \ref{prop:bidual_map}, this exact sequence induces a map
-\[\Phi_{n,m}:\ \bigcap^{r+\nu(n)} \bH^1_{\FF^n}(\Q,T)\to \bigcap^{r+\nu(m)} \bH^1_{\FF^m}(\Q,T)\]
+\[\Phi_{n,m}:\ \bigcap^{r+\nu(n)} \bH^1_{\FF^n}(K,T)\to \bigcap^{r+\nu(m)} \bH^1_{\FF^m}(K,T)\]
+
+\begin{remark}
+Note that the map $\Phi_{n,m}$ is dependent on a choice of an isomorphism $\bH^1_{\s}(\Q,T)\cong R$, or equivalently, an element in $\bH^1_{\s}(K_\ell,T)^\times$. From now on, we assume we have fixed such isomorphism for every $\ell\in \PP$.
+\end{remark}
 
 \begin{lemma}
 Let $\m,n,r\in \NN$ be square-free products of Kolyvagin ultraprimes such that $m\mid n\mid r$. Then
@@ -88,11 +92,46 @@ Let $\m,n,r\in \NN$ be square-free products of Kolyvagin ultraprimes such that $
 \label{lem:com} 
 \end{lemma}
 
+\begin{proof}
+\textcolor{red}{do}
+\end{proof}
+
+Therefore, the set of maps $\phi_{n,m}$ forms an inverse system, so it makes sense to consider the elements in the inverse limit.
+
+
+
 \begin{definition}
 The set of Stark systems of $\FF$ is defined as the inverse limit
 \[\bSS(\FF):=\varprojlim_{n\in \NN} \bigcap^{r+\nu(n)} \bH^1_{\FF^n}(\Q,T)\]
+\label{def:stark_systems}
 \end{definition}
 
+
+
+
+
+
+
+\subsection{Weak core vertices}
+
+Definition \ref{def:stark_systems} might seem abstract, but the Stark systems can be controlled by their values at some particular $n\in \NN$.
+
+\begin{definition}
+A \emph{weak core vertex} of rank $r$ is a square-free product of ultraprimes $n\in \NN$ such that $\bH^1_{\FF^*_n}(\Q,\bT^*)=0$ and $\bH^1_{\FF}(\Q,\bT)$ is a free $\Lambda$-module of rank $r+\nu(n)$.
+\end{definition}
+
+\begin{proposition}
+Let $n\in \NN$ be a weak core vertex and let $m\in \NN$ be such that $n\mid m$. Then $m$ is also a weak core vertex.
+\label{prop:core_vertex_div}
+\end{proposition}
+
+\begin{proof}
+Since $n\mid m$, then $\bH^1_{\FF_m}(\Q,T)$ is contained in $\bH^1_{\FF_n}(\Q,T)$, so it also vanishes. The exact sequence
+\[\xymatrix{0\ar[r] & \bH^1_{\FF^n}(\Q,\bT) \ar[r] & \bH^1_{\FF^m}(\Q,\bT) \ar[r] & \bigoplus_{\ku\mid \frac{m}{n}}\bH^1_s(\Q_{\ku},\bT)\ar[r] & 0}\]
+The first and third terms of this exact sequence are free modules of ranks $r+\nu(n)$ and $\nu(m)-\nu(n)$. Hence $\bH^1_{\FF^m}(\Q,\bT)$ is free of rank $r+\nu(n)$.
+\end{proof}
+
+Weak core vertices control the Stark systems.
 
 \begin{theorem}
 Let $n\in \NN$ be a core vertex. Then the projection map
@@ -109,26 +148,10 @@ is an isomorphism. This map is induced by the exact sequence
 Since $\Ext^1(\Lambda,\Lambda)=0$, the dual map $\bH^1_{\FF^{n\ell}}(\Q,\bT)^+\to \bH^1_{\FF^n}(\Q,\bT)^+$ is surjective. Hence we can construct an injective map 
 \[\bigwedge^{r+\nu(n)} \bH^1_{\FF^n}(\Q,\bT)^+ \to \bigwedge^{r+\nu(n\ell)} \bH^1_{\FF^{n\ell}}(\Q,\bT)^+\]
 which turns out to be an isomorphism since both are free $\Lambda$-modules of rank $1$. Therefore, its dual map is also an isomorphism.
-
-\textcolor{blue}{perhaps comment that $n\ell$ is also a core vertex}
 \end{proof}
 
-\subsection{Core vertex}
 
-\begin{definition}
-A \emph{core vertex} of rank $r$ is a square-free product of ultraprimes $n\in \NN$ such that $\bH^1_{\FF^*_n}(\Q,\bT^*)=0$ and $\bH^1_{\FF}(\Q,\bT)$ is a free $\Lambda$-module of rank $r+\nu(n)$.
-\end{definition}
-
-\begin{proposition}
-Let $n\in \NN$ be a core vertex and let $m\in \NN$ be such that $n\mid m$. Then $m$ is also a core vertex.
-\label{prop:core_vertex_div}
-\end{proposition}
-
-\begin{proof}
-Since $n\mid m$, then $\bH^1_{\FF_m}(\Q,T)$ is contained in $\bH^1_{\FF_n}(\Q,T)$, so it also vanishes. The exact sequence
-\[\xymatrix{0\ar[r] & \bH^1_{\FF^n}(\Q,\bT) \ar[r] & \bH^1_{\FF^m}(\Q,\bT) \ar[r] & \bigoplus_{\ku\mid \frac{m}{n}}\bH^1_s(\Q_{\ku},\bT)\ar[r] & 0}\]
-The first and third terms of this exact sequence are free modules of ranks $r+\nu(n)$ and $\nu(m)-\nu(n)$. Hence $\bH^1_{\FF^m}(\Q,\bT)$ is free of rank $r+\nu(n)$.
-\end{proof}
+If we assume the existence of core vertices, we know that the module of Stark systems is free of rank one.
 
 \begin{assumption}
     There exist an integer $r$ and $n\in \NN$ such that $\bH^1_{\FF^*}(\Q,\bT^*)=0$ and $\bH^1_{\FF^n}(\Q,\bT)$ is a free $\Lambda$-module of rank $r+\nu(n)$.
@@ -136,7 +159,7 @@ The first and third terms of this exact sequence are free modules of ranks $r+\n
 \end{assumption}
 
 \begin{corollary}
-The module of Stark systems $\bSS(\FF)$ is a free $\Lambda$-module of rank one.
+Under assumption \ref{ass:core_vertex}, the module of Stark systems $\bSS(\FF)$ is a free $\Lambda$-module of rank one. The generators of $\bSS(\FF)$ are called \emph{primitive} Stark systems.
 \end{corollary}
 
 \begin{theorem}

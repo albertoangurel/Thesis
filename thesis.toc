@@ -3,57 +3,55 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {0.1}Galois cohomology}{4}{section.0.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {0.1.1}Local Galois cohomology}{4}{subsection.0.1.1}%
+\contentsline {chapter}{\numberline {1}Kolyvagin systems}{7}{chapter.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {0.1.2}Selmer structures}{6}{subsection.0.1.2}%
+\contentsline {section}{\numberline {1.1}Local cohomology and Kolyvagin primes}{7}{section.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {1}Kolyvagin systems}{13}{chapter.1}%
+\contentsline {section}{\numberline {1.2}Selmer modules}{9}{section.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.1}Local cohomology and Kolyvagin primes}{13}{section.1.1}%
+\contentsline {section}{\numberline {1.3}Fitting ideals}{16}{section.1.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.2}Selmer modules}{15}{section.1.2}%
+\contentsline {section}{\numberline {1.4}Classical Kolyvagin systems}{17}{section.1.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.3}Fitting ideals}{19}{section.1.3}%
+\contentsline {section}{\numberline {1.5}Selmer structures of rank 0}{19}{section.1.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.4}Classical Kolyvagin systems}{21}{section.1.4}%
+\contentsline {subsection}{\numberline {1.5.1}Proof of Lemma \ref {lem:deltan_trn}}{21}{subsection.1.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.5}Selmer structures of rank 0}{22}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.2}Proof of Lemma \ref {lem:fitti_sub_fitt0trn}}{22}{subsection.1.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.5.1}Proof of Lemma \ref {lem:deltan_trn}}{25}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.3}Proof of Lemma \ref {lem:fitti_eq_fitt0_rank}}{22}{subsection.1.5.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.5.2}Proof of Lemma \ref {lem:fitti_sub_fitt0trn}}{26}{subsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.5.4}Proof of Lemma \ref {lem:fitti_eq_fitt0_higher}}{23}{subsection.1.5.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.5.3}Proof of Lemma \ref {lem:fitti_eq_fitt0_rank}}{26}{subsection.1.5.3}%
+\contentsline {section}{\numberline {1.6}Non-self dual Galois representations of rank $0$}{23}{section.1.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.5.4}Proof of Lemma \ref {lem:fitti_eq_fitt0_higher}}{26}{subsection.1.5.4}%
+\contentsline {section}{\numberline {1.7}Old stuff}{23}{section.1.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.6}Old stuff}{26}{section.1.6}%
+\contentsline {subsection}{\numberline {1.7.1}Non-self-dual case}{26}{subsection.1.7.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.6.1}Fitting ideals of Selmer groups of core rank zero}{27}{subsection.1.6.1}%
+\contentsline {chapter}{\numberline {2}Patched Cohomology}{29}{chapter.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.6.2}Non-self-dual case}{30}{subsection.1.6.2}%
+\contentsline {section}{\numberline {2.1}Ultrafilters}{29}{section.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Patched Cohomology}{35}{chapter.2}%
+\contentsline {subsection}{\numberline {2.1.1}Definition}{29}{subsection.2.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Ultrafilters}{35}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.2}Analogy between ultrafilters and ideals}{30}{subsection.2.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.1}Definition}{35}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.3}Ultraproducts}{31}{subsection.2.1.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.2}Analogy between ultrafilters and ideals}{36}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.4}Ultraprimes}{34}{subsection.2.1.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.3}Ultraproducts}{37}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}Patched cohomology}{36}{section.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.4}Ultraprimes}{39}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.2.1}Construction}{36}{subsection.2.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Patched cohomology}{41}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.2}Local patched cohomology}{37}{subsection.2.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.1}Construction}{41}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.3}Global patched cohomology}{39}{subsection.2.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.2}Local patched cohomology}{42}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.4}Patched Selmer structures}{41}{subsection.2.2.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Global patched cohomology}{43}{section.2.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Patched Selmer structures}{45}{section.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}Patched Selmer modules}{43}{subsection.2.2.5}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Kolyvagin systems over the Iwasawa algebra}{47}{chapter.3}%
 \defcounter {refsection}{0}\relax 
@@ -61,6 +59,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.2}Stark Systems}{49}{section.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.1}Core vertex}{50}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.1}Weak core vertices}{50}{subsection.3.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{References}{52}{theorem.3.2.8}%
+\contentsline {chapter}{\numberline {4}Cartesian systems}{53}{chapter.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}The graph of cartesian Selmer structures}{53}{section.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{References}{54}{theorem.4.1.3}%

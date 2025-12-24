@@ -213,36 +213,6 @@
       \field{pages}{xv\bibrangedash 826}
       \range{pages}{812}
     \endentry
-    \entry{Rubin}{book}{}
-      \name{author}{1}{}{%
-        {{hash=36c8e0559efe2dd98d3833fcaf2a18d5}{%
-           family={Rubin},
-           familyi={R\bibinitperiod},
-           given={Karl},
-           giveni={K\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Princeton University Press, Princeton, NJ}%
-      }
-      \strng{namehash}{36c8e0559efe2dd98d3833fcaf2a18d5}
-      \strng{fullhash}{36c8e0559efe2dd98d3833fcaf2a18d5}
-      \strng{bibnamehash}{36c8e0559efe2dd98d3833fcaf2a18d5}
-      \strng{authorbibnamehash}{36c8e0559efe2dd98d3833fcaf2a18d5}
-      \strng{authornamehash}{36c8e0559efe2dd98d3833fcaf2a18d5}
-      \strng{authorfullhash}{36c8e0559efe2dd98d3833fcaf2a18d5}
-      \field{labelalpha}{Rub00}
-      \field{sortinit}{R}
-      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Hermann Weyl Lectures. The Institute for Advanced Study}
-      \field{series}{Annals of Mathematics Studies}
-      \field{title}{Euler systems}
-      \field{volume}{147}
-      \field{year}{2000}
-      \field{pages}{xii+227}
-      \range{pages}{-1}
-    \endentry
     \entry{Sakamoto18}{article}{}
       \name{author}{1}{}{%
         {{hash=cb73ace61a4173770d59c0a95305476d}{%
