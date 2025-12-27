@@ -3,50 +3,8 @@
 
 
 
-\begin{lemma}(\cite[lemma 3.5.3]{MazurRubin})
-Assume that \ref{Hirred} and \ref{Hcoh0} hold. For every $j\in \Z_{\geq 0}$, the inclusion $T^*[\m^j]\hookrightarrow T$ induces an isomorphism:
-\[H^1_{\FF^*}(\Q,T^*[\m^j])\cong H^1_{\FF^*}(\Q,T^*)[\m^j]\]
-\label{lem:mr353}
-\end{lemma}
-
-\begin{lemma}(\cite[lemma 3.5.4]{MazurRubin})
-    Assume further that $R$ is artinian of length $k$ and that \ref{Hirred}, \ref{Hcoh0} and \ref{Hcartesian} hold. If $\pi$ be a generator of $\m$, the multiplication by $\pi^{k-j}$ induces a map $T/\m^j\hookrightarrow T$, which in turn induces an isomorphism in the cohomology groups:
-    \[H^1_{\FF^*}(\Q,T/\m^j)\cong H^1_{\FF^*}(\Q,T)[\m^j]\]
-    \label{lem:mr354}
-    \end{lemma}
 
 
-\ref{Hsur}, \ref{Hchev} and \ref{Hprimes} are required to ensure there exists infinitely many Kolyvagin primes satisfying \ref{P1modp} and \ref{P1dim} that bound the Selmer group appropriately. Assumption \ref{Hprimes} is slightly weaker than the corresponding hypothesis in \cite{MazurRubin}. It does not suppose any inconvenience in the proofs of this reference and permits a cleaner description of the Kolyvagin primes in the example in \textsection\ref{sec:EC}.
-
-\ref{Hcore0} is imposed because we want to generalise the theory in \cite{MazurRubin} to the case of core rank 0. However, those Selmer structures do not admit any non-trivial Kolyvagin systems. Therefore, \ref{Hloc} is required to modify the structure in order to link it with a Selmer structure of rank one, $\FF_q$, which the theory in \cite{MazurRubin} can be applied to. Note that, by local Tate duality, the condition $H^2(\Q_q,T)$ is equivalent to $H^0(\Q_q, T^*)=0$. 
-
-
-
-
-
-
-Assumption \ref{Hloc} can be understood in terms of the cohomology groups with torsion coefficients. The long exact sequence implies the following lemma.
-
-\begin{lemma}
-Assume that a prime $q$ satisfies \ref{Hloc}. Then for every $j\in \Z_{\geq 0}$ there is an isomorphism
-$$H^1_\s(\Q_q,T/\m^j)\cong R/\m^j$$
-\label{lem:Hloc_tors}
-\end{lemma}
-
-\begin{proof}
-Since $H^2(\Q_q,T)=0$, the long exact sequence induces an isomorphism
-$$H^1(\Q_q,T)/\m^j H^1(\Q_q,T)\xrightarrow{\sim} H^1(\Q_q,T/\m^jT)$$
-Since $H^1_\f(\Q_q, T/\m^j T)$ is the image of $H^1_\f(\Q_q,T)$, we get that
-$$H^1_\s(\Q_q, T/\m^j T)\cong H^1_\s(\Q_q, T)/\m^j H^1_\s(\Q_q, T)\cong R/\m^j$$\qedhere
-\end{proof}
-
-
-
-
-
-
-
-Some elements in $\NN(\PP)$ will play an important role in the theory of Kolyvagin systems.
 
 \begin{definition}
 An element $n\in \NN(\PP)$ is said to be a \emph{core vertex} if either $H^1_{\FF(n)}(\Q,T)=0$ or $H^1_{\FF^*(n)}(\Q,T^*)=0$.
@@ -56,32 +14,6 @@ An element $n\in \NN(\PP)$ is said to be a \emph{core vertex} if either $H^1_{\F
 For every $n\in \NN(\PP)$, there is some core vertex $m\in \NN(\PP)$ such that $n|m$.
 \label{prop:core_vertex}
 \end{proposition}
-
-The concept of core rank plays a vital role in the study of Selmer structures.
-
-\begin{theorem}(\cite[theorem 4.1.5]{MazurRubin})
-    There exists some $x,y\in \Z_{\geq 0}$, one of which can be taken to be $0$, such that for every $n\in \NN(\PP)$ and every $j\in \Z_{\geq0}$ there is a non-canonical isomorphism
-    $$H^1_{\FF(n)}(\Q,T/\m^j)\oplus (R/\m^j)^x\approx H^1_{\FF^*(n)}(\Q,T^*[\m^j])\oplus (R/\m^j)^y$$
-    The integer $\chi(T,\FF)=y-x$ is said to be the \emph{core rank} of $\FF$.
-    \label{th:core_rank}
-    \end{theorem}
-
-
-\begin{proposition}(\cite[corollary 3.21]{Sakamoto18})
-    Let $(T,\FF,\PP)$ be a Selmer triple and let $a,b,c\in \NN_k$ be pairwise relatively prime. Then
-    $$\chi(T/\m^k,\FF_a^b(c))=\chi(T/\m^k,\FF)+\nu(b)-\nu(a)$$
-    \label{prop:core_abc}
-    \end{proposition}
-    
-    
-    \begin{remark}
-    Proposition \ref{prop:core_abc} is also true when $a,b\in \mathcal N(\PP')$, where $\PP'$ denotes the set of primes $\ell$ such that $H^1_\s(\Q_\ell,T/\m^k)$ is free of rank one over $R/\m^k$. 
-    \label{rem:core_abc}
-    \end{remark}
-
-
-
-The key idea of this work is that we can bound the Selmer group by using appropriate primes, whose existence is known due to the Chebotarev density theorem. To be precise, we will now state the result needed.
 
 
 
@@ -120,39 +52,7 @@ $$H^1_{\FF^*(n\ell)}(\Q,T^*[\m^k])=H^1_{\FF^*_\ell(n)}(\Q,T^*[\m^k])$$
 \end{lemma}
 
 
-The above two results imply the following
-\begin{corollary}(\cite[proposition 4.5.8]{MazurRubin})
-Assume that $\chi(\FF)>0$ and that $H^1_{\FF^*}(\Q,T^*[\m^k])\approx R/\m^{e_1}\times \cdots\times R/\m^{e_s}$ for some integers $e_1\geq e_2\geq\ldots \geq e_s$. Then there are infinitely many primes $\ell$ such that 
-$$H^1_{\FF^*(\ell)}(\Q,T^*[\m^k])\approx R/\m^{e_2}\times \cdots\times R/\m^{e_s}$$
-\label{cor:mr458}
-\end{corollary}
 
-
-
-Given a Galois representation $T$ defined over a discrete valuation ring $\OO$, there are some natural Selmer structures that can be defined on $T$. The first example is called the \emph{canonical Selmer structure}. The finite cohomology group is a well behaved local condition for primes different from $p$ and $\infty$. The idea behind the canonical example is to consider the local conditions at those primes to be the whole local cohomology groups.
-
-\begin{definition}
-    Let $T$ be a Galois representation over a discrete valuation ring of residual characteristic $p>0$. Then the canonical local conditions are defined as
-    $$\left\{\begin{aligned}
-& H^1_{\Fcan}(\Q_\ell,T)=H^1_\f(\Q_\ell, T)\ \ \textrm{if}\ \ell\neq p\\
-&H^1_{\Fcan}(\Q_p,T)=H^1(\Q_p,T)\\
-&H^1_{\Fcan}(\R,T)=H^1(\R,T)
-\end{aligned}\right.$$
-\label{def:Fcan_str}
-\end{definition}
-
-The canonical structure is the one that can be studied directly by using Euler systems. However, it is usually different to the Selmer groups that appear naturally in artihmetic geometry, because they differ in the local conditions at $p$ and $\infty$. The infinite prime is usually not an issue since $H^1(\R,T)=0$ when $p>2$. At $p$, S.~Bloch and K.~Kato gave in \cite{BlochKato} a definition of a local condition at $p$, based purely on the Galois representation $T$. In the most arithmetically important cases, it coincides the local condition at $p$ defined geometrically. Their definition uses Fontaine's period rings from $p$-adic Hodge theory. Moreover, Bloch-Kato Selmer group is conjecturally directly related to the special values of the motivic $L$-function.
-
-
-
-\begin{definition}
-Let $T$ be a Galois representation over a local ring of residual characteristic $p>0$. Then the Bloch-Kato local conditions are defined as
-$$\left\{\begin{aligned}
-& H^1_{\FBK}(\Q_\ell,T)=H^1_\f(\Q_\ell, T)\ \ \textrm{if}\ \ell\neq p\\
-&H^1_{\FBK}(\Q_p,T)=\ker\left(H^1(\Q_\ell, T)\to H^1(\Q_\ell, T\otimes_{\Z_p} B_\textrm{crys})\right)
-\end{aligned}\right.$$
-\label{def:BK_str}
-\end{definition}
 
 
 
@@ -175,7 +75,7 @@ Let $K$ be a number field. Fix an algebraic closure $\overline K$ of $K$. For ev
 \end{notation}
 
 \begin{notation}
-Let $R$ be a finite, local, artinian and self-injective ring with maximal ideal $\m$ and residue field $k$ of characteristic $p$. Let $T$ be an $R[[G_K]]$-module, which is finitely generated as an $R$-module and is only ramified at finitely many primes.
+Let $R$ be a local, artinian and self-injective ring with maximal ideal $\m$ and finite residue field $k$ of characteristic $p\geq 5$. Let $T$ be an $R[[G_K]]$-module, which is free and finitely generated as an $R$-module and is only ramified at finitely many primes.
 \end{notation}
 
 \begin{notation}(Duality)
@@ -201,10 +101,19 @@ We assume the following assumptions:
 \begin{itemize}
 \item \namedlabel{Tirred}{(T1)} $T/\m T$ is an irreducible $k[[G_K]]$-module.
 \item \namedlabel{Ttau}{(T2)} There exists $\tau\in G_{K_M}$ such that $T/(\tau-1)T\cong R$ as $R$-modules.
-\item \namedlabel{Tcoh}{(T3)} $H^1(K(T)_M/K,T)=H^1(K(T)_M/K,T^*(1))=0$.
+\item \namedlabel{Tcoh}{(T3)} $H^1(K(T)_M/K,T)=H^1(K(T)_M/K,T^*)=0$.
 \end{itemize}
 \label{ass:basic}
 \end{assumption}
+
+\begin{remark}
+Assume that the homomorphism $\rho:\ G_\Q\to \Aut(T)\cong GL_{\rank(T)}(R)$ induced by the Galois action is surjective. Then all three Assumptions \ref{ass:basic} hold. Indeed, \ref{Tirred} and \ref{Ttau} are clear. 
+
+For \ref{Tcoh}, note that the order of $R^\times$ is divisible by $p-1$. It implies that the order of $GL_{rank(T)}(R)$ and, therefore, the order of $\Gal(K(T)_M/K)$, are also divisible by $p-1$. Then there is a subgroup $\Delta\subset \Gal(K(T)_M/K)$ of order $p-1$. For every $A\in\{T,T^*\}$, there is an inflation-restriction exact sequence
+\[\xymatrix{0\ar[r] & H^1\Bigl(\Gal(K(T)_M/K)/\Delta,A^\Delta\Bigr)\ar[r] & H^1(K(T)_M/K,A)\ar[r] & H^1(\Delta,A)}\]
+Note that the first cohomology group vanishes since $A^\Delta=0$ and the third one is also zero since the order of $\Delta$ is prime to $p$. Therefore, $H^1(K(T)_M/K,A)$ needs to be zero.
+\label{rem:surjective_ass}
+\end{remark}
 
 There is a set of primes playing a crucial role in this theory.
 
@@ -231,6 +140,8 @@ Let $\ell$ be a finite place of $K$, not dividing $p$. Assume $T$ is unramified 
 where $K_\ell^\ur/K$ is the maximal unramified extension of $K$, $\II_\ell$ is the inertia subgroup of $G_{K_\ell}$, and the second equality follows from the inflation-restriction sequence. 
 \label{def:finite}
 \end{definition}
+
+\textcolor{red}{comment on finite cohomology for other primes}
 
 \begin{definition}
 Let $\ell$ be a finite place of $K$ as in Definition \ref{def:finite}. The \emph{singular cohomology} at $\ell$ is the quotients
@@ -264,7 +175,7 @@ H^1_\f(K_\ell,T)\cong T/(\tau-1)T,\ H^1_\s(K_\ell,T)\cong T^{\tau=1}
 
 \begin{definition}
 Let $\ell\in \PP$. The transverse cohomology sugbgroup is defined as
-\[H^1_{\tr}(K_\ell,T):=H^1\Bigl(K(\ell)_\ell,T^{G_{K(\ell)_\ell}}\Bigr)\hookrightarrow H^1(K_\ell,T)\]
+\[H^1_{\tr}(K_\ell,T):=H^1\Bigl(K(\ell)_\ell/K_\ell,T^{G_{K(\ell)_\ell}}\Bigr)\hookrightarrow H^1(K_\ell,T)\]
 \end{definition}
 
 \begin{proposition}(\cite[Lemma 1.2.4]{MazurRubin})
@@ -309,7 +220,7 @@ In this section, we introduce the concepts of Selmer structures and their associ
 \begin{definition}
 A \emph{Selmer structure} $\FF$ on $T$ is a collection of the following data:
 \begin{itemize}
-\item A finite set $\Sigma(\FF)$ of places of $K$, including all archimedean and $p$-adic prime and all the primes where $T$ is ramified.
+\item A finite set $\Sigma(\FF)$ of places of $K$, including all archimedean and $p$-adic primes and all the primes where $T$ is ramified.
 \item For every $\ell \in \Sigma(\FF)$, a choice of an $R[[G_{K_\ell}]]$-submodule
 \[H^1_{\FF}(K_\ell, T)\subset H^1(K_\ell,T)\]
 This choice is known as \emph{local condition} at $\ell$.
@@ -318,7 +229,8 @@ This choice is known as \emph{local condition} at $\ell$.
 
 \begin{definition}
 The \emph{Selmer module} associated to a Selmer structure is 
-\[H^1_{\FF}(K,T)=\ker\left( H^1(K,T)\to \prod_{\ell\in \Sigma} H^1(K_\ell, T)\right)\]
+\[H^1_{\FF}(K,T)=\ker\left( H^1(K^{\Sigma}/K,T)\to \prod_{\ell\in \Sigma} H^1(K_\ell, T)\right)\]
+where $K^\Sigma/K$ is the maximal extension unramified outside $\Sigma$ and the map is the composition of inflation and restriction map
 \end{definition}
 
 
@@ -326,7 +238,8 @@ The \emph{Selmer module} associated to a Selmer structure is
 \begin{remark}
 When $\ell\not \in \Sigma(\FF)$, we say the local condition at $\ell$ is 
 \[H^1_\FF(K_\ell,T)=H^1_f(K_\ell,T)\]
-Under this identification, the Selmer module only depends on the local conditions, and not on the set $\Sigma(\FF)$.
+Under this identification, the Selmer module only depends on the local conditions, and not on the set $\Sigma(\FF)$, being
+\[H^1_{\FF}(K,T)=\ker\left( H^1(K,T)\to \prod_{\ell\in \Pb} H^1(K_\ell, T)\right)\]
 \end{remark}
 
 In order to compare Selmer structures, Poitou-Tate global duality is helpful. In order to introduce the global duality exact sequence, we need to introduce the concept of dual Selmer structure.
@@ -348,7 +261,8 @@ Let $\FF$ and $\GG$ be Selmer structures of $T$ such that $H^1_{\FF}(K_\ell, T)\
 \end{proposition}
 
 \begin{notation}
-Let $\FF$ and $\GG$ be Selmer structures. We say $\FF\leq \GG$ if $H^1_{\FF}(K_\ell, T)\subset H^1_{\GG}(K_\ell,T)$ for all places $\ell$.
+Let $\FF$ and $\GG$ be Selmer structures. We say $\FF\leq \GG$ if 
+\[H^1_{\FF}(K_\ell, T)\subset H^1_{\GG}(K_\ell,T)\ \forall \ell\in \PP\]
 \end{notation}
 
 Local conditions propagates naturally to submodules and quotients of $T$.
@@ -377,14 +291,14 @@ Let $T_1\subset T_2\subset T$ be two submodules of $T$. The propagation of a loc
 
 With the definition of the propagation of Selmer structures, we can compare the Selmer groups of submodules with the torsion of the Selmer group.
 
-\begin{proposition}(\cite[Lemma 3.5.3]{MazurRubin})
+\begin{proposition}(\cite[Lemma 3.5.3]{MazurRubin}, \cite[Proposition 3.5]{BurnsSakamotoSano2})
     Under Assumptions \ref{ass:basic}, for every ideal of $R$, the inclusion $T^*[I]\hookrightarrow T^*$ induces an isomorphism
     \[H^1(K,T^*[I])\cong H^1(K,T^*)[I]\]
     \label{prop:selmer_torsion}
 \end{proposition}
 
 
-In this theory, it is required to impose a technical condition on the Selmer structures that guarantees a good behaviour under the propagation.
+In this theory, it is required to impose a technical condition on the Selmer structures that guarantees good behaviour under the propagation.
 
 \begin{definition}(Cartesian Selmer structure)
 A Selmer structure $\FF$ is said to be \emph{cartesian} if the map
@@ -394,20 +308,25 @@ is injective for every prime $\ell$. \textcolor{red}{review with assumptions on 
 \end{definition}
 
 \begin{remark}
-It is enough to check the cartesian condition for $\ell\in \Sigma(\FF)$. Indeed, if $H^1_\FF(K_q,T)=H^1_\f(K_q, T)$, then $H^1_\s(K_q, T)=\Hom(\II_q, T^{\Frob_\ell=1})$. Then the cartesian condition holds for $q$ because $\Hom$ is a left exact functor.
+It is enough to check the cartesian condition for $\ell\in \Sigma_\FF$. Indeed, when $\ell\notin \Sigma_{\FF}$, then
+\[H^1_\FF(K_\ell,T)=H^1_\f(K_\ell, T)\Rightarrow H^1_{\FF}(K_\ell,T)=H^1_\s(K_q, T)=\Hom(\II_q, T^{\Frob_\ell=1})\]
+which is a cartesian local condition because $\Hom$ is a left exact functor.
 \end{remark}
 
-When the Selmer structure is cartesian, the Selmer group of some quotients of $A$ can be also identified with the torsion of the Selmer group.
+When the Selmer structure is cartesian, the Selmer group of some quotients of $T$ can be also identified with the torsion of the Selmer group.
 
 \begin{proposition}
     Assume Assumptions \ref{ass:basic} and that $I$ is an ideal of $R$ such that $R[I]$ is principal. The multiplication by a generator $\pi$ induces an injection $T/I\hookrightarrow T$, which itself induces an isomorphism
-    \[H^1(K,T/I)\hookrightarrow H^1(K,T)[I]\]
+    \[H^1_{\FF}(K,T/I)\hookrightarrow H^1_{\FF}(K,T)[I]\]
    \label{prop:selmer_quotient} 
 \end{proposition}
 
-\textcolor{red}{Proof}
+\begin{proof}
+Multiplication by $\pi$ induces an isomorphism $T/I\cong T[I]$. Therefore, Proposition \ref{prop:selmer_torsion} implies that 
+\[H^1_{\FF}(K,T/I)\cong H^1_{\FF}(K,T[I])\cong H^1_{\FF}(K,T)[I]\]
+\end{proof}
 
-The theory of Kolyvagin systems is dependent on one invariant associated to the Selmer structure, the core rank, that measures the difference in dimension between the Selmer module and the Selmer module of the dual structure.
+The theory of Kolyvagin systems is dependent on the core rank, which is an invariant associated to the Selmer structure, that measures the difference in dimension between the Selmer module and the Selmer module of the dual structure.
 \begin{definition}(Core rank)
 Let $\FF$ be a Selmer strucure on $T$. The \emph{core rank} of $\FF$ is the integer
 \[\chi(\FF):=\dim_k H^1_{\FF}(K,T\otimes k)-\dim_k H^1_{\FF}(K,T^*[\m])\]
@@ -420,7 +339,7 @@ We will assume $\chi(\FF)$ is non-negative. Otherwise, one could swap the roles 
 
 When the Selmer strcuture is cartesian, the core rank can determine the relation of the full Selmer group with the one of the dual Selmer structure.
 
-\begin{proposition}
+\begin{proposition}(\cite[Theorem 4.1.5.]{MazurRubin})
 Let $R$ be a principal, artinian, local ring and let $\FF$ be a cartesian Selmer structure of core rank $\chi(\FF)\geq 0$. Then there is a non-canonical homomorphism
 \[H^1_{\FF}(K,T)=R^{\chi(\FF)}\oplus H^1_{\FF}(K,T^*)\]
 \label{prop:core_rank_str}
@@ -464,7 +383,11 @@ Let $\FF$ be a cartesian Selmer structure and let $a,b,c\in \NN$ be pairwise cop
 The Kolyvagin system argument involve the modification of certain conditions in order to make the Selmer module smaller. For this reason, we will finish this section with some technical lemmas that will be used repeatedly. We start with an application of Chebotarev density theorem that proves the existence of Kolyvagin primes such that their localisation does not annihilate certain elements in the local cohomology group.
 
 \begin{proposition}(\cite[Lemma 3.9]{BurnsSakamotoSano2})
-Let $c_1,\ldots,c_s\in H^1(K,T)$ and let $c_1^*,\ldots,c_t^*\in H^1(K,T^*)$ be non-zero elements. If $s+t<p$, there is a Kolyvagin prime $\ell\in \PP$ such that $\loc_\ell(c_i)$ and $\loc_\ell(c_i^*)$ are all non-zero.
+Consider non-zero cohomology classes 
+\[\begin{array}{cc}
+    c_1,\ldots,c_s\in H^1(K,T),  & c_1^*,\ldots,c_t^*\in H^1(K,T^*)
+\end{array}\]
+If $s+t<p$, there is a Kolyvagin prime $\ell\in \PP$ such that $\loc_\ell(c_i)$ and $\loc_\ell(c_i^*)$ are all non-zero.
 \label{prop:cheb}
 \end{proposition}
 
@@ -473,13 +396,17 @@ Let $c_1,\ldots,c_s\in H^1(K,T)$ and let $c_1^*,\ldots,c_t^*\in H^1(K,T^*)$ be n
 \begin{lemma}(\cite[Lemma 4.1.7]{MazurRubin})
 Let $\FF$ be a Selmer structure and let $\ell\notin\Sigma_\FF$ be a prime satisfying that 
 \[\loc_\ell:\ H^1_{\FF}(K,T)\to H^1_\f(K_\ell,T)\]
-is surjective. Then $H^1_{\FF(\ell)}(K,T^*)=H^1_{\FF}(K,T^*)$.
+is surjective. Then $H^1_{\FF(\ell)}(K,T^*)=H^1_{\FF_\ell}(K,T^*)$.
 \label{lem:tr_res}
 \end{lemma}
 
-For the rest of this section, we assume $R$ is a principal ring. The next two lemmas show how we can make the Selmer group smaller by swapping the local condition at certain approppriate prime $\ell$. The situation when $\chi(\FF)\geq 1$ was done in \cite{MazurRubin} and it is technically since we can apply lemma \ref{lem:tr_res} directly.
+\begin{proof}
+\textcolor{red}{do}
+\end{proof}
 
-\begin{lemma}
+For the rest of this section, we assume $R$ is a principal ring. The next two lemmas show how we can make the Selmer group smaller by swapping the local condition at certain approppriate prime $\ell$. The situation when $\chi(\FF)\geq 1$ was done in \cite{MazurRubin}.
+
+\begin{lemma}(see \cite[Proposition 4.5.8]{MazurRubin})
 Assume $R$ is principal and let $\FF$ be a cartesian Selmer structure. Assume that $H^1_{\FF}(K,T)$ contains a submodule isomorphic to $R$ and that 
 \[H^1_{\FF}(K,T^*)\approx R/\m^{e_1}\times \cdots\times R/\m^{e_s}\]
 for some exponents $e_1\geq e_2\geq \cdots \geq e_s$. Then there exists a Kolyvagin prime $\ell \in \PP$ such that 
@@ -496,7 +423,7 @@ When $\chi(\FF)\geq 1$, the Selmer group $H^1_{\FF}(K,T)$ always contains a subm
 \textcolor{red}{do}
 \end{proof}
 
-When $\chi(\FF)=0$, we need to study quotients of $T$ in order to apply \ref{lem:tr_res} and, when recovering the information about the Selmer group at $t$, we only get partial information. The next lemma is the technical base for the main Theorems \textcolor{red}{cite} about the structure of Selmer group of core rank zero.
+When $\chi(\FF)=0$, we need to study quotients of $T$ in order to apply \ref{lem:tr_res} and, when recovering the information about the Selmer group of $T$, we only get partial information. The next lemma is the technical base for the main Theorems \textcolor{red}{cite} about the structure of Selmer group of core rank zero.
 
 \begin{lemma}
 Assume $R$ is principal and let $\FF$ be a cartesian Selmer structure such that $\chi(\FF)=0$. Assume that 
@@ -532,8 +459,9 @@ Therefore, $H^1_{\FF^*(\ell)}(\Q,T^*)$ can be injected into $R\times R/\m^{e_2}\
 When $\chi(\FF)=0$, we can improve Lemma \ref{lem:transverse_reduction_torsion} to obtain a result of the kind of Lemma \ref{lem:transverse_reduction_free} even when the Selmer group does not contain submodules isomorphic to $R$, but assuming some hypothesis about $T$ not being residually self-dual.
 
 \begin{assumption}
+Consider the following assumptions to rule out self-duality in $T$
 \begin{itemize}
-\item\namedlabel{Nsd}{(N1)} $\Hom_{\F_p[G_\Q]}(T/\m T,T^*[\m])=0$.
+\item\namedlabel{Nsd}{(N1)} $T/\m T$ is not isomorphic to $T^*[\m]$ as $k[[G_K]]$-modules.
 \item\namedlabel{Nsur}{(N2)} The image of the homomorphism $R\to \textrm{End}(T)$ is contained in the image of $\Z_p[[G_\Q]]\to \textrm{End}(T)$.
 \end{itemize}
 \label{ass:nd}

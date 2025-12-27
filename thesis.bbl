@@ -19,41 +19,6 @@
 
 \refsection{0}
   \datalist[entry]{anyt/global//global/global}
-    \entry{BlochKato}{incollection}{}
-      \name{author}{2}{}{%
-        {{hash=d70f290633620a3a63a318f4b0e912f1}{%
-           family={Bloch},
-           familyi={B\bibinitperiod},
-           given={Spencer},
-           giveni={S\bibinitperiod}}}%
-        {{hash=d17898f46dcc8922e71c199b1619b8db}{%
-           family={Kato},
-           familyi={K\bibinitperiod},
-           given={Kazuya},
-           giveni={K\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Birkhäuser Boston, Boston, MA}%
-      }
-      \strng{namehash}{b0ee9516a543ca4053ea3672370a51a4}
-      \strng{fullhash}{b0ee9516a543ca4053ea3672370a51a4}
-      \strng{bibnamehash}{b0ee9516a543ca4053ea3672370a51a4}
-      \strng{authorbibnamehash}{b0ee9516a543ca4053ea3672370a51a4}
-      \strng{authornamehash}{b0ee9516a543ca4053ea3672370a51a4}
-      \strng{authorfullhash}{b0ee9516a543ca4053ea3672370a51a4}
-      \field{labelalpha}{BK90}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{The {G}rothendieck {F}estschrift, {V}ol.\ {I}}
-      \field{series}{Progr. Math.}
-      \field{title}{{$L$}-functions and {T}amagawa numbers of motives}
-      \field{volume}{86}
-      \field{year}{1990}
-      \field{pages}{333\bibrangedash 400}
-      \range{pages}{68}
-    \endentry
     \entry{BurnsSakamotoSano2}{misc}{}
       \name{author}{3}{}{%
         {{hash=efc7b5e28e331906f58cf841742758e6}{%

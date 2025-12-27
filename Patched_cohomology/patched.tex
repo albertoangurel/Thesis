@@ -477,6 +477,8 @@ Since classical local duality is non-degenerate, and the ultraproduct is an exac
 Applying Proposition \ref{prop:ultraproduct_hom}, we also obtain the injection
 \[\UU\Bigl(H^1(K_{\ell_n},T)\Bigr)\hookrightarrow \Hom\left(\UU\Bigl(H^1(K_{\ell_n},T^*)\Bigr),\UU\left(\frac{(\# T)^{-1} \Z}{\Z}\right)\right)\]
 Therefore, the patched local duality pairing is non-degenerate on the left. Similarly, it is also non-degenerate on the right factor.
+
+\textcolor{red}{limits}
 \end{proof}
 
 \textcolor{red}{finite cohomology annihilators}
@@ -594,13 +596,19 @@ Let $T$ be an ind-finite group and let $\FF$ be a Selmer structure defined on $T
 where the limit is taken over the finite submodules $T'$ of $T$ and $\bH^1_{\FF}(K,T')$ is the Selmer group of the propagated Selmer structure, as defined in Definition \ref{def:propagation_submodules}.
 \end{proposition}
 
-The next technical lemma shows that patched Selmer groups can be obtained from patching classical Selmer groups.
+The next technical lemma shows that, in the finite case, patched Selmer groups can be obtained from patching classical Selmer groups.
 \begin{lemma}
-Let $\FF\leq \GG$ be two Selmer structures defined on a finite Galois module $T$. Then there are sequences of classical Selmer structures $(\FF_i)$ and $(\GG_i)$ such that $\FF_i\leq \GG_i$ for all $i\in \N$ and 
+Let $\FF\leq \GG$ be two Selmer structures defined on a finite Galois module $T$. Then there are sequences of classical Selmer structures $(\FF_i)$ and $(\GG_i)$ such that $\FF_i\leq \GG_i$ for all $i\in \N$ and all ultraprimes $\ku$,
+\[\begin{array}{cc}
+\bH^1_{\FF}(K_\ku,T)=\UU\Bigl(H^1_{\FF_i}(K_\ku,T)\Bigr),\ \bH^1_{\GG}(K_\ku,T)=\UU\Bigl(H^1_{\GG_i}(K_\ku,T)\Bigr)
+\end{array}\]
+Moreover, we can construct the patched Selmer group as the ultraproduct of classical Selmer groups
 \[\begin{array}{cc}
 \bH^1_{\FF}(K,T)=\UU\Bigl(H^1_{\FF_i}(K,T)\Bigr),\ \bH^1_{\GG}(K,T)=\UU\Bigl(H^1_{\GG_i}(K,T)\Bigr)
 \end{array}\]
+\label{lem:structure_patching}
 \end{lemma}
+
 
 \begin{proof}
 For an ultraprime $\ku \in \Sigma_\FF\cup \Sigma_\GG$, fix a representing sequence $(\ku_i)$ and let $W_\ku$ be the set of indices such that there is an isomorphism $\varphi_i^\ku:\ H^1(K_{\ell_i},T)\cong \bH^1(K_\ku,T)$. Note that Corollary \ref{cor:patched:local_constant} implies that $W_\ku\in \UU$. 
@@ -612,7 +620,7 @@ For every $i\in \N$, define the classical Selmer structre by $\Sigma_{\FF_i}=\{\
 \end{aligned}\]
 
 This definition implies that $\bH^1_\FF(K_\ku,T)=\UU\Bigl(H^1_{\FF}(K_{\ku_i},T)\Bigr)$. Therefore, Proposition \ref{prop:ultrafilter_exact} implies that
-\[\ker\Biggl[\bH^1(K^\kn/K,T)\to \prod_{\ku\mid \kn} \bH^1_{/FF}(K_\ku,T)\Biggr]=\ker\Biggl[\UU\Bigl(H^1(K^{n_i}/K,T)\Bigr)\to \prod_{\ku_i\mid \kn_i} \UU\Bigl(H^1_{/\FF}(K_{\ku_i},T)\Bigr)\Biggr]\]
+\[\ker\Biggl[\bH^1(K^\kn/K,T)\to \prod_{\ku\mid \kn} \bH^1_{/\FF}(K_\ku,T)\Biggr]=\ker\Biggl[\UU\Bigl(H^1(K^{n_i}/K,T)\Bigr)\to \prod_{\ku_i\mid \kn_i} \UU\Bigl(H^1_{/\FF}(K_{\ku_i},T)\Bigr)\Biggr]\]
 Again by the exactness of the ultraproduct given in Proposition \ref{prop:ultrafilter_exact} implies that 
 \[\bH^1_{\FF}(K,T)=\UU\Bigl(H^1_{\FF_i}(K,T)\Bigr)\]
 
@@ -629,13 +637,29 @@ By construction $\FF_i\leq \GG_i$ and, analogously,
 
 We can use local duality to define dual Selmer structures as in Definition \ref{def:dual_selmer_structure}
 \begin{definition}
-    Let $\FF$ be a Selmer structure on $T$. The we can define a \emph{dual Selmer structure} $\FF^*$ on $T^*$ by defining the local condition $\bH^1(K_\ku,\bT^*)$ as the the annihilator of $\bH^1_{\FF}(K_\ku,\bT)$ under the local duality pairing in Proposition \ref{prop:patched:local_duality}
+    Let $\FF$ be a Selmer structure on $T$. The we can define a \emph{dual Selmer structure} $\FF^*$ on $T^*$ by defining the local condition $\bH^1(K_\ku,T^*)$ as the the annihilator of $\bH^1_{\FF}(K_\ku,T)$ under the local duality pairing in Proposition \ref{prop:patched:local_duality}
+    \label{def:patched:dual_structure}
 \end{definition}
 
 Dual patched Selmer structures can be also obtained by patching the dual Selmer structures in the classical setting.
 \begin{lemma}
-Let $\FF$ a patched Selmer structure and let $\FF_i$ be a sequence of classical Selmer structures patching to $\FF$. Then the dual Selmer structures $\FF_i^*$ also patches to $\FF$.
+Let $\FF$ a patched Selmer structure defined on a finite group $T$ and let $\FF_i$ be classical Selmer structures such that 
+\[\bH^1_{\FF}(K_\ku,T)=\UU\Bigl(H^1_{\FF}(K_\ku,T)\Bigr)\]
+Then, we have that
+\[\bH^1_{\FF^*}(K_\ku,T^*)=\UU\Bigl(H^1_{\FF_i^*}(K_\ku,T^*)\Bigr)\]
+\label{lem:patching_structures_dual}
 \end{lemma}
+
+\begin{proof}
+By Definition \ref{def:patched:dual_structure}, for every ultraprime $\ku=(\ell_i)$, we have that
+\[\bH^1_{\FF^*}(K_\ku,T^*)=\ker\left(H^1(K_\ku,T^*)\to \Hom\left(H^1_{\FF}(K_\ku,T)\to \frac{(\# T)^{-1} \Z}{\Z}\right)\right) \]
+where the map is induced by local duality, as stated in Proposition \ref{prop:patched:local_duality}. This map can be also written as the composite
+\[\begin{aligned} 
+    \UU\Bigl(H^1(K_{\ell_i},T^*)\Bigr)\to \UU\left(\Hom\left(  H^1_{\FF_i}(K_{\ell_i},T),\frac{(\# T)^{-1} \Z}{\Z}\right)\right) \\\hookrightarrow \Hom\left(\UU\Bigl(H^1_{\FF_i}(K_{\ell_i},T)\Bigr),\UU\left(\frac{(\# T)^{-1} \Z}{\Z}\right)\right)
+\end{aligned}\]
+where the second map is the injection given in Proposition \ref{prop:ultraproduct_hom}. By Proposition \ref{prop:local_duality} and \ref{prop:ultrafilter_exact}, we can compute the kernel of this map as
+\[\bH^1_{\FF^*}(K_\ku,T^*)=\UU\Bigl(H^1_{\FF_i^*}(K_{\ell_i},T^*)\Bigr)\]
+\end{proof}
 
 There is also a global duality exact sequence in this setting.
 
@@ -646,15 +670,26 @@ Let $\FF\leq\GG$ be two Selmer stuctures. Then there is a global duality exact s
 \end{proposition}
 
 \begin{proof}
-Assume first that $T$ is finite. Let $\mathfrak n=(n_k)_{k\in \N}$ be the square-free product of all ultraprimes in $\Sigma_\FF\cup \Sigma_{\GG}$.  
-
-
-
-Note that $\FF\leq \GG$ implies that $\FF_i\leq \GG_i$ as Selmer structures for all $i$, so they induce a global exact sequence. The exactness of the patching functor implies that 
+Assume first that $T$ is finite. Let $\mathfrak n=(n_k)_{k\in \N}$ be the square-free product of all ultraprimes in $\Sigma_\FF\cup \Sigma_{\GG}$. By Lemma \ref{lem:structure_patching}, there are sequences of classical Selmer structures $(\FF_i)$ and $(\GG_i)$, where $\FF_i\leq \GG_i$, and 
 \[\begin{array}{cc}
-    \Sel_\FF(\Q,T)=\UU(\Sel_{\FF_i}(\Q,T))   & \Sel_\GG(\Q,T)=\UU(\Sel_{\FF_i}(\Q,T)) \\
-    \Sel_{\FF^*}(\Q,T^*)^\vee=\UU(\Sel_{\FF_i^*}(\Q,T^*)^\vee)   & \Sel_\GG(\Q,T^*)=\UU(\Sel_{\GG_i^*}(\Q,T)) 
+\bH^1_{\FF}(K_\ku,T)=\UU\Bigl(H^1_{\FF_i}(K_{\ku_i},T)\Bigr),\ \bH^1_{\GG}(K_\ku,T)=\UU\Bigl(H^1_{\GG_i}(K_{\ku_i},T)\Bigr)
 \end{array}\]
+
+By the exactness of the ultraproduct shown in Proposition \ref{prop:ultrafilter_exact}, the Selmer groups of $\FF$ and $\GG$ are also ultraproducts of classical Selmer groups:
+\[\begin{array}{cc}
+\bH^1_{\FF}(K,T)=\UU\Bigl(H^1_{\FF_i}(K,T)\Bigr),\ \bH^1_{\GG}(K_\ku,T)=\UU\Bigl(H^1_{\GG}(K,T)\Bigr)
+\end{array}\]
+
+By Lemma \ref{lem:patching_structures_dual} and Proposition \ref{prop:ultrafilter_exact}, the dual Selmer groups can be also obtained as an ultraproduct of classical Selmer groups:
+\[\begin{array}{cc}
+\bH^1_{\FF^*}(K,T^*)=\UU\Bigl(H^1_{\FF_i^*}(K,T^*)\Bigr),\ \bH^1_{\GG^*}(K_\ku,T^*)=\UU\Bigl(H^1_{\GG^*}(K,T^*)\Bigr)
+\end{array}\]
+
+Then the global duality exact sequence is 
+\[\xymatrix{\UU\Bigl(H^1_{\FF_i}(K,T)\Bigr)\ar@{>->}[r] & \UU\Bigl(H^1_{\GG}(K,T)\Bigr)\ar[r] & \UU\biggl(\displaystyle{\bigoplus_{\ell} \frac{H^1_{\GG}(K_\ell,T)}{H^1_{\FF}(K_\ell,T)}}\biggr) \ar[r] & \UU\Bigl(H^1_{\GG^*}(K,T^*)^\vee\Bigr)\ar@{->>}[r]& \UU\Bigl(H^1_{\FF^*}(K,T^*)^\vee\Bigr)}\]
+which is exact by Proposition \ref{prop:ultrafilter_exact}.
+
+\textcolor{red}{profinite or ind-finite}
 \end{proof}
 
 \subsection{Patched Selmer modules}
@@ -700,7 +735,7 @@ Let $\pi$ be a generator of $\m$. Consider the exact sequence
 It induces an injection 
 \[\bH^1(K,T)/\m^k\hookrightarrow \bH^1(K,T/\m^k)\]
 By the definition of Selmer group, there is an injection
-\[\frac{\bH^1(K,T)}{\bH^1_{\FF}(K,T)}\to \prod_{\UU(\PP)} \frac{\bH^1(K_\ku,T)}{\bH^1_{\FF}(K_\ku,T)}\]
+\[\frac{\bH^1(K,T)}{\bH^1_{\FF}(K,T)}\to \prod_{\UU(\Pb)} \frac{\bH^1(K_\ku,T)}{\bH^1_{\FF}(K_\ku,T)}\]
 Since the Selmer structure is cartesian, the product is torsion-free, so the domain is torsion free as well. By the snake's lemma, it implies that the top vertical map in the following diagram is injective.
 \[\xymatrix{\bH^1_\FF(K,T)/\m^k \ar[r] \ar@{>->}[d]& \bH^1_\FF(K,T/\m^k) \ar@{>->}[d]\\
 \bH^1(K,T)/\m^k\ar@{>->}[r] & \bH^1(K,T/\m^k)
@@ -729,7 +764,7 @@ Let $\FF$ be a cartesian Selmer structure on $T$ of core rank $\chi(\FF)$. For e
 
 \begin{proposition}
 Let $\FF$ be a cartesian Selmer structure on $T$ of core rank $\chi(\FF)$. Then 
-\[\rank_R\bH^1(K,T)-\rank_R \bH^1(K,T^*)^\vee=\chi(\FF)\]
+\[\rank_R\ \bH^1(K,T)-\rank_R\ \bH^1(K,T^*)^\vee=\chi(\FF)\]
 \label{prop:patched:core_rank_limit}
 \end{proposition}
 
@@ -739,12 +774,26 @@ For every $k\geq 0$, there is an isomorphism \textcolor{red}{proof needed}
 Therefore, $\bH^1(K,T^*)$ is cofinitely generated, so there are constants $a$ and $b$ such that 
 \[\length\Bigl(\bH^1_{\FF}(K,T^*[\m^k])\Bigr)=ak+b\]
 By Proposition \ref{prop:patched:core_rank_finite}, then 
-\[\length\Bigl(\rank_R\bH^1(K,T/\m^k)\Bigr)=(a+\chi(\FF))k+b\]
+\[\length\Bigl(\rank_R\ \bH^1(K,T/\m^k)\Bigr)=(a+\chi(\FF))k+b\]
 By Proposition \ref{prop:patched:quotients}, there is a constant $f$ such that
-\[(a+\chi(\FF))k+b-f\leq \length\Bigl(\rank_R\bH^1(K,T)/\m^k\Bigr) \leq (a+\chi(\FF))k+b\]
+\[(a+\chi(\FF))k+b-f\leq \length\Bigl(\rank_R\ \bH^1(K,T)/\m^k\Bigr) \leq (a+\chi(\FF))k+b\]
 Hence $\bH^1(K,T)$ is also finitely generated of rank $a+\chi(\FF)$.
 \end{proof}
 
+\section{Ultra Kolyvagin systems}
+
+\begin{definition}
+An \emph{ultra Kolyvagin system} for a Selmer structure $\FF$
+$$\kappa=\left\{\kappa_n\in H^1_{\mathcal F(n)}(\Q,T):\ n\in \NN\right\}$$
+satisfying the following relation for every $n\in \NN$ and $\ell\in \PP$ not dividing $n$. By the definition of Selmer module, we have that 
+\[\begin{array}{cc}
+\loc_\ell(\kappa_n)\in H^1_{\FF(n)}(K_\ell,T)=H^1_\f(K_\ell,T),\ &\loc_\ell(\kappa_{n\ell})\in H^1_{\FF(n\ell)}(K_\ell,T)=H^1_\tr(K_\ell,T)
+\end{array}\]
+The collection $\kappa$ is a Kolyvagin system if the following is satisfied
+\[\loc_\ell(\kappa_{n\ell})=\phi_\ell^{\fs}\circ \loc_\ell(\kappa_n)\]
+for every $n\in \NN$ and $\ell\in \PP$ not dividing $n$.
+\label{def:ultra_kol}
+\end{definition}
 
 
 
