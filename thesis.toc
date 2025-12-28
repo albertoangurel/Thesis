@@ -1,33 +1,29 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {british}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {0.1}Galois cohomology}{4}{section.0.1}%
-\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Kolyvagin systems}{5}{chapter.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.1}Local cohomology and Kolyvagin primes}{5}{section.1.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.2}Selmer modules}{7}{section.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.3}Fitting ideals}{14}{section.1.3}%
+\contentsline {section}{\numberline {1.3}Classical Kolyvagin systems}{16}{section.1.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.4}Classical Kolyvagin systems}{16}{section.1.4}%
+\contentsline {section}{\numberline {1.4}Selmer structures of rank 0}{17}{section.1.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.5}Selmer structures of rank 0}{17}{section.1.5}%
+\contentsline {subsection}{\numberline {1.4.1}Proof of Lemma \ref {lem:deltan_trn}}{20}{subsection.1.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.5.1}Proof of Lemma \ref {lem:deltan_trn}}{20}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.4.2}Proof of Lemma \ref {lem:fitti_sub_fitt0trn}}{21}{subsection.1.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.5.2}Proof of Lemma \ref {lem:fitti_sub_fitt0trn}}{21}{subsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.4.3}Proof of Lemma \ref {lem:fitti_eq_fitt0_rank}}{21}{subsection.1.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.5.3}Proof of Lemma \ref {lem:fitti_eq_fitt0_rank}}{21}{subsection.1.5.3}%
+\contentsline {subsection}{\numberline {1.4.4}Proof of Lemma \ref {lem:fitti_eq_fitt0_higher}}{21}{subsection.1.4.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.5.4}Proof of Lemma \ref {lem:fitti_eq_fitt0_higher}}{21}{subsection.1.5.4}%
+\contentsline {section}{\numberline {1.5}Non-self dual Galois representations of rank $0$}{22}{section.1.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.6}Non-self dual Galois representations of rank $0$}{22}{section.1.6}%
+\contentsline {section}{\numberline {1.6}Old stuff}{22}{section.1.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.7}Old stuff}{22}{section.1.7}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.7.1}Non-self-dual case}{25}{subsection.1.7.1}%
+\contentsline {subsection}{\numberline {1.6.1}Non-self-dual case}{25}{subsection.1.6.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {2}Patched Cohomology}{27}{chapter.2}%
 \defcounter {refsection}{0}\relax 
@@ -67,4 +63,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.1}The graph of cartesian Selmer structures}{51}{section.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{References}{52}{theorem.4.1.3}%
+\contentsline {chapter}{\numberline {A}Algebraic Preliminaries}{53}{appendix.A}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.1}Fitting ideals}{53}{section.A.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{References}{55}{theorem.A.1.4}%

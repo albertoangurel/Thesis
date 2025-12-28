@@ -1,64 +1,3 @@
-\section{Galois cohomology}
-
-
-
-
-
-
-
-\begin{definition}
-An element $n\in \NN(\PP)$ is said to be a \emph{core vertex} if either $H^1_{\FF(n)}(\Q,T)=0$ or $H^1_{\FF^*(n)}(\Q,T^*)=0$.
-\end{definition}
-
-\begin{proposition}(\cite[corollary 4.1.9]{MazurRubin})
-For every $n\in \NN(\PP)$, there is some core vertex $m\in \NN(\PP)$ such that $n|m$.
-\label{prop:core_vertex}
-\end{proposition}
-
-
-
-\begin{proposition}(\cite[proposition 3.6.1]{MazurRubin})
-Let $c_1,c_2\in H^1(\Q,T)\setminus\{0\}$ and let $c_3,c_4\in H^1(\Q,T^*)\setminus\{0\}$. For every $k\in \N$, there exists an infinite set of primes $S\subset \PP_k$ such that
-$$\loc_\ell(c_i)\neq 0\ \ \forall \ell\in S,\ \forall i=1,2,3,4$$
-\label{prop:mr361}
-\end{proposition}
-
-The main consequence of this proposition is that it can be used to find primes whose finite localisation maps are surjective.
-
-\begin{corollary}
-Let $(T,\FF,\PP)$ be a Selmer triple satisfying \ref{Hffr}-\ref{Hprimes} and let $j\in\NN$ be such that $\m^{j-1} H^1_\FF(\Q,T)\neq 0$. Then there are infinitely many primes $\ell \in \PP$ such that 
-\[\loc_\ell\bigl(H^1_{\FF}(\Q,T/\m^j)\bigr)=H^1_f(\Q_\ell,T/\m^j)\]
-Assume further than $\m^{j-1} H^1_\FF(\Q,T^*)\neq 0$. Then there are infinitely many primes $\ell\in \PP$ such that both localisation maps
-\[\begin{array}{cc}
-    \loc_\ell^\f\bigl(H^1_{\FF}(\Q,T/\m^j)\bigr)=H^1_\f(\Q_\ell,T/\m^j),\ &
-    \loc_\ell^\f\bigl(H^1_{\FF}(\Q,T^*[\m^j])\bigr)=H^1_\f(\Q_\ell,T^*[\m^j])
-\end{array}\]
-are surjective.
-\label{cor:loc_sur}
-\end{corollary}
-
-\begin{proof}
-By lemmas \ref{lem:mr353} and \ref{lem:mr354}, we can find some elements $d_1\in H^1_\FF(\Q,T/m^j)$ and $d_3\in H^1_{\FF}(\Q,T^*[\m])$ such that $\m^{j-1} d_1\neq 0$ and $\m^{j-1} d_3\neq 0$. Consider $c_1=\pi^{j-1} d_1$ and $c_3=\pi^{j-1} d_3$, where $\pi$ is some generator of $\m$. Since both $c_1$ and $c_3$ are nonzero, proposition \ref{prop:mr361} guarantees the existence of infinitely many primes $\ell\in\PP\cap \PP_j$ such that $\loc_\ell(c_1)$ and $\loc_\ell(c_3)$ are non-zero. Moreover, since $c_1$ and $c_3$ belong to the Selmer groups, their localisation belong to the finite cohomology groups, so $\loc_\ell^\f(c_1)\neq 0$ and $\loc_\ell^\f(c_3)\neq 0$. By corollary \ref{cor:local_coh_cyclic}, $H^1_f(\Q_\ell,T/\m^j)$ and $H^1_f(\Q_\ell, T^*[\m^j])$ are free of rank one over $R/\m^j$. Therefore, the only way the localizations of $c_1$ and $c_3$ do not vanish is when $\loc_\ell^f(d_1)$ generates $H^1_f(\Q_\ell, T/\m^j)$ and $\loc_\ell^f(d_3)$ generates $H^1_f(\Q_\ell,T^*[\m^j])$.
-\end{proof}
-
-
-
-This result alongside the following lemma plays a central role in the proof of theorem \ref{th:mr459} below.
-
-\begin{lemma}(\cite[lemma 4.1.7(ii)]{MazurRubin})
-Let $\ell\in \PP_k$ be a prime not dividing $n\in\NN_k$. If the localisation map $$\loc_\ell^\f: H^1_{\FF(n)}(\Q,T/\m^k)\to H^1_{\f}(\Q_\ell, T/\m^k)$$ is surjective, then
-$$H^1_{\FF^*(n\ell)}(\Q,T^*[\m^k])=H^1_{\FF^*_\ell(n)}(\Q,T^*[\m^k])$$
-\label{lem:mr417}
-\end{lemma}
-
-
-
-
-
-
-
-
-
 
 \chapter{Kolyvagin systems}
 
@@ -109,7 +48,7 @@ We assume the following assumptions:
 \begin{remark}
 Assume that the homomorphism $\rho:\ G_\Q\to \Aut(T)\cong GL_{\rank(T)}(R)$ induced by the Galois action is surjective. Then all three Assumptions \ref{ass:basic} hold. Indeed, \ref{Tirred} and \ref{Ttau} are clear. 
 
-For \ref{Tcoh}, note that the order of $R^\times$ is divisible by $p-1$. It implies that the order of $GL_{rank(T)}(R)$ and, therefore, the order of $\Gal(K(T)_M/K)$, are also divisible by $p-1$. Then there is a subgroup $\Delta\subset \Gal(K(T)_M/K)$ of order $p-1$. For every $A\in\{T,T^*\}$, there is an inflation-restriction exact sequence
+For \ref{Tcoh}, note that the order of $R^\times$ is divisible by $p-1$. It implies that the order of $GL_{\rank(T)}(R)$ and, therefore, the order of $\Gal(K(T)_M/K)$, are also divisible by $p-1$. Then there is a subgroup $\Delta\subset \Gal(K(T)_M/K)$ of order $p-1$. For every $A\in\{T,T^*\}$, there is an inflation-restriction exact sequence
 \[\xymatrix{0\ar[r] & H^1\Bigl(\Gal(K(T)_M/K)/\Delta,A^\Delta\Bigr)\ar[r] & H^1(K(T)_M/K,A)\ar[r] & H^1(\Delta,A)}\]
 Note that the first cohomology group vanishes since $A^\Delta=0$ and the third one is also zero since the order of $\Delta$ is prime to $p$. Therefore, $H^1(K(T)_M/K,A)$ needs to be zero.
 \label{rem:surjective_ass}
@@ -169,6 +108,7 @@ H^1_\f(K_\ell,T)\cong T/(\tau-1)T,\ H^1_\s(K_\ell,T)\cong T^{\tau=1}
     \[H^1_\f(K_\ell,T)\cong T/(\Frob_\ell-1) T\cong T/(\tau-1)T\]
     However, the second one is only canonical after tensoring with the Galois group \(\GG_\ell=\Gal(K(\ell)/K(1))\), where $K(\ell)$ is defined as the maximal $p$-extension inside the ray class field modulo $\ell$. Following \cite[Lemma 1.2.1]{MazurRubin}:
     \[H^1_\s(K_\ell,T)\otimes_{\Z} \GG_\ell \cong \Hom(\II_\ell,T^{\Frob_\ell=1})\otimes \GG_\ell\cong T^{\Frob_\ell=1}\cong T^{\tau=1}\]
+    \label{rem:local_coh_cyclic}
 \end{remark}
 
 
@@ -401,7 +341,17 @@ is surjective. Then $H^1_{\FF(\ell)}(K,T^*)=H^1_{\FF_\ell}(K,T^*)$.
 \end{lemma}
 
 \begin{proof}
-\textcolor{red}{do}
+The surjectivity of $\loc_\ell$, together with the exact sequence of Proposition \ref{prop:global_duality} with Selmer structures $\FF_\ell$ and $\FF$ implies that 
+\begin{equation}
+H^1_{(\FF^*)^\ell}(K,T^*)=H^1_{\FF^*}(K,T^*)
+\label{eq:417}
+\end{equation}
+By construction, we obtain
+\[H^1_{(\FF^*)_\ell}(K,T^*)=H^1_{\FF^*}(K,T^*)\cap H^1_{(\FF^*)(\ell)}(K,T^*)\]
+By equation \eqref{eq:417}
+\[H^1_{(\FF^*)_\ell}(K,T^*)=H^1_{(\FF^*)^\ell}(K,T^*)\cap H^1_{(\FF^*)(\ell)}(K,T^*)\]
+Since $H^1_{(\FF^*)(\ell)}(K,T^*)\subset H^1_{(\FF^*)^\ell}(K,T^*)$, we get that
+\[H^1_{(\FF^*)_\ell}(K,T^*)=H^1_{(\FF^*)(\ell)}(K,T^*)\]
 \end{proof}
 
 For the rest of this section, we assume $R$ is a principal ring. The next two lemmas show how we can make the Selmer group smaller by swapping the local condition at certain approppriate prime $\ell$. The situation when $\chi(\FF)\geq 1$ was done in \cite{MazurRubin}.
@@ -419,8 +369,13 @@ When $\chi(\FF)\geq 1$, the Selmer group $H^1_{\FF}(K,T)$ always contains a subm
 \[H^1_{\FF}(K,T)\approx R^{\chi(\FF)} \oplus H^1_{\FF^*}(K,T^*)\]
 \end{remark}
 
-\begin{proof}
-\textcolor{red}{do}
+\begin{proof}[Proof of Lemma \ref{lem:transverse_reduction_free}]
+Recall that $k=\length(R)$ and let $\pi$ be a generator of $\m$. Choose classes $c\in H^1_{\FF}(K,T)$ and $c^*\in H^1_{\FF^*}(K,T^*)$ such that $\pi^{k-1} c\neq 0$ and $\pi^{e_1-1} c^*\neq 0$. By Proposition \ref{prop:cheb}, there is a Kolyvagin prime $\ell \in \PP$ such that 
+\[\begin{array}{cc}
+\loc_\ell(\pi^{k-1} c) \neq 0,\ & \loc_\ell(\pi^{e_1-1}c^*)\neq 0
+\end{array}\]
+The first condition implies that $\loc_\ell$ is surjective, so Lemma \ref{lem:transverse_reduction_free} implies that 
+\[H^1_{(\FF^*)(\ell)}(K,T^*)=H^1_{(\FF^*)_\ell}(K,T^*)\approx R/\m^{e_2}\times \cdots\times R/\m^{e_s}\]
 \end{proof}
 
 When $\chi(\FF)=0$, we need to study quotients of $T$ in order to apply \ref{lem:tr_res} and, when recovering the information about the Selmer group of $T$, we only get partial information. The next lemma is the technical base for the main Theorems \textcolor{red}{cite} about the structure of Selmer group of core rank zero.
@@ -438,25 +393,33 @@ If, moreover, $e_1>e_2$, the integer $t$ can be chosen equal to $e_2$.
 \begin{proof}
 Since $\chi(\FF)=0$, Proposition \ref{prop:core_rank_str} implies that 
 $$H^1_{\FF^*}(K,T^*)\approx H^1_{\FF}(K,T)\approx R/\m^{e_1}\times\cdots \times R/\m^{e_s}$$
-We study the propagated Selmer group to the quotient $T/\m^{e_1}$ and its dual $T^*[m^{e_1}]$. 
 
-Applying Proposition \ref{prop:cheb} for some nonzero $c_1\in \m^{e_1-1} H^{1}_{\FF}(\Q,T/\m^{e_1})$ and some nonzero $c_1^*\in \m^{e_1-1} H^{1}_{\FF^*}(K,T[\m^{e_1}]^*)$, we can find infinitely many primes $\ell\in \PP$ such that the localisation maps \textcolor{red}{technicality Kolyvagin primes with quotients}
-$$\begin{array}{cc}
-\loc_\ell: H^1_{\FF}(\Q,T/\m^{e_1})\to H^1_\textrm{f}(\Q_\ell, T/\m^{e_1}),\ \ & \loc_\ell^*:H^1_{\FF^*}(\Q,T^*[\m^{e_1}])\to H^1_\f(\Q,T^*[\m^{e_1}])
-\end{array}$$
-are surjective. Since $\ell\in \PP$, both $H^1_\f(\Q_\ell, T/\m^{e_1})$ and $H^1_\f(\Q_\ell,T^*[e_1])$ are free $R/\m^{e_1}$-modules of rank one by Proposition \ref{prop:kol_primes}. \textcolor{red}{technicality with quotients}
+We pick classes $c\in H^1_{\FF}(K,T)$ and $c^*\in H^1_{\FF^*}(K,T^*)$ such that $\pi^{e_1} c\neq 0$ and $\pi^{e_1} c^*\neq 0$. By Proposition \ref{prop:cheb}, we can choose a Kolyvagin prime $\ell\in \PP$ such that 
+\[\begin{array}{cc}
+\loc_\ell(\pi^{e_1-1} c) \neq 0,\ & \loc_\ell(\pi^{e_1-1}c^*)\neq 0
+\end{array}\]
+Consider the diagram 
+\[\xymatrix{ H^1_{\FF}(K,T/\m^{e_1})\ar[r]^{\loc_\ell} \ar[d]^{\pi^{k-e_1}}      &       H^1_\f(K_\ell,T/\m^{e_1}) \ar[d]^{\pi^{k-e_1}} \\
+            H^1_{\FF}(K,T)\ar[r]^{\loc_\ell}     &       H^1_\f(K_\ell,T/\m^{e_1})
+}\]
+By Proposition \ref{prop:selmer_quotient}, the leftmost vertical map is surjective, so there is some $c'\in H^1_{\FF}(K,T/\m^{e_1})$ such that $\loc_\ell(\pi^{e_1}c')\neq 0$.
 
-By Proposition \ref{prop:selmer_torsion} and Lemma \ref{lem:tr_res},
-\[H^1_{\FF^*(\ell)}(\Q,T^*)[\m^{e_1}]\cong H^1_{\FF^*(\ell)}(\Q,T^*[\m^{e_1}])=H^1_{\FF^*_\ell}(\Q,T^*[\m^{e_1}])\approx R/\m^{e_2}\times \cdots \times R/\m^{e_s}\]
+Note that the element $\tau\in G_K$ from \ref{Ttau} in Assumption \ref{ass:basic} satisfies that 
+\[T/(\m^{e_1},\tau-1)\cong R/\m^{e_1}\]
+and, since $K(T/\m^{e_1})_{e_1}\subset K(T)_K$, then $\Frob_\ell$ is conjugate to $\tau$ in $\Gal(K(T/\m^{e_1})_{e_1}/K)$, so it is a Kolyvagin prime for $T/\m^{e_1}$. Then we can apply Lemma \ref{lem:tr_res} to guarantee that
+\[H^1_{(\FF^*)(\ell)}(K,T^*[\m^{e_1}])=H^1_{(\FF^*)_\ell}(K,T^*[\m^{e_1}])\approx R/\m^{e_2}\times \cdots \times R/\m^{e_s}\]
+
+By Propositions \ref{prop:core_rank_str} and \ref{prop:selmer_torsion},
+\[H^1_{\FF(\ell)}(K,T)[\m^{e_1}]\cong H^1_{\FF^*(\ell)}(\Q,T^*)[\m^{e_1}]\cong H^1_{\FF^*(\ell)}(\Q,T^*[\m^{e_1}])\approx R/\m^{e_2}\times \cdots \times R/\m^{e_s}\]
 
 
 
 Since $\chi(\FF^\ell)=1$ by Proposition \ref{prop:rank_modified}, then Proposition \ref{prop:core_rank_str} implies that
-$$H^1_{\FF^*(\ell)}(\Q,T^*)\approx H^1_{\FF(\ell)}(\Q,T)\subset H^1_{\FF^\ell}(\Q,T)\approx R\oplus H^1_{\FF_\ell^*}(\Q,T^*)$$
-Therefore, $H^1_{\FF^*(\ell)}(\Q,T^*)$ can be injected into $R\times R/\m^{e_2}\times\cdots \times R/\m^{e_s}$ and its $\m^{e_1}$-torsion is isomorphic to $R/\m^{e_2}\times \cdots \times R/\m^{e_s}$. Under those considerations, the lemma follows by the structure theorem of $R/\m^k$-modules. 
+$$ H^1_{\FF(\ell)}(\Q,T)\subset H^1_{\FF^\ell}(\Q,T)\approx R\oplus H^1_{\FF_\ell^*}(\Q,T^*)$$
+Therefore, $H^1_{\FF(\ell)}(\Q,T)$ can be injected into $R\times R/\m^{e_2}\times\cdots \times R/\m^{e_s}$ and its $\m^{e_1}$-torsion is isomorphic to $R/\m^{e_2}\times \cdots \times R/\m^{e_s}$. Under those considerations, the lemma follows by the structure theorem of $R/\m^k$-modules. 
 \end{proof}
 
-When $\chi(\FF)=0$, we can improve Lemma \ref{lem:transverse_reduction_torsion} to obtain a result of the kind of Lemma \ref{lem:transverse_reduction_free} even when the Selmer group does not contain submodules isomorphic to $R$, but assuming some hypothesis about $T$ not being residually self-dual.
+Even in the case $\chi(\FF)=0$, we can improve Lemma \ref{lem:transverse_reduction_torsion} to obtain a result of the kind of Lemma \ref{lem:transverse_reduction_free} even when the Selmer group does not contain submodules isomorphic to $R$, but assuming some hypothesis about $T$ not being residually self-dual.
 
 \begin{assumption}
 Consider the following assumptions to rule out self-duality in $T$
@@ -467,107 +430,95 @@ Consider the following assumptions to rule out self-duality in $T$
 \label{ass:nd}
 \end{assumption}
 
+Under those assumptions, we have a stronger application of the Chebotarev density theorem
+
+
+\begin{proposition}(\cite[proposition 3.6.2]{MazurRubin})
+Assume that $T$ satisfies Assumptions \ref{ass:basic} and \ref{ass:nd}. Let $C\subset H^1(K,T)$ and $D\subset H^1(K,T^*)$ be finite submodules and choose homomorphisms
+$$\begin{array}{cc}
+\phi:\ C\to R,\ \ &\psi:D\to R
+\end{array}$$
+There exists a set $S\subset \PP$ of positive density such that for all $\ell\in S$
+$$\begin{aligned}
+C\cap \ker\left[\loc_\ell:\ H^1(K,T)\to H^1(K_\ell,T)\right]=\ker(\phi)\\
+ D\cap \ker\left[\loc_\ell:\ H^1(K,T^*)\to H^1(K_\ell,T^*)\right]=\ker(\psi)
+ \end{aligned}$$
+\label{prop:mr362}
+\end{proposition}
+
 \begin{lemma}
 Let $\FF$ be a cartesian Selmer structure satisfying Assumptions \ref{ass:basic} and \ref{ass:nd}. Assume that
-$$H^1_{\FF}(\Q,T)\approx H^1_{\FF^*}(\Q,T^*)\approx R/\m^{e_1}\times \cdots\times R/\m^{e_s}$$
+$$H^1_{\FF}(\Q,T)\approx R/\m^{e_1}\times \cdots\times R/\m^{e_s}$$
 for some $e_1\geq \ldots \geq e_s\in\N$. Then there are infinitely many primes $\ell\in \PP_k$ such that 
-$$H^1_{\FF(\ell)}(\Q,T)\approx H^1_{\FF^*(\ell)}(\Q,T^*)\approx R/\m^{e_2}\times \cdots\times R/\m^{e_s}$$
+$$H^1_{\FF(\ell)}(\Q,T)\approx R/\m^{e_2}\times \cdots\times R/\m^{e_s}$$
 \label{lem:nd}
 \end{lemma}
 
-\textcolor{red}{fix references}
+
 
 \begin{proof}
+When $e_1=\length(R)$, the result follows from Lemma \ref{lem:transverse_reduction_free}. Hence we can assume without lost of generality that $e_1<\length(R)$.
 
-By corollary \ref{cor:loc_sur}, we can find an auxiliary prime $b\in \NN_k$ such that the localisation maps
+Similarly to the proof of Lemma \ref{lem:transverse_reduction_torsion}, we can use Proposition \ref{prop:cheb} to find an auxiliary prime $q\in \PP$ such that the localisation maps
 $$\begin{array}{cc}
-\loc_b^\f:\ H^1_{\FF}(\Q,T/\m^{e_1})\to H^1_\f(\Q_b,T/\m^{e_1}),\ \ &\loc_b^\f:\ H^1_{\FF^*}(\Q,T^*[\m^{e_1}])\to H^1_\f(\Q_b,T^*[\m^{e_1}])
+\loc_q:\ H^1_{\FF}(K,T)\to H^1_\f(K_q,T)[\m^{e_1}],\ &\loc_q:\ H^1_{\FF^*}(K,T^*)\to H^1_\f(K_q,T^*)[\m^{e_1}]
 \end{array}$$
-are surjective. By corollary \ref{cor:local_coh_cyclic}, $H^1_\f(\Q_\ell, T/\m^k)$ is isomorphic to $R/\m^{e_1}$ and 
-\[H^1_{\FF^*}(\Q,T^*[\m^{e_1}])\approx R/\m^{e_2}\times \cdots\times R/\m^{e_s}\]
-Since $\chi(\FF^b)=1$ by proposition \ref{prop:core_abc}, we have that
+are surjective. Hence
+\[H^1_{(\FF^*)_q}(\Q,T^*)\approx R/\m^{e_2}\times \cdots\times R/\m^{e_s}\]
+Since $\chi(\FF^q)=1$ by Proposition \ref{prop:rank_modified}, Proposition \ref{prop:core_rank_str} implies that
 \begin{equation}
-H^1_{\FF^b}(\Q,T/\m^k)\approx R/\m^k\times R/\m^{e_2}\times \cdots\times R/\m^{e_s}
+H^1_{\FF^q}(\Q,T)\approx R\times R/\m^{e_2}\times \cdots\times R/\m^{e_s}
 \label{eq:str_Fb}
 \end{equation}
-By proposition \ref{prop:mr362}, we can find a prime $\ell$ satisfying the following:
+By Proposition \ref{prop:mr362}, we can find infinitely many primes $\ell$ satisfying the following:
 \begin{itemize}
-\item The kernel of the localisations $\loc_\ell$ and $\loc_b$ defined on $H^1_{\FF^*}(\Q,T^*[\m^k])$ are the same. By fixing generators $x_b$ and $x_\ell$ of $H^1_\f(\Q_b,T^*[\m^k])$ and $H^1_\f(\Q_\ell,T^*[\m^k])$, respectively, we are defining an isomorphism
-$$H^1_\f(\Q_b,T^*[\m^k])\cong R/\m^k\cong H^1_\f(\Q_\ell,T^*[\m^k])$$
-Under this isomorphism, we can understand $\loc_b^\f,\loc_\ell^\f\in \Hom(H^1_{\FF^*}(\Q,T^*[\m^k]),R/\m^k)$. In this setting, the above condition implies that there exists a unit $u\in (R/\m^k)^\times$ such that $\loc_\ell= u\loc_b$.
+\item The kernel of the localisations $\loc_\ell$ and $\loc_b$ defined on $H^1_{\FF^*}(\Q,T^*)$ are the same. Following Remark \ref{rem:local_coh_cyclic}, we can define non-canonical isomorphisms
+\begin{equation}
+H^1_\f(K_q,T^*)\cong H^1_\f(K_\ell,T^*)\cong T^*/(\tau-1)\cong R
+\label{eq:fin_iso}
+\end{equation}
+Under this isomorphism, we can understand $\loc_q$ and $\loc_\ell$ as elements in the dual space $H^1_{\FF^*}(\Q,T^*)^+$. In this setting, the above condition implies that there exists a unit $u\in R^\times$ such that $\loc_\ell= u\loc_q$.
 
 \item The kernel of the finite localisation map 
-$$\loc_\ell:\ H^1_{\FF}(\Q,T/\m^k)\to H^1_\f(\Q_\ell,T/\m^k)$$ 
-coincides with $H^1_{\FF_b}(\Q,T/\m^k)$. It implies that
-\[H^1_{\FF_{b\ell}}(\Q,T/\m^k)=H^1_{\FF_b}(\Q,T/\m^k)\approx R/\m^{e_2}\times \cdots\times R/\m^{e_s}\]
+$$\loc_\ell:\ H^1_{\FF}(K,T)\to H^1_\f(K_\ell,T)$$ 
+coincides with $H^1_{\FF_q}(K,T)$. It implies that
+\[H^1_{\FF_{q\ell}}(K,T)=H^1_{\FF_q}(K,T)\approx R/\m^{e_2}\times \cdots\times R/\m^{e_s}\]
 \end{itemize}
-Since $\chi(\FF^{\ell b})=2$ by proposition \ref{prop:core_abc}, there is an isomorphism
-$$H^1_{\FF^{\ell b}}(\Q,T)\approx R/\m^k\times R/\m^{k}\times R/\m^{e_2}\times \cdots\times R/\m^{e_s}$$
+Since $\chi(\FF^{q\ell})=2$ by Proposition \ref{prop:rank_modified}, then Proposition \ref{prop:core_rank_str} gives an isomorphism
+$$H^1_{\FF^{q\ell}}(K,T)\approx R^2\times R/\m^{e_2}\times \cdots\times R/\m^{e_s}$$
 
 By proposition \ref{prop:global_duality}, we can consider the following exact sequence
-$$\xymatrix{H^1_{\FF^{\ell b}}(\Q,T/\m^k)\ar[r] & H^1_{\s}(\Q_b, T/\m^k)\oplus H^1_{\s}(\Q_\ell, T/\m^k) \ar[r] & H^1_{\FF^*}(\Q,T^*[\m^k])}$$
-Let $\widehat{x_b}\in H^1_s(\Q_b,T/\m^k)$ and $\widehat{x_\ell}\in H^1_s(\Q_\ell,T/\m^k)$ be the dual elements of $x_b$ and $x_\ell$ under the pairing given in proposition \ref{prop:local_duality}. The element $(\widehat{x_b},-u\widehat{x_\ell})\in H^1_{\s}(\Q_b, T/\m^k)\oplus H^1_{\s}(\Q_\ell, T/\m^k)$ belongs to the kernel of the second map, so there is an element $z\in H^1_{\FF^{\ell b}}(\Q,T/\m^k)$ such that $\loc_b^s(z)=\widehat{x_b}$ and $\loc_\ell^s(z)=-u\widehat{x_\ell}$. The relaxed Selmer groups splits as follows.
-$$H^1_{\FF^{\ell b}}(\Q,T/\m^k)=(R/\m^k) z\oplus H^1_{\FF^b}(\Q,T/\m^k)=(R/\m^k) z\oplus H^1_{\FF^\ell}(\Q,T/\m^k)$$
+$$\xymatrix{H^1_{\FF^{q\ell}}(K,T)\ar[r] & H^1_{\s}(K_q, T)\oplus H^1_{\s}(K_\ell, T) \ar[r] & H^1_{\FF^*}(K,T^*)^\vee}$$
+Dualising the isomorphisms in \eqref{eq:fin_iso}, we obtain an isomorphism
+\begin{equation}
+H^1_\s(K_q,T)\oplus H^1_\s(K_\ell,T)\cong R^2
+\label{eq:sing_iso}
+\end{equation}
+such that the element $(1,-u^{-1})$ belongs to the kernel of the second map. Therefore, there is an element $z\in H^1_{\FF^{\ell b}}(\Q,T)$ such that $\loc_q(z)=1$ and $\loc_\ell(z)=-u^{-1}$, under the identifications in \eqref{eq:sing_iso} 
+
+It implies that the relaxed Selmer groups splits as follows.
+\begin{equation}
+H^1_{\FF^{q\ell}}(K,T)=R z\oplus H^1_{\FF^q}(K,T)=R z\oplus H^1_{\FF^\ell}(K,T)
+\label{eq:rel_ql_split}
+\end{equation}
 
 We want to show now that 
-$$\loc_\ell^{\f}:\ H^1_{\FF^\ell}(\Q,T/\m^k)\to H^1_\f(\Q_\ell,T/\m^k)$$ 
-is also surjective. Indeed, let $x\in H^1_{\FF^\ell}(\Q,T/\m^k)$ be such that $\pi^{k-1}x\neq 0$, where $\pi $ is a generator of $\m$. Then there is a unique decomposition $x=\alpha z+\beta$, where $\alpha\in R/\m^k$ and $\beta\in H^1_{\FF^b}(\Q,T/\m^k)$. Since
-$$H^1_{\FF^\ell}(\Q,T/\m^k)\cong R/\m^k\times R/\m^{e_2}\times \cdots\times R/\m^{e_s}$$
- then $\pi^{k-e_1}x\in H^1_\FF(\Q,T/\m^k)\subset H^1_{\FF^b}(\Q,T/\m^k)$ so $\alpha\in \m^{e_1}/\m^k$. Then $\pi^{k-1} \beta\neq 0$. Since $\loc_\ell^\f(H^1_{\FF^b}(\Q,T/\m^k))$ is equal to $H^1_\f(\Q_\ell, T/\m^k)$, the isomorphism in \eqref{eq:str_Fb} implies that $\loc_\ell^\f(\beta )$ generates $H^1_\f(\Q_\ell, T/\m^k)$.
+$$\Pi_\ell\circ\loc_\ell:\ H^1_{\FF^\ell}(K,T)\to H^1_\f(K_\ell,T)$$ 
+where $\Pi_\ell:\ H^1(K_\ell,T)\to H^1_{\f}(K_\ell,T)$ is the projection of Proposition \ref{prop:kol_primes}, is also surjective. 
 
-As $\loc_\ell^\f(x)-\loc_\ell^\f(\beta)= \alpha\loc_\ell^\f(z)\in \m^{e_1} H^1_\f(\Q_\ell, T/\m^k)$, then $\loc_\ell^\f(x)$ is also a generator and thus $\loc_{\ell}^\f$ is surjective when considered as a map from $H^1_{\FF^\ell}(\Q,T/\m^k)$. Then the structure theorem over principal ideal domains implies
-\[H^1_{\FF(\ell)}(\Q,T/\m^k)=\ker\left(\loc_\ell^\f:\ H^1_{\FF^\ell}(\Q,T/\m^k)\to H^1_\f(\Q_\ell,T/\m^k)\right)\cong R/\m^{e_2}\times\cdots\times R/\m^{e_s}\qedhere\]
+Indeed, let $x\in H^1_{\FF^\ell}(K,T)$ be such that $\pi^{k-1}x\neq 0$, where $\pi $ is a generator of $\m$. By \eqref{eq:rel_ql_split}, there is a unique decomposition $x=\alpha z+\beta$, where $\alpha\in R$ and $\beta\in H^1_{\FF^q}(K,T)$. Since
+$$H^1_{\FF^\ell}(\Q,T)\cong R\times R/\m^{e_2}\times \cdots\times R/\m^{e_s}$$
+ then $\pi^{k-e_1}x\in H^1_\FF(K,T)\subset H^1_{\FF^q}(\Q,T)$ so $\alpha\in \m^{e_1}$. Then $\pi^{k-1} \beta\neq 0$. By the assumptions on the prime $\ell$,
+ \[\loc_\ell\Bigl(H^1_{\FF^q}(K,T)\Bigr)=H^1_\f(K_\ell, T)\]
+  the isomorphism in \eqref{eq:str_Fb} implies that $\loc_\ell(\beta )$ generates $H^1_\f(\Q_\ell, T)$. Indeed, every element of $H^1_{\FF^q}(K,T)$ is a linear combination of $\beta$ and elements of $\m^{e_2}$-torsion, so $\loc_\ell$ would only be surjective when $\loc_\beta$ generates the whole $H^1_\f(K_\ell, T)$.
+
+We have that
+\[(\Pi_\ell\circ\loc_\ell)(x)-(\Pi_\ell\circ\loc_\ell)(\beta)= \alpha(\Pi_\ell\circ\loc_\ell)(z)\in \m^{e_1} H^1_\f(K_\ell, T)\]
+Then $(\Pi_\ell\circ\loc_\ell)(x)$ also generates $H^1_\f(K_\ell, T)$ and thus 
+\[\Pi_\ell\circ\loc_{\ell}:\ H^1_{\FF^\ell}(\Q,T/\m^k)\to H^1_\f(K_\ell, T)\]
+is also surjective. Then the structure theorem over principal ideal domains implies
+\[H^1_{\FF(\ell)}(\Q,T/\m^k)=\ker\left(\Pi_\ell\circ\loc_\ell:H^1_{\FF^\ell}(\Q,T/\m^k)\to H^1_\f(\Q_\ell,T/\m^k)\right)\cong R/\m^{e_2}\times\cdots\times R/\m^{e_s}\qedhere\]
 \end{proof}
-
-\section{Fitting ideals}
-
-The Selmer groups defined in the previous section are the objects we want to study. We aim to give a description of the structure of this groups. In order to be precise, we introduce the concept of Fitting ideals.
-
-\begin{definition}
-
-Let $M$ be a finitely presented $R$-module. Choose a resolution
-\[\xymatrix{R^n\ar[r]^{A} & R^m\ar[r] & M \ar[r] & 0}\]
-where the map $R^n\to R^m$ is represented by the matrix $A$. For every $i\geq 0$, we define the $i^{\textrm{th}}$ Fitting ideal $\Fitt_i^R(M)$ is the ideal in $R$ generated by the minors of size $(m-i)$ of $A$.
-\end{definition}
-
-\begin{remark}
-The $i^{\textrm{th}}$ Fitting ideal coincides with the image of the following map, induced by the matrix $A$.
-\[\Fitt_i^R(M)=\textrm{Im}\Biggl(\bigwedge^{m-i} R^n\to \bigwedge^{m-i} R^m\Biggr)\]
-\end{remark}
-
-It can be shown that Fitting ideals are well defined.
-\begin{proposition}(\cite[Corollary 20.4]{Eisenbud})
-The Fitting ideals $\Fitt_i^R(M)$ are independent of the chosen resolution.
-\end{proposition}
-
-When the coefficient ring $R$ is simple enough, the sequence of Fitting ideals can recover $M$ up to pseudo-isomorphism.
-\begin{proposition}
-Let $R$ be a discrete valuation ring and let $M$ be a finitely generated $R$-module. Then the Fitting ideals determine $M$ up to isomorphism.
-\label{prop:fitting_dvr}
-\end{proposition}
-
-\begin{proof}
-Let $\m$ be the maximal ideal of $R$. The structure theorem of finitely generated modules over principal ideal domains implies that there are integers $r$, $s$ and $\alpha_1\geq\ldots\geq \alpha_s$ such that 
-\[M\approx R^r \times R/\m^{\alpha_1}\times\cdots \times R/\m^{\alpha_s}\]
-
-Then $M$ admits a resolution 
-\[\xymatrix{R^{r+s}\ar[r]^{A} & R^{r+s}\ar[r] & M \ar[r] & 0}\]
-where the matrix $A$ is given by 
-\[A=\begin{pmatrix}\begin{array}{c;{2pt/2pt}c} \textbf{0}_{r\times r} & \textbf{0}_{s\times r} \\\hdashline[2pt/2pt]\textbf{0}_{r\times s} & \begin{matrix} \pi^{\alpha_1}\\ & \ddots \\ & & \pi^{\alpha_s} \end{matrix}\end{array}\end{pmatrix}\]
-where $\pi$ is a generator of $\m$. We can then compute,
-\begin{itemize}
-\item $i\in \{0,\ldots, r-1\}\Rightarrow \Fitt_i(M)=(0)$
-\item $j\in \{0,\ldots,s-1\}\Rightarrow \Fitt_{r+j}=\prod_{k=j+1}^s \m^{i_k} =\m^{\sum_{k=j+1}^s i_k}$
-\item $i\geq r+s\Rightarrow \Fitt_i(M)=(1)$.
-\end{itemize}
-
-The Fitting ideals determine $M$ up to isomorphism, since
-\begin{itemize}
-\item $r$ is the minimum $i$ such that $\Fitt_i(M)\neq 0$.
-\item For $i\geq 0$, $\alpha_i=\Fitt_{r+i+1}(M)\Fitt_{r+i}(M)^{-1}$. 
-\end{itemize}
-\end{proof}
-
 
 
 \section{Classical Kolyvagin systems}
@@ -1091,18 +1042,6 @@ Let $(T,\FF,\PP)$ be a Selmer triple satisfying \ref{Hffr}-\ref{Hprimes} and \re
 
 The reason assuming \ref{Nsd}-\ref{Nsur} is that we can apply the following result.
 
-\begin{proposition}(\cite[proposition 3.6.2]{MazurRubin})
-Assume that $T$ satisfies \ref{Hffr}-\ref{Hchev} and \ref{Nsd}-\ref{Nsur}. Let $C\subset H^1(\Q,T)$ and $D\subset H^1(\Q,T^*)$ be finite submodules and choose some homomorphisms
-$$\begin{array}{cc}
-\phi:\ C\to R,\ \ &\psi:D\to R
-\end{array}$$
-There exists a set $S\subset \PP_k$ of positive density such that for all $\ell\in S$
-$$\begin{aligned}
-C\cap \ker\left[\loc_\ell:\ H^1(\Q,T)\to H^1(\Q_\ell,T)\right]=\ker(\phi)\\
- D\cap \ker\left[\loc_\ell:\ H^1(\Q,T^*)\to H^1(\Q_\ell,T^*)\right]=\ker(\psi)
- \end{aligned}$$
-\label{prop:mr362}
-\end{proposition}
 
 
 
