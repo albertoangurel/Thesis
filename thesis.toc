@@ -9,21 +9,21 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.3}Classical Kolyvagin systems}{16}{section.1.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.4}Selmer structures of rank 0}{17}{section.1.4}%
+\contentsline {subsection}{\numberline {1.3.1}Proof of Lemma \ref {lem:fitti_fitt0trn}}{17}{subsection.1.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.4.1}Proof of Lemma \ref {lem:deltan_trn}}{20}{subsection.1.4.1}%
+\contentsline {section}{\numberline {1.4}Selmer structures of rank 0}{18}{section.1.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.4.2}Proof of Lemma \ref {lem:fitti_sub_fitt0trn}}{21}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.1}Proof of Lemma \ref {lem:deltan_trn}}{21}{subsection.1.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.4.3}Proof of Lemma \ref {lem:fitti_eq_fitt0_rank}}{21}{subsection.1.4.3}%
+\contentsline {subsection}{\numberline {1.4.2}Proof of Lemma \ref {lem:fitti_eq_fitt0_rank}}{22}{subsection.1.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.4.4}Proof of Lemma \ref {lem:fitti_eq_fitt0_higher}}{21}{subsection.1.4.4}%
+\contentsline {subsection}{\numberline {1.4.3}Proof of Lemma \ref {lem:fitti_eq_fitt0_higher}}{22}{subsection.1.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.5}Non-self dual Galois representations of rank $0$}{22}{section.1.5}%
+\contentsline {section}{\numberline {1.5}Non-self dual Galois representations of rank $0$}{23}{section.1.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.6}Old stuff}{22}{section.1.6}%
+\contentsline {section}{\numberline {1.6}Selmer groups over discrete valuation rings}{23}{section.1.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.6.1}Non-self-dual case}{25}{subsection.1.6.1}%
+\contentsline {section}{\numberline {1.7}Old stuff}{23}{section.1.7}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {2}Patched Cohomology}{27}{chapter.2}%
 \defcounter {refsection}{0}\relax 

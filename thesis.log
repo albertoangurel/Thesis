@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.8)  28 DEC 2025 03:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.8)  29 DEC 2025 21:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -868,14 +868,7 @@ Package csquotes Info: Redefining alias 'default' -> 'british'.
 File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count462
 \l__pdf_internal_box=\box70
-) (/Users/alberto/Documents/PhD/Thesis/thesis.aux (/Users/alberto/Documents/PhD/Thesis/Kolyvagin_systems/kol_sys.aux
-
-LaTeX Warning: Label `Nsd' multiply defined.
-
-
-LaTeX Warning: Label `Nsur' multiply defined.
-
-) (/Users/alberto/Documents/PhD/Thesis/Patched_cohomology/patched.aux
+) (/Users/alberto/Documents/PhD/Thesis/thesis.aux (/Users/alberto/Documents/PhD/Thesis/Kolyvagin_systems/kol_sys.aux) (/Users/alberto/Documents/PhD/Thesis/Patched_cohomology/patched.aux
 
 LaTeX Warning: Label `Tirred' multiply defined.
 
@@ -1038,110 +1031,71 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 
 
 ] <xymatrix 5x1 158> [6] [7] <xymatrix 5x1 158>
-Overfull \hbox (18.55602pt too wide) detected at line 199
+Overfull \hbox (18.55602pt too wide) detected at line 200
 []
  []
 
 [8] [9] [10] [11] <xymatrix 2x2 182> [12] [13] <xymatrix 3x1 82> [14]
-Overfull \hbox (17.80695pt too wide) detected at line 520
+Overfull \hbox (17.80695pt too wide) detected at line 527
 \OML/cmm/m/it/10.95 H[]\OT1/cmr/m/n/10.95 (\U/msb/m/n/10.95 Q\OML/cmm/m/it/10.95 ; T=\U/euf/m/n/10.95 m[]\OT1/cmr/m/n/10.95 ) = [] [] [] \OML/cmm/m/it/10.95 R=\U/euf/m/n/10.95 m[] \OMS/cmsy/m/n/10.95 ^^B [] ^^B \OML/cmm/m/it/10.95 R=\U/euf/m/n/10.95 m[]
  []
 
-[15] [16] <xymatrix 5x1 158>
-Overfull \hbox (19.7755pt too wide) detected at line 654
+[15] [16] <xymatrix 4x1 120> [17] <xymatrix 5x1 158>
+Overfull \hbox (19.7755pt too wide) detected at line 692
 []
  []
 
-[17] [18] [19] <xymatrix 4x1 168> <xymatrix 5x1 158>
-Overfull \hbox (1.04982pt too wide) detected at line 787
+[18] <xymatrix 3x1 89> [19] [20] <xymatrix 4x1 168> <xymatrix 5x1 158> [21]
+Overfull \hbox (1.04982pt too wide) detected at line 840
 [][][]\OML/cmm/m/it/10.95 H[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 K; T\OT1/cmr/m/n/10.95 )[] = [][][]\OML/cmm/m/it/10.95 C[][][][][]H[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 K; T\OT1/cmr/m/n/10.95 )[] = [][][]\OML/cmm/m/it/10.95 C[][] []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ^^T[]\OT1/cmr/m/n/10.95 ) = [](\OML/cmm/m/it/10.95 ^^N[]\OT1/cmr/m/n/10.95 )
  []
 
-<xymatrix 4x1 120> [20] [21]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 828.
+(hyperref)                removing `math shift' on input line 872.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 828.
+(hyperref)                removing `math shift' on input line 872.
 
-<xymatrix 5x1 158>
+[22] <xymatrix 5x1 158>
 
-LaTeX Warning: Reference `prop:core_vertex' on page 22 undefined on input line 864.
-
-
-LaTeX Warning: Reference `lem:mr353' on page 22 undefined on input line 867.
+LaTeX Warning: Reference `prop:core_vertex' on page 23 undefined on input line 951.
 
 
-LaTeX Warning: Reference `lem:ordkappadelta' on page 22 undefined on input line 870.
-
-
-LaTeX Warning: Reference `th:mr459' on page 22 undefined on input line 870.
-
-
-LaTeX Warning: Reference `th:kur_par' on page 22 undefined on input line 896.
-
-
-LaTeX Warning: Reference `th:kur_par' on page 22 undefined on input line 904.
-
-[22]
-
-LaTeX Warning: Reference `th:kur_par' on page 23 undefined on input line 917.
-
-
-LaTeX Warning: Reference `th:kur_par' on page 23 undefined on input line 917.
-
-
-LaTeX Warning: Reference `th:kur_par' on page 23 undefined on input line 917.
-
-
-LaTeX Warning: Reference `th:kur_par' on page 23 undefined on input line 924.
-
-
-LaTeX Warning: Reference `lem:mr353' on page 23 undefined on input line 939.
-
-<xymatrix 4x1 120>
-
-LaTeX Warning: Reference `cor:local_coh_cyclic' on page 23 undefined on input line 945.
-
-
-LaTeX Warning: Reference `lem:ord_delta' on page 23 undefined on input line 947.
+LaTeX Warning: Reference `lem:mr353' on page 23 undefined on input line 954.
 
 [23]
 
-LaTeX Warning: Reference `cor:loc_sur' on page 24 undefined on input line 957.
+LaTeX Warning: Reference `lem:ordkappadelta' on page 24 undefined on input line 957.
 
 
-LaTeX Warning: Reference `lem:mr417' on page 24 undefined on input line 960.
+LaTeX Warning: Reference `th:mr459' on page 24 undefined on input line 957.
 
 
-LaTeX Warning: Reference `lem:cr0' on page 24 undefined on input line 985.
+LaTeX Warning: Reference `th:kur_par' on page 24 undefined on input line 983.
 
 
-LaTeX Warning: Reference `lem:ord_delta' on page 24 undefined on input line 989.
+LaTeX Warning: Reference `th:kur_par' on page 24 undefined on input line 991.
 
 
-LaTeX Warning: Reference `lem:cr0' on page 24 undefined on input line 994.
+LaTeX Warning: Reference `th:kur_par' on page 24 undefined on input line 1004.
+
+
+LaTeX Warning: Reference `th:kur_par' on page 24 undefined on input line 1004.
+
+
+LaTeX Warning: Reference `th:kur_par' on page 24 undefined on input line 1004.
 
 [24]
 
-LaTeX Warning: Reference `th:kur_par' on page 25 undefined on input line 1032.
+LaTeX Warning: Reference `th:kur_par' on page 25 undefined on input line 1016.
 
 
-LaTeX Warning: Reference `Hffr' on page 25 undefined on input line 1035.
+LaTeX Warning: Reference `Hffr' on page 25 undefined on input line 1019.
 
 
-LaTeX Warning: Reference `Hprimes' on page 25 undefined on input line 1035.
-
-
-LaTeX Warning: Reference `th:kur_par' on page 25 undefined on input line 1060.
-
-
-LaTeX Warning: Reference `lem:ord_delta' on page 25 undefined on input line 1064.
-
-
-LaTeX Warning: Reference `th:kur_par' on page 25 undefined on input line 1066.
+LaTeX Warning: Reference `Hprimes' on page 25 undefined on input line 1019.
 
 ) [25]
 \openout2 = `Patched_cohomology/patched.aux'.
@@ -1235,24 +1189,24 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: DBF45E8806E96E1CE2C7BEA00B568E39;2572.
+(rerunfilecheck)             Checksum: A46342C0A19CC3F2FD33D9B4FBDFC58E;2603.
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
  33347 strings out of 478994
- 599114 string characters out of 5858185
- 1400353 words of memory out of 5000000
- 49920 multiletter control sequences out of 15000+600000
+ 599142 string characters out of 5858185
+ 1400412 words of memory out of 5000000
+ 49918 multiletter control sequences out of 15000+600000
  425606 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  118i,22n,119p,3296b,2235s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/xypic/xycmat10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/xypic/xycmbt10.pfb>
-Output written on /Users/alberto/Documents/PhD/Thesis/thesis.pdf (55 pages, 472468 bytes).
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/xypic/xycmat10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/xypic/xycmbt10.pfb>
+Output written on /Users/alberto/Documents/PhD/Thesis/thesis.pdf (55 pages, 465105 bytes).
 PDF statistics:
  1013 PDF objects out of 1200 (max. 8388607)
- 919 compressed objects within 10 object streams
- 291 named destinations out of 1000 (max. 500000)
+ 920 compressed objects within 10 object streams
+ 293 named destinations out of 1000 (max. 500000)
  285 words of extra memory for PDF output out of 10000 (max. 10000000)
 
