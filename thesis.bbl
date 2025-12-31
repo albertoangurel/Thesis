@@ -81,33 +81,6 @@
       \field{title}{Commutative Algebra}
       \field{year}{1995}
     \endentry
-    \entry{Kim23}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=5972b3b70a7d748aa6623178105ea418}{%
-           family={Kim},
-           familyi={K\bibinitperiod},
-           given={Chan-Ho},
-           giveni={C\bibinithyphendelim H\bibinitperiod}}}%
-      }
-      \strng{namehash}{5972b3b70a7d748aa6623178105ea418}
-      \strng{fullhash}{5972b3b70a7d748aa6623178105ea418}
-      \strng{bibnamehash}{5972b3b70a7d748aa6623178105ea418}
-      \strng{authorbibnamehash}{5972b3b70a7d748aa6623178105ea418}
-      \strng{authornamehash}{5972b3b70a7d748aa6623178105ea418}
-      \strng{authorfullhash}{5972b3b70a7d748aa6623178105ea418}
-      \field{labelalpha}{Kim25}
-      \field{sortinit}{K}
-      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{eprintclass}{math.NT}
-      \field{eprinttype}{arXiv}
-      \field{title}{The structure of Selmer groups and the Iwasawa main conjecture for elliptic curves}
-      \field{year}{2025}
-      \verb{eprint}
-      \verb 2203.12159
-      \endverb
-    \endentry
     \entry{MazurRubin}{article}{}
       \name{author}{2}{}{%
         {{hash=bbbc6e9371aca03f048f5012bdab5885}{%

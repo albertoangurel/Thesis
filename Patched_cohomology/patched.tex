@@ -780,6 +780,22 @@ By Proposition \ref{prop:patched:quotients}, there is a constant $f$ such that
 Hence $\bH^1(K,T)$ is also finitely generated of rank $a+\chi(\FF)$.
 \end{proof}
 
+Under assumptions \ref{ass:basic}, the profinite Selmer groups are free modules.
+\begin{proposition}
+Assume $T$ satisfies Assumption \ref{ass:basic} and $\FF$ is any Selmer structure. Then $H^1_\FF(K,T)$ is a free $R$-module. Moreover, if $\FF$ is a cartesian, then the quotient
+\[\frac{\bH^1(K,T)}{\bH^1_{\FF}(K,T)}\]
+ is torsion free.
+ \label{prop:patched:selmer_free}
+\end{proposition}
+
+\begin{proof}
+Since $H^1_{\FF}(K,T)$ is finitely generated, then we only need to prove it contains no torsion. Consider the exact sequence
+\[\xymatrix{0\ar[r]& T\ar[r] & T\ar[r] & T/\m\ar[r] & 0}\]
+Then \ref{Tirred} implies that $H^0(K,T/\m)$, so $\bH^1(K,T)$ contains no torsion. By the definition of Selmer module, there is an injection
+\[\frac{\bH^1(K,T)}{\bH^1_{\FF}(K,T)}\hookrightarrow \bigoplus_{\ku\in \UU(\PP)} \frac{\bH^1(K_\ku,T)}{\bH^1_{\FF}(K_\ku,T)}\]
+Since $\FF$ is cartesian, the latter is torsion-free, which implies that the domain is also torsion-free.
+\end{proof}
+
 \section{Ultra Kolyvagin systems}
 
 \begin{definition}

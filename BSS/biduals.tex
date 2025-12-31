@@ -4,76 +4,7 @@
 
 The results in previous chapters were limited to principal rings. Here, we generalise previous results to compute the Fitting ideal over the Iwasawa algebra $\Lambda:=\Z_p[[T]]$. For that we need to consider Kolyvagin systems consisting of collections of classes in exterior biduals of Selmer groups, as defined in \cite{BurnsSakamotoSano2}. In this chaper, we combine this setting with the patched Selmer groups defined in Chapter \ref{ch:patched} following \cite{Sweeting}. This new setting presents some technical complications, since the coefficient ring $\Lambda$ is no longer self-injective, a condition required in the construction in \cite{BurnsSakamotoSano2}.
 
-\section{Preliminaries on exterior powers}
 
-The goal of this section is to introduce the necessary background to construct systems in the exterior biduals of the Selmer groups. The all have in common that they are constructed from different versions of maps of the following kind.
-
-\begin{proposition}
-Consider the exact sequence of $\Lambda$-modules
-\[\xymatrix{0\ar[r] & N\ar[r] &M \ar[r] & \Lambda^s }\]
-Then there is a canonical map 
-\[\Phi: \bigcap^{r+s} M\to \bigcap^{r} N\]
-\label{prop:bidual_map}
-\end{proposition}
-
-Since $\Lambda$ is not a self-injective ring, we need to prove some basic facts about the extension groups of $\Lambda$-modules before addressing the proof of Proposition \ref{prop:bidual_map}.
-
-
-\begin{lemma}
-Let $M$ be a submodule of $\Lambda^s$. Then $\Ext^1(M,\Lambda)$ is finite.
-\label{lem:ext_finite}
-\end{lemma}
-
-\begin{proof}
-For every $\Lambda$-module $M$, recall that $M^+:=\Hom(M,\Lambda)$. There is a canonical map
-\[\Phi:\ M\to M^{++},\ m\mapsto \bigl(\varphi\in M^+\mapsto \varphi (a)\bigr)\]
-Let $T_1(M)=\ker\Phi$. Since $M$ is contained in $\Lambda^s$, we claim that $T_1(M)=0$. Indeed, fix an inclusion $\iota:\ M\hookrightarrow  \Lambda^s$ and denote by $\pi^i:\ \Lambda^s\to \Lambda$ the projection at the $i^{\textrm{th}}$ coordinate. Let $m\in M\setminus\{0\}$. Then there is some $j\in \{1,\ldots,s\}$ such that the $j^{\textrm{th}}$ coordinate of $\iota(m)$ is non-zero. Then 
-\[\Phi(m)(\pi^j\circ \iota)=\pi_j(\iota(m))\neq 0\]
-Thus $m\notin T_1(M)$ and the proof of the claim is complete.
-
-By \cite[Corollary 5.5.9]{NSW}, $\Ext^1(M,\Lambda)$ is finite.
-\end{proof}
-
-\begin{lemma}
-Let $N\subset M$ be $\Lambda$ modules such that $N$ has finite index in $M$. Then $N^*=M^*$.
-\label{lem:dual_fin_index}
-\end{lemma}
-
-\begin{proof}
-There is an exact sequence 
-\[\xymatrix{(M/N)^*\ar[r] & M^* \ar[r] & N^*\ar[r] & \Ext^1(M/N,\Lambda)}\]
-Since $M/N$ is finite, then both $(M/N)^*$ and $\Ext^1(M/N,\Lambda)$ vanish. Indeed, $(M/N)^*=0$ since $\Lambda$ does not contain elements of finite order and $\Ext^1(M/N,\Lambda)=0$ by \cite[Corollary 5.5.4]{NSW}
-\end{proof}
-
-
-
-\begin{proof}[Proof of proposition \ref{prop:bidual_map}]
-Let $I$ be the image of the map $N\to M$ inside $\Lambda^s$. By lemma \ref{lem:ext_finite}, $\Ext^1(I,\Lambda)$ is finite. There is an exact sequence
-\[\xymatrix{\Lambda^s\ar[r] & M^* \ar[r] & N^*\ar[r] & \Ext^1(I,\Lambda)}\]
-Call $J$ to the image of $M^*$ inside $N^*$, which has finite index in $N^*$ because of the finiteness of $\Ext^1(I,\Lambda)$. The exact sequence
-\[\xymatrix{\Lambda^s\ar[r] & M^* \ar[r] &J\ar[r] & 0}\] 
-induces a canonical map
-\[\bigwedge^r J\to \bigwedge^{r+s} M^*\]
-The dual of this map is
-\[\bigcap^{r+s} M^*\to \Hom\left(\bigwedge^r J,\Lambda\right)\]
-Since $\bigwedge^r J$ has finite index in $\bigwedge^r N^*$, lemma \ref{lem:dual_fin_index} implies that their duals are equal, so the above map can be rewritten as
-\[\bigcap^{r+s} M^*\to \bigcap^{r} N^*\]
-\end{proof}
-
-\begin{proposition}
-Consider the exact sequence of $\Lambda$-modules
-\[\xymatrix{0\ar[r] & N\ar[r] &\Lambda^{r+s}\ar[r] & \Lambda^s \ar[r] & M\ar[r] & 0}\]
-Let $\varphi$ be a generator of $\displaystyle \bigcap^{r+s} \Lambda^{r+s}$ and let
-\[\Phi:\ \bigcap^{r+s} \Lambda^{r+s} \to \bigcap^{r} N\] 
-be the map constructed in proposition \ref{prop:bidual_map}. Then the image of $\displaystyle \Phi(\varphi)\in \Hom\left(\bigwedge^{r} N^*,\Lambda\right)$ contains the $0^{th}$ Fitting ideal of $M$.
-\label{prop:bidual_fitting}
-\end{proposition}
-
-\begin{proof}
-Let $\Psi$ be the composition of the following maps
-\[\xymatrix{\bigwedge^{r} (\Lambda^{r+s})^*\ar[r]& \bigwedge^{r} N^* \ar[r] & \bigwedge^{s+t} (\Lambda^{r+s})^* \ar[r]^{\varphi} &\Lambda}\]
-where the first map is induced by the homomorphism $(\Lambda^{r+s})^*\to N^*$ and has finite cokernel, the second map is the one constructed in the proof of \ref{prop:bidual_map}. Since $\Phi(\varphi)$ is the composition of the last two maps, its image contains the image of $\Psi$ with finite index. The proof concludes by noticing the image of $\Psi$ coindides with the $0^{\textrm{th}}$ Fitting ideal of $M$.
-\end{proof}
 
 \section{Stark Systems}
 
