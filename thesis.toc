@@ -47,26 +47,70 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2.3}Global patched cohomology}{39}{subsection.3.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.4}Patched Selmer structures}{41}{subsection.3.2.4}%
+\contentsline {section}{\numberline {3.3}Patched Selmer groups}{41}{section.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.5}Patched Selmer modules}{44}{subsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.3.1}Patched Selmer structures}{41}{subsection.3.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Ultra Kolyvagin systems}{46}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.2}Patched Selmer modules}{44}{subsection.3.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Kolyvagin systems over the Iwasawa algebra}{47}{chapter.4}%
+\contentsline {subsection}{\numberline {3.3.3}Suitable ultraprimes}{45}{subsection.3.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Stark Systems}{47}{section.4.1}%
+\contentsline {subsection}{\numberline {3.3.4}Patched Selmer modules over discrete valuation rings}{45}{subsection.3.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.1}Weak core vertices}{48}{subsection.4.1.1}%
+\contentsline {section}{\numberline {3.4}Ultra Kolyvagin systems}{48}{section.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Cartesian systems}{51}{chapter.5}%
+\contentsline {chapter}{\numberline {4}Kolyvagin systems over the Iwasawa algebra}{49}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}The graph of cartesian Selmer structures}{51}{section.5.1}%
+\contentsline {section}{\numberline {4.1}Iwasawa Selmer modules}{49}{section.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Algebraic Preliminaries}{53}{appendix.A}%
+\contentsline {subsection}{\numberline {4.1.1}Suitable ultraprimes}{49}{subsection.4.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Fitting ideals}{53}{section.A.1}%
+\contentsline {section}{\numberline {4.2}Stark Systems}{55}{section.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.2}Preliminaries on exterior powers}{54}{section.A.2}%
+\contentsline {subsection}{\numberline {4.2.1}The module of Stark systems}{56}{subsection.4.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{References}{57}{theorem.A.2.4}%
+\contentsline {subsection}{\numberline {4.2.2}Higher Fitting ideals of the Selmer group}{57}{subsection.4.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Kolyvagin systems}{58}{section.4.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.1}Definition of Kolyvagin systems}{58}{subsection.4.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.2}Regulator map}{58}{subsection.4.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.4}Structure of the Selmer group}{59}{section.4.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.1}Fitting ideal and $\Lambda $-modules up to pseudo-isomorphism}{59}{subsection.4.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.2}Fitting ideals of the Selmer groups}{59}{subsection.4.4.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Cartesian systems}{63}{chapter.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}The graph of cartesian Selmer structures}{63}{section.5.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Selmer group of an elliptic curve}{65}{chapter.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.0.1}Main results}{65}{subsection.6.0.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.0.2}Dual exponential map}{75}{subsection.6.0.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.0.3}Twisting of Kato's Euler system}{79}{subsection.6.0.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.0.4}Mazur-Tate elements and Kolyvagin derivative}{82}{subsection.6.0.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.0.5}Image of Bloch-Kato dual exponential map}{87}{subsection.6.0.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.0.6}Kato's Kolyvagin system}{89}{subsection.6.0.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.0.7}Primitivity of Kato's Euler system and proof of theorem \ref {th:EK_IMC}}{90}{subsection.6.0.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.0.8}Functional equation and proof of theorem \ref {th:EK_str}}{91}{subsection.6.0.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.0.9}Examples}{92}{subsection.6.0.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Algebraic Preliminaries}{95}{appendix.A}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.1}Fitting ideals}{95}{section.A.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.2}Preliminaries on exterior powers}{96}{section.A.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{References}{99}{theorem.A.2.4}%

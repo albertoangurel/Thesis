@@ -434,9 +434,9 @@ Recall that $K(T)$ is the kernel of the action $\rho:\ G_K\to \Aut(T)$ and let
 \begin{assumption}
 In addition, we assume the following assumptions:
 \begin{itemize}
-\item \namedlabel{Tirred}{(T1)} $T/\m T$ is an irreducible $k[[G_K]]$-module.
-\item \namedlabel{Ttau}{(T2)} There exists $\tau\in G_{K_M}$ such that $T/(\tau-1)T\cong R$ as $R$-modules.
-\item \namedlabel{Tcoh}{(T3)} $H^1(K(T)_{p^\infty}/K,T)=H^1(K(T)_{p^\infty}/K,T^*(1))=0$. 
+\item \namedlabel{pTirred}{(T1)} $T/\m T$ is an irreducible $k[[G_K]]$-module.
+\item \namedlabel{pTtau}{(T2)} There exists $\tau\in G_{K_M}$ such that $T/(\tau-1)T\cong R$ as $R$-modules.
+\item \namedlabel{pTcoh}{(T3)} $H^1(K(T)_{p^\infty}/K,T)=H^1(K(T)_{p^\infty}/K,T^*(1))=0$. 
 \end{itemize}
 \label{ass:patched:basic}
 \end{assumption}
@@ -500,7 +500,7 @@ The set of square-free products of Kolyvagin ultraprimes is denoted by $\NN$.
 
 \begin{definition}(\cite[Definition 2.4.2]{Sweeting})
 Let $T$ be either a finite, profinite or ind-finite $R[[G_K]]$ module and let $\kn\in \NN$ be represented by the sequence $(n_i)$. We defined the maximal patched cohomology group unramified at $\kn$ by
-\[\bH^i(K^\kn/K,T):=\bH^i(\Gal(K^{n_i}/K),T)\]
+\[\bH^i(K^\kn/K,T):=\bH^i\Bigl(\Gal(K^{n_i}/K),T^{G_{K_{n_i}}}\Bigr)\]
 where $K^{n_i}$ represents the maximal extension of $K$ unramified outside the prime divisors of $n_i$. Note that this definition is independent of the sequence representing $\kn$.
 \end{definition}
 
@@ -543,6 +543,8 @@ Let $S\subset \UU(\Pb)$ be a finite set of ultraprimes and let $T$ be unramified
 \label{prop:patched:unramified}
 \end{proposition}
 
+\section{Patched Selmer groups}
+
 \subsection{Patched Selmer structures}
 
 Following \cite{Sweeting}, we can now define the Selmer structures in this setting. The main innovation is they also include local conditions at non-constant ultraprimes.
@@ -554,6 +556,7 @@ A \emph{Selmer structure} $\FF$ is a consists of the following data:
 \item For each $\ku\in S$, a closed $R$-submodule
 \[\bH^1_\FF(K_\ku,T) \subset \bH^1(K_\ku,T)\]
 \end{itemize}
+\label{def:patched:selmer}
 \end{definition}
 
 \begin{definition}
@@ -636,7 +639,7 @@ By construction $\FF_i\leq \GG_i$ and, analogously,
 
 
 We can use local duality to define dual Selmer structures as in Definition \ref{def:dual_selmer_structure}
-\begin{definition}
+\begin{definition}(Dual Selmer structure)
     Let $\FF$ be a Selmer structure on $T$. The we can define a \emph{dual Selmer structure} $\FF^*$ on $T^*$ by defining the local condition $\bH^1(K_\ku,T^*)$ as the the annihilator of $\bH^1_{\FF}(K_\ku,T)$ under the local duality pairing in Proposition \ref{prop:patched:local_duality}
     \label{def:patched:dual_structure}
 \end{definition}
@@ -694,7 +697,65 @@ which is exact by Proposition \ref{prop:ultrafilter_exact}.
 
 \subsection{Patched Selmer modules}
 
-In this section, we endow the group $T$ with an $R$-module structure, for some discrete valuation ring $R$.
+In this section, we endow the group $T$ with an module structure and will try to reprove the resutls in \textsection \ref{sec:selmer}
+
+\begin{notation}
+Let $R$ be a complete, local ring with finite residue field $k$ and let $T$ be an $R[[G_K]]$-module that is free and finitely generated as an $R$-module.
+\end{notation}
+
+\begin{proposition}
+    Under Assumptions \ref{ass:patched:basic}, for every finitely generated ideal $I$ of $R$, the inclusion $T^*[I]\hookrightarrow T^*$ induces an isomorphism
+    \[H^1_{\FF^*}(K,T^*[I])\cong H^1_{\FF}(K,T^*)[I]\]
+    \label{prop:patched:selmer_torsion}
+\end{proposition}
+
+\begin{proof}
+
+Hence, Propostion \textcolor{red}{long exact sequence} induces an injection
+\[H^1(K^{\kn_i}/K,T^*[I])\hookrightarrow H^1(K^{\kn_i}/K,T^*)[I]\]
+By Definition \ref{def:patched:selmer}, there is an injection
+\[H^1_{\FF}(K,T^*[I])\hookrightarrow H^1_{\FF}(K,T^*)[I]\]
+
+Let $\kn$ be the square-free product of all primes in $\Sigma_{\FF}$. By \ref{pTirred} in Assumption \ref{ass:patched:basic}, we have that \textcolor{red}{need to redo with quotients of $T^*$}
+\[\bH^0(K^{\kn},T^*)=H^0(K,T^*)=0\]
+Consider the exact sequence
+\[\xymatrix{0\ar[r] & T^*[I]\ar[r] & T^* \ar[r] &T^*/T^*[I]}\]
+By Propostion \textcolor{red}{long exact sequence}, it induces an exact sequence
+\begin{equation}
+\xymatrix{0\ar[r] & \bH^1\Bigl(K^{\kn}/K,T^*[I]\Bigr) \ar[r] & \bH^1\Bigl(K^{\kn}/K,T^*\Bigr) \ar[r] &\bH^1\Bigl(K^{\kn}/K,T^*/T^*[I]\Bigr) \ar[r] & 0}
+\label{eq:patched:selmer_torsion}
+\end{equation}
+
+Let $\{r_1,\cdots,r_d\}$ be a minimal set of generators of $I$. It induces an injection 
+\[T^*/T^*[I]\hookrightarrow (T^*)^d,\ t\mapsto (r_1t,\ldots,r_dt)\]
+By \textcolor{red}{cite $H^0=0$}, it induces an injection
+\[\bH^1\Bigl(K^{\kn}/K,T^*/T^*[I]\Bigr)\hookrightarrow \bH^1\Bigl(K^{\kn}/K,T^*\Bigr)^d\] 
+\textcolor{red}{complete}
+Since the composition 
+\[\bH^1\Bigl(K^{\kn}/K,T^*\Bigr)\to \bH^1\Bigl(K^{\kn}/K,T^*/T^*[I]\Bigr)\hookrightarrow \bH^1\Bigl(K^{\kn}/K,T^*\Bigr)^d\]
+is the multiplication by $(r_1,\ldots, r_d)$, its kernel coincides with $\bH^1\Bigl(K^{\kn}/K,T^*\Bigr)[I]$. Since the second map is injective, the kernel coincices with the kernel of the first map. From \eqref{eq:patched:selmer_torsion}, we can conclude that 
+\[\bH^1\Bigl(K^{\kn}/K,T^*[I]\Bigr)=\bH^1\Bigl(K^{\kn}/K,T^*\Bigr)[I]\]
+
+Consider the following commutative diagram with exact rows
+\[\xymatrix{
+0\ar[r] &       \bH^1_{\FF}(K,T^*[I])\ar[r]\ar[d] &      \bH^1\Bigl(K^{\kn}/K,T^*[I]\Bigr) \ar[r]\ar[d]^\sim &  \bigoplus_{\ku\in \Sigma_\FF^*} \bH^1_{/\FF^*}(K_\ku,T^*[I])\ar[d]\\
+0\ar[r] &       \bH^1_{\FF}(K,T^*)[I]\ar[r] &      \bH^1\Bigl(K^{\kn}/K,T^*\Bigr)[I] \ar[r] &  \bigoplus_{\ku\in \Sigma_\FF^*} \bH^1_{/\FF^*}(K_\ku,T^*)[I]
+}\]
+We have already seen that the middle vertical arrow is an isomorphism. The right vertical arrow is injective, since its dual $\bH^1_{\FF}(K_\ku,T)\twoheadrightarrow \bH^1_{\FF}(K_\ku,T/I)$ is surjective by definition of propagated Selmer structures. Therefore, the leftmost vertical arrow is also an isomorphism.
+\end{proof}
+
+
+\subsection{Suitable ultraprimes}
+
+This section is devoted to prove analogues of Propositions \ref{prop:cheb} and \ref{prop:cheb_nd}
+
+
+
+
+
+
+\subsection{Patched Selmer modules over discrete valuation rings}
+
 
 \begin{notation}
 Let $R$ be a discrete valuation ring and let $T$ be an $R[[G_K]]$-module that is free and finitely generated as an $R$-module.
@@ -748,11 +809,11 @@ Hence the top horizontal map is also injective. Snake's lemma shows that
 
 \end{proof}
 
-We now prove an analogue of Proposition \ref{prop:core_rank_str} for patched Selmer structures.
+We now prove an analogue of Proposition \ref{prop:core_rank_str} for patched Selmer structures. Recall that core rank was defined in the classical setting in Definition \ref{def:core_rank} and it is define in the same way in this patched setting.
 
 \begin{proposition}
 Let $\FF$ be a cartesian Selmer structure on $T$ of core rank $\chi(\FF)$. For every $k\geq 0$, there is a non-canonical isomorphism
-\[\bH^1(K,T/\m^k)\cong \left(R/\m^k\right)^{\chi(\FF)} \oplus \bH^1(K,T^*[\m^k])\]
+\[\bH^1_{\FF}(K,T/\m^k)\cong \left(R/\m^k\right)^{\chi(\FF)} \oplus \bH^1_{\FF^*}(K,T^*[\m^k])\]
 \label{prop:patched:core_rank_finite}
 \end{proposition}
 
@@ -789,7 +850,7 @@ Assume $T$ satisfies Assumption \ref{ass:basic} and $\FF$ is any Selmer structur
 \end{proposition}
 
 \begin{proof}
-Since $H^1_{\FF}(K,T)$ is finitely generated, then we only need to prove it contains no torsion. Consider the exact sequence
+Consider the exact sequence
 \[\xymatrix{0\ar[r]& T\ar[r] & T\ar[r] & T/\m\ar[r] & 0}\]
 Then \ref{Tirred} implies that $H^0(K,T/\m)$, so $\bH^1(K,T)$ contains no torsion. By the definition of Selmer module, there is an injection
 \[\frac{\bH^1(K,T)}{\bH^1_{\FF}(K,T)}\hookrightarrow \bigoplus_{\ku\in \UU(\PP)} \frac{\bH^1(K_\ku,T)}{\bH^1_{\FF}(K_\ku,T)}\]

@@ -1,0 +1,1312 @@
+\chapter{Selmer group of an elliptic curve}
+\label{sec:EC}
+
+\subsection{Main results}
+\label{sec:EC_intro}
+
+
+
+
+
+
+The aim of this section is to apply the results from the previous one to compute the Galois structure of the classical Selmer group of an elliptic curve (defined over $\Q$) over certain abelian extensions.
+
+Throughout this section, let $E/\Q$ be an elliptic curve defined over $\Q$ and let $p\geq 5$ be a prime number. Denote by $N$ the conductor of $E$ and by $T$ the Tate module of $E$.
+
+Assume the following hypothesis.
+
+\begin{itemize}
+\item \namedlabel{ESur}{(E1)} The homomorphism $\rho:\ G_\Q\to \textrm{Aut}(T)$ induced by the Galois action is surjective.
+%\item \namedlabel{ETam}{(E2)} All the Tamagawa numbers of $E$ are prime to $p$.
+\item \namedlabel{EManin}{(E2)} Either the Manin constant $c_0$ or $c_1$ is prime to $p$.
+\end{itemize}
+
+Assumptions \ref{ESur} is necessary to ensure that $T$ satisfies the assumptions \ref{Hffr}-\ref{Hprimes}. Assumption \ref{EManin} is necessary to guarantee the integrality of the modular symbols, which will be defined below.
+
+By the modularity theorem, there exist morphisms
+\[\begin{array}{cc}
+\varphi_0:\ X_0(N)\to E,\ &\varphi_1:\ X_1(N)\to E
+\end{array}\]
+where $X_0(N)$ and $X_1(N)$ are the modular curves associated to the groups $\Gamma_0(N)$ and $\Gamma_1(N)$, respectively. We may choose $\varphi_0$ and $\varphi_1$ of minimal degree.
+
+The modularity theorem also proves the existence of a newform $f$ of weight $2$ and level $N$ associated to the isogeny class of $E$. Fixing a Néron differential $\omega_E$, there exist some constants $c_0(E)$ and $c_1(E)$ such that\footnote{We may choose $\varphi_0$ and $\varphi_1$ in a way that both $c_0(E)$ and $c_1(E)$ are positive.}
+\[\begin{array}{cc}
+\varphi_0^*(\omega)=c_0(E) 2\pi i f(\tau)\,d\tau,\ &\varphi_1^*(\omega)=c_1(E) 2\pi i f(\tau)\,d\tau
+\end{array}\]
+
+The Manin constant $c_0(E)$ is an integer (see \cite[proposition 2]{Edixhoven91}) and is conjecturally  equal to $1$ if $E$ is an $X_0$-optimal elliptic curve, i.e., the degree of $\varphi_0$ is minimal among all modular parametrizations of curves in the isogeny class of $E$ (see \cite[\textsection 5]{Manin72}). The conjecture was proven in \cite{Mazur78} if $E$ is semistable. In particular, it is proven that, for an $X_0$-optimal elliptic curve, $c_0(E)$ is only divisible by $2$ and primes of additive reduction. By \ref{ESur}, $E$ does not admit any $p$-isogeny. Hence $c_0(E)$ is conjecturally prime to $p$ under assumption \ref{ESur}.
+
+The constant $c_1(E)$ was conjectured to be $1$ for all elliptic curves by Stevens in \cite[conjecture 1]{Stevens89}.
+
+By the modularity theorem, we can define for an elliptic curve the modular symbols of its associated modular form. In fact, if $f$ is the modular form associated to the isogeny class of $E$, the modular symbol of $E$ for some $\frac{a}{m}\in \Q$ is defined as
+\[\lambda\left(\frac{a}{m}\right):=\int_{i\infty}^{\frac{a}{m}} 2\pi i f(z)\,dz\]
+where the integral follows the vertical line in the upper half plane from the cusp at infinity to $\frac{a}{m}\in\Q$.
+
+The modular symbols satisfy the following relation (see \cite[lemma 5]{WiersemaWuthrich}):
+\[\lambda\left(\frac{-a}{m}\right)=\overline{\lambda\left(\frac{a}{m}\right)}\]
+We can consider the real and imaginary parts of the modular symbols and normalise them by one of the Néron periods $\Omega_E^{\pm}$ to obtain rational numbers carrying important arithmetic information.
+\begin{equation} \left[\frac{a}{m}\right]^\pm=\frac{\lambda\left(\frac{a}{m}\right)\pm\lambda\left(\frac{-a}{m}\right)}{2\Omega_E^{\pm}}\in \Q
+\label{eq:modular_symbol}
+\end{equation}
+
+Assumption \ref{EManin} is required to ensure that the denominator of $\left[\frac{a}{m}\right]^{\pm}$ is not divisible by $p$. Thus
+\[\left[\frac{a}{m}\right]^{\pm}\in \Z_{(p)}\subset \Z_p\]
+
+Although we need the elliptic curve $E$ to be defined over $\Q$ in order to apply the modularity theorem to make use of the modular symbols, we will study the properties of the Mordell-Weil group over a finite abelian extension $K/\Q$ satisfying the following hypotheses:
+\begin{itemize}
+\item\namedlabel{Kur}{(K1)} $K/\Q$ is unramified at $p$ and at every prime at which $E$ has bad reduction.
+\item\namedlabel{Kdeg}{(K2)} The degree $[K:\Q]$ is prime to $p$. 
+\item\namedlabel{Kloc}{(K3)} $E(K_\p)[p]=\{O\}$ for every prime $\p$ of $K$ above $p$.
+\item\namedlabel{Ktam}{(K4)} All the Tamagawa numbers of $E$ over $K$ are prime to $p$.
+\item \namedlabel{KIMCloc}{(K5)} For every character $\chi$ of $\Gal(K/\Q)$, the Iwasawa main conjecture localised at $X\Lambda$ holds for the modular form $f_\chi$, which is defined in \eqref{eq:twsited_mf} below.
+\end{itemize}
+
+Throughout this section, denote by $G$ the Galois group $\Gal(K/\Q)$. Also, let $d$ and $c$ be the degree and the conductor of $K/\Q$, respectively. We will also denote by $\OO_d$ the ring of integers of $\Q_p(\mu_d)$ and $\Lambda_d:=\Lambda\otimes \OO_d$, where $\Lambda$ is the Iwasawa algebra defined in \textsection \ref{sec:lambda}.
+
+Assumption \ref{KIMCloc} deserves some comment. If $f=\sum_{n=1}^\infty a_nq^n$ is the newform associated to $E$, the $\chi$-twist of $f$ is defined as
+\begin{equation}
+f_\chi=\sum_{n=1}^\infty \chi(n) a_n q^n\in S_2(Y_1(N\cond(\chi)^2),\chi^2)
+\label{eq:twsited_mf}
+\end{equation}
+
+\begin{remark}
+With this definition of $f_\chi$, we have that 
+\[L(f_\chi,s)=L(E,\chi,s)\]
+
+Indeed, the $L$-function of the twisted modular form is defined as 
+\[L(f_\chi,s)=\sum_{n=1}^\infty \frac{\chi(n)a_n}{n^s}=\prod_{\ell} \Bigl(1-\ell^{-s}\chi(\ell)a_\ell+\textbf{1}_N(\ell)\ell^{1-2s}\chi(\ell)^2\Bigr)^{-1}\]
+where $N$ is the level of $f$ and $\textbf{1}_N(\ell)$ is the trivial Dirichlet character modulo $N$, given by $\textbf{1}_N(m)=1$ if $\gcd(N,m)=1$ and $\textbf{1}_N(m)=0$ otherwise.
+
+This definition coincides with the motivic $L$-function of $T_pE\otimes \OO_d(\chi)$, where $\chi$ is normalised such that $\chi(\ell)=\chi(\Frob_\ell$), where $\Frob_\ell$ denotes the arithmetic Frobenius. In this setting, when $ \ell\neq p$, the Euler factor is
+\[P_\ell(T)_\chi:=\det_{\OO_d\otimes \Q_\ell} \Bigl(1-\Frob_\ell^{-1} T|((T_p\otimes \OO_d(\chi))^*)^{I_\ell}\Bigr)=1-\ell\chi(\ell)a_\ell T+\textbf{1}_N(\ell)\ell \chi(\ell)^2 T^2\]
+In case, $\ell=p$, one would obtain the same formula using Fontaine's period ring $B_{\crys}$:
+\[P_p(T)_\chi=\Bigl(1-\Frob_\ell^{-1} T|(T_p\otimes \OO_d(\chi))^*\otimes B_\crys\Bigr)=1-p\chi(p) a_p T+\textbf{1}_N(p)p \chi(p)^2 T^2\]
+Then the motivic $L$-function is defined as
+\[L(T_pE\otimes \OO_d(\chi),s):=\prod_\ell P_\ell(\ell^{-s})=\prod_\ell (1-\ell^{-s} \chi(\ell)a_\ell+\textbf{1}_N(\ell)\ell^{1-2s} \chi(\ell)^2)=L(f_\chi,s)\]
+\end{remark}
+
+We assume the Iwasawa main conjecture in the sense of Kato.
+
+\begin{conjecture}(Iwasawa main conjecture for $f_\chi$ in the sense of Kato) Define the Iwasawa algebra
+    \[
+    {H^1_{\textrm{IW}}(\Q_\infty,T\otimes\OO_d(\chi))}:=\varprojlim_n H^1(\Q_n,T\otimes \OO_d(\chi))\]
+Also denote 
+    \[X_\infty:=\Hom(H^1_{\FLambda^*}(\Q,(T\otimes \Lambda_d(\chi))^*),\Q_p/\Z_p)\]
+    Let $z_{\Q_\infty,\chi}\in H^1_{\textrm{IW}}(\Q_\infty,T\otimes\chi)$ be the $\chi$-twist of Kato's zeta element (see \eqref{eq:kataoka_interp} and \eqref{eq:euler_twist}). The Iwasawa main conjecture is the equality of $\Lambda$-ideals
+    \[\char\left(\frac{H^1_{\textrm{IW}}(\Q_\infty,T\otimes \OO_d(\chi))}{\Lambda z_{\Q_\infty,\chi}}\right)=\char(X_\infty)\]
+    \label{conj:IMC}
+    \end{conjecture}
+    
+    \begin{remark}
+    By theorem \ref{th:MC_ind}, conjecture \ref{conj:IMC} is equivalent to the primitivity of the $\chi$-twisted Kato's Kolyvagin system over $\Q_\infty$. An argument analogous to remark \ref{rem:katos_equal} shows that this is equivalent to the primality of certain Kato's Kolyvagin system for $f_\chi$.
+    \end{remark}
+
+    \begin{remark} 
+        Iwasawa main conjecture for $f_\chi$ was proven in \cite[theorem 1]{SkinnerUrban} when $p$ does not divide the level of $f_\chi$, which, under our assumption \ref{Kur}, is equivalent to $E$ having good reduction at $p$, and the existence of an auxilliary prime $\ell\mid\mid N$ such that $\chi$ is unramified at $\ell$ and the reduction modulo $\ell$ of the Galois representation $\overline{\rho}_{f_\chi}$ satisfies that $\dim_{\F_\ell}\overline{\rho}_{f_\chi}^{\II_\ell}=1$ and $\dim_{\F_\ell}\overline{\rho}_{f_\chi}^{G_{\Q_\ell}}=0$. 
+
+          The proof of the Iwasawa main conjecture was extended in \cite[theorem 1.1]{FouquetWan} to some cases in which $E$ has bad reduction at $p$, assuming the existence of the above auxiliary prime $\ell$ and that the semisimplification of $\overline{\rho}|_{G_{\Q_p}}$ is different to $\psi\oplus\psi$ and $\psi\oplus \chi_{\textrm{cyc}}\psi$ for any character $\psi$ and the cyclotomic character $\chi_{\textrm{cyc}}$.
+    \end{remark}
+
+ 
+    
+ However, assumption \ref{KIMCloc} only assumes a weaker Iwasawa main conjecture: a special case of the following conjecture when $\beta=X\Lambda$.
+    
+    \begin{conjecture}(Localised Iwasawa main conjecture for $f_\chi$)
+    Let $\beta$ be a height one prime ideal of $\Lambda$. The Iwasawa main conjecture localised at $\beta$ is the equality
+    \[\ord_\beta\left(\char\left(\frac{H^1_{\textrm{IW}}(\Q_\infty,T\otimes \OO_d(\chi))}{\Lambda z_{\Q_\infty,\chi}^\infty}\right)\right)=\ord_\beta\left(\char(X_\infty)\right)\]
+    \label{conj:IMC_loc}
+    \end{conjecture}
+
+%\begin{remark}
+%Under assumption \ref{Esur}, conjecture \ref{conj:IMC_loc} was proven in \ref{Wan15}.
+%\end{remark}
+
+
+
+We want to describe the Galois structure of the classical Selmer group $\Sel(K,E[p^\infty])$. Indeed, the Selmer group $\Sel(K,E[p^\infty])$ have a natural action of the Galois group $\Gal(K/\Q)$, in which the Galois automorphism acts by conjugation on the cohomology group. Hence, it has a $\Z_p[G]$-module structure, which is the one we are interested in. 
+
+By Shapiro's lemma (see \cite[proposition 1.6.4]{NSW}), there is an isomorphism
+\[H^1(K,T)\cong H^1\left(\Q,\Ind_{G_K}^{G_\Q}(T)\right)\cong H^1(\Q,T\otimes \Z_p[G])\]
+At this point, it is important to make a remark on the Galois action on $T\otimes \Z_p[G]$. In order to construct the Galois cohomology group $H^1(\Q,T\otimes \Z_p[G])$, we need $T\otimes \Z_p[G]$ to be endowed with a continuous action of $G_\Q$. It is given by the following formula:
+\[\sigma(t\otimes x)=\sigma t\otimes \sigma x\ \forall \sigma\in G,\ \forall t\in T,\ \forall x\in \Z_p[G]\]
+
+However, cohomological conjugation endowes $H^1(K,T)$ with a natural $G$-action. The way to see this action in $H^1(\Q,T\otimes \Z_p[G])$ is considering $T\otimes \Z_p[G]$ as a $\Z_p[G]$-module with the multiplication by the elements of $G$ given by
+\[\sigma(t\otimes x)=t\otimes x\sigma^{-1} \ \forall \sigma\in G,\ \forall t\in T,\ \forall x\in \Z_p[G]\]
+
+When $T\otimes \Z_p[G]$ is a $\Z_p[G]$-module, then $H^1(\Q,T\otimes \Z_p[G])$ is also a $\Z_p[G]$-module. In this situation, Shapiro's lemma isomorphism respects the $\Z_p[G]$-structures.
+
+
+
+
+
+
+
+
+
+
+We know study the local conditions used to define the Selmer group. Let $\ell$ be a rational prime and let $v$ be a prime of $K$ above $\ell$. Denote by $G_{v/\ell}$ to the Galois group $\Gal(K_v/\Q_\ell)$, which is canonically isomorphic to a subgroup of $G$. Shapiro's lemma can also be applied to the local cohomology groups.
+\[H^1(K_v,T)\cong H^1\Bigl(\Q,T\otimes \Z_p[G_{v/\ell}]\Bigr)\]
+
+
+
+
+  
+
+
+The classical local condition at a prime $v$ of $K$ is defined as the image of the Kummer map.
+\[H^1_{\Fcl}(K_v,T)=\Im\biggl(E(K_v)\widehat\otimes \Z_p\to H^1(K_v,T)\biggr)\]
+
+When $\ell\neq p$, this local condiction coincides with the finite cohomology subgroup:
+\[H^1_{\Fcl}(K_v,T)=\ker\biggl(H^1(K_v,T)\to H^1(\II_{v/\ell},T\otimes \Q_p)\biggr)\]
+where $\II_{v/\ell}$ is the inertia subgroup of $G_{v/\ell}$.
+When $\ell=p$, the classical condition can be described purely in terms of $T$, by using $p$-adic Hodge theory. In this case, the classical local condition coincides with the Bloch-Kato local condition defined in \textsection \ref{sec:global}:
+ \[H^1_{\FBK}(K_v,T):=\ker\biggl(H^1(K_v,T)\to H^1(K_v,T\otimes B_\crys)\biggr)\]
+
+The Bloch-Kato Selmer structure can be defined similarly for $H^1(\Q_p,T\otimes \Z_p[G_{v/p}])$:
+\[\mathclap{H^1_{\FBK}(\Q_p,T\otimes \Z_p[G_{v/p}])=\ker\biggl(H^1(\Q_p,T\otimes \Z_p[G_{v/p}])\to H^1(K_v,T\otimes\Z_p[G_{v/p}]\otimes B_\crys)\biggr)}\]
+The isomorphism given by Shapiro's lemma identifies both Bloch-Kato conditions:
+\[H^1_{\Fcl}(K,T)\cong H^1_{\FBK}(\Q,T\otimes \Z_p[G])\]
+
+
+
+
+Since $\Z_p[G]$ is not a local ring, we cannot apply the general theory of Kolyvagin systems directly. Since the order of $G$ is prime to $p$ by \ref{Kdeg}, we can split the Selmer group into character parts. In order to do that, we tensor it with $\OO_d$.
+
+
+%\paragraph{Notation} Let $A$ be a $\Z_p$ module and let $\chi$ be a Dirichlet character. We will denote $A[\chi]=A\otimes \Z_p[\chi]$, where $\Z_p[\chi]$ is the minimal ring containing $\Z_p$ and the values of $\chi$. Assume also that $A$ admits an action of a group $G$. Then we will denote by $A(\chi)$ to $A[\chi]$ with the $G$-action given by $\sigma\cdot a=\chi(\sigma) \sigma a$. We further denote by $A_\chi$ to $A(\chi)^G$.
+
+We thus get an isomorphism 
+\[H^1_{\FBK}(\Q,T\otimes \Z_p[G])\otimes \OO_d\cong H^1_{\FBK}(\Q,T\otimes \OO_d[G])=\bigoplus_{\chi\in \widehat{G}} H^1_{\FBK}(\Q,T\otimes e_\chi\OO_d[G])\]
+where $e_\chi$ is the idempotent element associated to the character $\chi$, defined in \eqref{eq:idempotent} below.
+%where $Z_p[G]_\chi$ denotes the submodule of $G$ formed by the elements $x\in \Z_p[G]$ such that $\sigma\cdot x:=x\sigma^{-1}=\chi(\sigma) x$ (note that action 2 is used to determine the Galois structure of the Selmer group). %Since $\Z_p[G]$ is abelian, we can consider a third action, consisting in the standard right multiplication\footnote{This step is not strictly necessary for our proof, but it can avoid confussion with the notation.}
+%\[\begin{aligned}
+%&\textrm{Action 3}:\ & \sigma (t\otimes x):=t\otimes \sigma x\ \forall \sigma\in G,\ \forall t\in T,\ \forall x\in \Z_p[G]
+%\end{aligned}\]
+
+%The efect of considering action 3 instead of action 2 in the character parts is swapping $\chi$ by $\chibar$.
+
+
+
+Since $T\otimes e_\chi\OO_d[G]$ is isomorphic to $T\otimes \OO_d(\chi)$, where $\OO_d(\chi)$ is $\OO_d$ endowed with an action of $G$ given by $\sigma x=\chi(\sigma)x$, we have an isomorphism
+\[H^1_{\FBK}(\Q,T\otimes \Z_p[G])\otimes \OO_d\cong\bigoplus_{\chi\in \widehat G} H^1_{\FBK}(\Q,T\otimes \OO_d(\chi)) \]
+
+Therefore, we can study the groups $H^1(\Q,T\otimes \OO_d(\chi))$ instead. The Galois structure of $H^1_{\FBK}(\Q,T\otimes \Z_p[G])$ is completely determined by the $\OO_d$ structure of $H^1_{\FBK}(\Q,T\otimes \OO_d(\chi))$ of every $\chi$ (see \textsection \ref{sec:examples} for examples of this process). Since $\OO_d$ is a principal local ring, we can apply the general theory of Kolyvagin systems to study this cohomology group.
+
+Knowing the Fitting ideals of the twisted Selmer groups, we can determine $H^1_{\FBK}(K,T)$ up to isomprphism.
+
+\begin{proposition}
+%The explicit relation between the Fitting ideals of the Selmer group over $K$ and the twisted Selmer groups is given by 
+The Fitting ideals of $H^1_\FBK(K,T)$ can be computed as:
+\begin{equation}
+\Fitt^{i}_{\Z_p[G]}\Bigl(H^1_{\FBK}(K,T)\Bigr)=\Z_p[G]\cap\left(\sum_{\chi\in \widehat G} e_\chibar\ \Fitt^i_{\OO_d}\Bigl(H^1_{\FBK}(Q,T\otimes \OO_d(\chi))\Bigr)\right)
+\label{eq:fitting_rational}
+\end{equation}
+Moreover, there is an isomorphism
+\[H^1_\FBK(K,T)\approx \bigoplus_{i} \Z_p[G]/I_i\]
+where $I_i$ are ideals of $\Z_p[G]$ satisfying that $I_{i-1}\subset I_i$ for all $i$ and that 
+\[\Fitt_{\Z_p[G]}^{i-1}H^1_\FBK(K,T)=I_i\, \Fitt_{Z_p[G]}^iH^1_\FBK(K,T)\]
+\label{prop:fitting_integral}
+\end{proposition}
+
+\begin{proof}
+By the definition of the Fitting ideals, we can compute
+\[\Fitt^{i}_{\Z_p[G]}\Bigl(H^1_{\FBK}(K,T)\Bigr)=\Fitt^{i}_{\OO_d[G]}\Bigl(H^1_{\FBK}(K,T)\otimes \OO_d\Bigr)\]
+
+Since $\OO_d[G]=\bigoplus_{\chi\in \widehat G} e_{\chi}\OO_d[G]$, then 
+\[\Fitt^{i}_{\OO_d[G]}\Bigl(H^1_{\FBK}(K,T)\otimes \OO_d\Bigr)=\left(\sum_{\chi\in \widehat G} e_\chibar\ \Fitt^i_{\OO_d}\Bigl(H^1_{\FBK}(Q,T\otimes \OO_d(\chi))\Bigr)\right)\]
+
+Then \eqref{eq:fitting_rational} follows from \cite[proposition 1.17]{AtiyahMcDonald} since every ideal of $\Z_p[G]$ is a contracted ideal under the inclusion $\Z_p[G]\hookrightarrow \OO_d[G]$. Indeed, if $G=C_{n_1}\times\cdots\times C_{n_s}$, where $C_j$ represents the cyclic group of $j$ elements and $n_i\mid n_{i-1}$ for all $i$. Hence,
+\[\Z_p[G]\cong \Z_p[C_{n_1}][C_{n_2}]\cdots[C_{n_s}]\]
+
+If $\OO$ is an unramified discrete valuation ring with with residue field $k$ and residue characteristic $p$ and $j$ is prime to $p$, then
+\[\OO[C_j]\approx \OO[T]/(T^j-1)\cong \bigoplus_{k} \OO[T]/(f_k(T))\]
+where $f_k(T)$ are the irreducible factors of $T^j-1$, which are all distinct. By Gauss's and Hensel's lemmas, the reductions $\overline{f_k}(T)$ are irreducible in $k[T]$ and, therefore, $\OO[T]/(f_k(T))$ are unramified discrete valuation rings.
+
+By repeating this process for every cyclic factor of $G$, we obtain a decomposition
+\[\Z_p[G]\approx \bigoplus_{k} \OO_{k}\]
+where every $\OO_{k'}$ is an unramified discrete valuation ring, associated to a Galois orbit the characters $G\to \overline{\Z_p}$.
+
+The above decomposition implies that every non-zero ideal in $\Z_p[G]$ is the product of maximal ideals. Since the zero ideal is contracted because the map $\Z_p[G]\to \OO_d[G]$ is injective, we just need to prove that the maximal ideals of $\Z_p[G]$ are contracted. Every maximal ideal of $\Z_p[G]$ is of the form
+\[\m_i=\bigoplus_{k\neq i} \OO_k\oplus p\OO_i\]
+
+If $e_i$ is the idempotent element associated to $\OO_i$, then there are some characters $\chi_{i_1},\ldots,\chi_{i_t}\in \widehat G$ such that 
+\[e_i=\sum_{j=1}^t e_{\chi_{i_1}}\]
+Hence
+\[m_i=\Z_p[G]\cap \left[\left(\sum_{j=1}^t e_{\chi_{i_1}}\right) p\OO_d[G]+\left(1-\sum_{j=1}^t e_{\chi_{i_1}}\right)\OO_d[G]\right]\]
+
+The second part of this proposition follows by applying the structure theorem of finitely generated modules over principal ideal domains to the discrete valuation rings in the decomposition of $\Z_p[G]$.
+\end{proof}
+
+We have already established the $\Z_p$-module and the Selmer structure we are going to study. In order to complete the Selmer triple, we need to establish which will be our set of Kolyvagin primes $\PP$.
+
+\begin{definition}
+The Selmer triple we are going to study is defined as follows.
+\begin{itemize}
+\item $T=T_pE\otimes \OO_d(\chi)$, where $T_pE$ is the Tate module of the elliptic curve and $\OO_d(\chi)$ is $\Z_p[\chi]$ twisted by a character $\chi$ of $G$ with values in $\overline \Z_p$.
+\item The Selmer strucure is the Bloch-Kato Selmer structure (see definition \ref{def:BK_str}).
+\item The set of Kolyvagin primes $\PP$ is formed by the good reduction primes that are unramified and split completely at $K/\Q$.
+\end{itemize}
+\label{def:Kato_triple}
+\end{definition}
+
+\begin{remark}
+For every $k\in \mathbb N$, the set of primes $\PP\cap \PP_k$ is $\PP_{k,K}$, i.e., the primes $\ell$ satisfying the following conditions.
+\begin{itemize}
+\item \namedlabel{PEgood}{(PE0)} $E$ has good reduction at $\ell$ and $\ell$ is unramified in $K/\Q$.
+\item \namedlabel{PE1modp}{(PE1)} $\ell\equiv 1 \mod p^k$.
+\item \namedlabel{PE1dim}{(PE2)} $\widetilde E_\ell(\F_\ell)[p^k]$ is free of rank one over $\Z/p^k$.
+\item \namedlabel{PEsplit}{(PE3)} $\ell$ splits completely in $K/\Q$.
+\end{itemize}
+\label{rem:Eprimes}
+\end{remark}
+
+In order to study the structure of $H^1_\FBK(\mathbb Q, T\otimes \OO_d(\chi))$, we define some twists of the Kurihara numbers. Kurihara numbers were defined by M.~Kurihara in \cite{Kur2014} and \cite{Kur2012}. In those articles, they were related to the structure of the Selmer group $\Sel(\Q,E[p^\infty])$ and the veracity of the Iwasawa main conjecture. The definition given by M.~Kurihara was the particular case of our definition \ref{def:kurihara_numbers} below when $\chi$ is the trivial character. In this definition, we twist the Kurihara numbers by the different characters $\chi$ of $G$, so we can get information about the structure of $H^1_\FBK(\mathbb Q, T\otimes \OO_d(\chi))$.
+
+\begin{definition}
+Let $n\in \NN(\PP_{k,K})$ and let $\chi$ be a Dirichlet character of character of conductor $c$. We define the \emph{twisted Kurihara number} as
+\begin{equation}
+\widetilde \delta_{n,\chi}=\sum_{a\in (\Z/cn\Z)^*} \chibar(a)\left[\frac{a}{cn}\right]^{\chi(-1)}\left(\prod_{\ell\mid n}\log_{\eta_\ell}^p(a)\right)\in \OO_d/p^{k_n}
+\label{eq:kurihara_number}
+\end{equation}
+where $\eta_\ell$ is a generator of $(\Z/\ell)^\times$ and $\log_{\eta_\ell}^p(a)$ is the unique $x\in \Z/p^k$ such that $\eta_\ell^{-x} a$ has order prime to $p$ in $(\Z/\ell)^\times$ (see definition \ref{def:logarithm}). Here $k_n$ is the minimal $k\in \mathbb N$ such that $n\in \NN_k$.
+%and every prime divisor $\ell$ of $n$ is congruent to $1$ modulo $p^{k+k_\chi'-1}$, where $k_\chi'=v_p\left(1-\frac{a_p}{p} \chi(p)+\textbf{1}_N(p)\frac{1}{p}\chi(p)^2\right)$. Here $\textbf{1}_N(\ell)$ denotes the trivial Dirichlet character modulo $N$, taking values $\textbf{1}_N(\ell)=1$ when $\gcd(N,\ell)=1$ and $\textbf{1}_N(\ell)=0$ otherwise
+\label{def:kurihara_numbers}
+\end{definition}
+
+
+
+\begin{remark}
+The definition of the twisted Kurihara numbers depends on the choice of the primive roots $\eta_\ell$ for the prime divisors $\ell$ of $n$. However, the $p$-adic valuation of $\delta_{n,\chi}$ is independent of this choice.
+\label{rem:delta_well-def}
+\end{remark}
+
+\begin{remark}
+Note that for $n=1$, the Birch formula in \cite[(I.8.6)]{MTT} relates the twisted Kurihara number with the twisted special $L$-value:
+$$\delta_{1,\chi}=\sum_{a\in(\Z/c\Z)^*} \chibar(a)\left[\frac{a}{c}\right]^{\chi(-1)}=\frac{1}{\tau(\chibar)}\frac{L(E,\chi,1)}{\Omega_E^{\chi(-1)}}$$
+where $\tau(\chi)$ is the Gauss sum of $\chi$.
+\end{remark}
+
+%\begin{remark}
+%The definition of $h_n$ in \ref{def:kurihara_numbers} contains one more condition than the definition of $k_n$ in \ref{def:kol}. The reason behind this is the congruences in \textsection \ref{sec:MT} lose precision, so we need to impose more conditions on the Kolyvagin primes in order to give a correct description of the Selmer group. Note that in the case when $k'_\chi\leq 1$, both definitions of $h_n$ and $k_n$ are equivalent.
+%\end{remark}
+
+
+\begin{definition}
+Define the quantities
+\[\begin{aligned}
+&\ord(\delta_{n,\chi}):=\max\{j\in\N\cup\{0,\infty\}:\delta_n\in p^j(\OO_d/p^{k_n}) \}\\&\partial^{(i)}(\delta_\chi):=\min\{\ord(\delta_{n,\chi}): n\in \NN,\nu(n)=i\}\\
+&\partial^{(\infty)}(\delta_\chi)=\min\{\partial^{(i)}(\delta_\chi):\ i\in \N_0\}
+\end{aligned}\]
+In analogy with definition \ref{def:theta}, define the ideals $\Theta_{i,\chi}$ as 
+\[\Theta_{i,\chi}=p^{\partial^{(i)}(\delta_\chi)}\OO_d\subset \OO_d\]
+\end{definition}
+
+The following theorem describes the group structure of the Bloch-Kato Selmer group of $T(\chi)$ in terms of the $\chi$-twisted Kurihara numbers.
+
+\begin{theorem}
+Let $E/\Q$ and $p\geq 5$ be an elliptic curve and a prime number satisfying \ref{ESur}-\ref{EManin} and let $K/\Q$ be an abelian extension satisfying \ref{Kur}-\ref{KIMCloc}. Then $\partial^{(\infty)}(\widetilde \delta_\chi)$ is finite. Call $r$ to the minimum $i$ such that $\Theta_{i,\chi}\neq 0$ and $s$ to the minimum $j$ such that $\partial^{(j)}(\widetilde \delta_\chi)=\partial^{(\infty)}(\widetilde \delta_\chi)$. Also, denote by $n_i$ the exponent $\Theta_{i,\chi}=(p)^{n_i}$ and $a_i=\frac{n_i-n_{i+2}}{2}$.
+\begin{enumerate}
+\item If $\chi=\overline\chi$, then
+$$H^1_{\FBK}(\Q,T\otimes \OO_d(\chi))\approx \OO_d^r\oplus \left(\OO_d/p^{a_r}\right)^2\oplus\left(\OO_d/p^{a_{r+2}}\right)^2\oplus\cdots\oplus \left(\OO_d/p^{a_{s-2}}\right)^2$$
+\item If $\chi\neq \overline \chi$, then
+$$H^1_{\FBK}(\Q,T\otimes \OO_d(\chi))\approx \OO_d^r\oplus \OO_d/p^{n_r-n_{r+1}}\oplus\OO_d/p^{n_{r+1}-n_{r+2}}\oplus\cdots\oplus \OO_d/p^{n_{s-1}-n_s}$$
+\end{enumerate}
+\label{th:EK_str}
+\end{theorem}
+
+\begin{remark}
+Theorem \ref{th:EK_str} when $K=\Q$ is a result of C.H.~Kim in \cite{Kim23}.
+\end{remark}
+
+
+\begin{remark}
+It is enough to prove theorem \ref{th:EK_str} for the primitive characters of $G$, i.e., those of conductor $c$. Indeed, if $\chi$ is a character of conductor $m$, consider $K_m=K\cap \Q(\mu_m)$. Note that $\chi$ is a primitive character of $\Gal(K_m/\Q)$. Since $[K:K_m]$ is prime to $p$,
+\[H^1_{\FBK}(K_m,T)\cong H^1_{\FBK}(K,T)^{\Gal(K/K_m)}\]
+Hence the $\chi$ parts of both Selmer group coincide. Hence if theorem \ref{th:EK_str} holds for $K_m$ and $\chi$, it also holds for $K$ and $\chi$.
+\label{rem:EK_str}
+\end{remark}
+
+\begin{remark}
+When $\chi$ is the trivial character, M. Kurihara conjectured in \cite{Kur2012} the existence of of some $n\in \NN$ such that $\ord(\delta_n)$ is equal to zero. When $p$ is a prime of ordinary reduction, M. Kurihara proved it under the assumptions of the non-degeneracy of the $p$-adic height pairing and the Iwasawa main conjecture (see \cite[theorem B]{Kur2014}). An analogue statement can be conjecured for other characters.
+\end{remark}
+
+\begin{conjecture}
+There exists some $n\in \NN$ such that $\ord(\delta_{n,\chi})=0$. In other words, $\partial^{(\infty)}(\delta_{n,\chi})=0$.
+\label{conj:kur}
+\end{conjecture}
+
+When $\chi$ is the trivial character, R. Sakamoto proved in \cite[theorem 1.2]{Sakamoto21} (see also \cite[theorem 1.11]{Kim23}) that M.~Kurihara's conjecture is equivalent to the Iwasawa main conjecture.
+
+
+
+
+\begin{theorem}
+Let $E/\Q$ and $p\geq 5$ be an elliptic curve and a prime number satisfying \ref{ESur}-\ref{EManin}, let $K/\Q$ be an abelian extension satisfying \ref{Kur}-\ref{KIMCloc} and let $\chi$ be a character of $\Gal(K/\Q)$. Then $\partial^{(\infty)}(\delta_\chi)=0$ if and only if the Iwasawa main conjecture \ref{conj:IMC} holds true.
+\label{th:EK_IMC}
+\end{theorem}
+
+
+
+The rest of \textsection \ref{sec:EC} is dedicated to the proofs of theorems \ref{th:EK_str} and \ref{th:EK_IMC}. Theorem \ref{th:EK_str} is just an application of theorems \ref{th:kur_par} and \ref{th:kur}. In order to prove it, we need to check that the Selmer triple satisfies the assumptions of these theorems.
+
+
+
+
+
+\begin{proposition}
+The Selmer triple $(T\otimes \OO_d(\chi),\Fcl,\PP)$ satisfies the assumptions \ref{Hffr}-\ref{Hprimes} made in \textsection \ref{sec:global}.
+\label{prop:EK:hyp}
+\end{proposition}
+
+\begin{proof}
+Assumptions \ref{Hffr} and \ref{Hchev} are obvious. \ref{Hprimes} holds from \ref{rem:Eprimes}
+
+Note that $\Q(T)$ is only ramified at $p$ and at bad primes of $E$, so $\Q(T)\cap K$ is unramified at every prime by \ref{Kur}. Since $\Q$ has class number $1$, then $\Q(T)\cap K=\Q$. Therefore, every $\sigma\in \Gal(\Q(T)/\Q)$ can be lifted to some $\widetilde \sigma\in G_\Q$ such that $\chi(\widetilde \sigma)=1$.
+
+Every basis of $T$ as a $\Z_p$-module is a basis of $T\otimes \OO_d(\chi)$ as an $\OO_d$-module. After fixing such a basis, the representation induces a map $G_\Q\to \GL_2(\OO_d)$. By \ref{ESur}, the image of this map contains $\GL_2(\Z_p)$, so \ref{Hirred} and \ref{Hsur} hold true.
+
+%By the Weil pairing, $\Q(T)=\Q(T,\mu_{p^\infty})$. Let $L$ be the fixed field of $\chi$. Since $\Q(T)\cap K=\Q$, then 
+%\[\Gal(\Q(T\otimes \OO_d(\chi))/\Q)\cong \Gal(\Q(T)/\Q)\times \Gal(L/\Q)\cong \GL_2(\Z_p)\times \Gal(L/\Q)\]
+Let $\Delta\subset \GL_2(\OO_d)$ be the subgroup formed by the matrices $\zeta I$, where $I$ is the identity matrix and $\zeta$ is a $(p-1)^{\textrm{th}}$-root of unity. Since the image of the map $G_\Q\to \GL_2(\OO_d)$ considered above contains $\GL_2(\Z_p)$, there is an inclusion $\Delta\hookrightarrow \Gal(\Q(T\otimes \OO_d(\chi))/\Q)$. If we denote the latter Galois group by $H$, consider the inflation-restriction sequence
+%$$\xymatrix{ H^1(\GL_2(\Z_p)/\Delta\times H,(T/p\otimes \OO_d(\chi))^\Delta)\ar[r] &H^1(\Q(T\otimes \OO_d(\chi))/\Q,T/p\otimes \OO_d(\chi))\ar[r] &H^1(\Delta,T/p\otimes \OO_d(\chi))}$$
+\begin{center}
+    \begin{tikzpicture}[descr/.style={fill=white,inner sep=1.5pt}]
+    
+            \matrix (m) [
+                matrix of math nodes,
+                row sep=4em,
+                column sep=1.5em,
+                text height=1.5ex, text depth=0.25ex
+            ]
+            {  0 & H^1\Bigl(H/\Delta,(T/p\otimes \OO_d(\chi))^\Delta\Bigr) &
+                H^1\Bigl(H,T/p\otimes \OO_d(\chi)\Bigr) & H^1\Bigl(\Delta,T/p\otimes \OO_d(\chi)\Bigr) \\
+            };
+    
+            \path[overlay,->, font=\scriptsize,>=latex]
+            (m-1-1) edge node[auto]{} (m-1-2)
+            (m-1-2) edge node[auto]{} (m-1-3)
+            %(m-1-2) edge node[auto]{$\varepsilon_*$} (m-1-3) 
+            %(m-1-3) edge (m-1-4) 
+            %(m-1-2) edge[out=355,in=175] node[descr,yshift=0.3ex] {} (m-2-1)
+            (m-1-3) edge node[auto]{} (m-1-4);
+            %(m-2-2) edge node[auto]{$\varepsilon'_*$}(m-2-3);
+       
+    \end{tikzpicture}
+    \end{center}
+Since $T(\chi)^\Delta=0$ and the order of $\Delta$ is prime to $p$, then $H^1(\Q(T\otimes\OO_d(\chi))/\Q,T/p)=0$. Therefore, \ref{Hcoh0} is proven since the Weil pairing implies that $\Q(T,\mu_p^\infty)=\Q(T)$ and $T/p\cong T^*[p]$.
+
+
+For every $\ell \in \Sigma(\FF_{cl})$ and every prime $v$ of $K$ above $\ell$, let $G_{v/\ell}=\Gal(K_v/\Q_\ell)$ and let $H^1_{/\FBK}(\Q_\ell, T\otimes \OO_d(\chi))$ be the quotient $H^1(\Q_\ell, T\otimes \OO_d(\chi))/H^1_{\FBK}(\Q_\ell, T\otimes \OO_d(\chi))$. Since $\# G_v$ is prime to $p$,
+$$H^1_{/\FBK}\Bigl(\Q_\ell,T\otimes \OO_d(\chi)\Bigr)\cong H^1_{\FBK}\Bigl(\Q_\ell,T^*\otimes \OO_d(\overline\chi)\Bigr)\du\cong \Biggl(H^1_{\FBK}\biggl(K_v,E[p^\infty]\otimes \OO_d(\chibar)\biggr)\du\Biggr)_{G_{v/\ell}}$$
+The last cohomology group vanishes when $\ell\neq p$. Otherwise, we can compute
+\begin{equation} 
+    H^1_{\FBK}\biggl((K_v,E[p^\infty])\du\otimes \OO_d(\chi)\biggr)_{G_{v/p}}\cong \Biggl(\varprojlim_{n\in\mathbb{N}}E(K_v)/p^n\otimes \OO_d(\chi)\Biggr)_{G_{v/p}}=\biggl(E(K_v)\otimes \OO_d(\chi)\biggr)_{G_{v/p}}
+    \label{eq:H1s_tf}
+\end{equation}
+Since $E(K_v)$ contains no $p$-torsion when $v\mid p$ by \ref{Kloc}, then $E(K_v)$ is a free of rank one $\Z_p[G_{v/p}]$-module. Hence $(E(K_v)\otimes \OO_d(\chi))_{G_{v/p}}$ is torsion-free and $\FBK$ is cartesian by \cite[lemma 3.7.1]{MazurRubin}. Thus \ref{Hcartesian} holds true.
+
+Since $H^1_\Fcl(K,T)=H^1_\FBK(\Q,T\otimes \Z_p[G])$ is a self dual Galois representation by \cite[theorem 1.1]{DokschitserDokschitser}, we have that
+\[H^1_{\FBK}\Bigl(\Q,T/p^k\otimes \OO_d(\chi)\Bigr)\cong H^1_\FBK\Bigl(\Q,T^*[p^k]\otimes \OO_d(\chibar)\Bigr)\]
+and hence $\chi(T\otimes\OO_d(\chi),\FBK)=0$, so \ref{Hcore0} holds. For \ref{Hloc}, it holds for the prime $p$ by \ref{Kloc}. Indeed, from the computation in \eqref{eq:H1s_tf}, one can deduce that $H^1_{/\FBK}(\Q_p,T\otimes \OO_d(\chi))$ is free of rank one over $\OO_d$ and, from the local duality in proposition \ref{prop:local_duality}, we have that 
+\[H^2(\Q_p,T\otimes \OO_d(\chi))\cong H^0(\Q_v,E[p^\infty]\otimes \OO_d(\chibar))\du=0\qedhere\]
+\end{proof}
+
+The proof of theorems \ref{th:EK_str} and \ref{th:EK_IMC} is structured as follows. \textsection\ref{sec:exp}-\textsection\ref{sec:Kato_kol} are dedicated to relate Kato's Euler system to the Kurihara numbers. In \textsection\ref{sec:exp}, we introduce Kato's Euler system for $T_pE$, originally constructed in \cite{Kato}, and its link to the special $L$-values via the dual exponential map, following \cite{Kataoka21}. In \textsection\ref{sec:twist}, we apply the twisting process explained in \cite[\textsection II.4]{Rubin} to obtain an Euler systems for $T\otimes \OO_d(\chi)$. In \textsection\ref{sec:MT}, we use the interpolation property of Mazur-Tate elements to relate them to Kato's Euler system. After applying the Kolyvagin derivative, we obtain a relation between Kato's Euler system and Kurihara numbers.
+
+This relation is obtained through the dual exponential map. Therefore, it is necessary to compute the image of the integral cohomology group under the dual exponential map, as done in \textsection\ref{sec:exp_im}. With this computations, we can prove the equality between the orders of the twisted Kato's Kolyvagin system and the twisted Kurihara numbers in \textsection\ref{sec:Kato_kol}.
+
+The proof of theorem \ref{th:EK_IMC}, based on the equivalence between the Iwasawa main conjecture and the primitivity of Kato's Euler system, is concluded in \textsection\ref{sec:proof_IMC}. \textsection\ref{sec:proof_str} is dedicated to the proof of theorem \ref{th:EK_str} as an application of theorems \ref{th:kur_par} and \ref{th:kur} and the functional equation of the Kurihara numbers (\cite[lemma 5.2.1]{Kur2012}).
+
+
+
+
+
+\subsection{Dual exponential map}
+\label{sec:exp}
+
+
+
+K. Kato constructed in \cite{Kato} an Euler system for the Tate module of an elliptic curve \(T\) and defined an exponential map to relate this Euler system to the special values of the twisted $L$-functions of the elliptic curve.
+
+Using the Néron differential $\omega_E$ we had already fixed, we can define the dual exponential map (see \cite[definition 3.10]{BlochKato})
+$$\exp^*_{\omega_E}:\ H^1_{/\FBK}(F_\p,T)\otimes \Q_p\to F_\p$$
+where $F_\p$ is the completion at a prime $\p$ above $p$ of an abelian extension $F/\Q$ and $H^1_{/\FBK}(F_\p,T)$ is the quotient $H^1(F_\p,T)/H^1_{\FBK}(F_\p,T)$. 
+
+We will sketch the construction of the exponential map from \cite{BlochKato}. The following is the fundamental short exact sequence from $p$-adic Hodge theory
+\begin{equation}
+\xymatrix{0\ar[r] &\Q_p\ar[r] & B_\crys^{\varphi=1}\oplus B_{\dR}^+\ar[r] & B_{\dR}\ar[r] & 0}
+\label{eq:pHT}
+\end{equation}
+where $B_\crys$ and $B_\dR$ are the crystalline and de Rahm period rings. For $V:=T\otimes \Q_p$, we denote
+$$\begin{array}{ccc}
+D_\crys(V)=(B_\crys\otimes V)^{G_{F_\p}},\ \ &D_\dR(V)=(B_\dR\otimes V)^{G_{F_\p}},\ \ &D_\dR(V)^+=(B_\dR^+\otimes V)^{G_{F_\p}}
+\end{array}$$
+
+If we consider the cohomological exact sequence in \eqref{eq:pHT} tensored with $V$,
+$$\xymatrix{0\ar[r] &\Q_p\ar[r] & D_\crys(V)^{\varphi=1}\oplus D_{\dR}(V)^+\ar[r] & D_{\dR}(V)\ar[r] & H^1_\FBK(F_\p,V)\ar[r] & 0}$$
+Since the tangent space of $E$ is isomorphic to $D_\dR(V)/D_\dR(V)^+$, this exact sequence induces a surjective map
+$$\exp:\ \textrm{tan}(E/F_\p)\to H^1_\FBK(F_\p,V)$$
+
+The dual $\omega_E^*$ of the Neron differential generates the tangent space of $E/F_\p$ as an $F_\p$-vector space, so we can consider the exponential as a map from $F_\p$,
+$$\exp_{\omega_E}:\ F_\p\to H^1_{\FBK}(F_\p,V)$$
+Its dual map is the one we will be interested in.
+$$\exp_{\omega_E}^*:\ H^1_{/\FBK}(F_\p,V)\to \Hom(F_\p,\Q_p)$$
+We can identify the latter with $F_\p$ via the following isomorphism
+\begin{equation}
+F_\p\to \Hom(F_\p,\Q_p),\ x\mapsto (y\mapsto \Tr_{F_\p/\Q_p}(xy))
+\label{eq:dual_trace}
+\end{equation}
+
+The above map is defined for every Galois representation using $p$-adic Hodge theory. However, when $T$ is the Tate module of an elliptic curve $E$, the exponential map has a geometrical meaning (see \cite[example $3.10.1$]{BlochKato}). Note that in this case
+$$H^1_\FBK(F_\p,T)=\varprojlim_n E(F_\p)/p^n$$
+Then the exponential map coincides with the Lie group exponential map defined on the elliptic curve. Moreover, it can be also understood as the tensor with $\Q_p$ of the formal group exponential map defined on certain power of the maximal ideal of the ring of integers of $F_\p$.
+
+We will be interested in the image under this map of elements coming from the global cohomology group $H^1(F,T)$. In order to do that, we consider the localisation at a rational prime $q$ as the direct sum of the localisation maps above every prime $v$ above $q$
+$$\loc_q^s:\ H^1(F,V)\to \bigoplus_{v\mid q} H^1_{/\FBK}(F_v,V)$$
+
+Then there is an Euler system $(z_F)_{F\in \Omega}$ satisfying the following interpolation property (see \cite{Kataoka21}, theorem 6.1). Fix an inclusion $\overline \Q\subset \C$; for every character $\psi$ of $\Gal(F/\Q)$, we have that
+\begin{equation}\sum_{\sigma\in \Gal(F/\Q)} \psi(\sigma) \sigma(\exp^*_{\omega_E}(\loc_s^p(z_F)))=\frac{L_{S_F\cup\{p\}}(E,\psi,1)}{\Omega^{\psi(-1)}}\in F\otimes \Q_p
+\label{eq:kataoka_interp}
+\end{equation}
+where $S_F$ is the primes ramifying at $F/\Q$ and $\Omega^{\pm}$ denote the Néron periods of $E$. Here $L_{S_F\cup\{p\}}(E,\psi,1)$ is the $S_F\cup\{p\}$-truncated and $\psi$-twisted L-function, defined as
+$$L_{S_F\cup\{p\}}(E,\psi,s)=\prod_{\ell\notin S_F, \ell\neq p} (1-a_\ell\psi(\ell) \ell^{-s} +\textbf{1}_N(\ell)\psi(\ell)^2 \ell^{1-2s})^{-1}$$
+
+Call $w_F:=\exp^*_{\omega_E}(\loc^s_p(z_F))$ and, for every character $\psi$ of $\Gal(F/\Q)$, define the idempotent element as 
+\begin{equation}e_{\psi}:=\frac{1}{[F:\Q]}\sum_{\sigma\in \Gal(F/\Q)} \overline\psi(\sigma) \sigma\in \Z_p[\psi][\Gal(F/\Q)]
+    \label{eq:idempotent}
+\end{equation}
+where $\Z_p[\psi]$ is the ring obtained by adjoining the values of $\psi$ to $\Z_p$. Then equation \eqref{eq:kataoka_interp} can be written as
+\begin{equation}
+e_{\psi} w_F=\frac{1}{[F:\Q]}\frac{L_{S_F\cup\{p\}}(E,\overline \psi,1)}{\Omega^{\psi(-1)}}
+\label{eq:kataoka_idemp}
+\end{equation}
+
+For every $n,m\in \N$ such that $m\mid n$, we use the following notation. We call $\tilde n$ the product of all the primes dividing $n$ and $r(m,n):=\textrm{lcm}(\tilde n, m)$. Furthermore, let $s(m,n):=\frac{r(m,n)}{m}$ be the product of primes dividing $n$ but not $m$. Note that $m$ and $s(m,n)$ are relatively prime. When there is no risk of confussion, we will denote these quantities by $r$ and $s$.
+
+For the remaining of this section, fix $n\in \N$ divisible by neither $p$ nor any bad prime of $E$. For every character $\psi$ of conductor $m$, the algebraic $L$-value is defined as
+$$\LL_n(E,\psi):=\frac{L_{S_n\cup\{p\}}(E,\psi,1)}{\varphi(n)e_{\overline \psi}(\zeta_{r})\Omega^{\psi(-1)}}=(-1)^{\nu(s)}\overline\psi(s)\frac{\varphi(r)L_{S_n\cup\{p\}}(E,\psi,1)}{\varphi(n)\varphi(m)e_{\overline \psi}(\zeta_{m})\Omega^{\psi(-1)}}$$
+where $S_n$ is the set of prime divisors of $n$ and $\varphi$ represents the Euler totient function and $\zeta_j=e^{\frac{2\pi i}{j}}\in \C$. This is a modification of the definition in \cite{WiersemaWuthrich} to consider the cases when $\psi$ is a non-primitive character. Note that, when $\psi$ is primitive, the product $\varphi(n) e_\psibar(\zeta_r)$ coincides with the Gauss sum of $\psi$. It is worth mentioning that the last equality comes from the fact that 
+\begin{equation}
+e_\psibar(\zeta_r)=\frac{\varphi(m)}{\varphi(r)}e_{\psibar}\biggl(\Tr_{\Q(\mu_r)/\Q(\mu_m)}(\zeta_{r})\biggr)=\frac{\varphi(m)}{\varphi(r)}e_\psibar\biggl((-1)^{\nu(s)} \zeta_m^{(s^{-1})} \biggr)=\frac{(-1)^{\nu(s)}\varphi(m)}{\psibar(s)\varphi(r)}e_{\psibar}(\zeta_m)
+    \label{eq:trace}
+\end{equation}
+where $s^{-1}$ is the inverse of $s$ mod $m$.
+
+
+
+
+If we let $\DD_n$ be the set of Dirichlet characters modulo $n$, we can define the Stickelberger element as
+$$\Theta_n:= \sum_{\psi \in \DD_n} \LL_n\Bigl(E,\overline\psi\Bigr) e_\psi\in \Q_p[\zeta_{\varphi(n)}][\Gal(\Q(\mu_n)/\Q)]$$
+
+We can lower bound the $p$-adic valuation of the $\psi$-parts of $\Theta_n$ for certain characters. In order to do that, define 
+\begin{equation}
+k_\psi':=v_p\Biggl(\frac{1-a_p\psi(p)+\textbf{1}_N(p)\psi(p)^2}{p}\Biggr)
+\label{eq:kchi}
+\end{equation}
+
+\begin{proposition}
+Let $m\in \N$ be an integer prime to $Np$ and let $\psi$ be a character of conductor $m$, satisfying that $r(m,n)=n$ or, equivalently, that $\gcd(m,n/m)=1$. Then $\psi(\Theta_n)=\LL_n\Bigl(E,\psibar\Bigr)\in p^{k_\psi'}\Z_p[\psi]$.
+\label{prop:integrality_L}
+\end{proposition}
+
+\begin{proof}
+By assumption \ref{EManin} and \cite[theorem 2]{WiersemaWuthrich}, the primitive algebraic $L$-value, defined as $\LL\Bigl(E,\psibar\Bigr):=\frac{L(E,\psibar,1)}{\varphi(m)e_{\psi}(\zeta_m)\Omega^{\psi(-1)}}$ belongs to $\Z_p[\psi]$. It satisfies an explicit relation with $\LL_n\Bigl(E,\psibar\Bigr)$
+\[\LL_n(E,\psibar)=(-1)^{\nu(s)}\psi(s) \frac{\varphi(r)}{\varphi(n)} \prod_{\ell\in (S_n\cup\{p\})\setminus S_m} \left(\frac{\ell-a_\ell\psibar(\ell) +\textbf{1}_N(\ell)\psibar(\ell)^2}{\ell}\right)\ \LL\Bigl(E,\psibar\Bigr)\]
+When $r=n$, all of the terms in the right hand side belong to $\Z_p[\psi]$ with the possible exception of the Euler factor at $p$, which has $p$-adic valuation $k_\psibar'$, which is the same as the one of $k_\psi'$. Therefore,
+\[\LL_n\Bigl(E,\psibar\Bigr)\in p^{k_\psi'}\Z_p[\psi]\qedhere\]
+\end{proof}
+
+
+
+
+Stickelberger elements can be also defined for every abelian extension of $\Q$. If $F/\Q$ is an abelian extension of conductor $n$, consider the projection
+$$c_{\Q(\mu_n),F}:\ \Q_p[\Gal(\Q(\mu_n)/\Q)]\to \Q_p[\Gal(F/\Q)],\ \sigma\mapsto \sigma|_F$$
+
+\begin{definition}
+Let $F/\Q$ be an abelian extension of conductor $n$. Then we define the Stickelberger element of $F$ as
+$$\Theta_F:=c_{\Q(\mu_n),F} \Theta_n$$
+\end{definition}
+
+The way to relate the Stickelberger elements to Kato's Euler system is by considering their action on certain elements in $\Q(\mu_n)$.
+
+\begin{definition}
+For every $n\in \N$, consider the element
+$$\xi_n=\sum_{\tilde n\mid d\mid n}\zeta_d$$
+
+\end{definition}
+
+\begin{lemma}
+If $\psi$ is a Dirichlet character modulo $n$ of conductor $m$, then
+$$e_\psi(\xi_n)=e_\psi(\zeta_{r(m,n)})$$
+\label{lem:chi_xi}
+\end{lemma}
+
+\begin{proof}
+For every $d$ dividing $n$, let $d'=\textrm{gcd}(d,m)$. For every $\sigma\in \Gal(\Q(\mu_d)/\Q(\mu_{d'}))$, we can find a lift $\widetilde \sigma \in \Gal(\Q(\mu_n)/\Q(\mu_{d'}))$ such that 
+$$\begin{array}{cc}
+\widetilde \sigma\bigm|_{\Q(\mu_d)}=\sigma\textrm{ and }& \widetilde\sigma\bigm|_{\Q(\mu_m)}=\textrm{Id}|_{\Q(\mu_m)}
+\end{array}$$
+
+Since $\psi$ has conductor $m$,
+$$e_\psi(\sigma(\zeta_d))=e_\psi(\widetilde \sigma(\zeta_d))=e_\psi(\zeta_d)\ \forall \sigma\in \Gal(\Q(\mu_d)/\Q(\mu_{d'}))$$
+Therefore
+$$e_\psi(\zeta_d)=\frac{1}{[\Q(\mu_d):\Q(\mu_{d'})]} e_\psi(\Tr_{\Q(\mu_d)/\Q(\mu_{d'})} \zeta_d)$$
+
+Assume first that there is a prime $\ell$ such that $v_\ell(d)>v_\ell(m)\geq1$. Then $\gcd(d,m)\mid \frac{d}{\ell}$, so
+$$\Tr_{\Q(\mu_d)/\Q(\mu_{d'})} \zeta_d=\Tr_{\Q(\mu_{d/\ell})/\Q(\mu_{d'})}\left(\Tr_{\Q(\mu_d)/\Q(\mu_{d/\ell})} \zeta_d\right)$$
+However, $\Tr_{\Q(\mu_d)/\Q(\mu_{d/\ell})} \zeta_d=0$ because $\ell\mid \frac{d}{\ell}$. Indeed, $\zeta_d$ is a root of the polynomial $P(T)=T^\ell-\zeta_{d/\ell}$. Since $[\Q(\mu_d):\Q(\mu_{d/\ell})]=\ell$ because $\ell^2\mid d$, then $P(T)$ is irreducible. The sum of the roots of $P$ is zero and, hence, so is the trace of $\zeta_d$. Therefore, $e_\psi(\zeta_d)=0$ in this case.
+
+
+Given some $d$ such that the above prime $\ell$ does not exist, then $d\mid r$. Moreover, assume $d< r$. Since $\tilde n\mid d$, then $d'<m$
+$$e_\psi(\zeta_d)=\frac{1}{[\Q(\mu_d):\Q(\mu_{d'})]}e_{\psi}(\Tr_{\Q(\mu_d)/\Q(\mu_d')}\zeta_d)$$
+Since $\psi$ has conductor $m$, then $e_\psi(x)=0$ for every $x\in \Q(\mu_{d'})$ and, therefore, $e_\psi(\zeta_d)=0$.
+
+The only remaining term is $\zeta_{r}$, so 
+\[e_\psi(\xi_n)=\sum_{\tilde n\mid d\mid n} e_\psi(\zeta_d)=e_\psi(\zeta_{r})\]\qedhere
+\end{proof}
+
+
+The concept of $\xi_n$ extends naturally to abelian extensions of $\Q$. Assume $F/\Q$ is an abelian extension of conductor $n$. Define
+$$\xi_F:= \Tr_{\Q(\mu_n)/F} \xi_n$$
+
+
+\begin{corollary}
+If $F/\Q$ is an abelian extension of conductor $n$ and $\psi$ is a character of conductor $m$ whose fixed field contains $F$, then 
+$$e_\psi(\xi_F)=[\Q(\mu_n):F] e_\psi(\zeta_{r})$$
+\label{cor:chi_xi}
+\end{corollary}
+
+\begin{proof}
+Since $F$ contains the fixed field of $\psi$, by lemma \ref{lem:chi_xi},
+\[e_\psi(\xi_F)=[\Q(\mu_n):F] e_\psi(\xi_n)=[\Q(\mu_n):F] e_\psi(\zeta_{r})\]\qedhere
+\end{proof}
+
+We can compute
+$$e_\psi(\Theta_F(\xi_F))=\Theta_n e_\psi(\xi_F)=[\Q(\mu_n):F]\Theta_n e_\psi(\zeta_{r})=[\Q(\mu_n):F]\LL_n\Bigl(E,\psibar\Bigr)e_\psi(\zeta_{r})$$
+
+Thus,
+$$e_\psi(\Theta_F(\xi_F))=\frac{L_{S_n\cup\{p\}}(E,\psibar,1)}{[F:\Q]\Omega^{\psi(-1)}}\in F\otimes \Q_p$$
+
+Since that is true for all characters, we can conclude from equation \eqref{eq:kataoka_idemp} that
+\begin{equation}
+w_F=\Theta_F(\xi_F)\in F\otimes \Q_p
+\label{eq:Kato_MT}
+\end{equation}
+
+
+
+\subsection{Twisting of Kato's Euler system}
+\label{sec:twist}
+
+According to definition \ref{def:Kato_triple}, we are interested in studying the representation
+\[T(\chi):=T_pE\otimes \OO_d(\chi)\]
+where $\chi$ is a primitive character of $G$. In order to do that, we have to apply the twisting process of Euler systems described in \cite[\textsection II.4]{Rubin}. Define
+\begin{equation}
+z_{F,\chi}:=\textrm{cor}_{KF/F}(z_{KF}\otimes 1_\chi)
+\label{eq:euler_twist}
+\end{equation}
+where $1_\chi$ represents the unit element in $\OO_d(\chi)$.
+
+The goal of this section is to describe the dual exponetial of the twisted zeta element. In particular, with the notation of \eqref{eq:Kato_MT}, we want to show that this value coincides with the $\chibar$ part of $\Theta_{KF}(\xi_{KF})$.
+
+\begin{proposition} (\cite[proposition II.4.2]{Rubin})
+The collection $\{z_{F,\chi}\}_{F\in \Omega}$ is an Euler system for $T(\chi)$.
+\end{proposition}
+
+We will now describe the dual exponential map of \(V\otimes \OO_d(\chi)\). Note that \(V\) and \(V\otimes \OO_d(\chibar)\) are equal as $G_{(KF)_w}$-modules for every prime $w$ of $KF$ above $p$. Hence we can consider the exponential map
+
+\[\exp:\ \bigoplus_{w\mid p}\frac{(B_{\dR}\otimes V\otimes \OO_d(\chibar))^{G_{(KF)_w}}}{(B^+_{\dR}\otimes V\otimes \OO_d(\chibar))^{G_{(KF)_w}}}\to \bigoplus_{w\mid p}H^1_\FBK((KF)_w,V\otimes \OO_d(\chibar))\] 
+
+For every $w$, we have an isomorphism (depending on fixing a Weierstrass model for $E$)
+\[\frac{(B_{\dR}\otimes V\otimes \OO_d(\chibar))^{G_{(KF)_w}}}{(B^+_{\dR}\otimes V\otimes \OO_d(\chibar))^{G_{(KF)_w}}}\cong (KF)_w\otimes \OO_d(\chibar)\]
+
+Since \(G_{w/v}:=\Gal((KF)_w/F_v)\) is finite, then \(H^1\left((KF)_w/F_v,B_\dR^+\otimes V\otimes \chibar\right)=0\), so
+\[\left(\frac{\Bigl(B_{\dR}\otimes V\otimes \OO_d(\chibar)\Bigr)^{G_{(KF)_w}}}{\Bigl(B^+_{\dR}\otimes V\otimes \OO_d(\chibar)\Bigr)^{G_{(KF)_w}}}\right)^{G_w}=\frac{\Bigl(B_{\dR}\otimes V\otimes \OO_d(\chibar)\Bigr)^{G_{F_v}}}{\Bigl(B^+_{\dR}\otimes V\otimes \OO_d(\chibar)\Bigr)^{G_{F_v}}}\]
+
+By considering the direct sum over all $w\mid p$, the exponential map over $F_v$ can be written as
+\[\exp_{\omega_E,\chibar}:\ \Bigl(KF\otimes \Q_p\otimes \OO_d(\chibar)\Bigr)^{\Gal(KF/F)}\to \bigoplus_{v\mid p} H^1_\FBK\Bigl((F_v,V\otimes \OO_d(\chibar))\Bigr)\]
+
+Note that the first term is the $\chi$-part of $KF\otimes \Q_p$. Hence the dual exponential map can be written as 
+\[\exp^*_{\omega_E,\chibar}:\ \bigoplus_{v\mid p} H^1_{/\FBK}(F_v,V\otimes \OO_d(\chi))\to \Hom\Bigl(e_\chi(KF\otimes L),\Q_p\Bigr)\cong e_{\chibar}\Bigl((KF)\otimes L\Bigr)\]
+where we denote $L=\OO_d\otimes \Q_p$ and the last isomorphism comes from the fact that the identification in \eqref{eq:dual_trace} is Galois equivariant. Note that we are also using \eqref{eq:dual_trace} to identify \(\Hom(L,\Q_p)\cong L\).
+
+In an abuse of notation, we will also denote by $\exp_{\omega_E,\chibar}^*$ to the following map
+\[\exp^*_{\omega_E,\chibar}:\ H^1(F,V\otimes \OO_d(\chi))\to \bigoplus_{v\mid p} H^1_{/\FBK}(F_v,V\otimes \OO_d(\chi))\to e_\chibar((KF)\otimes L)\]
+
+
+
+Now we will describe how the twisting process in \eqref{eq:euler_twist} is reflected in the images of the dual exponential map. 
+
+First note that over $KF$, the map $\exp_{\omega_E,\chibar}^*$ coincides with $\exp_{\omega_E}^*\otimes \OO_d(\chi)$. Hence we just need to see how $\exp_{\omega_E,\chibar}^*$ behaves under the corestriction. 
+
+\begin{proposition}
+Let $c\in H^1(F,V\otimes \OO_d(\chi))$ and $d=\cor_{KF/F} c\in H^1(KF,V\otimes \OO_d(\chi))$. Then
+\[\exp_{\omega_E,\chibar}^*(d)=N_{KF/F}\exp_{\omega_E,\chibar}^*(c)\in (KF\otimes \Q_p\otimes \OO_d(\chi))^{G_F}\]
+\label{prop:exp_cor}
+\end{proposition}
+
+\begin{proof}
+Localising at primes above $p$, we have that
+\[\loc_{p}^s(d)=\left(\bigoplus_{w\mid p} \cor_{(KF)_w/F_v}\right) (\loc_p^s(c))\]
+
+
+By \cite[propostion 1.5.3 (iv)]{NSW}, if we understand $\loc_p^s(c)\du$ and $\loc_p^s(d)\du$ as maps into the duals of the finite cohomology groups, we have that 
+\[\loc_{p}^s(c)\du=\loc_{p}^s(d)\du\circ\left(\bigoplus_{w\mid p}\res_{(KF)_w/F_v}\right)\]
+
+By \cite[proposition 1.5.2]{NSW}, the following digram is commutative 
+
+
+\begin{center}
+    \begin{tikzpicture}[descr/.style={fill=white,inner sep=1.5pt}]
+    
+            \matrix (m) [
+                matrix of math nodes,
+                row sep=4em,
+                column sep=5em,
+                text height=1.5ex, text depth=0.25ex
+            ]
+            {  (KF\otimes \Q_p\otimes \chibar)^{G_F}  &    \bigoplus_{v\mid p} H^1_\f(F_v,V\otimes \chibar)   & \Q_p\\
+            KF\otimes \Q_p\otimes \chibar  &    \bigoplus_{w\mid p} H^1_\f((KF)_w,V\otimes \chibar)   & \Q_p\\
+            };
+    
+            \path[overlay,->, font=\scriptsize,>=latex]
+            (m-1-1) edge node[auto]{$\exp_{\omega_E}$} (m-1-2)
+            (m-1-2) edge node[auto]{$\loc_p^s(d)\du$} (m-1-3) 
+
+            %(m-1-3) edge (m-1-4) 
+            %(m-1-3) edge[out=355,in=175] node[descr,yshift=0.3ex] {$\delta^n$} (m-2-1)
+            (m-2-1) edge node[auto]{$\exp_{\omega_E}$} (m-2-2)
+            (m-2-2) edge node[auto]{$\loc_p^s(c)\du$}(m-2-3)
+            (m-1-1) edge node[auto]{$\subset$}(m-2-1)
+            (m-1-2) edge node[auto]{$\bigoplus_{v\mid p} \res$} (m-2-2)
+            (m-1-3) edge node[auto]{$=$} (m-2-3);
+    
+    
+    
+    \end{tikzpicture}
+    \end{center}
+
+Therefore, $\exp^*_{\omega_E,\chi}(d)$ is the restriction to $(KF\otimes\Q_p\otimes \chibar)^{G_F}$ of $\exp^*_{\omega_E,\chi}(c)$. Under the identification \eqref{eq:dual_trace}, that means
+\[\exp_{\omega_E,\chi}^*(d)=N_{KF/F}\exp_{\omega_E,\chi}^*(c)\]
+\end{proof}
+
+
+
+If $K\cap F=\Q$, the dual exponential map of the twisted Kato's Euler system is 
+\[w_{F,\chi}:=\exp_{\omega_E,\chibar}^*(z_{F,\chi})=N_{KF/F}(\exp_{\omega_E,\chibar}^*(z_{KF}\otimes 1_\chi))=[K:\Q]e_\chibar(\omega_{KF})\]
+
+By equation \eqref{eq:Kato_MT},
+\begin{equation}
+w_{F,\chi}=[K:\Q]e_{\chibar}(\Theta_{KF}(\xi_{KF}))= d\, e_\chibar(\Theta_{KF})(\xi_{KF})
+\label{eq:twisted_omega}
+\end{equation}
+
+
+
+\begin{remark}
+\label{rem:katos_equal}
+Kato's theory is not exclusive for elliptic curves, but can be done for modular forms. In particular, we can apply it to the modular form $f_\chi$, for some character $\chi$ of $G$, in order to obtain an Euler system $z_{F}^\chi\in H^1\bigl(F,V\otimes \OO_d(\chi)\bigr)$ satisfying the interpolation property. It is essentially the same Euler system as the one defined in \eqref{eq:euler_twist}.
+
+Let $g$ be a modular form and let $K_g$ be its field of coefficients. Let $\lambda$ be a prime of $K_g$ above $p$. Kato defined in \cite[\textsection 6.3]{Kato} the $\Q_p$-vector space $V_{K_{g,\lambda}}(g)$ to be the maximal Hecke eigenquotient of $H^1_{\textrm{ét}}(Y_1(N),K_{g,\lambda})$ associated to $g$. Every $\gamma\in V_{K_{g,\lambda}(g)}$ can be used to construct an Euler system $z_\gamma$ which can be characterised by an interpolation property.
+
+If we denote $S(g)$ to the Hecke eigenspace of $S_2(Y_1(N))$ containing $g$ and $V_\C(g)=V_{K_g,\lambda}(g)\otimes_{K_{g,\lambda}}\C$, the period map defined in \cite[\textsection 4.10]{Kato} induces a map
+\[\per:\ S(g)\to V_{\C}(g)\]
+Let $F$ be a number field and let $\psi$ be a character of $\Gal(F/\Q)$. Then the interpolation property for $z_\gamma$ can be written as
+\[\sum_{\sigma\in \Gal(F/\Q)} \psi(\sigma) \per\bigl(\sigma(\exp^*(\loc_s^p(z_{\gamma,F})))\bigr)^{\psi(-1)}=L_{S_F\cup\{p\}}(g,\chi,1)\gamma^{\psi(-1)}\]
+where, for some $\eta\in V_{K_g,\lambda}(g)$, $\eta^{\pm}$ denotes the projection of $\eta$ to the eigenspace in which the complex conjugation acts by multiplication with $\pm$. Note that \eqref{eq:kataoka_interp} can be obtained after choosing a suitable $\gamma_0$ (see \cite[theorem 6.1]{Kataoka21}). 
+
+This interpolation property can be used to compare the $\chi$-twisted Euler systems constructed for $f$ in \eqref{eq:euler_twist}, denoted by $z^f_{F,\chi}$ and the Euler system for $f_\chi$, constructed for a suitable $\gamma\in V_{L_{\lambda}}(f_\chi)$, where $\lambda$ is a prime of $L$ above $p$. This Euler system will be denoted by $z_{\gamma_F}^{f_\chi}$.
+
+We follow the argument in \cite[\textsection 14.6]{Kato}. There is an isomorphism of Galois representations 
+\begin{equation}\Psi:\ V_{\Q_p}(f)\otimes L_\lambda(\chi)\cong V_{L_\lambda}(f_\chi)
+\label{eq:Kato146}
+\end{equation}
+
+Choose $\gamma=\Psi(\gamma_0\otimes 1)$. Note that $\gamma^{\pm\chi(-1)}=\Psi(\gamma^{\pm}\otimes 1)$.
+The isomorphism in \eqref{eq:Kato146} induces an isomorphism of cohomology groups:
+\begin{equation}
+H^1(F,V_{\Q_p}(f)\otimes L_\lambda(\chi))\cong H^1(F,V_{L_{\lambda}}(f_\chi))
+\label{eq:iso_coh}
+\end{equation}
+
+Choose $\gamma$ the image of $\gamma_0\otimes 1$ under the isomorphism 
+
+
+
+ We claim that $z_{\gamma,F}^{f_\chi}$ is the image of $z_{\chi,F}^f$ under the isomorphism in \eqref{eq:iso_coh}. Consider the commutative diagram
+
+
+\begin{center}
+    \begin{tikzpicture}[descr/.style={fill=white,inner sep=1.5pt}]
+    
+            \matrix (m) [
+                matrix of math nodes,
+                row sep=4em,
+                column sep=4em,
+                text height=1.5ex, text depth=0.25ex
+            ]{
+            H^1(F,V_{\Q_p}(f)\otimes L_\lambda(\chi)) &
+            S(f)\otimes L_\lambda(\chi)  &
+            V_\C(f)  \\
+            H^1(F,V_{L_{\lambda}}(f_\chi)) &
+            S(f_\chi)\otimes L_\lambda  &
+            V_\C(f_\chi)\\
+            };
+    
+            \path[overlay,->, font=\scriptsize,>=latex]
+            (m-1-1) edge node[auto]{$\exp^*$} (m-1-2)
+            (m-1-2) edge node[auto]{$\per$} (m-1-3)
+            (m-2-1) edge node[auto]{$\exp^*$} (m-2-2)
+            (m-2-2) edge node[auto]{$\per$} (m-2-3)
+            (m-1-1) edge node[auto]{$\sim$} (m-2-1)
+            (m-1-3) edge node[auto]{$\sim$} (m-2-3);
+
+    \end{tikzpicture}
+    \end{center}
+
+Following \cite[(6.3)]{Kataoka21}, we can compute the image of the zeta elements under the composition $\per\circ \exp^*$. If $\psi$ is a character of $\Gal(F/\Q)$, we have that
+\[\begin{aligned}
+& (\per\circ \exp^*)\biggl(e_\psi\Bigl(z_{F,\chi}^f\Bigr)\biggr)=L_{S_F\cup\{p\}}(E,\chi\psi,1) (\gamma_0^{\chi\psi(-1)}\otimes 1_\C)\\
+&(\per\circ \exp^*)\biggl(e_\psi\Bigl(z_{\gamma,F}^{f_\chi}\Bigr)\biggr)=L_{S_F\cup\{p\}}(f_\chi,\psi,1) (\gamma^{\psi(-1)}\otimes 1_\C)
+\end{aligned}\]
+
+Since $L_{S_F\cup\{p\}}(E,\chi\psi)=L_{S_F\cup\{p\}}(f_\chi,\psi)$ and $\gamma_0^{\chi\psi(-1)}\otimes 1_\C$ is identified with $\gamma^{\psi(-1)}\otimes 1_\C$ under the isomorphism on the right, the images of both zeta elements are the same under the identifications made. Since the compositions $\per\circ\exp^*$ are injective maps, we can conclude that both zeta elements are identified under the isomorphism
+ \[H^1(F,V_{\Q_p}(f)\otimes L_\lambda(\chi))\cong H^1(F,V_{L_{\lambda}}(f_\chi))\]
+\end{remark}
+
+
+
+
+
+
+
+
+\subsection{Mazur-Tate elements and Kolyvagin derivative}
+\label{sec:MT}
+
+
+
+Using the interpolation in \eqref{eq:kataoka_idemp}, we can relate $\omega_F$ to  Mazur-Tate elements defined in \cite{MazurTate}. The main advantage of this relation is that Mazur-Tate elements have an explicit formula in terms of the modular symbols defined in \eqref{eq:modular_symbol}, which is a key fact in the relation between Kato's Euler system and the Kurihara numbers.
+\begin{definition}
+Let $n\in \Z$. The \emph{Mazur-Tate modular element} for $n$ is defined as
+$$\theta_{n}=\sum_{a\in (\Z/n\Z)^*} \left(\left[\frac{a}{n}\right]^++\left[\frac{a}{n}\right]^-\right) \sigma_a \in \Z_p[\Gal(\Q(\mu_n)/\Q)]$$
+where $\sigma_a$ is the element of $\Gal(\Q(\mu_n)/\Q)$ that sends $\zeta_n$ to $\zeta_n^a$. The integrality of the Mazur-Tate modular elements holds true under assumption \ref{EManin}.
+\end{definition}
+
+Mazur-Tate elements can be also defined for abelian extensions of $\Q$.
+
+\begin{definition}
+Let $F/\Q$ be an abelian extension of conductor $n$. Then the Mazur-Tate element of $F$ is defined as 
+$$\theta_F:=c_{\Q(\mu_n)/F} \theta_n$$
+\end{definition}
+
+Mazur-Tate elements can be related to special $L$-values by using the Birch's formula (see \cite[formula (8.6)]{MTT})
+
+\begin{proposition}(\cite[\textsection 1.4]{MazurTate},\cite[lemma 6, proposition 7]{WiersemaWuthrich})
+If $\psi$ is a Dirichlet character of conductor $n$, then
+$$\psi(\theta_n)=\frac{n}{\varphi(n) e_\psi(\zeta_n)} \frac{L_{S_n}(E,\psibar,1)}{\Omega^{\psi(-1)}}\in\Z_p[\psi]$$
+where $S_n$ is the set of primes dividing $n$ and $\varphi(n)$ is the Euler totient function. Note that the product $\varphi(n) e_{\psi}(\zeta_n)$ coincides with the Gauss sum $\tau(\psibar)$.
+\label{prop:MT_interpolation}
+\end{proposition}
+
+For primitive characters, the $\psi$ parts of the Mazur-Tate element are easily comparable using the $\psi$ parts of $\Theta_n$.
+
+\begin{corollary}
+If $\psi$ is a Dirichlet character of conductor $n$, then
+$$\psi(\Theta_n)=\frac{1}{n}\psi(\theta_n)(1-p^{-1} a_p \psibar(p)-p^{-1}\textbf{1}_{N}(p) \psibar(p)^2)$$
+\label{cor:Theta_MT}
+\end{corollary}
+
+
+For every $n\in \NN_k$, recall that $\Q(n)$ is the maximal $p$-subextension inside $\Q(\mu_n)$ and let $K(n):=K\Q(n)$. Note that there is a canonical identification
+\begin{equation}
+\Gal(K(n)/\Q)=\Gal(K/\Q)\times \Gal(\Q(n)/\Q)=G\times \GG_n
+\label{eq:K(n)_prod}
+\end{equation}
+
+We can use corollary \ref{cor:Theta_MT} to compare $\Theta_{K(n)}$ and $\theta_{K(n)}$ as elements in the group ring $\Z_p[\Gal(K(n)/\Q)]$. We follow the process in \cite{Ota18} and \cite{KimKimSun}. However, in our case, we only have the equality for the primitive character parts. That implies that both elements are not necessarily equal, but they are related enough so we can compare their Kolyvagin derivatives.
+
+
+Consider the element
+$$\Upsilon_{K(n)}:=\Theta_K(n)-\frac{1}{n}(1-p^{-1} a_p \Frob_p^{-1}-p^{-1} \textbf{1}_{N}(p) \Frob_p^{-2})\theta_{K(n)}\in \Z_p[G]$$
+
+The following result can be deduced from corollary \ref{cor:Theta_MT}
+\begin{corollary}
+For every primitive character $\psi$ of $\Gal(K(n)/\Q)$, we have that
+$$e_\psi \Upsilon_{K(n)}=0$$
+\label{cor:ups_interp}
+\end{corollary}
+
+Recall that $\chi$ was a primitive character of $\Gal(K/\Q)$ which was                                              used to construct $T(\chi)$. Using the identification in equation \eqref{eq:K(n)_prod}, we can consider $\chi(\Theta_n)$ and $\chi(\theta_n)$ as elements in $\Z_p[\chi][\GG_n]$. For every Dirichlet character $\psi$ of conductor $n$, then $\chi\times \psi$ is a primitive character of $\Gal(K(n)/\Q)$ and we have that 
+$$e_{\chi\times \psi} \Upsilon_{K(n)}=0$$
+
+Hence
+\begin{equation}
+\chi\left(\Theta_{K(n)}-\frac{1}{n} (1-p^{-1} a_p \Frob_p^{-1}+p^{-1}\textbf{1}_{N}(p)  \Frob_p^{-2}) \theta_{K(n)}\right)=\sum_{\ell|n} \nu_{n,n/\ell}\ \alpha_{n,\ell}
+\label{eq:psi}
+\end{equation}
+where $\nu_{n,n\ell}:\ \Q_p[\zeta_{cn}][\GG_{n/\ell}]\to \Q_p[\zeta_{cn}][\GG_n]$ is the norm map and $\alpha_{n,\ell}$ is certain element in $ \Q_p[\zeta_{cn}][\GG_{n\ell}]$, which we do not need to determine explicitly.
+
+For every character $\psi'$ of $\Gal(\Q(n)/\Q)$ (not necessarily primitive), $\chi\times \psi'$ has conductor $m$ satisfying that $r(m,cn)=cn$. Therefore, proposition \ref{prop:integrality_L} implies that $\chi(\Theta_{K(n)})\in p^{k_\chi'} \Z_p[\GG_n]$. Hence $\alpha_{n,\ell}\in p^{k_\chi'}\Z_p[\zeta_{cn}][\GG_{n/\ell}]$ for every prime divisor $\ell$ of $n$.
+
+
+
+That is enough to relate the Kolyvagin derivatives of the (primitive) character parts of $\Theta_{K(n)}$ and $\theta_{K(n)}$.
+
+\begin{proposition}
+Let $\chi$ be a primitive character of $\Gal(K/\Q)$ and let $n\in \NN_k,$. Then the Kolyvagin derivative, defined in definition \ref{def:kol_der} can be computed as
+$$D_n\chi(\Theta_{K(n)})\equiv\frac{1}{n} \left(1-p^{-1} a_p \chibar(p) +p^{-1} \textbf{1}_{N}(p)\chibar(p)^2\right)D_n\chi(\theta_{K(n)}) \mod p^{k+k_\chi'} \Z_p[\chi] [\GG_n]$$
+
+\label{prop:kol_der_comp}
+\end{proposition}
+
+\begin{proof}
+Note that, since $\Gal(K(n)/\Q)$ is abelian,
+
+\[\begin{aligned}
+&D_n\left(\chi\left((1-p^{-1} a_p \Frob_p^{-1}+p^{-1} \textbf{1}_{N}(p)\Frob_p^{-2}) \theta_{K(n)}\right)\right)=\\
+&\chi\left(1-p^{-1} a_p \Frob_p^{-1}-p^{-1} \Frob_p^{-2}\right)D_n(\chi(\theta_{K(n)}))=\\
+&(1-p^{-1} a_p \chibar(p)+p^{-1}\textbf{1}_{N}(p) \chibar(p)^2)D_n(\chi(\theta_{K(n)}))
+\end{aligned}\]
+By equation \eqref{eq:psi}, it is enough to prove that, for every prime divisor $\ell$ of $n$,
+$$D_n\, \nu_{n,n/\ell} \alpha\in p^{k+k_\chi'} \Z_p[\psi] [\GG_n]$$
+for every $\alpha \in  p^{k_\chi'}\Z_p[\psi] [\GG_{n/\ell}]$. In fact, since $ \nu_{n,n/\ell} \alpha$ is $\GG_\ell$ invariant, then 
+$$D_\ell \nu_{n,n/\ell} \alpha=\frac{p^{n_\ell}(p^{n_\ell}-1)}{2}  \nu_{n,n/\ell} \alpha \in p^{k+k'_\chi} \Z_p[\psi] [\GG_n]$$
+since $\ell\in \PP_k$. Thus
+\[D_n \nu_{n,n/\ell} \alpha=D_{n/\ell} D_\ell \nu_{n,n/\ell} \alpha\in p^{k+k'_\chi} \Z_p[\psi] [\GG_n]\]\qedhere
+\end{proof}
+
+
+
+
+By proposition \ref{prop:rub442}, for every $n\in \NN_k$, $D_n z_{K\Q(n)}$ is invariant under the action of $\GG_n$ modulo $p^k$. Consequently, $D_n \Theta_{K\Q(n)}$ and, therefore, $D_n\theta_{K\Q(n)}$ are $\GG_n$-invariants modulo $p^k$. This is equivalent to
+$$D_n\Theta_{K(n)}(\zeta_{K(n)}),\ D_n\theta_{K(n)}(\zeta_{K(n)})\in K\otimes \Q_p$$
+
+In order to compute this value, proposition \ref{prop:logs_formula} below is very useful. Before stating it, we need to define a $p$-primary logarithm in $(\Z/\ell)^\times$.
+
+
+\begin{definition}
+Assume $H$ is a finite cyclic group whose order is exactly divisible by $p^k$ for some $k\in \N$. If $x$ is a generator of the $p$-primary part $H$, then for every $a\in H$ we will define $\log_x(a)$ to be the unique element in $y\in \Z/p^k$ such that $a^{-1}x^y$ has order prime to $p$.
+\label{def:logarithm}
+\end{definition}
+
+\begin{remark}
+Given two generators $x_1$ and $x_2$ of the $p$-primary part of $H$, the logarithms $\log_{x_1}(a)$ and $\log_{x_2}(a)$ have the same $p$-adic valuation.
+\label{rem:logs_val}
+\end{remark}
+
+\begin{proposition}(\cite[lemma 3.11]{Sakamoto21}) 
+Let $R$ be a ring, let $n=\ell_1\cdots\ell_s\in\NN_k$ and let 
+$$\theta=\sum_{\sigma\in \GG_n} a_\sigma\sigma \in R[\GG_n]$$
+be an element such that $D_n\theta$ is Galois invariant modulo $p^k$. Then 
+$$D_n\theta\equiv\sum_{\sigma \in \GG_n} a_\sigma \prod_{\ell\mid n}\log_{\tau_\ell}(\sigma) N_n\mod p^k R[\GG_n]$$
+where $N_n=\sum_{\sigma\in \GG_n} \sigma$ is the norm element and $\tau_\ell$ is the generator of $\GG_\ell$ used to define the Kolyvagin derivative.
+\label{prop:logs_formula}
+\end{proposition}
+
+\begin{proof}
+Denoting $T_i=\tau_{\ell_i}-1$ for every $i$, we can write
+$$D_n\theta=\sum_{i_1=1}^{\beta_{\ell_1}} \cdots\sum_{i_s=1}^{\beta_{\ell_s}} a_{\tau_{\ell_1}^{i_1}\cdots \tau_{\ell_s}^{i_s}} D_n(1+T_{\ell_1})^{i_1}\cdots (1+T_{\ell_s})^{i_s}$$
+where $\beta_{\ell_i}:=\#\GG_{\ell_i}$. Modulo $p^k$, equation \eqref{eq:kol_der} implies that $D_nT_{\ell_i}=-N_{\ell_i}$ and $D_nT_{\ell_i}^2=0$. Thus
+$$D_n\theta \equiv a_{\tau_{\ell_1}^{i_1}\cdots \tau_{\ell_s}^{i_s}} (1-i_1 N_{\ell_1})\cdots (1-i_s N_{\ell_s}) \mod p^k$$
+
+Since $D_n\theta$ is Galois invariant, the only non-vanishing summand in the right hand side is the multiple of $N_{\ell_1}\cdots N_{\ell_s}$. Since $i_i=\log_{\tau_{\ell_i}}(\sigma)$, we have
+\[D_n\theta\equiv (-1)^{\nu(n)} \sum_{\sigma\in \GG_n} a_\sigma \prod_{\ell\mid n} \log_{\tau_\ell}(\sigma)\mod p^k\]\qedhere
+\end{proof}
+
+Proposition \ref{prop:logs_formula} motivates definition \ref{def:kurihara_numbers} of the (twisted) Kurihara numbers.
+
+%\begin{definition}
+%Let $\chi$ be a Dirichlet character of conductor $c$ and let $n\in \NN_k$. For every prime divisor $\ell$ of $n$, fix a generator $\eta_\ell$ of $(\Z/\ell)^*$. The $\chi$-twisted Kurihara number $\delta_{n,\chi}$ is defined as
+%$$\delta_{n,\chi}:=\sum_{a\in (Z/nc)^*} \chi(a) \left(\left[\frac{a}{nc}\right]^++\left[\frac{a}{nc}\right]^-\right)\left(\prod_{\ell|n} \log_{\eta_\ell}(a)\right)\in \Z/p^k[\chi]$$
+%Recall that $\log_{\eta_\ell}$ is defined in definition \ref{def:logarithm}.
+%\label{def:tw_kur_num}
+%\end{definition}
+
+\begin{remark}
+The definition of $\delta_{n,\chi}$ depends on the choices of the generators $\eta_\ell\in (\Z/\ell)^\times$ for every $\ell\mid n$. However, by remark \ref{rem:logs_val}, the $p$-adic valuation of $\delta_{n,\chi}$ is well defined independently of the choices made in the construction of $\delta_{n,\chi}$.
+
+\end{remark}
+
+From propositions \ref{prop:kol_der_comp} and \ref{prop:logs_formula}, we obtain the following.
+\begin{corollary}
+For every primitive character $\chi$ of $\Gal(K/\Q)$ and every $n\in \NN_k$,
+\[D_n e_\chi(\Theta_{cn})\equiv \frac{\varphi(n)}{n}(1-p^{-1} a_p \chibar(p) +p^{-1}\textbf{1}_N(p) \chibar(p)^2) \delta_{n,\chibar}e_{\chi\times\textbf{1}_n}\]
+modulo $\frac{p^{k+k_\chibar'}}{\varphi(c)}\Z_p[\chi][G_{\Q(\mu_c)/\Q}\times\GG_n]$.
+%where $k'_\chi:=v_p\left(1-p^{-1} a_p \chibar(p) +\textbf{1}_{N}(p)p^{-1} \chibar(p)^2\right)$
+\label{cor:Theta_delta_cn}
+\end{corollary}
+
+\begin{proof}
+Since $D_n\chi(\theta_{cn})\equiv  \delta_{n,\chibar} N_n=\delta_{n,\chibar} \varphi(n) e_{\textbf{1}_n}\mod p^k \Z_p[\GG_n]$ by proposition \ref{prop:logs_formula}, the congruence holds modulo $p^{k+k'_\chibar}\varphi(c)^{-1}$ after multiplying both sides by the Euler product $\left(1-p^{-1} a_p \chibar(p) +\textbf{1}_{N}(p)p^{-1} \chibar(p)^2\right)$ and by the idempotent element. Thus, the corollary follows from proposition \ref{prop:kol_der_comp}.
+\end{proof}
+
+We can adapt corollary \ref{cor:Theta_delta_cn} to describe the $\chi$-part of $\Theta_{K(n)}$ in terms of the Kurihara numbers.
+
+\begin{corollary}
+For every primitive character $\chi$ of $\Gal(K/\Q)$, we have that 
+\[D_n e_\chi(\Theta_{K(n)})=\frac{\varphi(n)}{n} (1-p^{-1} a_p\chibar(p)+p^{-1}\textbf{1}_{N}(p)\chibar(p)^2)\delta_{n,\chibar} e_{\chi\times \textbf{1}_n}\]
+modulo $p^{k+k_\chibar'}\Z_p[\chi][G\times \GG_n]$.
+\label{cor:Theta_delta_Kn}
+\end{corollary}
+
+\begin{proof}
+It follows from corollary \ref{cor:Theta_delta_cn}, projecting the congruence to $\Z_p[\chi][G\times G_n]$. 
+
+Since both sides of that equation are invariant under the action of the Galois group $\Gal(\Q(\mu_c)/K)$, whose order is $\varphi(c)/d$, we can remove the denominator $\varphi(c)$ from the ideal of the congruence.
+\end{proof}
+
+
+By equation \eqref{eq:twisted_omega}, we obtain the following corollary.
+
+
+\begin{corollary}
+For every primitive character $\chi$ of $\Gal(K/\Q)$ and every $n\in \NN_k$, modulo ${p^{k+k'_\chi}}\Z_p[G\times\GG_n](\xi_{K(n)})$, we have that
+\[D_n (w_{\Q(n),\chi})\equiv  \frac{(-1)^{\nu(n)}\chi(n) }{n }(1-p^{-1} a_p \chi(p) +p^{-1}\textbf{1}_{N}(p) \chi(p)^2) \delta_{n,\chi}\varphi(c)e_\chibar(\zeta_c)\]
+\label{cor:omega_delta_}
+\end{corollary}
+
+\begin{proof}
+By the transitivity of the trace,
+\[\Tr_{K(n)/K}(\xi_{K(n)})=\Tr_{\Q(\mu_{nc})/K}\left(\sum_{n\widetilde{c}\mid d\mid nc} \zeta_d\right)=(-1)^{\nu(n)}\ \Tr_{\Q(\mu_c)/K}\left(\sum_{\widetilde c|d|c} \zeta_d^{(n^{-1})}\right)\]
+Denote
+\[\widetilde \xi_K=\Tr_{\Q(\mu_c)/K}\left(\sum_{\widetilde c|d|c} \zeta_d^{(n^{-1})}\right)\]
+
+Since $\chi$ has conductor $c$, by corollary \ref{cor:chi_xi}
+\[e_{\chi\times \textbf{1}_n}(\xi_{K(n)})=\frac{(-1)^{\nu(n)}}{\varphi(n)}e_{\chi}(\widetilde \xi_K)=\frac{(-1)^{\nu(n)}\chibar(n)}{\varphi(n)}[\Q(\mu_c):K]  e_\chi(\zeta_c)\]
+Since $[\Q(\mu_c):K]=\frac{\varphi(c)}{d}$, by equation \eqref{eq:twisted_omega} and corollary \ref{cor:Theta_delta_Kn}, we obtain that
+\[D_n (w_{\Q(n),\chi})\equiv  \frac{(-1)^{\nu(n)}\chi(n) }{n}(1-p^{-1} a_p \chi(p) +p^{-1} \chi(p)^2) \delta_{n,\chi}\varphi(c)e_\chibar(\zeta_c)\qedhere\]
+\end{proof}
+
+
+
+
+
+
+
+\subsection{Image of Bloch-Kato dual exponential map}
+\label{sec:exp_im}
+
+%Applying the twisting process in \cite[section 2.4]{Rubin} and the Kolyvagin derivative process \cite[theorem 3.2.4]{MazurRubin} to Kato's Euler system would give a non-zero Kolyvagin system $\kappa_\chi=(\kappa_{n\chi})_{n\in\NN(\PP)}$ for $(T\otimes O(\overline\chi), \Fcan,\PP)$. \textcolor{red}{Possibly delete}
+
+
+
+%Let $\omega_E$ be a Neron differential and let $\p$ be a prime of $K$ above $p$. The exponential map can be defined over $K_\p$
+%$$\exp:\ K_\p\omega_E^*\xrightarrow{\sim} E(K_\p)\otimes \mathbb Q_p$$
+%
+%By Tate duality, there is an isomorphism
+%\begin{equation}
+%\exp^*:\ H^1_s(K_\p,V)\xrightarrow{\sim} \Hom(K_\p,\Q_p)\omega_E\xrightarrow{\sim} \Hom(K_\p,\Q_p)\xrightarrow{\sim} K_\p
+%\label{eq:tr}
+%\end{equation}
+%where the last map is induced by the non-degenerate bilinear map $$K_\p\times K_\p \to \Q_p,\ (x,y)\mapsto \textrm{Tr}(xy)$$
+
+In \textsection \ref{sec:exp}, we have introduced the dual exponential map
+$$\exp_{\omega_E}^*:\ H^1_{/\FBK}(K_\p,V)\xrightarrow{\sim} K_\p$$
+where $K_\p$ is the completion of $K$ at a prime $\p$ above $p$. However, the group we are interested in is $H^1_{/\FBK}(K_\p,T)$. Hence we want to know the image of the composition map
+$$H^1_{/\FBK}(K_\p,T)\to H^1_{/\FBK}(K_\p,V)\to K_\p$$
+
+%We are interested on the image of $H^1_s(K_\p,T)\subset H^1_s(K_\p,V)$ under the dual exponential map. We can identify
+%$$\xymatrix{H^1_s(K_\p,V)\ar[r]^{\sim\ \ \ \ \ } &\Hom(E(K_\p), \Q_p)\\ H^1_s(K_\p,T)\ar[u]\ar[r]^{\sim\ \ \ \ \ } & \Hom(E(K_\p),\Z_p)\ar[u]}$$
+
+By the identifications we have made so far, some $z\in H^1_{/\FBK}(K_\p,T)$ is identified under local Tate duality to the map
+$$E(K_\p)\otimes \Q_p\to \Q_p,\ x\mapsto \textrm{Tr}_{K_\p/\Q_p}(\exp_{\omega_E}^*(z)\log_{\omega_E}(x))$$
+Hence an element $y\in K_\p$ belongs to $\exp_{\omega_E}^*(H^1_{\FBK}(K_\p,T))$ if and only if
+\begin{equation}
+\textrm{Tr}_{K_\p/\Q_p}(y\log_{\omega_E}(x))\in \mathbb Z_p\ \forall x\in E(K_\p)
+\label{eq:im_tr}
+\end{equation}
+where the logarithm is the extension of the one defined in the formal group of the elliptic curve.
+
+
+%To give an explicit description of this image, we can look at the character parts of $K_\p$ for every character of $\Gal(K_\p/\Q_p)$, since the dual exponential map is equivariant. In this decomposition it is easy to compute the image of the logarithm. Indeed,
+Denote by $\OO_\p$ and $\m_\p$ to the ring of integers of $K_\p$ and its maximal ideal, respectively. Denote by $E_1(K_\p)$ the kernel of the reduction map and $E_0(K_\p)$ the points whose reduction is a non-singular point. Since $K_\p/\Q_p$ is unramified by \ref{Kur}, the logarithm induces an isomorphism
+$$\log_{\omega_E}: E_1(K_\p)\xrightarrow{\sim} \m_\p$$
+To describe the image $\log_{\omega_E}(E(K_\p))$, we look at the $\chi$-part of this map for the different characters $\chi$ of $\Gal(K_\p/\Q_p)$. By \ref{Kloc}, $E(K_\p)_\chi$ is free of rank one over $\OO[\chi]$.  Since $p$ does not divide the Tamagawa number $c_\p$ by \ref{Ktam}, then the quotient $E(K_\p)/E_0(K_\p)$ has order prime to $p$. Therefore
+$$\log_{\omega_E}(E(K_\p))=\log_{\omega_E}(E_0(K_\p))$$
+
+Consider the exact sequence
+$$\xymatrix{0\ar[r] & E_1(K_\p)\ar[r] & E_0(K_\p)\ar[r] &\widetilde E_0(\kappa_\p)\ar[r] & 0}$$
+where $\widetilde E_0(\kappa_\p)$ denote the groups of non-singular points of the reduced curve modulo $\p$. Since $[K_\p:\Q_p]$ is prime to $p$ by \ref{Kdeg}, the sequence remains exact after taking $\chi$-parts. Since $E(K_\p)[p]=0$ by \ref{Kloc}, we have that
+$$\log_{\omega_E}(E_0(K_p)_\chi)=\frac{1}{p^{\length(\widetilde E_0(\kappa_\p)[p^\infty]_{\chi})}} \log_{\omega_E}(E_1(K_p)_\chi)$$
+
+
+
+Since $K_\p/\Q_p$ is unramified by \ref{Kur}, then $\log_{\omega_E}(E_1(K_\p)_\chi)=(\m_\p)_{\chi}=p(\OO_\p)_\chi$ and
+\begin{equation}
+\log_{\omega_E}(E(K_\p)_\chi)=\frac{p}{p^{\length(\widetilde E_0(\kappa_\p)[p^\infty]_{\chi})}} \OO_\chi
+\label{eq:log_im}
+\end{equation}
+
+The trace map satisfies, for every $x\in K_\p$, the identity $\textrm{Tr}(x)=\textrm{Tr}(e_1 x)$, where $e_1\in \mathbb Z_p[\Gal(K_\p/\Q_p)]$ is the idempotent element associated to the trivial character, i.e., $e_1=\frac{1}{[K_\p:\Q_p]}\sum_{\sigma\in \Gal(K_\p/\Q_p)} \sigma$. By \ref{Kdeg}, $[K_\p:\Q_p]$ is prime to $p$. Thus $\textrm{Tr}(x)\in \Z_p$ if and only if $e_1x \in \Z_p$.
+
+Moreover, note that given $x_1,x_2\in K_\p$ such that $\sigma(x_1)=\chi_1(\sigma)x_1$ and $\sigma(x_2)=\chi_2(\sigma) x_2$ for every $\sigma\in \Gal(K_\p/\Q_p)$ and some characters $\chi_1$ and $\chi_2$, then $\sigma(x_1 x_2)=(\chi_1\chi_2)(\sigma)(x_1x_2)$. 
+
+
+Combining equations \eqref{eq:im_tr} and \eqref{eq:log_im}, we obtain
+\begin{equation}
+\exp^*(H^1_{/\FBK}(\Q_p,T\otimes \OO_d(\chi)))= p^{\length(\widetilde E_0(\kappa_\p)[p^\infty]_{\chibar})-1} \OO_\chibar
+\label{eq:exp_tw_im}
+\end{equation}
+
+
+
+
+We will now relate the length of $\widetilde E_0(\kappa_\p)_{\chi}$ to the $p$-adic valuation of the Euler factor at $p$ evaluated at $s=1$. 
+
+\begin{proposition}
+%The following equivalence between the reduced curve and the Euler factor holds true.
+%$$\length(\widetilde E_0(\kappa_p)[p^\infty]_\chi)-1=k_\chi'=
+% \left\{\begin{aligned}
+%%&v_p\left(1-\frac{a_p}{p} \chi(p)+\frac{1}{p}\chi(p)^2\right)&\textrm{ if } p\nmid N\\
+%&v_p\left(1-\frac{a_p}{p} \chi(p)\right)  &\textrm{ if } p\mid\mid N\\
+%&v_p\left(1\right)&\textrm{ if } p^2\mid N 
+%\end{aligned}\right.$$
+ The length of $e_\chi\left(\widetilde E_0(\kappa_p)[p^\infty]\right)$ as an $\OO_d$-module is one unit larger than the valuation of the twsited Euler factor $1-\frac{a_p}{p}\chi(p)+\textbf{1}_N(p)\frac{1}{p}\chi(p)^2$ at $p$ evaluated at $s=1$.
+\end{proposition}
+
+\begin{proof}
+    Recall the definition of $k_\chi'=v_p\left(1-\frac{a_p}{p}\chi(p)+\textbf{1}_N(\ell)\frac{1}{p}\chi(p)^2\right)$ in definition \ref{def:kurihara_numbers}. We will consider different cases depending of the type of reduction of $E$ at $p$.
+
+Assume first that $E$ has good ordinary reduction at $p$ and let $\alpha\in \Z_p^\times$ be the unit root of the Euler polynomial $X^2-a_p X+p$. Then the arithmetic Frobenius acts on the reduced $p$-primary torsion $\widetilde E[p^\infty]$ by multiplication by $\alpha$ and thus acts on $\widetilde E[p^\infty]\otimes O(\overline\chi)$ multiplying by $\alpha \overline\chi(p)$. $\widetilde E(\kappa_\p)_\chi$ is the kernel of the action of $\Frob_p-1$ on $\widetilde E[p^\infty]\otimes O(\overline\chi)$, so its length is the $p$-adic valuation of $(\alpha \overline\chi(p)-1)$.
+
+Thus we just need to compute the $p$-adic valuation of $\alpha \overline\chi(p)-1$. The twisted Euler polynomial factors as
+$$\chi(p)^2X^2-a_p \chi(p)X+p=\chi(p)^2(\overline\chi(p)\alpha-X)(\overline\chi(p)\beta-X)$$
+where $\beta\in p\Z_p$ is the other root. Since $\overline\chi(p)\beta-1$ is a unit, evaluating at $X=1$ we get 
+$$(\chi(p)^2 -\chi(p) a_p+p)\sim (\overline\chi(p)\alpha-1)$$
+where $\sim$ denotes equality up to multiplication by a $p$-adic unit.
+
+
+It $E$ has good supersingular reduction at $p$, then clearly $\widetilde E(\kappa_\p)[p^\infty]=\{O\}$. In the supersingular case, then $p\nmid N$ and $p\mid a_p$, so the $k_\chi'$ has $p$-adic valuation $-1$ when evaluated at $X=1$. Since $E(\kappa_\p)_\chi=\{0\}$, then the proposition holds true in this case.
+
+
+
+If $E$ has multiplicative reduction, then $\widetilde E_0(\kappa_\p)\cong \kappa_\p^\times$ has order prime to $p$, so the $p$-adic valuation of the right hand side is $-1$. In this case, $a_p=\pm 1$ depending on the reduction being split or not and $\textbf{1}_N(\ell)=0$, so $k_\chi'$ has $p$-adic valuation $-1$ as well.
+
+If $E$ has additive reduction, then 
+\[ \widetilde E_0(\kappa_\p)_\chi\cong(\kappa_\p)_\chi=\# (\OO_\p/p\OO_p)_\chi\]
+has length one, so the equality is also satisfied in this case.
+\end{proof}
+
+
+
+
+
+By \ref{Kloc}, $H^2(\Q_p,T\otimes \OO_d(\chi))=H^0(\Q_p,E[p^\infty]\otimes \OO_d(\chibar))=0$, so there is an isomorphism
+$$ H^1_{/\FBK}(\Q_p,T\otimes \OO_d(\chi))/p^k \cong H^1_{/\FBK}(\Q_p,T/p^kT\otimes \OO_d(\chi))$$
+The dual exponential map induces thus an isomorphism
+\begin{equation}
+H^1_{\FBK}(\Q_p,T/p^kT\otimes \OO_d(\chi))\cong\frac{\exp_{\omega_E}^*(H^1_{/\FBK}(\Q_p,T\otimes \OO_d(\chi)))}{p^k \exp_{\omega_E}^*(H^1_{/\FBK}(\Q_p,T\otimes \OO_d(\chi)))}=\frac{p^{k'_\chibar}(\OO_p)_\chibar}{p^{k+k'_\chibar}(\OO_p)_\chibar}
+\label{eq:exp_tw}
+\end{equation}
+where $\OO_p:=\bigoplus_{\p\mid p} \OO_\p\subset K\otimes \Q_p$.
+
+
+\subsection{Kato's Kolyvagin system}
+\label{sec:Kato_kol}
+
+In \textsection \ref{sec:MT}, we have computed the value of the dual exponential map
+\[\exp_{\omega_E,\chibar}^*(D_n z_{\Q(n),\chi})\equiv \frac{(-1)^{\nu(n)}\chi(n)}{n}(1-p^{-1} a_p \chi(p) +p^{-1} \chi(p)^2) \delta_{n,\chi} \varphi(c)e_\chibar(\zeta_c)\]
+modulo \(p^{k+k'_\chi}\Z_p[\GG_n](\xi_{K(n)})\). Since \(p^{k+k'_\chi}\Z_p[\GG_n](\xi_{K(n)})\cap K\) is contained in \(p^{k+k'_\psi} \OO_p\), the congruence also holds modulo the latter.
+
+The goal of this section is to relate this value with Kato's Kolyvagin system. After that, we will check that the $p$-divisibility of Kato's Kolyvagin system and the Kurihara numbers coincide.
+
+As defined in \eqref{eq:tilde_kappa_n}, \(\kappa_{n,\chi}\) is the preimage of \(D_n z_{\Q(n),\chi}\) under the restriction map
+\[\res_{\Q(n)/\Q}:\ H^1(\Q,T/p^k\otimes \OO_d(\chi))\to H^1(\Q(n),T/p^k\otimes \OO_d(\chi))^{\GG_n}\]
+
+If we understand $\loc_p^\s(\kappa_{n,\chi})$ and $\loc_v^\s(D_n\omega_{\Q(n),\chi})$ as maps in the duals of $H^1_\FBK(\Q_p,T^*\otimes \OO_d(\overline\chi))$ and $H^1_\FBK(\Q_p,T^*\otimes \OO_d(\overline\chi))$, we obtain by \cite[proposition 1.5.3(iv)]{NSW} that 
+$$\loc_v^\s(D_n w_{n,\chi})=\loc_p^\s(\kappa_{n,\chi})\circ \cor_{\Q(n)/\Q}$$
+
+Similarly to the argument in proposition \ref{prop:exp_cor}, we can study the behaviour of the dual exponential map under restriction maps.
+
+\begin{proposition}
+Let $c\in H^1_{/\FBK}(\Q,V\otimes \OO_d(\chi))$ and denote its restriction by $d=\res_{\Q(n)/\Q}(c)\in H^1_{/\FBK}(\Q(n),V\otimes \OO_d(\chi))$. Then
+\[\exp_{\omega_E,\chibar}^*(c)=\exp_{\omega_E,\chibar}^*(d)\in (\Q(n)\otimes \Q_p\otimes \OO_d(\chi))^{\GG_n}\]
+\end{proposition}
+
+\begin{proof}
+Localising at primes above $p$, we get that 
+\[\loc_p^\s(d)=\left(\bigoplus_{v\mid p} \res_{\Q(n)_v/\Q_p}\right)\left(\loc_p^\s(c)\right)\]
+
+By \cite[proposition 1.5.3 (iv)]{NSW}, if $\loc_p^\s(c)\du$ and $\loc_p^\s(d)\du$ are considered as maps in duals of the Bloch-Kato cohomology groups, then
+\[\loc_p^\s(d)\du=\loc_p^\s(c)\du   \circ\left(\bigoplus_{v\mid p} \cor_{\Q(n)_v/\Q_p}\right)\]
+
+By \cite[proposition 1.5.2]{NSW},
+$\exp_{\omega_E,\chibar}^*(d)=\exp_{\omega_E,\chibar}^*(c)\circ N_{\Q(n)/\Q}$
+
+By the identification in \eqref{eq:dual_trace},
+\[\exp_{\omega_E,\chibar}^*(c)=\exp_{\omega_E,\chibar}^*(d)\qedhere\]
+\end{proof}
+
+Under the isomorphism in \eqref{eq:exp_tw}, the weak Kato's Kolyvagin system is
+%\[\widetilde \kappa_{n,\chi}=(-1)^{\nu(n)}  \frac{2\chibar(n)}{n}(1-p^{-1} a_p \chibar(p) +p^{-1} \chibar(p)^2) \delta_{n,\chi}e_\chi(\zeta_c)\]
+\[\widetilde \kappa_{n,\chi}=\frac{(-1)^{\nu(n)}\chi(n)}{n}(1-p^{-1} a_p \chi(p) +p^{-1} \chi(p)^2) \delta_{n,\chi} \varphi(c)e_\chibar(\zeta_c)\]
+
+In order to obtain Kato's Kolyvagin system $\kappa_\chi$ from $\widetilde \kappa_\chi$, we need to apply the construction from theorem \ref{th:wk_to_kol}. However, in this case, $\kappa_\chi=\widetilde \kappa_\chi$. In fact, by the definition of Kolyvagin primes, $a_\ell=2\mod p^k$ for every $\ell\mid n$. Therefore, for every $\ell$, we have that 
+\[P_\ell=X^2-a_\ell X+\ell\equiv (X-1)^2\mod p^k\] 
+
+Therefore, for every $\ell\mid n$, $\rho_\ell(P_\ell(\Frob_{\pi(\ell)}^{-1}))=0$. Hence, in the formula of theorem \ref{th:wk_to_kol}, the only term that does not vanish is the one associated to the trivial permutation, so $\widetilde \kappa_{n,\chi}=\kappa_{n,\chi}$.
+
+%\[ \kappa_{n,\chi}=(-1)^{\nu(n)}  \frac{2\chibar(n)}{n}(1-p^{-1} a_p \chibar(p) +p^{-1} \chibar(p)^2) \delta_{n,\chi} e_\chi(\zeta_c)\]
+
+Since $p$ is unramified in $K/\Q$ by \ref{Kur}, then $\varphi(c)e_\chibar(\zeta_c)$ generates the module $(\OO_{p})_\chibar$, and taking into account the description of the image of the dual exponential map in \eqref{eq:exp_tw}, we get that 
+\begin{equation}
+\ord(\loc_s^p(\kappa_{n,\chi}))=\ord(\delta_{n,\chi})
+\label{eq:orders}
+\end{equation}
+
+\subsection{Primitivity of Kato's Euler system and proof of theorem \ref{th:EK_IMC}}
+\label{sec:proof_IMC}
+
+In this section we will prove theorem \ref{th:EK_IMC}. From the $\chi$-twisted Kato's Euler system constructed in \textsection \ref{sec:twist}, one can apply the Kolyvagin derivative process as in theorem \ref{th:eul_to_kol_lambda} to obtain a Kolyvagin system $\kappa^\infty_\chi\in \KS(T\otimes \Lambda\otimes \OO_d(\chi),\FLambda, \PP)$.
+
+By \ref{Kloc} and \ref{Ktam}, the assumptions in proposition \ref{prop:lambda_kol_free} are satisfied, so $\KS(T\otimes \Lambda\otimes \OO_d(\chi),\FLambda, \PP)$ is free of rank one over $\Lambda$ and, by theorem \ref{th:MC_ind}, $\kappa^\infty_\chi$ is primitive if and only if the Iwasawa main conjecture \ref{conj:IMC} holds true.
+
+Kolyvagin derivative process can be applied to obtain the Kolyvagin system $\kappa_\chi \in \textrm{KS}(T\otimes \OO_d(\chi),\Fcan,\PP)$ which was studied in \textsection \ref{sec:Kato_kol}. By proposition \ref{prop:lambda_kol_free}, it will be the image of $\kappa^\infty_\chi$ under the canonical map
+\begin{equation}
+\textrm{KS}(T\otimes \OO_d(\chi)\otimes \Lambda,\FLambda,\PP)\to \textrm{KS}(T\otimes \OO_d(\chi),\Fcan,\PP)
+\label{eq:EK:red}
+\end{equation}
+By corollary \ref{cor:kol_red_prim}, $\kappa_\chi$ is primitive if and only if $\kappa^\infty_\chi$ is primitive. By lemma \ref{lem:dinf} and equation \eqref{eq:orders}, this is equivalent to $\partial^{(\infty)}(\delta_\chi)=0$, which is M. Kurihara's conjecture \ref{conj:kur}. 
+
+Hence the Iwasawa main conjecture and the Kurihara conjecture are equivalent for the twist $T\otimes \OO_d(\chi)$, so theorem \ref{th:EK_IMC} holds.
+
+Nevertheless, a non-primitive Kolyvagin system is useful for determining the structure of the Selmer group as long as it is non-zero. If we assume hypothesis \ref{KIMCloc}, then $\kappa_\chi^\infty\notin (X\Lambda)\KS(T\otimes \Lambda\otimes \OO_d(\chi),\FLambda,\PP)$ by corollary \ref{cor:kol_red_loc}. But this is the kernel of the map in \eqref{eq:EK:red}, so this condition means that $\kappa_\chi$ is nonzero, fact that will be necessary to apply theorems \ref{th:kur_par} and \ref{th:kur} in the next section.
+
+\subsection{Functional equation and proof of theorem \ref{th:EK_str}}
+\label{sec:proof_str}
+
+
+The second part of theorem \ref{th:EK_str} is a direct consequence of theorem \ref{th:kur}. By equation \eqref{eq:orders}, the ideals $\Theta_{i}(\widetilde\delta_\chi)$ in theorem \ref{th:EK_str} coincides with the ideals $\Theta_{i}(\kappa_\chi)$ in theorem \ref{th:kur}. By remark \ref{rem:EK_str}, we can assume $\chi$ is primitive. 
+
+Theorem \ref{th:kur} describe the structure of the Selmer group in a different way depending on whether the character $\chi$ is a quadratic character or not.
+
+Assume first that $\chi\neq\chibar$. In this case, theorem \ref{th:kur} implies that the ideals $\Theta_{i}(\widetilde \delta_\chi)$ 
+\[\Theta_{i}(\widetilde\delta_\chi)=\Fitt_{i}^{\OO_d}(H^1_\FBK(\Q,T\otimes \OO_d(\chi)))\]
+
+Since $\OO_d$ is a principal ideal domain, the structure theorem of finitely generated modules implies that 
+\[H^1_{\FBK}(\Q,T\otimes \OO_d
+(\chi))\approx \OO_d^r\oplus \bigoplus_{i=1}^{{s-r}} \frac{\OO_d}{(p)^{\partial^{(r+i)}(\widetilde \delta)-\partial^{(r+i-1)}(\widetilde \delta)}}\]
+where we are using the notation of theorem \ref{th:EK_str}. Therefore, the proof of the second part is complete.
+
+Now consider the case when $\chi=\chibar$, the module $T\otimes \OO_d(\chi)$ is self-dual and theorem \ref{th:kur} does not apply. We have to use \ref{th:kur_par} instead, which leads to a weaker control on the Fitting ideals of the Selmer group. However, Kurihara numbers satisfy a functional equation (inherited from the Mazur-Tate elements) and this fact leads to the determination of the structure of the Selmer group.
+
+Recall that $N$ is the conductor of the elliptic curve. The Mazur-Tate element satisfy the following functional equation
+\begin{proposition} (\cite[\textsection 1.6]{MazurTate})
+Let $\iota:\ \mathbb Z_p[\Gal(\Q(\mu_n)/\Q)]\to \mathbb Z_p[\Gal(\Q(\mu_n)/\Q)]$ be the map induced from the inversion in $\Gal(\Q(\mu_n)/\Q)$. Then 
+\[\iota(\theta_n)=\varepsilon \sigma_{-N} \theta_n\]
+where $\varepsilon\in\{\pm1\}$ is the root number of the elliptic curve and $\sigma_N\in \Gal(\Q(\mu_n/\Q))$ is the Galois automorphism that sends $\zeta_n$ to $\zeta_n^N$.
+\label{eq:MT_fe}
+\end{proposition}
+
+\begin{corollary}
+If $\psi$ is a character of $G$, then 
+\[\iota\left(\psibar(\theta_{K(n)})\right)=\varepsilon \chi(-N) \psi(\theta_{K(n)})\in \Z_p[\Gal(\Q(\mu_n)/\Q)]\]
+\end{corollary}
+
+Assume $\ell\in \PP_k$. Then the construction of the Kolyvagin derivative implies for every $\theta\in \Z_p[\Gal(\Q(\mu_n)/\Q)]$ that 
+$$D_\ell \iota(\theta)\equiv-D_\ell(\theta) \mod p^k$$
+
+Therefore, for every $n\in \NN_k$, 
+$$D_n\psibar(\theta_{K(n)})=(-1)^{\nu(n)} \varepsilon\psi(N) D_n\psi(\theta_{K(n)})$$
+
+Since $\chi=\chibar$, we have that 
+\[\delta_{n,\chi} (1-(-1)^{\nu(n)}\varepsilon\chi(-N))=0\]
+
+Since $\chi(-N)=\pm1$ , we have two possible cases.
+\begin{corollary}
+Depending on the root number $\varepsilon$ of the elliptic curve and the value $\chi(-N)$, we have that 
+\begin{itemize}
+\item If $\varepsilon\chi(-N)=1$, then $\delta_{n,\chi}=0$ when $n$ has an odd number of prime divisors.
+\item If $\varepsilon\chi(-N)=-1$, then $\delta_{n,\chi}=0$ when $n$ has an even number of prime divisors.
+\end{itemize}
+\label{cor:delta_fe}
+\end{corollary}
+
+Call $r=\rank_{\OO_d} H^1_\FBK(\Q,T\otimes \OO_d(\chi))$. The first condition of theorem \ref{th:kur_par} is satisfied in this case, so
+$$\Theta_{r}(\widetilde \delta_\chi)= \Fitt_{r}^{\OO_d} H^1_{\FBK}(Q,T\otimes \OO_d(\chi))$$
+
+For any index $i\geq r$ having different parity that $r$, $\Theta_{i,\chi}=0$ by corollary \ref{cor:delta_fe} and the corresponding Fitting ideal is non-zero. Hence the second condition of theorem \ref{th:kur_par} holds for $i+1$, so 
+$$\Theta_{i+1}(\widetilde \delta_\chi)= \Fitt_{i+1}^{\OO_d} H^1_{\FBK}(Q,T\otimes \OO_d(\chi))$$
+
+By the structure theorem of finitely generated modules over principal ideal domains, we obtain
+$$H^1_{\FBK}(\Q,T(\chi))\approx \OO_d^r\oplus \bigoplus_{i=1}^{\frac{s-r}{2}} \frac{\OO_d}{(p)^{\partial^{(r+2i)}(\widetilde \delta)-\partial^{(r+2i-2)}(\widetilde \delta)}}$$
+so theorem \ref{th:EK_str} has been proven.
+
+
+\subsection{Examples}
+\label{sec:examples}
+
+
+We end this article by showing some examples of computations o the Selmer group of elliptic curves. All the computations are done using Sagemath \cite{sagemath}. For all the elliptic curves $E$ and abelian extensions $K/\Q$ appearing in these examples, we will assume that $\Sha(E/K)$ is finite.
+
+\begin{example}
+    Consider the elliptic curve 196\,794cd1 in Cremona's database and the prime $p=5$. Over the abelian extension $K=\Q(\mu_7)$, we can determine the full group structure of the Selmer group. We proceed by studying the twisted Kurihara number for every Dirichlet character of conductor dividing $7$.
+
+    When $\chi$ is the trivial character, we compute $\delta_{1,\chi}=0$, so $\rank(E(\Q))\geq 1$. To obtain further information about the structure of the Selmer group, we need to compute $\Theta_{1,\chi}$. The smallest Kolyvagin prime $\ell=93\,251$ satisfies that $\ord_5(\delta_{\ell,\chi})=2$. It guarantees that $\rank(E(\Q))= 1$ and $\#\Sha(E/\Q)[5^\infty]\mid 25$. If we compute $\ord_5(\delta_{\ell,\chi})$ for the smallest Kolyvagin primes, we will obtain the value $2$ for approximately the $80\%$ of the computations and a higher value in the remaining cases. That would lead us to guess that $\Theta_2=25\Z_5$, which is equivalent to $\#\Sha(E/\Q)[5^\infty]=25$. However, we cannot prove it with only a finite amount of computations.
+
+    But we can use a different method to compute the order of the Tate-Shafarevich group using the Iwasawa main conjecture, which can be numerically verified it using theorem \ref{th:EK_IMC}. The smallest Kolyvagin primes for $k=1$ are $11$, $31$ and $131$. Their product $n=44\,671$ satisfies that $\delta_{n,\chi}\in \Z_5^\times$, so the Iwasawa main conjecture holds true in this elliptic curve.
+    
+    Using Sagemath, we can check that the $5$-adic $L$-function can be written as
+    \[\char(X_\infty)=\mathcal L_5(E,T)=(5^2+O(5^3))T+O(T^2)\]
+    Under our assumptions, Mazur's control theorem works perfectly, so we can conclude that $\Sel(\Q,T_5E)\approx \Z_5\times \Z_5/(5) \times\Z_5/(5)$. Therefore,
+    \[\Sha(E/\Q)[5^\infty]=\Sha(E/K)[5^\infty]^{\Gal(K/\Q)}\approx \Z_5/(5)\times \Z_5/(5)\]
+
+    If $\chi$ is the quadratic character of conductor $7$, then $\delta_{1,\chi}=0$, so $\rank(E(K)_{\chi})\geq 1$. In order to determine the full structure of the twisted Selmer group, we need to compute $\Theta_{1,\chi}$. Since $11$ is a Kolyvagin prime and $\ord_5(\delta_{11,\chi})=0$, we deduce that $\Theta_1=\Z_5$. Hence $\rank(E(K)_{\chi})= 1$ and $\Sha(E/K)[5^\infty]_\chi=\{0\}$.
+
+    For all other characters of conductor $7$, we compute $\ord_5(\delta_{1,\chi})=1$, which implies that $\Sha(E/K)_\chi\approx \OO_6/(5)$.
+
+    All the information above is enough to compute the structure of the Selmer group $\Sel(K,T_5E)\otimes \OO_6$ as an $\OO_6[\Gal(K/\Q)]$-module. By proposition \ref{prop:fitting_integral}, the Fitting ideal are then given by the expressions
+    \[\begin{aligned}
+    &\Fitt_{\Z_5}^0(\Sel(K,T_5E))=\frac{5}{3} (2\sigma_1-\sigma_2-\sigma_4)\\
+    &\Fitt_{\Z_5}^1(\Sel(K,T_5E))={5} \sigma_1+{4}(\sigma_2+\sigma_3+\sigma_4+\sigma_5+\sigma_6)\\
+    &\Fitt_{\Z_5}^2(\Sel(K,T_5E))=\frac{5}{3} \sigma_1+\frac{2}{3}(\sigma_2+\sigma_3+\sigma_4+\sigma_5+\sigma_6)\\
+    \end{aligned}\]
+
+    By proposition \ref{prop:fitting_integral}, there is an isomorphism of $\Z_p[\Gal(K/\Q)]$-modules
+    \[\Sel(K,T_5E)=\frac{\Z_p[G]}{\left({5}(2\sigma_1-\sigma_2-\sigma_4)\right)}\times \left(\frac{\Z_p[G]}{\left({5} \sigma_1+{2}(\sigma_2+\sigma_3+\sigma_4+\sigma_5+\sigma_6)\right)}\right)^2\]
+\end{example}
+
+\begin{example}
+Let $E$ be the elliptic curve 35a1 in Cremona's database and let $p=7$. For a Dirichlet character $\chi$ of conductor $51$ and order $8$ such that $\chi(35)=-1$ and $\chi(37)$ is a primitive $8^{\textrm{th}}$ root of unity $\zeta_{8}$ satisfying that $\zeta_{8}^2+3\zeta_8+1\in 7\Z_7$.
+
+We can compute $\ord_7(\delta_{1,\chi})=2$, so we know that $\rank(E(\Q(\mu_{51})))_\chi=0$ and 
+\[\#\Sha(E/\Q(\mu_{51}))[7^\infty]_\chi=\Bigl(\#(\OO_{16}/(7))\Bigr)^2\]
+
+Note that $\chi$ is not self-dual, so there are no non-degenerate pairings defined on the twisted Selmer group that determine its structure. In this case, the computation of $\Theta_{1,\chi}$ is what determines whether the Tate-Shafarevich group is isomorphic to $\OO_{16}/(7^2)$ or $\OO_{16}/(7)\times \OO_{16}/(7)$.
+
+The smallest Kolyvagin prime is $\ell=2\,801$ and satisfies that $\delta_{\ell,\chi}\in \OO_8^\times$. Hence $\Theta_{1,\chi}=\OO_8$ and 
+\[\#\Sha(E/\Q(\mu_{51}))[7^\infty]_\chi\approx\OO_{16}/(7^2)\]
+\end{example}
+
+\begin{example}
+    Consider the elliptic curve 11a1 in Cremona's database, the abelian extension $K=\Q(\mu_{61})$ and the prime $p=101$. 
+
+    Let $\chi$ be the character of conductor $61$ and order $20$ such that $\chi(2)$ is the unique primitive $20^{\textrm{th}}$ root of unity in $60+101\Z_{101}$. Then
+    \[\ord_{101}(\delta_{1,\chi})=\ord_{101}(\delta_{1,\chibar})=1\]
+    Theorem \ref{th:EK_str} then implies that 
+    \[\Sel(\Q,T_pE\otimes \Z_{101}(\chi))\approx \Sel(\Q,T_pE\otimes \Z_{101}(\chibar))\approx \Z_{101}/(101)\]
+
+    For the quadratic character $\chi'$ of conductor $61$, we obtain that $\delta_{1,\chi'}=0$, so theorem \ref{th:EK_str} implies that $\rank_{\Z_p}(\Sel(\Q,T_pE\otimes ))\geq 1$. To determine the full structure of this Selmer group, we need to compute $\Theta_{1,\chi'}$. The smallest Kolyvagin prime is $\ell'=64\,237$ and satisfies that
+    $\ord_{101}(\delta_{\ell',\chi})=0$. Hence, $\Theta_{i,\chi}=\Z_p$, so
+    \[\Sel(\Q,T_pE\otimes \Z_{101})\approx \Z_{101}\]
+
+    Finally, consider a character $\chi''$ of conductor $61$ and order $6$. It satisfies that $\chi(2)$ is a $6^{\textrm{th}}$-root of unity. Then $\delta_{1,\chi''}=\delta_{1,\overline{\chi''}}=0$. The smallest Kolyvagin prime for these characters is $\ell''=2\,528\,233$, satisfying that 
+    \[\ord_{101}(\delta_{\ell'',\chi''})=\ord_{101}(\delta_{\ell'',\overline{\chi''}})=0\] 
+    Hence,
+    \[\Sel\Bigl(\Q,T_pE\otimes \OO_6(\chi'')\Bigr)\approx \Sel\Bigl(\Q,T_pE\otimes \OO_6(\overline{\chi''})\Bigr)\approx \OO_6\]
+
+    Overall, assuming the finiteness of the Tate-Shafarevich group, we know that $\rank(E(K))=3$. Furthermore, we know how the rank grows along the subextensions of $K/\Q$. Indeed, if $K_2$ and $K_3$ are the subextensions of degrees $2$ and $3$, respectively, we know that $\rank(E(K_2))=1$ and $\rank(E(K_3))=2$.
+
+    Similarly, if $L$ is a subextension of $K/\Q$, then $\Sha(E/L)$ would have order $101^2$ if $[L:\Q]\in 20\Z$ and would be trivial otherwise.
+    
+
+\end{example}
+
+\begin{example}
+We can use this method to find Tate-Shafarevich groups divisible by large primes. Consider the elliptic curve 27a1 in the Cremona tables and the prime $p=472\,558\,791\,937$. Let $\chi$ be the Dirichlet character of conductor $89$ satisfying that $\chi(3)$ is the unique primitive $88^{\textrm{th}}$ root of unity in $382\,613\,086\,515+p\Z_p$. Then
+\[\ord_p(\delta_{1,\chi})=1\] 
+Therefore, we can conclude that
+\[\Sel(\Q,T_p E\otimes \Z_p(\chi))\approx \Z_p/(p)\]
+\end{example}
+

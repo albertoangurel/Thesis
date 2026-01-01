@@ -19,6 +19,75 @@
 
 \refsection{0}
   \datalist[entry]{anyt/global//global/global}
+    \entry{AtiyahMcDonald}{book}{}
+      \name{author}{2}{}{%
+        {{hash=feb3593a7d423b4961148cc3cc6c0231}{%
+           family={Atiyah},
+           familyi={A\bibinitperiod},
+           given={M.\bibnamedelimi F.},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=c2a02585793a1571ef56486f41d53bb6}{%
+           family={Macdonald},
+           familyi={M\bibinitperiod},
+           given={I.\bibnamedelimi G.},
+           giveni={I\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Reading, Massachusetts}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley}%
+      }
+      \strng{namehash}{001822f39c4aa1f97169e4266b69d7dc}
+      \strng{fullhash}{001822f39c4aa1f97169e4266b69d7dc}
+      \strng{bibnamehash}{001822f39c4aa1f97169e4266b69d7dc}
+      \strng{authorbibnamehash}{001822f39c4aa1f97169e4266b69d7dc}
+      \strng{authornamehash}{001822f39c4aa1f97169e4266b69d7dc}
+      \strng{authorfullhash}{001822f39c4aa1f97169e4266b69d7dc}
+      \field{labelalpha}{AM69}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-201-00361-0}
+      \field{title}{Introduction to Commutative Algebra}
+      \field{year}{1969}
+    \endentry
+    \entry{BlochKato}{incollection}{}
+      \name{author}{2}{}{%
+        {{hash=d70f290633620a3a63a318f4b0e912f1}{%
+           family={Bloch},
+           familyi={B\bibinitperiod},
+           given={Spencer},
+           giveni={S\bibinitperiod}}}%
+        {{hash=d17898f46dcc8922e71c199b1619b8db}{%
+           family={Kato},
+           familyi={K\bibinitperiod},
+           given={Kazuya},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Birkhäuser Boston, Boston, MA}%
+      }
+      \strng{namehash}{b0ee9516a543ca4053ea3672370a51a4}
+      \strng{fullhash}{b0ee9516a543ca4053ea3672370a51a4}
+      \strng{bibnamehash}{b0ee9516a543ca4053ea3672370a51a4}
+      \strng{authorbibnamehash}{b0ee9516a543ca4053ea3672370a51a4}
+      \strng{authornamehash}{b0ee9516a543ca4053ea3672370a51a4}
+      \strng{authorfullhash}{b0ee9516a543ca4053ea3672370a51a4}
+      \field{labelalpha}{BK90}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The {G}rothendieck {F}estschrift, {V}ol.\ {I}}
+      \field{series}{Progr. Math.}
+      \field{title}{{$L$}-functions and {T}amagawa numbers of motives}
+      \field{volume}{86}
+      \field{year}{1990}
+      \field{pages}{333\bibrangedash 400}
+      \range{pages}{68}
+    \endentry
     \entry{BurnsSakamotoSano2}{misc}{}
       \name{author}{3}{}{%
         {{hash=efc7b5e28e331906f58cf841742758e6}{%
@@ -56,6 +125,72 @@
       \verb 1805.08448
       \endverb
     \endentry
+    \entry{DokschitserDokschitser}{article}{}
+      \name{author}{2}{}{%
+        {{hash=bee63ea65aa631e013cc026253a2282d}{%
+           family={Dokschitser},
+           familyi={D\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+        {{hash=42606ac1ae1faf5a593de21f8296d308}{%
+           family={Dokschitser},
+           familyi={D\bibinitperiod},
+           given={Vladimir},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press (CUP)}%
+      }
+      \strng{namehash}{c7f2e9ed591af8037c1607f557116eb9}
+      \strng{fullhash}{c7f2e9ed591af8037c1607f557116eb9}
+      \strng{bibnamehash}{c7f2e9ed591af8037c1607f557116eb9}
+      \strng{authorbibnamehash}{c7f2e9ed591af8037c1607f557116eb9}
+      \strng{authornamehash}{c7f2e9ed591af8037c1607f557116eb9}
+      \strng{authorfullhash}{c7f2e9ed591af8037c1607f557116eb9}
+      \field{labelalpha}{DD09}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Mathematical Proceedings of the Cambridge Philosophical Society}
+      \field{month}{3}
+      \field{number}{2}
+      \field{title}{Self-duality of Selmer groups}
+      \field{volume}{146}
+      \field{year}{2009}
+      \field{pages}{257\bibrangedash 267}
+      \range{pages}{11}
+    \endentry
+    \entry{Edixhoven91}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=56144fab515f2d498766b24e030c2b3c}{%
+           family={Edixhoven},
+           familyi={E\bibinitperiod},
+           given={Bas},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Birkhäuser Boston, Boston, MA}%
+      }
+      \strng{namehash}{56144fab515f2d498766b24e030c2b3c}
+      \strng{fullhash}{56144fab515f2d498766b24e030c2b3c}
+      \strng{bibnamehash}{56144fab515f2d498766b24e030c2b3c}
+      \strng{authorbibnamehash}{56144fab515f2d498766b24e030c2b3c}
+      \strng{authornamehash}{56144fab515f2d498766b24e030c2b3c}
+      \strng{authorfullhash}{56144fab515f2d498766b24e030c2b3c}
+      \field{labelalpha}{Edi91}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Arithmetic algebraic geometry ({T}exel, 1989)}
+      \field{series}{Progr. Math.}
+      \field{title}{On the {M}anin constants of modular elliptic curves}
+      \field{volume}{89}
+      \field{year}{1991}
+      \field{pages}{25\bibrangedash 39}
+      \range{pages}{15}
+    \endentry
     \entry{Eisenbud}{book}{}
       \name{author}{1}{}{%
         {{hash=1249d4c8877c098355d267da038c837b}{%
@@ -80,6 +215,270 @@
       \field{labeltitlesource}{title}
       \field{title}{Commutative Algebra}
       \field{year}{1995}
+    \endentry
+    \entry{FouquetWan}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=8477c09da8a7abdb3a400241fce5e201}{%
+           family={Fouquet},
+           familyi={F\bibinitperiod},
+           given={Olivier},
+           giveni={O\bibinitperiod}}}%
+        {{hash=d82ee6345654a1b0cf74166d1e770536}{%
+           family={Wan},
+           familyi={W\bibinitperiod},
+           given={Xin},
+           giveni={X\bibinitperiod}}}%
+      }
+      \strng{namehash}{61fbd8e1d3381f24b8a08d05710a315b}
+      \strng{fullhash}{61fbd8e1d3381f24b8a08d05710a315b}
+      \strng{bibnamehash}{61fbd8e1d3381f24b8a08d05710a315b}
+      \strng{authorbibnamehash}{61fbd8e1d3381f24b8a08d05710a315b}
+      \strng{authornamehash}{61fbd8e1d3381f24b8a08d05710a315b}
+      \strng{authorfullhash}{61fbd8e1d3381f24b8a08d05710a315b}
+      \field{labelalpha}{FW22}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.NT}
+      \field{eprinttype}{arXiv}
+      \field{title}{The Iwasawa Main Conjecture for universal families of modular motives}
+      \field{year}{2022}
+      \verb{eprint}
+      \verb 2107.13726
+      \endverb
+    \endentry
+    \entry{Kato}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=d17898f46dcc8922e71c199b1619b8db}{%
+           family={Kato},
+           familyi={K\bibinitperiod},
+           given={Kazuya},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{d17898f46dcc8922e71c199b1619b8db}
+      \strng{fullhash}{d17898f46dcc8922e71c199b1619b8db}
+      \strng{bibnamehash}{d17898f46dcc8922e71c199b1619b8db}
+      \strng{authorbibnamehash}{d17898f46dcc8922e71c199b1619b8db}
+      \strng{authornamehash}{d17898f46dcc8922e71c199b1619b8db}
+      \strng{authorfullhash}{d17898f46dcc8922e71c199b1619b8db}
+      \field{labelalpha}{Kat04}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Astérisque}
+      \field{note}{Cohomologies $p$-adiques et applications arithmétiques. III}
+      \field{number}{295}
+      \field{title}{{$p$}-adic {H}odge theory and values of zeta functions of modular forms}
+      \field{year}{2004}
+      \field{pages}{ix\bibrangessep 117\bibrangedash 290}
+      \range{pages}{175}
+    \endentry
+    \entry{Kataoka21}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4286491235b3ca4b32b14880a5820261}{%
+           family={Kataoka},
+           familyi={K\bibinitperiod},
+           given={Takenori},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{4286491235b3ca4b32b14880a5820261}
+      \strng{fullhash}{4286491235b3ca4b32b14880a5820261}
+      \strng{bibnamehash}{4286491235b3ca4b32b14880a5820261}
+      \strng{authorbibnamehash}{4286491235b3ca4b32b14880a5820261}
+      \strng{authornamehash}{4286491235b3ca4b32b14880a5820261}
+      \strng{authorfullhash}{4286491235b3ca4b32b14880a5820261}
+      \field{labelalpha}{Kat21}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Math. Z.}
+      \field{number}{3-4}
+      \field{title}{Equivariant {I}wasawa theory for elliptic curves}
+      \field{volume}{298}
+      \field{year}{2021}
+      \field{pages}{1653\bibrangedash 1725}
+      \range{pages}{73}
+    \endentry
+    \entry{Kim23}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=5972b3b70a7d748aa6623178105ea418}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Chan-Ho},
+           giveni={C\bibinithyphendelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{5972b3b70a7d748aa6623178105ea418}
+      \strng{fullhash}{5972b3b70a7d748aa6623178105ea418}
+      \strng{bibnamehash}{5972b3b70a7d748aa6623178105ea418}
+      \strng{authorbibnamehash}{5972b3b70a7d748aa6623178105ea418}
+      \strng{authornamehash}{5972b3b70a7d748aa6623178105ea418}
+      \strng{authorfullhash}{5972b3b70a7d748aa6623178105ea418}
+      \field{labelalpha}{Kim25}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.NT}
+      \field{eprinttype}{arXiv}
+      \field{title}{The structure of Selmer groups and the Iwasawa main conjecture for elliptic curves}
+      \field{year}{2025}
+      \verb{eprint}
+      \verb 2203.12159
+      \endverb
+    \endentry
+    \entry{KimKimSun}{article}{}
+      \name{author}{3}{}{%
+        {{hash=5972b3b70a7d748aa6623178105ea418}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Chan-Ho},
+           giveni={C\bibinithyphendelim H\bibinitperiod}}}%
+        {{hash=779011535763f46b9225040bbec9f8cb}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Myoungil},
+           giveni={M\bibinitperiod}}}%
+        {{hash=deb5f5cf795dec30b9e90fd0b512d673}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Hae-Sang},
+           giveni={H\bibinithyphendelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{fe647f4bbbccf6c03bbd917a9e878e74}
+      \strng{fullhash}{fe647f4bbbccf6c03bbd917a9e878e74}
+      \strng{bibnamehash}{fe647f4bbbccf6c03bbd917a9e878e74}
+      \strng{authorbibnamehash}{fe647f4bbbccf6c03bbd917a9e878e74}
+      \strng{authornamehash}{fe647f4bbbccf6c03bbd917a9e878e74}
+      \strng{authorfullhash}{fe647f4bbbccf6c03bbd917a9e878e74}
+      \field{labelalpha}{KKS20}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Selecta Math. (N.S.)}
+      \field{number}{2}
+      \field{title}{On the indivisibility of derived {K}ato's {E}uler systems and the main conjecture for modular forms}
+      \field{volume}{26}
+      \field{year}{2020}
+      \field{pages}{Paper No. 31\bibrangessep 47}
+      \range{pages}{-1}
+    \endentry
+    \entry{Kur2014}{article}{}
+      \name{author}{1}{}{%
+        {{hash=3de83092158f005705a4ed22d74716d9}{%
+           family={Kurihara},
+           familyi={K\bibinitperiod},
+           given={Masato},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{3de83092158f005705a4ed22d74716d9}
+      \strng{fullhash}{3de83092158f005705a4ed22d74716d9}
+      \strng{bibnamehash}{3de83092158f005705a4ed22d74716d9}
+      \strng{authorbibnamehash}{3de83092158f005705a4ed22d74716d9}
+      \strng{authornamehash}{3de83092158f005705a4ed22d74716d9}
+      \strng{authorfullhash}{3de83092158f005705a4ed22d74716d9}
+      \field{extraname}{1}
+      \field{labelalpha}{Kur14}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extraalpha}{1}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Münster J. Math.}
+      \field{number}{1}
+      \field{title}{Refined {I}wasawa theory for {$p$}-adic representations and the structure of {S}elmer groups}
+      \field{volume}{7}
+      \field{year}{2014}
+      \field{pages}{149\bibrangedash 223}
+      \range{pages}{75}
+    \endentry
+    \entry{Kur2012}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=3de83092158f005705a4ed22d74716d9}{%
+           family={Kurihara},
+           familyi={K\bibinitperiod},
+           given={Masato},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer, Heidelberg}%
+      }
+      \strng{namehash}{3de83092158f005705a4ed22d74716d9}
+      \strng{fullhash}{3de83092158f005705a4ed22d74716d9}
+      \strng{bibnamehash}{3de83092158f005705a4ed22d74716d9}
+      \strng{authorbibnamehash}{3de83092158f005705a4ed22d74716d9}
+      \strng{authornamehash}{3de83092158f005705a4ed22d74716d9}
+      \strng{authorfullhash}{3de83092158f005705a4ed22d74716d9}
+      \field{extraname}{2}
+      \field{labelalpha}{Kur14}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extraalpha}{2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Iwasawa theory 2012}
+      \field{series}{Contrib. Math. Comput. Sci.}
+      \field{title}{The structure of {S}elmer groups of elliptic curves and modular symbols}
+      \field{volume}{7}
+      \field{year}{2014}
+      \field{pages}{317\bibrangedash 356}
+      \range{pages}{40}
+    \endentry
+    \entry{Manin72}{article}{}
+      \name{author}{1}{}{%
+        {{hash=2185aa20a1a57f9a2bab03df7f934b69}{%
+           family={Manin},
+           familyi={M\bibinitperiod},
+           given={Ju.\bibnamedelimi I.},
+           giveni={J\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \strng{namehash}{2185aa20a1a57f9a2bab03df7f934b69}
+      \strng{fullhash}{2185aa20a1a57f9a2bab03df7f934b69}
+      \strng{bibnamehash}{2185aa20a1a57f9a2bab03df7f934b69}
+      \strng{authorbibnamehash}{2185aa20a1a57f9a2bab03df7f934b69}
+      \strng{authornamehash}{2185aa20a1a57f9a2bab03df7f934b69}
+      \strng{authorfullhash}{2185aa20a1a57f9a2bab03df7f934b69}
+      \field{labelalpha}{Man72}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Izv. Akad. Nauk SSSR Ser. Mat.}
+      \field{title}{Parabolic points and zeta functions of modular curves}
+      \field{volume}{36}
+      \field{year}{1972}
+      \field{pages}{19\bibrangedash 66}
+      \range{pages}{48}
+    \endentry
+    \entry{Mazur78}{article}{}
+      \name{author}{1}{}{%
+        {{hash=775619c708f1e45784dd065674b120e8}{%
+           family={Mazur},
+           familyi={M\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{775619c708f1e45784dd065674b120e8}
+      \strng{fullhash}{775619c708f1e45784dd065674b120e8}
+      \strng{bibnamehash}{775619c708f1e45784dd065674b120e8}
+      \strng{authorbibnamehash}{775619c708f1e45784dd065674b120e8}
+      \strng{authornamehash}{775619c708f1e45784dd065674b120e8}
+      \strng{authorfullhash}{775619c708f1e45784dd065674b120e8}
+      \field{labelalpha}{Maz78}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Invent. Math.}
+      \field{number}{2}
+      \field{title}{Rational isogenies of prime degree (with an appendix by {D}. {G}oldfeld)}
+      \field{volume}{44}
+      \field{year}{1978}
+      \field{pages}{129\bibrangedash 162}
+      \range{pages}{34}
     \endentry
     \entry{MazurRubin}{article}{}
       \name{author}{2}{}{%
@@ -112,6 +511,78 @@
       \field{year}{2004}
       \field{pages}{viii+96}
       \range{pages}{-1}
+    \endentry
+    \entry{MazurTate}{article}{}
+      \name{author}{2}{}{%
+        {{hash=775619c708f1e45784dd065674b120e8}{%
+           family={Mazur},
+           familyi={M\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=273846f66204966f7c9cff1284754226}{%
+           family={Tate},
+           familyi={T\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Duke University Press}%
+      }
+      \strng{namehash}{a060c3e5146a1d8770948be361ee5f05}
+      \strng{fullhash}{a060c3e5146a1d8770948be361ee5f05}
+      \strng{bibnamehash}{a060c3e5146a1d8770948be361ee5f05}
+      \strng{authorbibnamehash}{a060c3e5146a1d8770948be361ee5f05}
+      \strng{authornamehash}{a060c3e5146a1d8770948be361ee5f05}
+      \strng{authorfullhash}{a060c3e5146a1d8770948be361ee5f05}
+      \field{labelalpha}{MT87}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Duke Mathematical Journal}
+      \field{number}{2}
+      \field{title}{{Refined conjectures of the “Birch and Swinnerton-Dyer type”}}
+      \field{volume}{54}
+      \field{year}{1987}
+      \field{pages}{711\bibrangedash 750}
+      \range{pages}{40}
+    \endentry
+    \entry{MTT}{article}{}
+      \name{author}{3}{}{%
+        {{hash=775619c708f1e45784dd065674b120e8}{%
+           family={Mazur},
+           familyi={M\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=273846f66204966f7c9cff1284754226}{%
+           family={Tate},
+           familyi={T\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=7fd6229673b74d5aded514ea33978d5f}{%
+           family={Teitelbaum},
+           familyi={T\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{2430a524cfe3e0021967b8c1ed61026e}
+      \strng{fullhash}{2430a524cfe3e0021967b8c1ed61026e}
+      \strng{bibnamehash}{2430a524cfe3e0021967b8c1ed61026e}
+      \strng{authorbibnamehash}{2430a524cfe3e0021967b8c1ed61026e}
+      \strng{authornamehash}{2430a524cfe3e0021967b8c1ed61026e}
+      \strng{authorfullhash}{2430a524cfe3e0021967b8c1ed61026e}
+      \field{labelalpha}{MTT86}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Invent. Math.}
+      \field{number}{1}
+      \field{title}{On {$p$}-adic analogues of the conjectures of {B}irch and {S}winnerton-{D}yer}
+      \field{volume}{84}
+      \field{year}{1986}
+      \field{pages}{1\bibrangedash 48}
+      \range{pages}{48}
     \endentry
     \entry{NSW}{book}{}
       \name{author}{3}{}{%
@@ -151,6 +622,63 @@
       \field{pages}{xv\bibrangedash 826}
       \range{pages}{812}
     \endentry
+    \entry{Ota18}{article}{}
+      \name{author}{1}{}{%
+        {{hash=daea2dda43e66986a8cea3b2b390e475}{%
+           family={Ota},
+           familyi={O\bibinitperiod},
+           given={Kazuto},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{daea2dda43e66986a8cea3b2b390e475}
+      \strng{fullhash}{daea2dda43e66986a8cea3b2b390e475}
+      \strng{bibnamehash}{daea2dda43e66986a8cea3b2b390e475}
+      \strng{authorbibnamehash}{daea2dda43e66986a8cea3b2b390e475}
+      \strng{authornamehash}{daea2dda43e66986a8cea3b2b390e475}
+      \strng{authorfullhash}{daea2dda43e66986a8cea3b2b390e475}
+      \field{labelalpha}{Ota18}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Amer. J. Math.}
+      \field{number}{2}
+      \field{title}{Kato's {E}uler system and the {M}azur-{T}ate refined conjecture of {BSD} type}
+      \field{volume}{140}
+      \field{year}{2018}
+      \field{pages}{495\bibrangedash 542}
+      \range{pages}{48}
+    \endentry
+    \entry{Rubin}{book}{}
+      \name{author}{1}{}{%
+        {{hash=36c8e0559efe2dd98d3833fcaf2a18d5}{%
+           family={Rubin},
+           familyi={R\bibinitperiod},
+           given={Karl},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Princeton University Press, Princeton, NJ}%
+      }
+      \strng{namehash}{36c8e0559efe2dd98d3833fcaf2a18d5}
+      \strng{fullhash}{36c8e0559efe2dd98d3833fcaf2a18d5}
+      \strng{bibnamehash}{36c8e0559efe2dd98d3833fcaf2a18d5}
+      \strng{authorbibnamehash}{36c8e0559efe2dd98d3833fcaf2a18d5}
+      \strng{authornamehash}{36c8e0559efe2dd98d3833fcaf2a18d5}
+      \strng{authorfullhash}{36c8e0559efe2dd98d3833fcaf2a18d5}
+      \field{labelalpha}{Rub00}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Hermann Weyl Lectures. The Institute for Advanced Study}
+      \field{series}{Annals of Mathematics Studies}
+      \field{title}{Euler systems}
+      \field{volume}{147}
+      \field{year}{2000}
+      \field{pages}{xii+227}
+      \range{pages}{-1}
+    \endentry
     \entry{Sakamoto18}{article}{}
       \name{author}{1}{}{%
         {{hash=cb73ace61a4173770d59c0a95305476d}{%
@@ -168,6 +696,7 @@
       \strng{authorbibnamehash}{cb73ace61a4173770d59c0a95305476d}
       \strng{authornamehash}{cb73ace61a4173770d59c0a95305476d}
       \strng{authorfullhash}{cb73ace61a4173770d59c0a95305476d}
+      \field{extraname}{1}
       \field{labelalpha}{Sak18}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
@@ -180,6 +709,92 @@
       \field{year}{2018}
       \field{pages}{2295\bibrangedash 2326}
       \range{pages}{32}
+    \endentry
+    \entry{Sakamoto21}{article}{}
+      \name{author}{1}{}{%
+        {{hash=cb73ace61a4173770d59c0a95305476d}{%
+           family={Sakamoto},
+           familyi={S\bibinitperiod},
+           given={Ryotaro},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{cb73ace61a4173770d59c0a95305476d}
+      \strng{fullhash}{cb73ace61a4173770d59c0a95305476d}
+      \strng{bibnamehash}{cb73ace61a4173770d59c0a95305476d}
+      \strng{authorbibnamehash}{cb73ace61a4173770d59c0a95305476d}
+      \strng{authornamehash}{cb73ace61a4173770d59c0a95305476d}
+      \strng{authorfullhash}{cb73ace61a4173770d59c0a95305476d}
+      \field{extraname}{2}
+      \field{labelalpha}{Sak22}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Doc. Math.}
+      \field{title}{{$p$}-{S}elmer group and modular symbols}
+      \field{volume}{27}
+      \field{year}{2022}
+      \field{pages}{1891\bibrangedash 1922}
+      \range{pages}{32}
+    \endentry
+    \entry{Stevens89}{article}{}
+      \name{author}{1}{}{%
+        {{hash=39ad10e6415cae89d64a4b10f29abe0f}{%
+           family={Stevens},
+           familyi={S\bibinitperiod},
+           given={Glenn},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{39ad10e6415cae89d64a4b10f29abe0f}
+      \strng{fullhash}{39ad10e6415cae89d64a4b10f29abe0f}
+      \strng{bibnamehash}{39ad10e6415cae89d64a4b10f29abe0f}
+      \strng{authorbibnamehash}{39ad10e6415cae89d64a4b10f29abe0f}
+      \strng{authornamehash}{39ad10e6415cae89d64a4b10f29abe0f}
+      \strng{authorfullhash}{39ad10e6415cae89d64a4b10f29abe0f}
+      \field{labelalpha}{Ste89}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Invent. Math.}
+      \field{number}{1}
+      \field{title}{Stickelberger elements and modular parametrizations of elliptic curves}
+      \field{volume}{98}
+      \field{year}{1989}
+      \field{pages}{75\bibrangedash 106}
+      \range{pages}{32}
+    \endentry
+    \entry{SkinnerUrban}{article}{}
+      \name{author}{2}{}{%
+        {{hash=9557c0fa2cce66a500d0183f84dcce77}{%
+           family={Skinner},
+           familyi={S\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod}}}%
+        {{hash=38d27d1aa4e0c1c9b76d2f60b6644033}{%
+           family={Urban},
+           familyi={U\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{c0301577b0464419adc62941419d782c}
+      \strng{fullhash}{c0301577b0464419adc62941419d782c}
+      \strng{bibnamehash}{c0301577b0464419adc62941419d782c}
+      \strng{authorbibnamehash}{c0301577b0464419adc62941419d782c}
+      \strng{authornamehash}{c0301577b0464419adc62941419d782c}
+      \strng{authorfullhash}{c0301577b0464419adc62941419d782c}
+      \field{labelalpha}{SU14}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Invent. Math.}
+      \field{number}{1}
+      \field{title}{The {I}wasawa main conjectures for {$\rm GL_2$}}
+      \field{volume}{195}
+      \field{year}{2014}
+      \field{pages}{1\bibrangedash 277}
+      \range{pages}{277}
     \endentry
     \entry{Sweeting}{misc}{}
       \name{author}{1}{}{%
@@ -213,6 +828,57 @@
       \verb{url}
       \verb https://arxiv.org/abs/2012.11771
       \endverb
+    \endentry
+    \entry{sagemath}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=bd9e260a244c281a9de33159cacc1722}{%
+           family={{The Sage Developers}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{bd9e260a244c281a9de33159cacc1722}
+      \strng{fullhash}{bd9e260a244c281a9de33159cacc1722}
+      \strng{bibnamehash}{bd9e260a244c281a9de33159cacc1722}
+      \strng{authorbibnamehash}{bd9e260a244c281a9de33159cacc1722}
+      \strng{authornamehash}{bd9e260a244c281a9de33159cacc1722}
+      \strng{authorfullhash}{bd9e260a244c281a9de33159cacc1722}
+      \field{labelalpha}{The}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{{\tt https://www.sagemath.org}}
+      \field{title}{{S}ageMath, the {S}age {M}athematics {S}oftware {S}ystem ({V}ersion x.y.z)}
+    \endentry
+    \entry{WiersemaWuthrich}{article}{}
+      \name{author}{2}{}{%
+        {{hash=17e063bdbacd0ee8250082786ffcf5f7}{%
+           family={Wiersema},
+           familyi={W\bibinitperiod},
+           given={Hanneke},
+           giveni={H\bibinitperiod}}}%
+        {{hash=e6c4757a258aad0f9eb30eda90f58dfd}{%
+           family={Wuthrich},
+           familyi={W\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{b08cad41d11a3fa434d6fcab66a98715}
+      \strng{fullhash}{b08cad41d11a3fa434d6fcab66a98715}
+      \strng{bibnamehash}{b08cad41d11a3fa434d6fcab66a98715}
+      \strng{authorbibnamehash}{b08cad41d11a3fa434d6fcab66a98715}
+      \strng{authornamehash}{b08cad41d11a3fa434d6fcab66a98715}
+      \strng{authorfullhash}{b08cad41d11a3fa434d6fcab66a98715}
+      \field{labelalpha}{WW22}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Doc. Math.}
+      \field{title}{Integrality of twisted {$L$}-values of elliptic curves}
+      \field{volume}{27}
+      \field{year}{2022}
+      \field{pages}{2041\bibrangedash 2066}
+      \range{pages}{26}
     \endentry
   \enddatalist
 \endrefsection

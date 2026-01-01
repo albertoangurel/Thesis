@@ -150,6 +150,7 @@ Under this pairing,
 
 
 \section{Selmer modules}
+\label{sec:selmer}
 
 In this section, we introduce the concepts of Selmer structures and their associated Selmer modules. They are subgroups of the Global Galois cohomolgy which are cut out by local conditions. The can be used to determine the structure of important arithmetic objects like class groups of number fields or Mordell-Weil groups of abelian varieties.
 
@@ -230,8 +231,8 @@ Let $T_1\subset T_2\subset T$ be two submodules of $T$. The propagation of a loc
 With the definition of the propagation of Selmer structures, we can compare the Selmer groups of submodules with the torsion of the Selmer group.
 
 \begin{proposition}(\cite[Lemma 3.5.3]{MazurRubin}, \cite[Proposition 3.5]{BurnsSakamotoSano2})
-    Under Assumptions \ref{ass:basic}, for every ideal of $R$, the inclusion $T^*[I]\hookrightarrow T^*$ induces an isomorphism
-    \[H^1(K,T^*[I])\cong H^1(K,T^*)[I]\]
+    Under Assumptions \ref{ass:basic}, for every ideal $I$ of $R$, the inclusion $T^*[I]\hookrightarrow T^*$ induces an isomorphism
+    \[H^1_{\FF}(K,T^*[I])\cong H^1_{\FF}(K,T^*)[I]\]
     \label{prop:selmer_torsion}
 \end{proposition}
 
@@ -447,7 +448,7 @@ $$\begin{aligned}
 C\cap \ker\left[\loc_\ell:\ H^1(K,T)\to H^1(K_\ell,T)\right]=\ker(\phi)\\
  D\cap \ker\left[\loc_\ell:\ H^1(K,T^*)\to H^1(K_\ell,T^*)\right]=\ker(\psi)
  \end{aligned}$$
-\label{prop:mr362}
+\label{prop:cheb_nd}
 \end{proposition}
 
 \begin{lemma}

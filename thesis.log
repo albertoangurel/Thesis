@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.8)  31 DEC 2025 03:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.8)  1 JAN 2026 03:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -868,17 +868,7 @@ Package csquotes Info: Redefining alias 'default' -> 'british'.
 File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count462
 \l__pdf_internal_box=\box70
-) (/Users/alberto/Documents/PhD/Thesis/thesis.aux (/Users/alberto/Documents/PhD/Thesis/Selmer/selmer.aux) (/Users/alberto/Documents/PhD/Thesis/Kolyvagin_systems/kol_sys.aux) (/Users/alberto/Documents/PhD/Thesis/Patched_cohomology/patched.aux
-
-LaTeX Warning: Label `Tirred' multiply defined.
-
-
-LaTeX Warning: Label `Ttau' multiply defined.
-
-
-LaTeX Warning: Label `Tcoh' multiply defined.
-
-) (/Users/alberto/Documents/PhD/Thesis/BSS/biduals.aux) (/Users/alberto/Documents/PhD/Thesis/Cartesian_systems/cartesian.aux) (/Users/alberto/Documents/PhD/Thesis/Preliminaries/algebra.aux))
+) (/Users/alberto/Documents/PhD/Thesis/thesis.aux (/Users/alberto/Documents/PhD/Thesis/Selmer/selmer.aux) (/Users/alberto/Documents/PhD/Thesis/Kolyvagin_systems/kol_sys.aux) (/Users/alberto/Documents/PhD/Thesis/Patched_cohomology/patched.aux) (/Users/alberto/Documents/PhD/Thesis/BSS/biduals.aux) (/Users/alberto/Documents/PhD/Thesis/Cartesian_systems/cartesian.aux) (/Users/alberto/Documents/PhD/Thesis/Ell_cur/ell_cur.aux) (/Users/alberto/Documents/PhD/Thesis/Preliminaries/algebra.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
@@ -1031,12 +1021,16 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 
 
 ] <xymatrix 5x1 158> [6] [7] <xymatrix 5x1 158>
-Overfull \hbox (18.55602pt too wide) detected at line 197
+Overfull \hbox (18.55602pt too wide) detected at line 198
 []
  []
 
-[8] [9] [10] [11] <xymatrix 2x2 182> [12] [13] <xymatrix 3x1 82> [14]
-Overfull \hbox (17.80695pt too wide) detected at line 524
+[8] [9] [10] [11] <xymatrix 2x2 182> [12] [13]
+
+LaTeX Warning: Reference `prop:mr362' on page 14 undefined on input line 478.
+
+<xymatrix 3x1 82> [14]
+Overfull \hbox (17.80695pt too wide) detected at line 525
 \OML/cmm/m/it/10.95 H[]\OT1/cmr/m/n/10.95 (\U/msb/m/n/10.95 Q\OML/cmm/m/it/10.95 ; T=\U/euf/m/n/10.95 m[]\OT1/cmr/m/n/10.95 ) = [] [] [] \OML/cmm/m/it/10.95 R=\U/euf/m/n/10.95 m[] \OMS/cmsy/m/n/10.95 ^^B [] ^^B \OML/cmm/m/it/10.95 R=\U/euf/m/n/10.95 m[]
  []
 
@@ -1111,100 +1105,332 @@ Overfull \hbox (7.52882pt too wide) in paragraph at lines 285--286
  []
 
 [35] <xymatrix 5x1 172> [36] <xymatrix 5x1 172> [37] [38] [39] [40] [41]
-Overfull \hbox (13.50658pt too wide) detected at line 623
+Overfull \hbox (13.50658pt too wide) detected at line 626
 [][][][]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 K[]=K; T\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ! [] [][]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 K[]; T\OT1/cmr/m/n/10.95 )[] = [][]\OMS/cmsy/m/n/10.95 U[]\OML/cmm/m/it/10.95 H[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 K[]=K; T\OT1/cmr/m/n/10.95 )[] \OMS/cmsy/m/n/10.95 ! [] U[]\OML/cmm/m/it/10.95 H[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 K[]; T\OT1/cmr/m/n/10.95 )[][]
  []
 
 [42] <xymatrix 5x1 158>
-Overfull \hbox (27.22264pt too wide) detected at line 668
+Overfull \hbox (27.22264pt too wide) detected at line 671
 []
  []
 
 [43] <xymatrix 5x1 158>
-Overfull \hbox (100.28955pt too wide) detected at line 689
+Overfull \hbox (100.28955pt too wide) detected at line 692
 []
  []
 
-
-Overfull \hbox (14.65524pt too wide) in paragraph at lines 713--716
-[][]\OT1/cmr/bx/n/10.95 Definition 3.2.35. []\OT1/cmr/m/n/10.95 (Cartesian local con-di-tion) A local con-di-tion $[][](\OML/cmm/m/it/10.95 K[]; T\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^Z [][]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 K[]; T\OT1/cmr/m/n/10.95 )$
+<xymatrix 4x1 120> <xymatrix 5x1 158> [44] <xymatrix 4x2 347>
+Overfull \hbox (14.65524pt too wide) in paragraph at lines 774--777
+[][]\OT1/cmr/bx/n/10.95 Definition 3.3.15. []\OT1/cmr/m/n/10.95 (Cartesian local con-di-tion) A local con-di-tion $[][](\OML/cmm/m/it/10.95 K[]; T\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^Z [][]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 K[]; T\OT1/cmr/m/n/10.95 )$
  []
 
-<xymatrix 4x1 127> [44] <xymatrix 2x2 154> [45] <xymatrix 5x1 158>) [46]
+[45] <xymatrix 4x1 127> <xymatrix 2x2 154> [46] <xymatrix 5x1 158> [47]) [48]
 \openout2 = `BSS/biduals.aux'.
 
  (/Users/alberto/Documents/PhD/Thesis/BSS/biduals.tex
 Chapter 4.
-<xymatrix 4x1 120> [47
+
+Overfull \hbox (8.35904pt too wide) in paragraph at lines 19--22
+[][]\OT1/cmr/bx/n/10.95 Definition 4.1.2. []\OT1/cmr/m/n/10.95 (Cartesian local con-di-tion) A local con-di-tion $[][](\OML/cmm/m/it/10.95 K[]; T\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^Z [][]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 K[]; T\OT1/cmr/m/n/10.95 )$
+ []
+
+[49
 
 
 
 
-] <xymatrix 5x1 158> <xymatrix 5x1 158> [48] <xymatrix 6x1 196>
-Overfull \hbox (13.83685pt too wide) detected at line 102
+] [50] <xymatrix 3x1 89>
+Overfull \hbox (6.28093pt too wide) in paragraph at lines 106--108
+\OT1/cmr/m/n/10.95 map and the second map is in-ject-ive by as-sump-tion []4.1.6[], we get that $\OML/cmm/m/it/10.95 p[]X[][] \OMS/cmsy/m/n/10.95 6\OT1/cmr/m/n/10.95 =
+ []
+
+[51]
+Overfull \hbox (23.25096pt too wide) in paragraph at lines 145--146
+\OT1/cmr/m/n/10.95 group $[][][]\U/msb/m/n/10.95 Q\OML/cmm/m/it/10.95 ; [][][]$\OT1/cmr/m/n/10.95 . Since $\OML/cmm/m/it/10.95 p[]X[]c[] \OMS/cmsy/m/n/10.95 6\OT1/cmr/m/n/10.95 = 0$ and $\OML/cmm/m/it/10.95 p[]X[]c[] \OMS/cmsy/m/n/10.95 6\OT1/cmr/m/n/10.95 =
+ []
+
+[52] [53] <xymatrix 3x1 82>
+
+LaTeX Warning: Reference `th:chebotarev' on page 54 undefined on input line 195.
+
+<xymatrix 4x1 120>
+
+LaTeX Warning: Reference `th:chebotarev' on page 54 undefined on input line 217.
+
+[54]
+Overfull \hbox (13.37033pt too wide) in paragraph at lines 227--228
+[]\OT1/cmr/m/n/10.95 The fi-nite-ness of the coker-nel of $[][]$ im-plies that $[][](\OML/cmm/m/it/10.95 K; [][]\OT1/cmr/m/n/10.95 )$ has fi-nite in-dex $[][](\OML/cmm/m/it/10.95 K; [][]\OT1/cmr/m/n/10.95 )$.
+ []
+
+<xymatrix 4x1 120> [55] <xymatrix 5x1 158> <xymatrix 5x1 158> [56] <xymatrix 6x1 196>
+Overfull \hbox (13.83685pt too wide) detected at line 336
 []
  []
 
 
-Overfull \hbox (8.79063pt too wide) in paragraph at lines 106--107
+Overfull \hbox (8.79063pt too wide) in paragraph at lines 340--341
 \OML/cmm/m/it/10.95 ^^^[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 "[]\OT1/cmr/m/n/10.95 )$, then pro-pos-i-tion []A.2.4[] im-plies that the im-age of $\OML/cmm/m/it/10.95 "[]$ \OT1/cmr/m/n/10.95 con-tains $[][]([][](\U/msb/m/n/10.95 Q\OML/cmm/m/it/10.95 ; [][]\OT1/cmr/m/n/10.95 ))$
  []
 
-) [49]
+
+LaTeX Warning: Command \SS invalid in math mode on input line 347.
+
+<xymatrix 4x1 120> [57] <xymatrix 4x1 120> <xymatrix 4x1 120> <xymatrix 4x2 166> [58]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 425.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Lambda' on input line 425.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 425.
+
+[59]
+Overfull \hbox (6.71097pt too wide) in paragraph at lines 488--489
+[]$[][]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 K; [][]\OT1/cmr/m/n/10.95 )[]$ is a fi-nitely gen-er-ated $^^C$-module, so it ad-mits a pseudo-isomorphism 
+ []
+
+[60]
+Overfull \hbox (34.8621pt too wide) in paragraph at lines 496--498
+\OT1/cmr/m/n/10.95 If we define $\OML/cmm/m/it/10.95 kn[]$ \OT1/cmr/m/n/10.95 as the formal square-free product of the first $\OML/cmm/m/it/10.95 i$ \OT1/cmr/m/n/10.95 primes of $(\U/euf/m/n/10.95 u[]\OML/cmm/m/it/10.95 ; [] ; \U/euf/m/n/10.95 u[]\OML/cmm/m/it/10.95 ; \U/euf/m/n/10.95 v[]\OML/cmm/m/it/10.95 ; [] ; kv[]\OT1/cmr/m/n/10.95 )$,
+ []
+
+) [61]
 \openout2 = `Cartesian_systems/cartesian.aux'.
 
- (/Users/alberto/Documents/PhD/Thesis/Cartesian_systems/cartesian.tex [50
+ (/Users/alberto/Documents/PhD/Thesis/Cartesian_systems/cartesian.tex [62
 
 
 
 
 ]
 Chapter 5.
-<xymatrix 5x1 158>) [51]
-\openout2 = `Preliminaries/algebra.aux'.
+<xymatrix 5x1 158>) [63]
+\openout2 = `Ell_cur/ell_cur.aux'.
 
- (/Users/alberto/Documents/PhD/Thesis/Preliminaries/algebra.tex [52
+ (/Users/alberto/Documents/PhD/Thesis/Ell_cur/ell_cur.tex [64
 
 
 
 
 ]
+Chapter 6.
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 4.
+
+
+LaTeX Warning: Reference `Hffr' on page 65 undefined on input line 24.
+
+
+LaTeX Warning: Reference `Hprimes' on page 65 undefined on input line 24.
+
+[65]
+
+LaTeX Warning: Reference `sec:lambda' on page 66 undefined on input line 64.
+
+[66]
+
+LaTeX Warning: Reference `th:MC_ind' on page 67 undefined on input line 101.
+
+[67] [68]
+
+LaTeX Warning: Reference `sec:global' on page 69 undefined on input line 162.
+
+[69] [70]
+
+LaTeX Warning: Reference `def:BK_str' on page 71 undefined on input line 246.
+
+[71]
+
+LaTeX Warning: Reference `def:theta' on page 72 undefined on input line 300.
+
+[72]
+
+LaTeX Warning: Reference `th:kur_par' on page 73 undefined on input line 350.
+
+
+LaTeX Warning: Reference `Hffr' on page 73 undefined on input line 357.
+
+
+LaTeX Warning: Reference `Hprimes' on page 73 undefined on input line 357.
+
+
+LaTeX Warning: Reference `sec:global' on page 73 undefined on input line 357.
+
+
+LaTeX Warning: Reference `Hffr' on page 73 undefined on input line 362.
+
+
+LaTeX Warning: Reference `Hchev' on page 73 undefined on input line 362.
+
+
+LaTeX Warning: Reference `Hprimes' on page 73 undefined on input line 362.
+
+
+LaTeX Warning: Reference `Hirred' on page 73 undefined on input line 366.
+
+
+LaTeX Warning: Reference `Hsur' on page 73 undefined on input line 366.
+
+
+Overfull \hbox (11.99771pt too wide) in paragraph at lines 394--395
+ [] 
+ []
+
+
+LaTeX Warning: Reference `Hcoh0' on page 73 undefined on input line 396.
+
+[73]
+Overfull \hbox (0.6535pt too wide) detected at line 400
+\OML/cmm/m/it/10.95 H[][]\U/msb/m/n/10.95 Q[]\OML/cmm/m/it/10.95 ; T \OMS/cmsy/m/n/10.95 
+ O[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ^^_\OT1/cmr/m/n/10.95 )[] [] \OML/cmm/m/it/10.95 H[][]\U/msb/m/n/10.95 Q[]\OML/cmm/m/it/10.95 ; T[] \OMS/cmsy/m/n/10.95 
+ O[]\OT1/cmr/m/n/10.95 ([])[][] [] []\OML/cmm/m/it/10.95 H[][]K[]; E\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 p[]\OT1/cmr/m/n/10.95 ] \OMS/cmsy/m/n/10.95 
+ O[]\OT1/cmr/m/n/10.95 ([])[][][][]
+ []
+
+
+Overfull \hbox (20.04353pt too wide) detected at line 405
+[][]\OML/cmm/m/it/10.95 H[][]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 K[]; E\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 p[]\OT1/cmr/m/n/10.95 ])[] \OMS/cmsy/m/n/10.95 
+ O[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ^^_\OT1/cmr/m/n/10.95 )[][] [] [][] \OML/cmm/m/it/10.95 E\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 K[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 =p[] \OMS/cmsy/m/n/10.95 
+ O[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ^^_\OT1/cmr/m/n/10.95 )[][] = []\OML/cmm/m/it/10.95 E\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 K[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 
+ O[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ^^_\OT1/cmr/m/n/10.95 )[][]
+ []
+
+
+LaTeX Warning: Reference `Hcartesian' on page 74 undefined on input line 406.
+
+
+LaTeX Warning: Reference `Hcore0' on page 74 undefined on input line 410.
+
+
+LaTeX Warning: Reference `Hloc' on page 74 undefined on input line 410.
+
+
+LaTeX Warning: Reference `th:kur_par' on page 74 undefined on input line 418.
+
+[74] <xymatrix 5x1 158>
+Overfull \hbox (6.85155pt too wide) detected at line 443
+[]
+ []
+
+<xymatrix 6x1 196> [75]
+Overfull \hbox (12.53667pt too wide) detected at line 492
+[][]\OML/cmm/m/it/10.95 e[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ^^P[]\OT1/cmr/m/n/10.95 ) = []\OML/cmm/m/it/10.95 e[][][][]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ^^P[]\OT1/cmr/m/n/10.95 )[] = []\OML/cmm/m/it/10.95 e[][]\OT1/cmr/m/n/10.95 (\OMS/cmsy/m/n/10.95 ^^@\OT1/cmr/m/n/10.95 1)[]\OML/cmm/m/it/10.95 ^^P[][] \OT1/cmr/m/n/10.95 = []\OML/cmm/m/it/10.95 e[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ^^P[]\OT1/cmr/m/n/10.95 )
+ []
+
+[76] [77] [78] [79] [80] [81] [82] [83]
+
+LaTeX Warning: Reference `def:kol_der' on page 84 undefined on input line 857.
+
+
+LaTeX Warning: Reference `prop:rub442' on page 84 undefined on input line 882.
+
+[84]
+
+LaTeX Warning: Reference `eq:kol_der' on page 85 undefined on input line 910.
+
+[85] [86] <xymatrix 5x1 158> [87] [88]
+
+LaTeX Warning: Reference `eq:tilde_kappa_n' on page 89 undefined on input line 1114.
+
+[89]
+
+LaTeX Warning: Reference `th:wk_to_kol' on page 90 undefined on input line 1145.
+
+
+LaTeX Warning: Reference `th:wk_to_kol' on page 90 undefined on input line 1148.
+
+
+LaTeX Warning: Reference `th:eul_to_kol_lambda' on page 90 undefined on input line 1161.
+
+
+LaTeX Warning: Reference `prop:lambda_kol_free' on page 90 undefined on input line 1163.
+
+
+LaTeX Warning: Reference `th:MC_ind' on page 90 undefined on input line 1163.
+
+
+LaTeX Warning: Reference `prop:lambda_kol_free' on page 90 undefined on input line 1165.
+
+
+LaTeX Warning: Reference `cor:kol_red_prim' on page 90 undefined on input line 1170.
+
+
+LaTeX Warning: Reference `lem:dinf' on page 90 undefined on input line 1170.
+
+
+LaTeX Warning: Reference `cor:kol_red_loc' on page 90 undefined on input line 1174.
+
+
+LaTeX Warning: Reference `th:kur_par' on page 90 undefined on input line 1174.
+
+[90]
+
+LaTeX Warning: Reference `th:kur_par' on page 91 undefined on input line 1192.
+
+[91]
+
+LaTeX Warning: Reference `th:kur_par' on page 92 undefined on input line 1226.
+
+
+LaTeX Warning: Reference `th:kur_par' on page 92 undefined on input line 1229.
+
+[92] [93]
+Overfull \hbox (19.75671pt too wide) in paragraph at lines 1299--1300
+[]\OT1/cmr/m/n/10.95 Overall, as-sum-ing the fi-nite-ness of the Tate-Shafarevich group, we know that $[](\OML/cmm/m/it/10.95 E\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 K\OT1/cmr/m/n/10.95 )) =
+ []
+
+) [94]
+\openout2 = `Preliminaries/algebra.aux'.
+
+ (/Users/alberto/Documents/PhD/Thesis/Preliminaries/algebra.tex
 Appendix A.
-<xymatrix 4x1 127> <xymatrix 4x1 127> [53] <xymatrix 4x1 120> [54] <xymatrix 4x1 120> <xymatrix 4x1 120> <xymatrix 4x1 120> <xymatrix 6x1 196>
+<xymatrix 4x1 127> <xymatrix 4x1 127> [95
+
+
+
+
+] <xymatrix 4x1 120> [96] <xymatrix 4x1 120> <xymatrix 4x1 120> <xymatrix 4x1 120> <xymatrix 6x1 196>
 Overfull \hbox (10.23105pt too wide) in paragraph at lines 115--118
 \OT1/cmr/m/n/10.95 be the map con-struc-ted in pro-pos-i-tion []A.2.1[]. Then the im-age of $^^H(\OML/cmm/m/it/10.95 '\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 2 [] []$
  []
 
-<xymatrix 4x1 127> [55]) [56] [57
+<xymatrix 4x1 127> [97]) [98]
+Overfull \hbox (10.2244pt too wide) in paragraph at lines 38--38
+\OT1/cmr/m/it/10.95 Arith-metic al-geb-raic geo-metry (Texel, 1989)\OT1/cmr/m/n/10.95 . Vol. 89. Progr. Math. Birkh^^?auser
+ []
+
+[99
 
 
 
-] (/Users/alberto/Documents/PhD/Thesis/thesis.aux (/Users/alberto/Documents/PhD/Thesis/Selmer/selmer.aux) (/Users/alberto/Documents/PhD/Thesis/Kolyvagin_systems/kol_sys.aux) (/Users/alberto/Documents/PhD/Thesis/Patched_cohomology/patched.aux) (/Users/alberto/Documents/PhD/Thesis/BSS/biduals.aux) (/Users/alberto/Documents/PhD/Thesis/Cartesian_systems/cartesian.aux) (/Users/alberto/Documents/PhD/Thesis/Preliminaries/algebra.aux))
+] [100] (/Users/alberto/Documents/PhD/Thesis/thesis.aux (/Users/alberto/Documents/PhD/Thesis/Selmer/selmer.aux) (/Users/alberto/Documents/PhD/Thesis/Kolyvagin_systems/kol_sys.aux) (/Users/alberto/Documents/PhD/Thesis/Patched_cohomology/patched.aux) (/Users/alberto/Documents/PhD/Thesis/BSS/biduals.aux) (/Users/alberto/Documents/PhD/Thesis/Cartesian_systems/cartesian.aux) (/Users/alberto/Documents/PhD/Thesis/Ell_cur/ell_cur.aux) (/Users/alberto/Documents/PhD/Thesis/Preliminaries/algebra.aux))
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 669834EDC0C572807E03B5ED4F66B9BF;2707.
+(rerunfilecheck)             Checksum: 2AF015C4D993F98E888DBBC7822AB8C2;4802.
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33359 strings out of 478994
- 599533 string characters out of 5858185
- 1402916 words of memory out of 5000000
- 49919 multiletter control sequences out of 15000+600000
- 425606 words of font info for 112 fonts, out of 8000000 for 9000
+ 33921 strings out of 478994
+ 609627 string characters out of 5858185
+ 1412548 words of memory out of 5000000
+ 50271 multiletter control sequences out of 15000+600000
+ 425842 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  118i,22n,119p,3296b,2235s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/xypic/xycmat10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/xypic/xycmbt10.pfb>
-Output written on /Users/alberto/Documents/PhD/Thesis/thesis.pdf (57 pages, 471639 bytes).
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cyrillic/wncyr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/xypic/xycmat10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/xypic/xycmbt10.pfb>
+Output written on /Users/alberto/Documents/PhD/Thesis/thesis.pdf (100 pages, 717608 bytes).
 PDF statistics:
- 1041 PDF objects out of 1200 (max. 8388607)
- 946 compressed objects within 10 object streams
- 295 named destinations out of 1000 (max. 500000)
- 293 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1768 PDF objects out of 2073 (max. 8388607)
+ 1617 compressed objects within 17 object streams
+ 496 named destinations out of 1000 (max. 500000)
+ 469 words of extra memory for PDF output out of 10000 (max. 10000000)
 
