@@ -1,9 +1,9 @@
-PWD /Users/alberto/Documents/PhD/Thesis
+PWD /Users/alberto/Documents/PhD/Thesis/Modular symbols
 INPUT /usr/local/texlive/2021/texmf.cnf
 INPUT /usr/local/texlive/2021/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/alberto/Documents/PhD/Thesis/modular_symbols.tex
-OUTPUT /Users/alberto/Documents/PhD/Thesis/modular_symbols.log
+INPUT /Users/alberto/Documents/PhD/Thesis/Modular symbols/modular_symbols.tex
+OUTPUT /Users/alberto/Documents/PhD/Thesis/Modular symbols/modular_symbols.log
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/base/book.cls
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/base/book.cls
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/base/book.cls
@@ -984,10 +984,10 @@ INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.de
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT /Users/alberto/Documents/PhD/Thesis/modular_symbols.aux
-INPUT /Users/alberto/Documents/PhD/Thesis/modular_symbols.aux
-INPUT /Users/alberto/Documents/PhD/Thesis/modular_symbols.aux
-OUTPUT /Users/alberto/Documents/PhD/Thesis/modular_symbols.aux
+INPUT /Users/alberto/Documents/PhD/Thesis/Modular symbols/modular_symbols.aux
+INPUT /Users/alberto/Documents/PhD/Thesis/Modular symbols/modular_symbols.aux
+INPUT /Users/alberto/Documents/PhD/Thesis/Modular symbols/modular_symbols.aux
+OUTPUT /Users/alberto/Documents/PhD/Thesis/Modular symbols/modular_symbols.aux
 INPUT /usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -1090,13 +1090,13 @@ INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-2020
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-2020-10-01.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.tex
-OUTPUT /Users/alberto/Documents/PhD/Thesis/modular_symbols.bcf
-INPUT /Users/alberto/Documents/PhD/Thesis/modular_symbols.bbl
-INPUT /Users/alberto/Documents/PhD/Thesis/modular_symbols.bbl
-INPUT /Users/alberto/Documents/PhD/Thesis/modular_symbols.bbl
-INPUT /Users/alberto/Documents/PhD/Thesis/modular_symbols.bbl
-INPUT /Users/alberto/Documents/PhD/Thesis/modular_symbols.bbl
-INPUT /Users/alberto/Documents/PhD/Thesis/modular_symbols.bbl
+OUTPUT /Users/alberto/Documents/PhD/Thesis/Modular symbols/modular_symbols.bcf
+INPUT /Users/alberto/Documents/PhD/Thesis/Modular symbols/modular_symbols.bbl
+INPUT /Users/alberto/Documents/PhD/Thesis/Modular symbols/modular_symbols.bbl
+INPUT /Users/alberto/Documents/PhD/Thesis/Modular symbols/modular_symbols.bbl
+INPUT /Users/alberto/Documents/PhD/Thesis/Modular symbols/modular_symbols.bbl
+INPUT /Users/alberto/Documents/PhD/Thesis/Modular symbols/modular_symbols.bbl
+INPUT /Users/alberto/Documents/PhD/Thesis/Modular symbols/modular_symbols.bbl
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -1134,18 +1134,18 @@ INPUT /usr/local/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestri
 INPUT /usr/local/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
-INPUT /Users/alberto/Documents/PhD/Thesis/modular_symbols.out
-INPUT /Users/alberto/Documents/PhD/Thesis/modular_symbols.out
-INPUT /Users/alberto/Documents/PhD/Thesis/modular_symbols.out
-INPUT /Users/alberto/Documents/PhD/Thesis/modular_symbols.out
-INPUT /Users/alberto/Documents/PhD/Thesis/modular_symbols.out
-INPUT /Users/alberto/Documents/PhD/Thesis/modular_symbols.out
-INPUT /Users/alberto/Documents/PhD/Thesis/modular_symbols.out
-INPUT /Users/alberto/Documents/PhD/Thesis/modular_symbols.out
-OUTPUT /Users/alberto/Documents/PhD/Thesis/modular_symbols.pdf
-INPUT /Users/alberto/Documents/PhD/Thesis/modular_symbols.out
-INPUT /Users/alberto/Documents/PhD/Thesis/modular_symbols.out
-OUTPUT /Users/alberto/Documents/PhD/Thesis/modular_symbols.out
+INPUT /Users/alberto/Documents/PhD/Thesis/Modular symbols/modular_symbols.out
+INPUT /Users/alberto/Documents/PhD/Thesis/Modular symbols/modular_symbols.out
+INPUT /Users/alberto/Documents/PhD/Thesis/Modular symbols/modular_symbols.out
+INPUT /Users/alberto/Documents/PhD/Thesis/Modular symbols/modular_symbols.out
+INPUT /Users/alberto/Documents/PhD/Thesis/Modular symbols/modular_symbols.out
+INPUT /Users/alberto/Documents/PhD/Thesis/Modular symbols/modular_symbols.out
+INPUT /Users/alberto/Documents/PhD/Thesis/Modular symbols/modular_symbols.out
+INPUT /Users/alberto/Documents/PhD/Thesis/Modular symbols/modular_symbols.out
+OUTPUT /Users/alberto/Documents/PhD/Thesis/Modular symbols/modular_symbols.pdf
+INPUT /Users/alberto/Documents/PhD/Thesis/Modular symbols/modular_symbols.out
+INPUT /Users/alberto/Documents/PhD/Thesis/Modular symbols/modular_symbols.out
+OUTPUT /Users/alberto/Documents/PhD/Thesis/Modular symbols/modular_symbols.out
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
@@ -1154,11 +1154,11 @@ INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmsl10.tfm
-INPUT /Users/alberto/Documents/PhD/Thesis/modular_symbols.aux
-INPUT /Users/alberto/Documents/PhD/Thesis/modular_symbols.out
-INPUT /Users/alberto/Documents/PhD/Thesis/modular_symbols.out
-INPUT /Users/alberto/Documents/PhD/Thesis/modular_symbols.run.xml
-OUTPUT /Users/alberto/Documents/PhD/Thesis/modular_symbols.run.xml
+INPUT /Users/alberto/Documents/PhD/Thesis/Modular symbols/modular_symbols.aux
+INPUT /Users/alberto/Documents/PhD/Thesis/Modular symbols/modular_symbols.out
+INPUT /Users/alberto/Documents/PhD/Thesis/Modular symbols/modular_symbols.out
+INPUT /Users/alberto/Documents/PhD/Thesis/Modular symbols/modular_symbols.run.xml
+OUTPUT /Users/alberto/Documents/PhD/Thesis/Modular symbols/modular_symbols.run.xml
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb

@@ -29,3 +29,120 @@ Let $\FF\leq \GG$ be cartesian Selmer structures. There is a canonical homomorph
 \begin{proof}
 \textcolor{red}{use general properties of biduals}
 \end{proof}
+
+\section{Higher dimensional Kolyvagin systems}
+
+In this section, we assume the weaker version of Assumption \ref{ass:basic}.
+
+\begin{assumption}
+We assume the following assumptions:
+\begin{itemize}
+\item \namedlabel{nsTirred}{(T1)} $T/\m T$ is an irreducible $k[[G_K]]$-module.
+\item \namedlabel{nsTcoh}{(T3)} $H^1(K(T)_M/K,T)=H^1(K(T)_M/K,T^*)=0$.
+\end{itemize}
+\label{ass:nonsur}
+\end{assumption}
+
+We are not assuming the existence of $\tau$ such that $T/(\tau-1)T$ is a free, cyclic $R$-module. However, there always exist $\tau\in G_K$ such that $T/(\tau-1)T$ is a free $R$-module of rank $d$.
+
+\begin{notation}
+Fix some $\tau\in G_{K_M}$ such that $T/(\tau-1)T\cong R^d$, minimizing the exponent $d$.
+\end{notation}
+
+Similarly to Definition \ref{def:kolyvagin_primes}, we define the Kolyvagin primes $\ell\in \PP_\tau$ as those not belonging to $\Sigma_\FF$ and whose Frobenius automorphism is conjugate to $\tau$ in $\Gal(K(T)_M/K)$. We also denote by $\NN_\tau$ (resp. by $\NN_\tau^i$) to the set of square-free products of Kolyvagin primes (resp. square-free products of exactly $i$-primes).
+
+Let $\ell\in \PP_\tau$. Since $\Frob_\ell$ is trivial in $\Gal(K_M/K)$, then \textcolor{red}{comment} there is an splitting
+\[H^1(K_\ell,T)=H^1_\f(K_\ell,T)\oplus H^1_\tr(K_\ell,T)\]
+which is a free $R$ module of rank $d$.
+
+Moreover, there is canonical isomorphisms
+\[H^1_\f(K_\ku, T)\cong T/(\Frob_\ku-1) T=T/(\tau-1) T\]
+
+After fixing a generator of $\GG_\ell$, there is another canonical ismorphisms.
+\[\phi_\ku^{\fs}:\ H^1_\f(K_\ku, T)\to H^1_\tr(K_\ku, T)\]
+
+\begin{definition}
+An element $\kn\in \NN$ is said to be \emph{admissible} if, for every $\ku\mid \kn$, the map 
+\[\loc_\ku:\ \bH^1_{\FF^{\kn/\ku}}(K,T)\to \bH^1_\f(K_\ku,T)\]
+We will denote the image of $\loc_\ku$ by $A_{\kn,\ku}$.
+\end{definition}
+
+The next proposition gives a method to construct admissible products.
+\begin{proposition}
+Let $\ku_1,\ldots, \ku_s\in \PP$ be a set ok Kolyvagin ultraprimes satisfying that for all $i=1,\ldots, s$, 
+\begin{itemize}
+    \item The image of $\loc_{\ku_i}:\bH^1_{\FF^{\ku_1\cdots\ku_{i-1}}}(K,T)\to \bH^1_{\f}(K_{\ku_i},T)$ is contained in a free rank $1$ $R$-submodule.
+    \item For every $j\in \{1,\ldots, i-1\}$, we have that
+    \[\bH^1_{(\FF^*)_{(\ku_1\cdots\ku_{i})/\ku_j}^{\ku_j}}(K,T^*)+\bH^1_{(\FF^*)_{(\ku_1\cdots\ku_{i-1})/\ku_j}}(K,T^*)=\bH^1_{(\FF^*)^{\ku_j}_{(\ku_1\cdots\ku_{i-1})/\ku_j}}(K,T^*)\]
+    \[\textcolor{blue}{H^1_{(\FF^*)^{\ell_1\ldots\ell_{i-1}}_{\ell_i}}(K,T^*)+ H^1_{\FF^*_{\ell_1\cdots\ell_{i-1}}}(K,T^*)=H^1_{(\FF^*)^{\ell_1\ldots\ell_{i-1}}}(K,T^*)     }\]
+\end{itemize}
+Then $\kn:=\ku_1\cdots\ku_s$ is admissible.
+\end{proposition}
+
+\begin{proof}
+Consider the exact sequence
+\[\xymatrix{\bH^1_{\FF^{\kn/\ku_i}_{\ku_i}}(K,T)\ar@{>->}[r] &  \bH^1_{\FF^{\kn/\ku_i}}(K,T)\ar[r] & \bH^1_\f(K_{\ku_i},T) \ar[r] & \bH^1_{(\FF^*)_{\kn/\ku_i}^{\ku_i}}(K,T^*)^\vee \ar@{->>}[r] &\bH^1_{(\FF^*)_{\kn/\ku_i}}(K,T^*)^\vee}\]
+
+Denote $r_i:=\ell_1\cdots \ell_{i-1}$ and $s_i:=\ell_{i+1}\cdots \ell_s$.\textcolor{red}{write}
+\end{proof}
+
+\section{Kolyvagin systems}
+
+Definition \ref{def:kol} can be generalised to this setting with the only modification of the original Kolyvagin primes in $\PP$ to rank $d$ Kolyvagin primes in $\PP_\tau$.
+
+\begin{definition}
+A \emph{$\tau$-Kolyvagin system} for a Selmer structure $\FF$
+$$\kappa=\left\{\kappa_n\in H^1_{\mathcal F(n)}(K,T):\ n\in \NN\right\}$$
+satisfying the following relation for every $n\in \NN$ and $\ell\in \PP$ not dividing $n$. By the definition of Selmer module, we have that 
+\[\begin{array}{cc}
+\loc_\ell(\kappa_n)\in H^1_{\FF(n)}(K_\ell,T)=H^1_\f(K_\ell,T),\ &\loc_\ell(\kappa_{n\ell})\in H^1_{\FF(n\ell)}(K_\ell,T)=H^1_\tr(K_\ell,T)
+\end{array}\]
+The collection $\kappa$ is a Kolyvagin system if the following is satisfied
+\begin{equation}
+\loc_\ell(\kappa_{n\ell})=\phi_\ell^{\fs}\circ \loc_\ell(\kappa_n)
+\label{eq:kol_cond}
+\end{equation}
+for every $n\in \NN$ and $\ell\in \PP$ not dividing $n$.
+\label{def:kol_tau}
+\end{definition}
+
+We will aim to construct a partial cartesian system from the classes $\kappa_n$, where $\kappa$ is a $\tau$-Kolyvagin systems and $n\in \NN_\tau$ is admissible.
+
+Recall that, when $n\in\NN_\tau$ is admissible, we had defined a free, cyclic $R$-submodule $A_{\kn,\ku}$ such that 
+\[\loc_\ku\Bigl(H^1_{\FF^{\kn/\ku}}(K,T)\Bigr)\subset A_{\kn,\ku}\subset H^1_{\f}(K,T)\]
+
+\begin{proposition}
+Assume that $\bH^1_{\FF}(K,T)\neq \bH^1_{\FF_\ku}(K,T)$. Then $A_{\kn,\ku}$ coincides for all admissible $\kn$ dividing $\ku$. 
+\end{proposition}
+
+Choose a free $R$-module $B_{n,\ku}$ of rank $d-1$ such that 
+\[A_{\kn,\ku}\oplus B_{\kn,\ku}=H^1_{\f}(K,T)\]
+
+We can define, for every admissible $\kn\in \NN$, a Selmer structure $\FF[\kn]$.
+
+\begin{definition}
+Let $\kn\in \NN$ be admissible. Define the Selmer structure $\FF[\kn]$ by the local conditions 
+\[\left\{\begin{aligned}
+&\bH^1_{\FF[n]}(K_\ku,T)=B_n\oplus \phi_\ku^\fs(A_n)&\textrm{ if }\ku\mid \kn\\
+&\bH^1_{\FF[n]}(K_\ku,T)=\bH^1_{\FF}(K_\ku,T)&\textrm{ if }\ku\nmid \kn\\
+\end{aligned}\right.\]
+\end{definition}
+
+\begin{proposition}
+Let $\kappa\in \KS_\tau(T)$. For every admissible $n\in \NN_\tau$, $\kappa_n\in \bH^1_{\FF[n]}(K,T)$.
+\end{proposition}
+
+\begin{proof}
+
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,13 +1,13 @@
 # Fdb version 3
-["biber modular_symbols"] 1760394884 "modular_symbols.bcf" "modular_symbols.bbl" "modular_symbols" 1760394920
-  "modular_symbols.bcf" 1760394920 106698 2cfd8a79f70465aca4d7c32db0f625e2 "pdflatex"
+["biber modular_symbols"] 1760394884 "modular_symbols.bcf" "modular_symbols.bbl" "modular_symbols" 1767401226
+  "modular_symbols.bcf" 1767401210 106698 2cfd8a79f70465aca4d7c32db0f625e2 "pdflatex"
   "refs.bib" 1760049628 10389 3b2e7142b7f42cf6ee338b2812e12bab ""
   (generated)
   "modular_symbols.bbl"
   "modular_symbols.blg"
-["pdflatex"] 1760394918 "/Users/alberto/Documents/PhD/Thesis/modular_symbols.tex" "/Users/alberto/Documents/PhD/Thesis/modular_symbols.pdf" "modular_symbols" 1760394920
-  "/Users/alberto/Documents/PhD/Thesis/modular_symbols.aux" 1760394920 2043 1ac60793acc545f70e55174143c531a1 ""
-  "/Users/alberto/Documents/PhD/Thesis/modular_symbols.tex" 1760394905 6184 aa66d33b24e652d77380f98d6379f204 ""
+["pdflatex"] 1767401207 "/Users/alberto/Documents/PhD/Thesis/Modular symbols/modular_symbols.tex" "/Users/alberto/Documents/PhD/Thesis/Modular symbols/modular_symbols.pdf" "modular_symbols" 1767401226
+  "/Users/alberto/Documents/PhD/Thesis/Modular symbols/modular_symbols.aux" 1767401210 2043 1ac60793acc545f70e55174143c531a1 ""
+  "/Users/alberto/Documents/PhD/Thesis/Modular symbols/modular_symbols.tex" 1760394905 6184 aa66d33b24e652d77380f98d6379f204 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -235,17 +235,17 @@
   "/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1616695603 5169178 a2ce6e2d73f603b690db6777d06dbccb ""
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1623104058 2724742 f0d02921f2f2217d65a5ed87d3c1b55a ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
-  "modular_symbols.aux" 1760394920 2043 1ac60793acc545f70e55174143c531a1 "pdflatex"
+  "modular_symbols.aux" 1767401210 2043 1ac60793acc545f70e55174143c531a1 "pdflatex"
   "modular_symbols.bbl" 1760394916 466 f7f239c736cf01ac6ce7bd829f9b3c7b "biber modular_symbols"
-  "modular_symbols.out" 1760394920 375 77fe5452ce8f8a313119d0bbc9b417d9 "pdflatex"
-  "modular_symbols.run.xml" 1760394920 2413 ed2b680ac784be9df6d803fe570c1cd1 "pdflatex"
+  "modular_symbols.out" 1767401210 375 77fe5452ce8f8a313119d0bbc9b417d9 "pdflatex"
+  "modular_symbols.run.xml" 1767401210 2413 ed2b680ac784be9df6d803fe570c1cd1 "pdflatex"
   "modular_symbols.tex" 1760394905 6184 aa66d33b24e652d77380f98d6379f204 ""
   (generated)
-  "modular_symbols.log"
-  "/Users/alberto/Documents/PhD/Thesis/modular_symbols.pdf"
+  "/Users/alberto/Documents/PhD/Thesis/Modular symbols/modular_symbols.pdf"
   "modular_symbols.bcf"
   "modular_symbols.pdf"
-  "modular_symbols.run.xml"
+  "modular_symbols.log"
   "modular_symbols.out"
   "modular_symbols.aux"
-  "/Users/alberto/Documents/PhD/Thesis/modular_symbols.log"
+  "/Users/alberto/Documents/PhD/Thesis/Modular symbols/modular_symbols.log"
+  "modular_symbols.run.xml"

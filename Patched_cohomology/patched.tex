@@ -579,6 +579,7 @@ We can recover the Selmer group as the limit of the propagated Selmer groups wit
 Let $T$ be a profinite group and let $\FF$ be a Selmer structure defined on $T$. Then
 \[\bH^1_{\FF}(K,T)=\varprojlim_{T\twoheadrightarrow T'} \bH^1_{\FF}(K,T')\]
 where the limit is taken over the finite quotients $T'$ of $T$ and $\bH^1_{\FF}(K,T')$ is the Selmer group of the propagated Selmer structure, as defined in Definition \ref{def:propagation_quotients}.
+\label{prop:selmer_profinite}
 \end{proposition}
 
 \begin{proof}
@@ -749,7 +750,7 @@ We have already seen that the middle vertical arrow is an isomorphism. The right
 
 This section is devoted to prove analogues of Propositions \ref{prop:cheb} and \ref{prop:cheb_nd}
 
-
+\textcolor{red}{might be needed to do it individually in every case}
 
 
 
@@ -782,7 +783,7 @@ By \cite[Lemma 3.7.1]{MazurRubin}, if a Selmer structure on $T$ is cartesian as 
 
 \textcolor{red}{finite cohomology}
 
-When a Selmer structure is cartesian, the propagated Selmer group of quotients of $T$ can be described as a quotient of the Selmer group of $T$.
+When a Selmer structure is cartesian, the propagated Selmer group of quotients of $T$ can be described as a quotient of the Selmer group of $T$. The proof of the next proposition follows the one of \cite[Lemma 3.7.1]{MazurRubin}
 
 \begin{proposition}
 Let $\FF$ be a cartesian Selmer structure. For $k\in \NN$, there is an injection with finite cokernel $C$
@@ -791,18 +792,22 @@ Let $\FF$ be a cartesian Selmer structure. For $k\in \NN$, there is an injection
 \end{proposition}
 
 \begin{proof}
-Let $\pi$ be a generator of $\m$. Consider the exact sequence
+Let $\kn$ be the square-free product of the ultraprimes in $\Sigma_\FF$ and let $\pi$ be a generator of $\m$. Consider the exact sequence
 \[\xymatrix{0\ar[r] & T\ar[r]^{\pi^k} & T\ar[r] &T/\m^k}\]
 It induces an injection 
-\[\bH^1(K,T)/\m^k\hookrightarrow \bH^1(K,T/\m^k)\]
-By the definition of Selmer group, there is an injection
-\[\frac{\bH^1(K,T)}{\bH^1_{\FF}(K,T)}\to \prod_{\UU(\Pb)} \frac{\bH^1(K_\ku,T)}{\bH^1_{\FF}(K_\ku,T)}\]
-Since the Selmer structure is cartesian, the product is torsion-free, so the domain is torsion free as well. By the snake's lemma, it implies that the top vertical map in the following diagram is injective.
-\[\xymatrix{\bH^1_\FF(K,T)/\m^k \ar[r] \ar@{>->}[d]& \bH^1_\FF(K,T/\m^k) \ar@{>->}[d]\\
-\bH^1(K,T)/\m^k\ar@{>->}[r] & \bH^1(K,T/\m^k)
+\[\bH^1(K^\kn/K,T)/\m^k\hookrightarrow \bH^1(K^\kn/K,T/\m^k)\]
+By the definition of Selmer group, there is a module $D$ fitting into an exact sequence
+\[\xymatrix{0\ar[r] & \frac{\bH^1(K^\kn/K,T)}{\bH^1_{\FF}(K,T)}\ar[r]&\prod_{\ku\in\Sigma_\FF} \frac{\bH^1(K_\ku,T)}{\bH^1_{\FF}(K_\ku,T)}\ar[r] D & 0}\]
+Since the Selmer structure is cartesian, the product is $\m$-torsion-free, so the domain is torsion free as well. The snake's lemma implies that the left vertical map in the following diagram is injective.
+\[\xymatrix{\bH^1_\FF(K,T)/\m^k \ar[r]^{f} \ar@{>->}[d]^{g_1}& \bH^1_\FF(K,T/\m^k) \ar@{>->}[d]^{g_2} \ar@{->>}[r]& C \ar[d]^{g_3}\\
+\bH^1(K^\kn/K,T)/\m^k \ar@{>->}[r] & \bH^1(K^\kn/K,T/\m^k)\ar@{->>}[r] &  \bH^2(K^n/K,T)[\m]
 }\]
-Hence the top horizontal map is also injective. Snake's lemma shows that
-\[\length(C)\leq \length \bH^2(K,T[\m^k])\]
+ Hence the map $f$ is also injective. Here, $C$ is defined as the cokernel of the first map. By the snake's lemma, there is an isomorphism
+ \[\ker(g_3)=\ker\Bigl(\coker(g_1)\to \coker(g_2)\Bigr)\]
+ By the definition of Selmer groups, the kernel map $\coker(g_1)\to \coker(g_2)$ coincides by the one of the map
+ \[\frac{\bH^1(K^\kn/K,T)}{\m^k \bH^1(K^\kn/K,T)+\bH^1_{\FF}(K,T)}\to \prod_{\ku\in \UU(\Pb)} \bH^1_{/\FF}(K_\ku,T/\m^k)\]
+
+\[\length(C)\leq \length\Bigl( \bH^2(K,T[\m^k])\Bigr)\]
 \textcolor{red}{explain further, long exact sequence of patched cohomology, Mazur Rubin 3.7.1}
 
 

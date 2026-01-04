@@ -5,7 +5,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.1}Local cohomology and Kolyvagin primes}{5}{section.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.2}Selmer modules}{7}{section.1.2}%
+\contentsline {section}{\numberline {1.2}Selmer modules}{8}{section.1.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {2}Kolyvagin systems}{17}{chapter.2}%
 \defcounter {refsection}{0}\relax 
@@ -63,29 +63,33 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.1}Iwasawa Selmer modules}{49}{section.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.1}Suitable ultraprimes}{49}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.1}Suitable ultraprimes}{50}{subsection.4.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Stark Systems}{55}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Stark Systems}{53}{section.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.1}The module of Stark systems}{56}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.1}The module of Stark systems}{54}{subsection.4.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.2}Higher Fitting ideals of the Selmer group}{57}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.2}Higher Fitting ideals of the Selmer group}{55}{subsection.4.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Kolyvagin systems}{58}{section.4.3}%
+\contentsline {section}{\numberline {4.3}Kolyvagin systems}{56}{section.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.1}Definition of Kolyvagin systems}{58}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.1}Definition of Kolyvagin systems}{56}{subsection.4.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.2}Regulator map}{58}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.2}Regulator map}{56}{subsection.4.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Structure of the Selmer group}{59}{section.4.4}%
+\contentsline {section}{\numberline {4.4}Structure of the Selmer group}{57}{section.4.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4.1}Fitting ideal and $\Lambda $-modules up to pseudo-isomorphism}{59}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.1}Fitting ideal and $\Lambda $-modules up to pseudo-isomorphism}{57}{subsection.4.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4.2}Fitting ideals of the Selmer groups}{59}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.2}Fitting ideals of the Selmer groups}{57}{subsection.4.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Cartesian systems}{63}{chapter.5}%
+\contentsline {chapter}{\numberline {5}Cartesian systems}{61}{chapter.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}The graph of cartesian Selmer structures}{63}{section.5.1}%
+\contentsline {section}{\numberline {5.1}The graph of cartesian Selmer structures}{61}{section.5.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}Higher dimensional Kolyvagin systems}{62}{section.5.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.3}Kolyvagin systems}{63}{section.5.3}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {6}Selmer group of an elliptic curve}{65}{chapter.6}%
 \defcounter {refsection}{0}\relax 

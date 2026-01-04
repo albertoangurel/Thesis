@@ -14,6 +14,10 @@ Let $\Lambda=\Z_p[[X]]$ be the classical Iwasawa algebra and let $\bT$ be a $\La
 
 We will aim to develop a theory of Kolyvagin systems to study Selmer groups defined on $\bT$. We will use the patched cohomology setting, as in Definition \ref{def:patched:selmer}.
 
+\begin{notation}
+We denote $\bT_{n,m}=\bT/(p^n,X^m)\bT$.
+\end{notation}
+
 The definition of patched Selmer structures for these Galois representations is included in Definition \ref{def:patched:selmer}. But the definition of patched cartesian Selmer structures, established in Definition \ref{def:patched_cartesian}, was exclusive for discrete valuation rings. However, a similar definition applies to Iwasawa Selmer modules.
 
 \begin{definition}(Cartesian local condition)
@@ -21,165 +25,104 @@ A local condition $\bH^1_{\FF}(K_\ku,T)\subset \bH^1(K_\ku,T)$ is called \emph{c
 \label{def:iwasawa:cartesian}
 \end{definition}
 
+\begin{proposition}
+Let $\FF$ be a cartesian Selmer structure and let $f\in \Lambda$. Then there is an injection 
+\[\bH^1_{\FF}(K,\bT)/f\bH^1_{\FF}(K,\bT)\hookrightarrow \bH^1_{\FF}(K,\bT/f\bT)\]
+\label{prop:iwasawa:quotient_injection}
+\end{proposition}
+
+\begin{proof}
+Let $\kn$ be the product of the ultraprimes in $\Sigma_{\FF}$. Consider the exact sequence 
+\[\xymatrix{0\ar[r] & \bT \ar[r] & \bT \ar[r] & \bT/f\bT\ar[r] & 0}\]
+\textcolor{red}{long cohomological exact sequence} induces an injection
+\[\bH^1(K^\kn/K,\bT)/f \bH^1(K^\kn/K,\bT) \hookrightarrow \bH^1(K^\kn/K,\bT/f\bT)\]
+
+Since $\prod_{\ku\in \Sigma_\FF} \bH^1(K_\ku,\bT)$ contains no $f$-torsion, there is another injection 
+\[\bH_{\FF}^1(K^\kn/K,\bT)/f \bH^1_{\FF}(K^\kn/K,\bT)\hookrightarrow \bH^1(K^\kn/K,\bT)/f \bH^1(K^\kn/K,\bT)\]
+which completes the proof.
+\end{proof}
+
+We want to prove an analogue with quotients by the elements divisible by the maximal ideal $\m$. This case is more complicated than Propositions \ref{prop:patched:quotients} and \ref{prop:iwasawa:quotient_injection} since the maximal ideal is not principal.
+
+\begin{corollary}
+Let $\FF$ be a cartesian Selmer structure and recall $\m$ is the maximal ideal of $\Lambda$. Then there is an injection 
+\[\bH^1_{\FF}(K,\bT)/\m\hookrightarrow \bH^1_{\FF}(K,\bT/\m)\]
+\label{cor:iwasawa:quotient_maximal}
+\end{corollary}
+
+\begin{proof}
+Recall that $\kn$ is the product of all the primes in $\Sigma_\FF$. By Proposition \ref{prop:iwasawa:quotient_injection},
+\[\bH^1(K^{\kn}/K,\bT)/X\bH^1(K^{\kn}/K,\bT)\hookrightarrow \bH^1(K^{\kn}/K,\bT/X\bT)\]
+Now consider the exact sequence
+\[\xymatrix{0\ar[r] & \bT/X\bT\ar[r]^p & \bT/X\bT\ar[r] & \bT/\m\bT\ar[r] & 0}\]
+In induces another injection
+\textcolor{red}{finish}
+\end{proof}
+
+
+
+
+
 \subsection{Suitable ultraprimes}
 
-This section is devoted to proving analogues of Propositions \ref{prop:cheb} and \ref{prop:cheb_nd} in the setting of patched Iwasawa Selmer groups.
+This section is devoted to proving analogues of Propositions \ref{prop:cheb} and \ref{prop:cheb_nd} in the setting of patched Iwasawa Selmer groups. The method we will use involves a recursive application of Proposition \ref{prop:cheb} to construct certain ultraprimes satisfying certain properties.
+
+\begin{notation}
+The next results construct suitable ultraprimes by building them from those obtained using Proposition \ref{prop:cheb}. In ocasion, we want to combine several results to guarantee the existence of ultraprimes satifying simultaneously more than one property. In order to to that, we say that the construct of an ultraprime involves $n$ choices if we are imposing that the localisations of $n$ cohomology classes do not vanish. By Proposition \ref{prop:cheb}, we can construct an ultraprime satisfying properties involving a total number of choices strictly smaller than $p$.
+\end{notation}
 
 \begin{proposition}
-Assume $R$ is a zero-dimensional Gorenstein ring and $T$ is an $R[[G_K]]$-module. Let $c_1,\ldots,c_s\in H^1(K,T)$ and let $c_1^*,\ldots,c_t^*\in H^1(K,T^*)$. Assume that $s+t\leq p$. Let $x_i\subset\Ann(\Ann(c_i))$ and $x_i^*\subset\Ann(\Ann(c_j^*))$ be non-zero elements.
-
-Then there exists a set $\QQ\subset \PP$ such that for all $q\in \QQ$, the localizations $x_i\in R\loc_q(c_i)$ and $y_i\in R \loc_q(c_j^*)$ for all $i\leq s$ and $j\leq t$.
-
-%$H^1_\f(K_q,T)[\Ann(c_i)]$ and $H^1_\f(K_q,T^*)[\Ann(c_j^*)]$, respectively, for all $i\leq s$ and $j\leq t$.
+Let $\bT$ be a Galois representation over the Iwasawa algebra satisfying Assumptions \ref{ass:patched:basic}. Assume that $\bH^1_{\FF}(K,\bT)$ does not vanish. Then there is an ultraprime $\ku$ such that $\loc_\ku\neq 0$, whose construction involves two choices.
 \end{proposition}
 
 \begin{proof}
-By \cite[Lemma 3.9]{BurnsSakamotoSano2}, the restriction induces an injection
-\[H^1(K,T)\hookrightarrow \Hom(K(T)_M,T/(\tau-1)T)\]
-Let $F_i$ be the field of definition of $c_i$, let $\widetilde c_i:\ G_K\to T$ be a cocycle representing $c_i$, and define $a_i:=-\widetilde c_i(\tau)\in T/(\tau-1)T$. The definition of $a_i$ is independent of the choice of the cocycle, which implies that $a_i\in T/(\tau-1)T[\Ann(c_i)]$.
-
-The image of $f(c_i)$ coincides $\Bigl(T/(\tau-1)T\Bigr)[\Ann(c_i)]$. Indeed, the injectivity of $f$ implies that $\Ann(f(c_i))=\Ann(c_i)$ and, since $R$ is self-injective and $R\cong T/(\tau-1)T$, $\Im(c_i)=\Ann(\Ann(c_i))$.
-
-Define
-\[H_i=f(c_i)^{-1} (a_i+\m \Im(c_i))\subset G_{K(T)_M}\]
-which is a coset of the subgroup $f(c_i)^{-1}(\m \Im(c_i))$. By Nakayama's lemma and the assumption on the principality of $\Im(c_i)=\Ann(\Ann(c_i))$, the index of this subgroup is $p$.
-
-Similarly, define $F_j^*$, $a_j^*$ and $H_j^*$ similarly for the class $c_j^*$.
-
-By the assumption $s+t<p$, we can find
-\[\gamma\in G_{K(T)_M}\setminus (H_1\cup\cdots \cup H_s\cup H_1^*\cup\cdots \cup H_t^*)\]
-
-Set $F=K(T)_MF_1\cdots F_sF_1^*\cdots F_t^*$, and define $\QQ$ be the set of primes $q\notin S$ such that $q$ is unramified in $F/K$ and $\Frob_q$ is conjugate to $\tau\gamma$ in $\Gal(F/K)$. Then Chebotarev density theorem implies that $\QQ$ has positive density, and it is contained in $\PP$ by construction. For every $q\in\QQ$, we have that
-\[\loc_q(c_i)=c_i(\tau\gamma)=\tau c_i(\gamma)+c_i(\tau)=f(c_i)(\gamma)-a_i\in \Im(f(c_i))\setminus \m\,\Im(f(c_i))\subset T/(\tau-1)T\]
-under the identification $H^1_\f(K_q,T)\cong T/(\Frob_q-1) T=T/(\tau-1)T$. Since $\Im(c_i)$ is principal, Nakayama's lemma implies that it is generated by $\loc_q(c_i)$. An analogous argument works for $\loc_q(c_i^*)$.
-\end{proof}
-
-\begin{proposition}
-Let $c\in \bH^1_{\FF}(\Q,T)$ be an element such that its projection to $\bH^1_{\FF}(\Q,T/(p^n,X^m)T)$ is nonzero. Then there exists a Kolyvagin ultraprime $\ku$ such that 
-\[(p^{n-1}X^{m-1})\bH^1(\Q_\ku,T)\subset \loc_\ku(\Lambda c)\]
-\label{prop:cheb_blocks}
-\end{proposition}
-
-\begin{proof}
-Write $c_{a,b}$ to the projection of $c$ to $\bH^1_{\FF}(\Q,T/(p^a,t^b)T)$. 
-
-Note that, since $c_{n,m}\neq 0$, then $p^rT^s c_{n+r,m+s}\neq 0$. \textcolor{red}{prove this}
-
-For every $(n+r,m+s)\in \N^2$, let $\ell_{n,m}$ be a Kolyagin prime for $T_{n,m}$ such that $\loc_{\ell_{n+r,m+s}}(p^rT^s c_{n+r,m+s})\neq 0$. Use an ordering of $\N^2$ to construct an ultraprime $\ku$ as the sequence of all the ${n,m}$.
-
-It is easily seen that $\loc$
-\end{proof}
-
-\begin{assumption} 
-Let $I=f\Lambda$ be a principal ideal. The canonical map
-\[\bH^1_{\FF}(K,\bT)/I\bH_{\FF}^1(K,\bT)\to \bH^1_{\FF}(K,T/IT)\]
-is an injection.
-\label{ass:cartesian}
-\end{assumption}
-
-\begin{assumption}
-If $\bT'$ is a quotient of $\bT$, then $H^0(K,\bT')=0$.
-\label{ass:sur}
-\end{assumption}
-
-
-
-\begin{lemma}
-
-Assume that $\bH^1(\Q,\bT)$ is non-zero and that there is a map
-\[\varphi:\ \Lambda \to \bH^1_{\FF^*}(\Q,\bT^*)^\vee\]
-with kernel $f\Lambda$., where $f$ is either $0$ or a product of a distinguished polynomial with a power of $p$. Then there exists a Kolyvagin ultraprime $\ku$ such that 
-\[\loc_\ku:\ \bH^1_{\FF}(K,\bT)\to \bH^1_{\f}(K_\ku,\bT)\]
-is surjective and 
-\[\loc_\ku^*:\ \bH^1_\f(K_\ku,\bT^*)^\vee\to \bH^1_{\FF^*}(K,\bT^*)^\vee\]
-has kernel contained in $f\bH^1_\f(K_\ku,\bT^*)^\vee$.
-
-\label{lem:chebotarev}
-\end{lemma}
-
-\begin{proof}
-By Nakayama's lemma, there exists $\alpha\in \bH^1(\Q,\bT)\setminus \m \bH^1(\Q,\bT)$. Write
+By Nakayama's lemma, there exists $\alpha\in \bH^1(K,\bT)\setminus \m \bH^1(K,\bT)$. Write
 \[\alpha=(\alpha_{n,m})\in \varprojlim_{n,m} \bH^1_{\FF}(K,\bT_{n,m})=\bH^1_{\FF}(K,\bT_{n,m})\]
-Since $\alpha\notin p\bH^1(K,\bT)$, assumption \ref{ass:cartesian} implies that $\alpha$ projects to a non-zero element in $\bH^1(\Q,\bT/p\bT)$. Since $\Lambda/p\Lambda\cong \F_p[[X]]$ is a discrete valuation ring, then 
-\[\bH^1(\Q,\bT/p\bT)=\varprojlim_m \bH^1(\Q,\bT_{1,m})\] 
+Since $\alpha\notin p\bH^1(K,\bT)$, Proposition \ref{prop:iwasawa:quotient_injection} implies that $\alpha$ projects to a non-zero element in $\bH^1(K,\bT/p\bT)$. By Proposition \ref{prop:selmer_profinite},
+\[\bH^1_{\FF}(K,\bT/p\bT)=\varprojlim_m \bH^1_{\FF}(K,\bT_{1,m})\] 
 Therefore, there exists some $m_0$ such that $\alpha_{1,m_0}\neq 0$. It implies that $\alpha_{n,m}\neq 0$ for all $m\geq m_0$. Moreover, the composition of maps
-\[\xymatrix{\bH_{\FF}^1(K,\bT_{n,m})\ar[r] & \bH^1_{\FF}(K,\bT_{1,m_0})\ar@{>->}[r]^{\cdot p^{n-1} X^{m-m_0}} & \bH^1_{\FF}(K,\bT_{n,m})}\]
-is the multiplication by $p^{n-1} X^{m-m_0}$. Since $\alpha_{1,m_0}$ is the image of $\alpha_{n,m}$ under the first map and the second map is injective by assumption \ref{ass:sur}, we get that $p^{n-1} X^{m-m_0} \alpha_{n,m}\neq 0$.
-
+\[\xymatrix{\bH_{\FF}^1(K,\bT_{n,m})\ar[r] & \bH^1_{\FF}(K,\bT_{1,m_0})\ar@{>->}[r] & \bH^1_{\FF}(K,\bT_{n,m})}\]
+is the multiplication by $p^{n-1} X^{m-m_0}$. Since $\alpha_{1,m_0}$ is the image of $\alpha_{n,m}$ under the first map and the second map is injective by Proposition \ref{prop:H0vanish}, then $p^{n-1} X^{m-m_0} \alpha_{n,m}\neq 0$.
 
 Similarly, since $\alpha\notin X\bH^1(\Q,T)$, an analogous argument swapping the roles of $p$ and $X$ implies that $\alpha_{n_0,1}\neq 0$. From this, it follows that $p^{n-n_0} X^{m-1} \alpha_{n,m}\neq 0$ for all $n\geq n_0$.
 
-On the dual side, the map $\varphi$ induces a surjective map in the dual spaces:
-\[\varphi^*:\ \bH^1_{\FF^*}(\Q,\bT^*)\to \Lambda^\vee[f^*]\]
-where $f^*$ is the dual polynomial of $f$, i.e., the image of $f$ under the $\Lambda$ automorphism that sends $(1+X)$ to $(1+X)^{-1}$. We need to consider the cases where $f=0$ and $f\neq 0$ separately.
-
-\textcolor{red}{f=0}
-
-When $f\neq 0$, we can express it as $f=p^\alpha g$, for some non-negative integer $\alpha$ and some distinguished polynomial $g$ of degree $d$. Since $\Lambda$ is a unique factorisation domain, there is an injective homomorphism
-\[\Lambda/(f)\hookrightarrow \Lambda/(p^\alpha)\times \Lambda/(g)\]
-It induces a surjection on the Pontryagin duals
-\[\Lambda^\vee[p^\alpha]\times \Lambda^\vee[g^*]\twoheadrightarrow \Lambda^\vee[f^*]\]
-Note that this map is induced by the canonical inclusion at every factor.
-
-
-
-For every $n\in \N$, the module $\Lambda^\vee[g^*,p^n]$ is the Pontryagin dual of $\Lambda/(g,p^n)$, so it is a free $\Z/p^n$ module of rank $d$. Since
-\[\dim_{\Lambda/\m} \Lambda^\vee[g^*,p^n]/\m=\dim_{\Lambda/\m} \Lambda/(g,p^n)[\m]=1,\]
-then $\Lambda^\vee[g^*,p^n]$ is a cyclic $\Lambda$-module. Note that, if $x_n$ is a generator of $\Lambda^\vee[g^*,p^n]$, then $p^{n-1} X^{d-1} x_n$ is a non-trivial element in $\Lambda^\vee[\m]$.
-
-Since the map $\varphi^*$ is surjective, there exists some element $\gamma_{n}\in \bH^1_{\FF^*}(\Q,\bT^*)$ such that $\varphi^*(\gamma_n)=x_n$. Since
-\[\varphi^*(p^{n-1} X^{d-1} \gamma_n)=p^{n-1} X^{d-1}  x_n\neq 0\]
-Therefore, $p^{n-1} X^{d-1}  \gamma_n\neq 0$. 
-
-When $\alpha\geq 1$, for every $n\in \N$, the module $\Lambda^\vee[p^\alpha,X^n]$ is the dual of $\Lambda/(p^\alpha,X_n)$. Since the $\m$-torsion of $\Lambda/(p^\alpha,X_m)$ is a one-dimensional $\Lambda/\m$-vector space, then $\Lambda^\vee[p^\alpha,X^n]$ is a cyclic $\Lambda$-module. Let $y_n$ be a generator of $\Lambda^\vee[p^\alpha,X^n]$. Since $\varphi^*$ is a surjective map and $y_n\in \Lambda[f^*]$, there is some element $\beta_n\in \bH^1_{\FF^*}(\Q,\bT^*)$ such that $\varphi^*(\beta_n)=y_n$. Since $\varphi^*(p^{\alpha-1} X^{n-1}\beta_m)\neq 0$, then $p^{\alpha-1} X^{n-1}\beta_n\neq 0$ as well.
-
-
-Since
-\[\bH^1_{\FF^*}\Bigl(\Q,\bT^*\Bigr)=\varinjlim_{n,m} \bH^1_{\FF^*}\Bigl(\Q,(\bT_{n,m})^*\Bigr)\]
-there is a pair $(r(n),s(n))$ for every $n\in \N$ such that both
-\[\beta_n,\gamma_n\in \textrm{Im}\biggl( \bH^1_{\FF^*}\Bigl(\Q,(\bT_{r(n),s(n)})^*\Bigr) \hookrightarrow \bH^1_{\FF^*}\Bigl(\Q,\bT^*\Bigr)\biggr)\]
-When there is no risk of confussion, we will denote the preimages of $\beta_n$ and $\gamma_n$ indistinctly. We can assume without loss of generality that $r(n),s(n)\geq n,\alpha,n_0,m_0$.
-
- 
- 
-For any $n\in \N$, fix a representative $\Bigl(c_{r(n),s(n)}^{(i)}\Bigr)_{i\in \N}$ of $c_{r(n),s(n)}$ in the patched cohomology group $\bH^1_{\FF}\Bigl(\Q,\bT_{r(n),s(n)}\Bigr)$. Since $p^{r(n)-1} X^{s(n)-m_0} c_{r(n),s(n)}\neq 0$ and $p^{r(n)-n_0} X^{s(n)-1} c_{r(n),s(n)}\neq 0$, we can guarantee that $p^{r(n)-1} X^{s(n)-m_0} c_{r(n),s(n)}^{(i)}\neq 0$ and $p^{r(n)-n_0} X^{s(n)-1} c_{r(n),s(n)}^{(i)}\neq 0$ for $\UU$-many $i$.
-
-Similarly, we can find representatives $\beta_n^{(i)}$ and $\gamma_n^{(i)}$ of $\beta_n$ and $\gamma_n$, respectively, in $\bH^1_{\FF}\Bigl(\Q,(\bT_{r(n),s(n)})^*\Bigr)$. Similarly, $p^{\alpha-1} X^{n-1} \beta_n^{(i)}\neq 0$ and $\lambda_n\gamma_n^{(i)}\neq 0$ for $\UU$-many $i$.
-
-Since the ultrafilter is closed by finite intersections, the set $S$ of indices $i$ such that all of the conditions 
+For every $a\in \N$, choose a sequence $\Bigl(\alpha_{a,a}^{(i)}\Bigr)$ representing $\alpha_{a,a}$. By the definition of ultraproduct and the closedness of ultrafilters under intersections, there is a set $S_a\in \UU$ such that, for every $i\in S$,
 \[\begin{array}{cc}
-p^{r(n)-1} X^{s(n)-m_0} c_{r(n),s(n)}^{(i)}\neq 0,& p^{r(n)-n_0} X^{s(n)-1} c_{r(n),s(n)}^{(i)}\neq 0, \\
-p^{\alpha-1} X^{n-1} \beta_n^{(i)}\neq 0, & p^{n-1} X^{d-1}\gamma_n^{(i)}\neq 0
+p^{a-1} X^{a-m_0} \alpha_{a,a}^{(i)}\neq 0,\ p^{a-n_0} X^{a-1} \alpha_{a,a}^{(i)}\neq 0&
 \end{array}\]
-hold is in the ultrafilter. In particular, $S$ is infinite, so there is a unique increasing bijection $\iota:\ \N\to S$.
+Denote $\iota_a:\ \N\to S_a$ the unique increasing bijection.
 
-Note that $c_{r(n),s(n)}^{(i)}$ and $c_{r(n),s(n)}^{(i)}$ belong to $H^1\Bigl(K,\bT_{r(n),s(n)}\Bigr)$, and $\beta_n^{(i)}$ and $\gamma_n^{(i)}$ belong to $H^1\Bigl(K,(\bT_{r(n),s(n)})^*\Bigr)$. By \cite[proposition 3.6.1]{MazurRubin} (see also \cite{BurnsSakamotoSano2}), for all $n$ there exists a Kolyvagin prime $\ell_n$ for the representation $\bT_{r(n),s(n)}$ such that the localization maps
+For every $a< \max\{n_0,m_0\}$, choose a random prime $\ell_a$. When $a\geq \max\{n_0,m_0\}$, we can choose, by using two choices of Proposition \ref{prop:cheb} a Kolyvagin prime $\ell_a\in \PP(T_{a,a})$ such that 
 \[\begin{array}{cc}
-\loc_{\ell_n}:\ H^1\Bigl(K,\bT_{r(n),s(n)}\Bigr)\to H^1(K_{\ell_n},\bT_{r(n),s(n)})\\ \loc_{\ell_n}^*:\ H^1\Bigl(K,(\bT_{r(n),s(n)})^*\Bigr)\to H^1(K_{\ell_n},(\bT_{r(n),s(n)})^*)
-\end{array}\]
-satisfy that
-
-\[\begin{array}{ccc}
-    \loc_{\ell_{n}}\Bigl(p^{r(n)-1} X^{s(n)-m_0} c_{r(n),s(n)}^{\iota(n)}\Bigr)\neq 0,\ &\loc_{\ell_{n}}\Bigl(p^{r(n)-n_0} X^{s(n)-1} c_{r(n),s(n)}^{(i)}\Bigr)\neq 0,\\
-    \loc_{{\ell}_{n}} \Bigl(p^{\alpha-1} X^{n-1} \beta_n^{\iota(n)}\Bigr)\neq 0, &\loc_{{\ell}_{n}}\Bigl(p^{n-1} X^{d-1}\gamma_n^{\iota(n)}\Bigr)\neq 0
+\loc_{\ell_a}\Bigl(p^{a-1} X^{a-m_0} \alpha_{a,a}^{\iota(a)}\Bigr)\neq 0,\ & 
+\loc_{\ell_a}\Bigl(p^{a-n_0} X^{a-1} \alpha_{a,a}^{\iota(a)}\Bigr)\neq 0
 \end{array}\]
 
+Construct the ultraprime $\ku$ represented by the sequence $(\ell_a)_{a\in \N}$. Consider the maps
+\[\loc_\ku:\ \bH^1_{\FF}(K,T_{a,a})\to \bH^1_\f(K_\ku,T_{a,a})\]
 
+Since $\ku$ is a Kolyvagin ultraprime, $\bH^1_\f(K_\ku,T_{a,a})$ is a free, cyclic $\Lambda_{a,a}$-module.
 
-The image $\loc_{\ell_n}(c_{r(n),s(n)}^{\iota(n)})$ belongs to $H^1_\f(K_{\ell_n},\bT_{r(n),s(n)})$, which is isomorphic to the quotient $\Lambda/(p^{r(n)},X^{s(n)})$ since $\ell_n$ is a Kolyvagin prime. By the assumptions on the prime $\ell_n$, $\loc_{\ell_n}(c_{r(n),s(n)})^{\iota(n)}$ is not $p^{r(n)-1}$ torsion nor $X^{s(n)-1}$torsion. Therefore, $\loc_{\ell_n}(c_{r(n),s(n)})^{\iota(n)}$ generates the whole $H^1(K_{\ell_n},\bT_{r(n),s(n)})$.
+For every $b\geq a$, the construction implies that 
+\[p^{a-1} X^{a-m_0} \loc_{\ell_b}\Bigl(\alpha_{b,b}^{(\iota(b))}\Bigr),p^{a-n_0} X^{a-1} \loc_{\ell_b}\Bigl(\alpha_{b,b}^{(\iota(b))}\Bigr)\notin H^1_\f(K_{\ell_b},\bT_{b,b})[p^{b-a}X^{b-a}]\]
+Therefore,
+\[p^{a-1} X^{a-m_0} \alpha_{b,b}^{(\iota(b))},p^{a-n_0} X^{a-1} \alpha_{b,b}^{(\iota(b))}\notin\ker\biggl(H^1_\f(K_{\ell_b},\bT_{b,b})\to H^1_\f(K_{\ell_b},\bT_{a,a})\biggr)\]
 
-On the dual side, $\loc_{\ell_n}(\beta_n)$ and $\loc_{\ell_n}(\gamma_n)$ belong to $H^1_{\f}(K_{\ell_n},(\bT_{r(n),s(n)})^*)$, which is isomorphic to $\Lambda^\vee[p^\alpha,X^n]$. Since $p^{\alpha-1} X^{n-1}\loc_{\ell_n}(\beta_n)\neq 0$, then 
-\[\Lambda\loc_{\ell_n}(\beta_n)\supset H^1(K_{\ell_n},(\bT_{r(n),s(n)})^*)[p^\alpha, X^{n-1}]\]
+Then 
 
-Similarly, $\lambda_n\loc_{\ell_n}(\gamma_n)\neq 0$. Since $\Lambda/(p^{r(n)},X^{s(n)})$ is a Gorenstein ring, we can find some $z_n\in \Lambda$ such that $z_n\lambda_n\loc_{\ell_n}(\gamma_n)\neq 0$ is a non-trivial $\m$-torsion element.
-Consider the element $z_n \loc_{\ell_n}(\gamma_n)$. Its annihilator contains $\lambda_n\cdot \m$ but does not contain $\lambda_n$.
+By Proposition \ref{prop:ultrafilter_exact} and taking limits, it means that $\Im(\loc_\ku)$ is not contained in either $p\bH^1_\f(K_\ku,T)$ or $X\bH^1_\f(K_\ku,T)$.
 
-Construct the ultraprime $\ku$ as the equivalence class of the sequence $(\ell_{n})$. Then, the image of $\loc_{\ku}$ contains $\bH^1_f(\Q_\ku,\bT^*)[f^*]$. This implies that there is a surjection
- \[\loc_\ku(\bH^1_{\FF}(\Q,\bT^*)^\vee) \twoheadrightarrow \bH^1_f(\Q_\ku,\bT^*)^\vee/(f)\]
-Since $\loc_{\ku}^\vee$ factors through
-\[\bH^1_s(\Q_\ku,\bT^*)^\vee \twoheadrightarrow \loc_\ku(\bH^1_{\FF}(\Q,\bT^*))^\vee \hookrightarrow \bH^1_{\FF}(\Q,\bT^*)^\vee\]
-then $\ker(\loc_\ku)$ is contained in $f\bH^1_s(\Q_\ku,\bT^*)^\vee$.
+\textcolor{red}{redo, wrong}
+
 \end{proof}
+
+
+
+
+
+
+
+
 
 \begin{corollary}
 Assume that $\bH^1_{\FF}(K,\bT)\neq 0$ and that the dual Selmer group admits a pseudo-isomorphims

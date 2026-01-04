@@ -52,6 +52,15 @@ Note that the first cohomology group vanishes since $A^\Delta=0$ and the third o
 \label{rem:surjective_ass}
 \end{remark}
 
+\begin{proposition}
+If $T$ satisfies Assumption \ref{ass:basic}, then $H^0(K,T/I)=0$ for every ideal $I$ of $R$
+\label{prop:H0vanish}
+\end{proposition}
+
+\begin{proof}
+By \ref{Tirred}, either $(T/\m T)^{G_K}=0$ or $T/\m T$ is the trivial representation. Since the latter does not satisfy \ref{Tcoh}, then the former holds. It implies that $(T/I)^{G_K}=0$.
+\end{proof}
+
 There is a set of primes playing a crucial role in this theory.
 
 \begin{definition}
@@ -67,22 +76,23 @@ We define the following sets:
 \item $\NN_i^{(R)}$: set of square-free products of $i$ Kolyvagin primes.
 \end{itemize}
 When there is no risk of confusion, we will drop the reference to $R$.
+\label{not:kol_primes}
 \end{notation}
 
 The reason to choose these primes is that we can control its local cohomology, since the finite and singular cohomology groups, defined below, are free cyclic $R$-modules.
 
 \begin{definition}(Finite cohomology)
 Let $\ell$ be a finite place of $K$, not dividing $p$. Assume $T$ is unramified at $\ell$. The \emph{finite cohomology} group at $\ell$ is defined as 
-\[H^1_\f(K_\ell,T):=H^1(K_\ell^{\ur},T)=\ker\biggl(H^1(K_\ell,T)\to H^1(\II_\ell,T)\biggr)\]
+\[H^i_\f(K_\ell,T):=H^i(K_\ell^{\ur},T)=\ker\biggl(H^i(K_\ell,T)\to H^i(\II_\ell,T)\biggr)\]
 where $K_\ell^\ur/K$ is the maximal unramified extension of $K$, $\II_\ell$ is the inertia subgroup of $G_{K_\ell}$, and the second equality follows from the inflation-restriction sequence. 
 \label{def:finite}
 \end{definition}
 
 \textcolor{red}{comment on finite cohomology for other primes}
 
-\begin{definition}
+\begin{definition}(Singular cohomology)
 Let $\ell$ be a finite place of $K$ as in Definition \ref{def:finite}. The \emph{singular cohomology} at $\ell$ is the quotients
-\[H^1_\s(K_\ell,T)=H^1(K_\ell,T)\biggm/H^1_\f(K_\ell,T)\]
+\[H^i_\s(K_\ell,T)=H^i(K_\ell,T)\biggm/H^i_\f(K_\ell,T)\]
 \end{definition}
 
 When $\ell$ is a Kolyvagin prime, the singular cohomology can be also identified with a subgroup of $H^1(K_\ell,T)$.
@@ -111,8 +121,8 @@ H^1_\f(K_\ell,T)\cong T/(\tau-1)T,\ H^1_\s(K_\ell,T)\cong T^{\tau=1}
 
 
 
-\begin{definition}
-Let $\ell\in \PP$. The transverse cohomology sugbgroup is defined as
+\begin{definition}(Transverse cohomology)
+Let $\ell\in \PP$. The \emph{transverse cohomology} sugbgroup is defined as
 \[H^1_{\tr}(K_\ell,T):=H^1\Bigl(K(\ell)_\ell/K_\ell,T^{G_{K(\ell)_\ell}}\Bigr)\hookrightarrow H^1(K_\ell,T)\]
 \end{definition}
 
@@ -475,7 +485,7 @@ Since $\chi(\FF^q)=1$ by Proposition \ref{prop:rank_modified}, Proposition \ref{
 H^1_{\FF^q}(\Q,T)\approx R\times R/\m^{e_2}\times \cdots\times R/\m^{e_s}
 \label{eq:str_Fb}
 \end{equation}
-By Proposition \ref{prop:mr362}, we can find infinitely many primes $\ell$ satisfying the following:
+By Proposition \ref{prop:cheb_nd}, we can find infinitely many primes $\ell$ satisfying the following:
 \begin{itemize}
 \item The kernel of the localisations $\loc_\ell$ and $\loc_b$ defined on $H^1_{\FF^*}(\Q,T^*)$ are the same. Following Remark \ref{rem:local_coh_cyclic}, we can define non-canonical isomorphisms
 \begin{equation}
