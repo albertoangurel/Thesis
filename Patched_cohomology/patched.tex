@@ -478,7 +478,13 @@ Applying Proposition \ref{prop:ultraproduct_hom}, we also obtain the injection
 \[\UU\Bigl(H^1(K_{\ell_n},T)\Bigr)\hookrightarrow \Hom\left(\UU\Bigl(H^1(K_{\ell_n},T^*)\Bigr),\UU\left(\frac{(\# T)^{-1} \Z}{\Z}\right)\right)\]
 Therefore, the patched local duality pairing is non-degenerate on the left. Similarly, it is also non-degenerate on the right factor.
 
-\textcolor{red}{limits}
+Assume now that $T$ is profinite, which implies that $T^*$ is ind-finite. Then
+\[\begin{array}{cc}
+\bH^1(K_\ku,T)=\varprojlim_{T\twoheadrightarrow T'} \bH^1(K_\ku,T'),\ & \bH^1(K_\ku,T^*)=\varinjlim_{T\twoheadrightarrow T'} \bH^1(K_\ku,(T')^*)
+\end{array}\]
+Hence, local duality for patched cohomology groups with finite coefficients induces a perfect pairing 
+\[\varprojlim_{T\twoheadrightarrow T'} \bH^1(K_\ku,T')\times \varinjlim_{T\twoheadrightarrow T'} \bH^1(K_\ku,(T')^*)\to \Q/\Z\]
+It proves local duality for profinite $T$. When $T$ is ind-finite, an analogous proof completes the result.
 \end{proof}
 
 \textcolor{red}{finite cohomology annihilators}
@@ -598,6 +604,7 @@ The next dual proposition is proven similarly.
 Let $T$ be an ind-finite group and let $\FF$ be a Selmer structure defined on $T$. Then
 \[\bH^1_{\FF}(K,T)=\varinjlim_{T'\hookrightarrow  T} \bH^1_{\FF}(K,T')\]
 where the limit is taken over the finite submodules $T'$ of $T$ and $\bH^1_{\FF}(K,T')$ is the Selmer group of the propagated Selmer structure, as defined in Definition \ref{def:propagation_submodules}.
+\label{prop:selmer_indfinite}
 \end{proposition}
 
 The next technical lemma shows that, in the finite case, patched Selmer groups can be obtained from patching classical Selmer groups.
@@ -693,7 +700,7 @@ Then the global duality exact sequence is
 \[\xymatrix{\UU\Bigl(H^1_{\FF_i}(K,T)\Bigr)\ar@{>->}[r] & \UU\Bigl(H^1_{\GG}(K,T)\Bigr)\ar[r] & \UU\biggl(\displaystyle{\bigoplus_{\ell} \frac{H^1_{\GG}(K_\ell,T)}{H^1_{\FF}(K_\ell,T)}}\biggr) \ar[r] & \UU\Bigl(H^1_{\GG^*}(K,T^*)^\vee\Bigr)\ar@{->>}[r]& \UU\Bigl(H^1_{\FF^*}(K,T^*)^\vee\Bigr)}\]
 which is exact by Proposition \ref{prop:ultrafilter_exact}.
 
-\textcolor{red}{profinite or ind-finite}
+When $T$ is profinite (resp. ind-finite), then Proposition \ref{prop:selmer_profinite} (resp. Proposition \ref{prop:selmer_indfinite}) implies that the above exact sequence can be obtained as the inverse (resp. direct) limit of the associated exact sequences for the finite quotients (resp. submodules) of $T$.
 \end{proof}
 
 \subsection{Patched Selmer modules}

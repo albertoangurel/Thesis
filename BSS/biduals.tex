@@ -42,21 +42,31 @@ Since $\prod_{\ku\in \Sigma_\FF} \bH^1(K_\ku,\bT)$ contains no $f$-torsion, ther
 which completes the proof.
 \end{proof}
 
-We want to prove an analogue with quotients by the elements divisible by the maximal ideal $\m$. This case is more complicated than Propositions \ref{prop:patched:quotients} and \ref{prop:iwasawa:quotient_injection} since the maximal ideal is not principal.
+We want to prove an analogue with quotients by the elements divisible by the maximal ideal $\m$. Since the maximal ideal is not principal, we need to impose an extra assumption on $H^2(K,\bT)$ containing no finite $\Lambda$-submodules.
 
-\begin{corollary}
+\begin{assumption}
+The cohomology group $\bH^2(K,\bT)$ contains no finite $\Lambda$-submodules.
+\label{ass:H2}
+\end{assumption}
+
+\begin{proposition}
 Let $\FF$ be a cartesian Selmer structure and recall $\m$ is the maximal ideal of $\Lambda$. Then there is an injection 
 \[\bH^1_{\FF}(K,\bT)/\m\hookrightarrow \bH^1_{\FF}(K,\bT/\m)\]
-\label{cor:iwasawa:quotient_maximal}
-\end{corollary}
+\textcolor{red}{comment of unramified patched cohomology}
+\label{prop:iwasawa:quotient_maximal}
+\end{proposition}
 
 \begin{proof}
 Recall that $\kn$ is the product of all the primes in $\Sigma_\FF$. By Proposition \ref{prop:iwasawa:quotient_injection},
-\[\bH^1(K^{\kn}/K,\bT)/X\bH^1(K^{\kn}/K,\bT)\hookrightarrow \bH^1(K^{\kn}/K,\bT/X\bT)\]
-Now consider the exact sequence
+\[\bH^1(K^{\kn}/K,\bT)/X\hookrightarrow \bH^1(K^{\kn}/K,\bT/X\bT)\twoheadrightarrow \bH^2(K^{\kn}/K,\bT)[X] \]
+Snake's lemma induces another exact sequence
+\[\xymatrix{\bH^2(K^{\kn}/K,\bT)[\m]\ar[r]   & \bH^1(K^{\kn}/K,\bT)/\m\ar[r]   & \bH^1(K^{\kn}/K,\bT/X\bT)/p}\]
+By Assumption \ref{ass:H2}, the first term vanishes, so the second map is injective. Now consider the exact sequence
 \[\xymatrix{0\ar[r] & \bT/X\bT\ar[r]^p & \bT/X\bT\ar[r] & \bT/\m\bT\ar[r] & 0}\]
-In induces another injection
-\textcolor{red}{finish}
+It induces an injection
+\[\bH^1(K^{\kn}/K,\bT/X\bT)/p\hookrightarrow \bH^1(K^{\kn}/K,\bT/\m\bT)\]
+Combining it with the injection above, we obtain an injection 
+\[\bH^1_{\FF}(K,\bT)/\m\hookrightarrow \bH^1_{\FF}(K,\bT/\m)\]
 \end{proof}
 
 
@@ -67,110 +77,98 @@ In induces another injection
 
 This section is devoted to proving analogues of Propositions \ref{prop:cheb} and \ref{prop:cheb_nd} in the setting of patched Iwasawa Selmer groups. The method we will use involves a recursive application of Proposition \ref{prop:cheb} to construct certain ultraprimes satisfying certain properties.
 
-\begin{notation}
-The next results construct suitable ultraprimes by building them from those obtained using Proposition \ref{prop:cheb}. In ocasion, we want to combine several results to guarantee the existence of ultraprimes satifying simultaneously more than one property. In order to to that, we say that the construct of an ultraprime involves $n$ choices if we are imposing that the localisations of $n$ cohomology classes do not vanish. By Proposition \ref{prop:cheb}, we can construct an ultraprime satisfying properties involving a total number of choices strictly smaller than $p$.
-\end{notation}
 
 \begin{proposition}
-Let $\bT$ be a Galois representation over the Iwasawa algebra satisfying Assumptions \ref{ass:patched:basic}. Assume that $\bH^1_{\FF}(K,\bT)$ does not vanish. Then there is an ultraprime $\ku$ such that $\loc_\ku\neq 0$, whose construction involves two choices.
+Let $\bT$ be a Galois representation over the Iwasawa algebra satisfying Assumptions \ref{ass:patched:basic} and \ref{ass:H2}. Assume that $\bH^1_{\FF}(K,\bT)$ does not vanish. Then there is an ultraprime $\ku$ such that $\loc_\ku\neq 0$, whose construction involves two choices.
+\label{prop:iwasawa:cheb:surjective}
 \end{proposition}
 
 \begin{proof}
 By Nakayama's lemma, there exists $\alpha\in \bH^1(K,\bT)\setminus \m \bH^1(K,\bT)$. Write
 \[\alpha=(\alpha_{n,m})\in \varprojlim_{n,m} \bH^1_{\FF}(K,\bT_{n,m})=\bH^1_{\FF}(K,\bT_{n,m})\]
-Since $\alpha\notin p\bH^1(K,\bT)$, Proposition \ref{prop:iwasawa:quotient_injection} implies that $\alpha$ projects to a non-zero element in $\bH^1(K,\bT/p\bT)$. By Proposition \ref{prop:selmer_profinite},
-\[\bH^1_{\FF}(K,\bT/p\bT)=\varprojlim_m \bH^1_{\FF}(K,\bT_{1,m})\] 
-Therefore, there exists some $m_0$ such that $\alpha_{1,m_0}\neq 0$. It implies that $\alpha_{n,m}\neq 0$ for all $m\geq m_0$. Moreover, the composition of maps
-\[\xymatrix{\bH_{\FF}^1(K,\bT_{n,m})\ar[r] & \bH^1_{\FF}(K,\bT_{1,m_0})\ar@{>->}[r] & \bH^1_{\FF}(K,\bT_{n,m})}\]
-is the multiplication by $p^{n-1} X^{m-m_0}$. Since $\alpha_{1,m_0}$ is the image of $\alpha_{n,m}$ under the first map and the second map is injective by Proposition \ref{prop:H0vanish}, then $p^{n-1} X^{m-m_0} \alpha_{n,m}\neq 0$.
+Since $\alpha\notin \m\bH^1(K,\bT)$, Proposition \ref{prop:iwasawa:quotient_maximal} implies that $\alpha_{1,1}\neq 0$. For every $a\in \N$, $\alpha_{a,a}$ projects to $\alpha_{1,1}$ under the map
+\[\bH^1_{\FF}(K,\bT_{a,a})\to \bH^1_{\FF}(K,\bT_{1,1})\]
+Hence $\alpha_{a,a}$ does not belong to the kernel of this projection, i.e., 
+\[p^{a-1}X^{a-1}\alpha_{a,a}\neq 0\]
 
-Similarly, since $\alpha\notin X\bH^1(\Q,T)$, an analogous argument swapping the roles of $p$ and $X$ implies that $\alpha_{n_0,1}\neq 0$. From this, it follows that $p^{n-n_0} X^{m-1} \alpha_{n,m}\neq 0$ for all $n\geq n_0$.
 
-For every $a\in \N$, choose a sequence $\Bigl(\alpha_{a,a}^{(i)}\Bigr)$ representing $\alpha_{a,a}$. By the definition of ultraproduct and the closedness of ultrafilters under intersections, there is a set $S_a\in \UU$ such that, for every $i\in S$,
-\[\begin{array}{cc}
-p^{a-1} X^{a-m_0} \alpha_{a,a}^{(i)}\neq 0,\ p^{a-n_0} X^{a-1} \alpha_{a,a}^{(i)}\neq 0&
-\end{array}\]
+For every $a\in \N$, choose a sequence $\Bigl(\alpha_{a,a}^{(i)}\Bigr)$ representing $\alpha_{a,a}$. By the definition of ultraproduct and the closedness of ultrafilters under intersections, there is a set $S_a\in \UU$ such that
+\[p^{a-1} X^{a-1} \alpha_{a,a}^{(i)}\neq 0\ \forall i\in S_a\]
 Denote $\iota_a:\ \N\to S_a$ the unique increasing bijection.
 
-For every $a< \max\{n_0,m_0\}$, choose a random prime $\ell_a$. When $a\geq \max\{n_0,m_0\}$, we can choose, by using two choices of Proposition \ref{prop:cheb} a Kolyvagin prime $\ell_a\in \PP(T_{a,a})$ such that 
-\[\begin{array}{cc}
-\loc_{\ell_a}\Bigl(p^{a-1} X^{a-m_0} \alpha_{a,a}^{\iota(a)}\Bigr)\neq 0,\ & 
-\loc_{\ell_a}\Bigl(p^{a-n_0} X^{a-1} \alpha_{a,a}^{\iota(a)}\Bigr)\neq 0
-\end{array}\]
+For every $a$, we can choose, by Proposition \ref{prop:cheb}, a Kolyvagin prime $\ell_a\in \PP(T_{a,a})$ such that 
+\[\loc_{\ell_a}\Bigl(p^{a-1} X^{a-1} \alpha_{a,a}^{\iota(a)}\Bigr)\neq 0\]
+This implies that the map
+\[\loc_{\ell_a}:\ \bH^1_{\FF}(K,\bT_{a,a})\to \bH^1_{\f}(K,\bT_{a,a})\]
+is surjective.
 
 Construct the ultraprime $\ku$ represented by the sequence $(\ell_a)_{a\in \N}$. Consider the maps
-\[\loc_\ku:\ \bH^1_{\FF}(K,T_{a,a})\to \bH^1_\f(K_\ku,T_{a,a})\]
+\[\loc_\ku:\ \bH^1_{\FF}(K,\bT_{a,a})\to \bH^1_\f(K_\ku,\bT_{a,a})\]
 
-Since $\ku$ is a Kolyvagin ultraprime, $\bH^1_\f(K_\ku,T_{a,a})$ is a free, cyclic $\Lambda_{a,a}$-module.
+Since $\ell_a\in \PP(T_{a,a})$ is a Kolyvagin ultraprime, $\bH^1_\f(K_\ku,T_{a,a})$ is a free, cyclic $\Lambda_{a,a}$-module.
 
 For every $b\geq a$, the construction implies that 
-\[p^{a-1} X^{a-m_0} \loc_{\ell_b}\Bigl(\alpha_{b,b}^{(\iota(b))}\Bigr),p^{a-n_0} X^{a-1} \loc_{\ell_b}\Bigl(\alpha_{b,b}^{(\iota(b))}\Bigr)\notin H^1_\f(K_{\ell_b},\bT_{b,b})[p^{b-a}X^{b-a}]\]
-Therefore,
-\[p^{a-1} X^{a-m_0} \alpha_{b,b}^{(\iota(b))},p^{a-n_0} X^{a-1} \alpha_{b,b}^{(\iota(b))}\notin\ker\biggl(H^1_\f(K_{\ell_b},\bT_{b,b})\to H^1_\f(K_{\ell_b},\bT_{a,a})\biggr)\]
+\[\loc_{\ell_b}\Bigl(p^{b-1} X^{b-1} \alpha_{b,b}^{\iota(b)}\Bigr)\neq 0\]
+It implies that the top horizontal arrow of the following diagram is surjective.
+\[\xymatrix{
+    \bH^1_{\FF}(K,\bT_{b,b})\ar@{->>}[r]^{\loc_{\ell_b}} \ar[d]  &  \bH^1_\f(K_{\ell_b},\bT_{b,b}) \ar@{->>}[d]\\
+    \bH^1_{\FF}(K,\bT_{a,a})\ar@{->>}[r]^{\loc_{\ell_b}}  &  \bH^1_\f(K_{\ell_b},\bT_{a,a})
+}\]
+The rightmost vertical arrow is surjective because $\ell_b\in \PP(T_{b,b})$. Therefore, the bottom horizontal arrow is also surjective.
 
-Then 
-
-By Proposition \ref{prop:ultrafilter_exact} and taking limits, it means that $\Im(\loc_\ku)$ is not contained in either $p\bH^1_\f(K_\ku,T)$ or $X\bH^1_\f(K_\ku,T)$.
-
-\textcolor{red}{redo, wrong}
-
+By \ref{prop:ultrafilter_exact}, the patched map
+\[\loc_\ku:\ \bH^1_{\FF}(K,\bT_{a,a})\to \bH^1(K_\ku,\bT_{a,a})\]
+is also surjective for all $a\in \NN$. Since the inverse limit is right exact, the following map is also surjective
+\[\loc_\ku:\ \bH^1_{\FF}(K,\bT)\to \bH^1(K_\ku,\bT)\]
 \end{proof}
 
+On the dual side, we can construct suitable Kolyvagin ultraprimes controlling the Selmer group.
 
+\begin{proposition}
+Let $\bT$ be a Galois representation over the Iwasawa algebra satisfying Assumptions \ref{ass:patched:basic}. Then there is some $\kn\in \NN$ such that
+\[\bH^1_{(\FF^*)_\kn}(K,\bT^*)=0\]
+\label{prop:iwasawa:cheb_dual_res}
+\end{proposition}
 
+\begin{proof}
+Let $\{r^1,\ldots,r^s\}$ be a basis of $\bH^1_{\FF^*}(K,\bT^*[\m])$ as a $k$-vector space. By Lemmas \ref{lem:structure_patching} and \ref{lem:patching_structures_dual}, there is a sequence of Selmer structures $\FF_i$ such that 
+\[\bH^1_{\FF^*}(K,\bT^*[\m])=\UU_i\Bigl(\bH^1_{(\FF_i)^*}(K,\bT^*[\m])\Bigr)\]
+For every $j\in \{1,\ldots, s\}$ choose a sequence $(r_i^j)_{i\in \N}$, where $r_i^j\in H^1_{(\FF_i)^*}(K,\bT^*[\m])$, representing $r^j$.
+There is a set of indices $S\in \UU$ such that, for all $i\in S$, the set $\{r_i^1,\ldots, r_i^s\}$ is a basis of $H^1_{(\FF_i)^*}(K,\bT^*[\m])$.
 
+For every $a\in S$, by Proposition \ref{prop:patched:selmer_torsion}, there is an injection
+\[\bH^1(K,\bT^*[m])\hookrightarrow \bH^1(K,\bT_{a,a}^*)\]
 
+For every $j\in\{1,\ldots, s\}$ and $a\in \N$, we can choose a Kolyvagin prime in $\ell_a^j\in \PP(T_{a,a})$ satisfying that 
+\[\loc_{\ell_a^j}(r_{a^j})\neq 0\]
 
+Choose ultraprimes $\ku^1=(\ku^1_i)_{i\in \N},\ldots, \ku^s=(\ku^s_i)_{i\in \N}$ satisfying that $\ku^j_a=\ell_a^j$ for each $j=1,\ldots, s$ and $a\in S$.
 
+Define $n_{a}:=\ku_a^1\cdots\ku_a^s$ for each $a\in \N$. Then, we have that
+\[H^1_{(\FF_{a})^*_{n_a}}(K,\bT^*[\m])=0\ forall a\in S\]
+If $\kn=\ku^1\cdots\ku^s$, Lemma \ref{prop:patched:selmer_torsion} implies that 
+\[\bH^1_{(\FF^*)_\kn}(K,\bT^*)[\m]=\bH^1_{(\FF^*)_\kn}(K,\bT^*[\m])=\UU_a\Bigl(H^1_{(\FF_{a})^*_{n_a}}(K,\bT^*[\m])=0\Bigr)=0\]
+\end{proof}
 
+By combining choices of primes in the proofs of Propositions \ref{prop:iwasawa:cheb:surjective} and \ref{prop:iwasawa:cheb_dual_res}, we can obtain the following improved version of the last proposition.
 
 \begin{corollary}
-Assume that $\bH^1_{\FF}(K,\bT)\neq 0$ and that the dual Selmer group admits a pseudo-isomorphims
-\[\bH^1_{\FF^*}(K,\bT^*)^\vee\approx \Lambda^r\times \prod_{i=1}^s \prod_{j=1}^{k_i} \Lambda/(f_i^{\alpha_{i,j}})\]
-where $r$ is a positive integer and the $f_i$ are either distinguised irreducible polynomials or powers of $p$, pairwise different and $\alpha_{i,j}$ are integers satisfying that $\alpha_{i,1}\geq \cdots\geq \alpha_{i,k_i}$. For every $j$, there is an ultraprime $\ku$ such that 
-\[\bH^1_{\FF^*(\ku)}(K_\ku,\bT^*)\approx \Lambda^{r-1}\times \prod_{i=1}^s \prod_{j=1}^{k_i} \Lambda/(f_i^{\alpha_{i,j}})\]
-\label{cor:cheb_sel_rk}
+Let $\bT$ be a Galois representation over the Iwasawa algebra satisfying Assumptions \ref{ass:patched:basic} and let $\FF$ be a cartesian Selmer structure of positive core rank. Then there is some $\kn\in \NN$ such that
+\[\bH^1_{(\FF^*)_{(\kn)}}(K,\bT^*)=0\]
+\label{prop:iwasawa:cheb_dual_tr}
 \end{corollary}
 
 \begin{proof}
-The composite map
-\[\xymatrix{\Lambda\ar[r] & \Lambda^r\times \prod_{i=1}^s \prod_{j=1}^{k_i} \Lambda/(f_i^{\alpha_{i,j}}) \ar[r] & \bH^1_{\FF^*(\ku)}(K_\ku,\bT^*)}\]
-has pseudo-null cokernel. However, the lack of finite submodules in $\Lambda$ implies that the above map is injective. By Theorem \ref{th:chebotarev}, there exists an ultraprime $\ku$ such that
-\[\loc_\ku:\ \bH^1_{\FF}(K,\bT)\to \bH^1_\f(K_\ku,\bT)\]
-has finite cokernel and the dual localization
-\[\loc_\ku^*:\ \bH^1_\f(K_\ku,\bT^*)^\vee\to \bH^1_\FF(K,\bT^*)^\vee\]
-is injective. The cokernel of this map is the strict Selmer group, which is pseudo-isomorphic to 
-\[\bH^1_{(\FF^*)(\ku)}(K,\bT^*)^\vee\cong \Lambda^{r-1}\times \prod_{i=1}^s \prod_{j=1}^{k_i} \Lambda/(f_i^{\alpha_{i,j}})\]
-
+By a combination of the proofs of Propositions \ref{prop:iwasawa:cheb:surjective} and \ref{prop:iwasawa:cheb_dual_res}, we can construct ultraprimes $\ku^1,\ldots, \ku^j$ such that 
+\[\loc_{\ku^j}:\ \bH^1_{\FF(\ku^1\cdots\ku^{j-1})}(K,\bT)\to \bH^1_\f(K_{\ku^j},\bT)\]
+is surjective for each $j=1,\ldots,s$ and 
+\[\bH^1_{(\FF^*)_\kn}(K,\bT^*)=0\]
+Indeed, we can construct the ultraprimes in Proposition \ref{prop:iwasawa:cheb_dual_res} individually satisfying Proposition \ref{prop:iwasawa:cheb:surjective}, since $\bH^1_{\FF(\ku^1\ldots\ku^{j-1})}(K,\bT)\neq 0$ since the core rank of $\FF(\ku^1\ldots\ku^{j-1})$ is positive. \textcolor{red}{complete}
 \end{proof}
 
-\begin{corollary}
-Assume that $\bH^1_{\FF}(K,\bT)\neq 0$ and that the dual Selmer group admits a pseudo-isomorphims
-\[\bH^1_{\FF^*}(K,\bT^*)^\vee\approx \prod_{i=1}^s \prod_{j=1}^{k_i} \Lambda/(f_i^{\alpha_{i,j}})\]
-where the $f_i$ are either distinguised irreducible polynomials or powers of $p$o, pairwise different and $\alpha_{i,j}$ are integers satisfying that $\alpha_{i,1}\geq \cdots\geq \alpha_{i,k_i}$. For every $j$, there is an ultraprime $\ku$ such that 
-\[\bH^1_{\FF^*(\ku)}(K_\ku,\bT^*)\approx \prod_{i=1}^s \prod_{j=2}^{k_i} \Lambda/(f_i^{\alpha_{i,j}})\]
-\label{cor:cheb_sel_tors}
-\end{corollary}
 
-\begin{proof}
-Let $f$ be the product of all $f_i^{\alpha_{i,1}}$. The pseudo isomorphism induces a map
-\[\xymatrix{\Lambda/(f)\ar[r] & \prod_{i=1}^s \Lambda/f_i^{\alpha_{i,1}} \ar[r] & \prod_{i=1}^s \prod_{j=1}^{k_i} \Lambda/(f_i^{\alpha_{i,j}}) \ar[r] & \bH^1_{\FF^*}(K,\bT^*)^\vee}\]
-By construction, the kernel of this map is pseudo-null. However, $\Lambda/(f)$ contains no finite submodules, so the map is injective.
 
-By Theorem \ref{th:chebotarev}, there exists an ultraprime $\ku$ such that
-\[\loc_\ku:\ \bH^1_{\FF}(K,\bT)\to \bH^1_\f(K_\ku,\bT)\]
-has finite cokernel and the dual localiztion
-\[\loc_\ku^*:\ \bH^1_\f(K_\ku,\bT^*)^\vee\to \bH^1_\FF(K,\bT^*)^\vee\]
-is contained in $f\Lambda$. The structure of $\bH^1_\FF(K,\bT^*)^\vee$ implies that $f\Lambda/\ker\loc_\ku^*$ is pseudo-null, so 
-\begin{equation} 
-    \prod_{i=1}^s \prod_{j=2}^{k_i} \Lambda/(f_i^{\alpha_{i,j}})\approx\bH^1_{\FF^*_\ku}(K_\ku,\bT^*)^\vee 
-    \label{eq:pseudo}
-\end{equation}
 
-The finiteness of the cokernel of $\loc_\ku$ implies that $\bH^1_{\FF^*}(K,\bT^*)$ has finite index $\bH^1_{\FF^\ku}(K,\bT^*)$. Since
-\[\bH^1_{\FF^*_\ku}(K,\bT^*)= \bH^1_{\FF^*}(K,\bT^*)\cap \bH^1_{\FF^*(\ku)}(K,\bT^*)\]
-then $\bH^1_{\FF^*_\ku}(K,\bT^*)$ has finite index in $\bH^1_{\FF^*(\ku)}(K,\bT^*)$, so their Pontryagin duals are pseudo-isomorphic. %Hence the map in \ref{eq:pseudo} is also a pseudo-isomorphims when consider $\bH^1_{\FF^*(\ku)}(K,\bT^*)$ as the codomain.
-\end{proof}
 
 
 

@@ -16,19 +16,142 @@ is a free, finitely generated $R$-module of rank $\chi(\GG)-\chi(\FF)$.
 Since $\GG$ is cartesian, the $R$-module
 \[\bigoplus_{\ku\in \UU(\Pb)}\bH^1_{/\GG}(K_\ku,T)\] 
 is torsion-free. Since $\LL_{\GG/\FF}$ is a finitely-generated submodule, it is free by the structure theorem. By Proposition \ref{prop:patched:global_duality}, there is an exact sequence
-\[\xymatrix{H^1_{\FF}(K,T)\ar@{>->}[r] & H^1_{\GG}(K,T)\ar[r] & \LL_{\GG/\FF} \ar[r] & H^1_{\GG^*}(K,T^*)^\vee\ar@{->>}[r]& H^1_{\FF^*}(K,T^*)^\vee}\]
+\[\xymatrix{H^1_{\FF}(K,T)\ar@{>->}[r] & H^1_{\GG}(K,T)\ar[r] & \LL_{\GG/\FF} \ar[r] & H^1_{\FF^*}(K,T^*)^\vee\ar@{->>}[r]& H^1_{\GG^*}(K,T^*)^\vee}\]
 By Proposition \ref{prop:patched:core_rank_limit}, we see that the rank of $\LL_{\GG/\FF}$ is $\chi(\GG)-\chi(\FF)$.
 \end{proof}
 
+We want to extend the definition of $\LL_{\GG/\FF}$ for every pair of Selmer structures $\FF$ and $\GG$, not necessarily comparable.
+\begin{definition}
+Let $\FF$ and $\GG$ be cartesian Selmer structures. We define the \emph{local quotient} as
+\[\LL_{\GG/\FF}:=\bigoplus_{\ku\in \Sigma_{\FF< \GG}} \frac{\bH^1_{\GG}(K_\ku,T)}{\bH^1_{\FF}(K_\ku,T)}\oplus \bigoplus_{\ku\in \Sigma_{\GG<\FF}} \left(\frac{\bH^1_{\FF}(K_\ku,T)}{\bH^1_{\GG}(K_\ku,T)}\right)^+\]
+where $\Sigma_{\FF<\GG}$ (resp. $\Sigma_{\GG<\FF}$) is the set of ultraprimes $\ku\in \Sigma_{\FF}\cup\Sigma_{\GG}$ such that $\bH^1_{\FF}(K_\ku,T)\subset \bH^1_{\GG}(K_\ku,T)$ (resp. $\bH^1_{\GG}(K_\ku,T)\subset \bH^1_{\FF}(K_\ku,T)$).
+\label{def:local_quotient}
+\end{definition}
+
 \begin{proposition}
 Let $\FF\leq \GG$ be cartesian Selmer structures. There is a canonical homomorphism
-\[\bigcap^{\chi(\GG)} \bH^1_{\GG}(K,T)\otimes \det(\LL_{\GG/\FF})\to \bigcap^{\chi(\FF)} \bH^1_{\GG}(K,T)\]
+\[\phi_{\GG,\FF}:\ \bigcap^{\chi(\GG)} \bH^1_{\GG}(K,T)\otimes \det(\LL^+_{\GG/\FF})\to \bigcap^{\chi(\FF)} \bH^1_{\FF}(K,T)\]
 \label{prop:cartesian_bidual_map}
 \end{proposition}
 
 \begin{proof}
-\textcolor{red}{use general properties of biduals}
+Since $\LL_{\GG/\FF}$ is a free $R$-module of rank $\chi(\GG)-\chi(\FF)$, Proposition \ref{prop:bidual_map_dvr_free} constructs the map $\phi_{\GG,\FF}$.
 \end{proof}
+
+\begin{definition}
+Fix a base cartesian Selmer structure $\FF_0$. For every cartesian Selmer structure $\FF$, define
+\[\bX(\FF)=\bX_{\FF_0}(\FF)=\bigcap^{\chi(\FF)} \bH^1_{\FF}(K,T)\otimes \det(\LL^+_{\FF/\FF_0})\]
+\end{definition}
+
+\begin{proposition}
+    Let $\FF\leq \GG$ be two cartesian Selmer structures. Then there is a map
+    \[\phi_{\GG/\FF}:\ \bX_{\FF_0}(\GG)\to \bX_{\FF_0}(\FF)\]
+    \label{prop:cartesian:map}
+\end{proposition}
+
+In order to prove this result, we need the following lemma.
+\begin{lemma}
+Let $\FF$, $\GG$ and $\FF_0$ be cartesian Selmer structures such that $\FF\leq \GG$. Then there is a canonical isomorphism
+\[\det(\LL_{\GG/\FF_0}^+)=\det(\LL_{\GG/\FF}^+)\otimes \det(\LL_{\FF/\FF_0}^+)\]
+\label{lem:cartesian:det_split}
+\end{lemma}
+
+\begin{proof}
+We can split the determinant of $\LL_{\GG/\FF}^+$ as
+\[\det\Bigl(\LL_{\GG/\FF_0}^+\Bigr)=\det\left(\bigoplus_{\ku\in \Sigma_{\FF_0< \GG}} \left(\frac{\bH^1_{\GG}(K_\ku,T)}{\bH^1_{\FF_0}(K_\ku,T)}\right)^+\right)\otimes  \det\left(\bigoplus_{\ku\in \Sigma_{\GG<\FF_0}} \frac{\bH^1_{\FF_0}(K_\ku,T)}{\bH^1_{\GG}(K_\ku,T)}\right)\]
+Here, all the summands are free $R$-modules, so we can identify them with their biduals. Since $\FF\leq \GG$, there is a partition $\Sigma_{\FF_0<\GG}=\Sigma_{\FF\leq \FF_0<\GG}\sqcup \Sigma_{\FF_0< \FF\leq\GG}$
+Hence we can use Propositions \ref{prop:det_quotient} and \ref{prop:det_dual} to split the first determinant as
+\[\begin{aligned}
+&\det\left(\bigoplus_{\ku\in \Sigma_{\FF_0< \GG}} \left(\frac{\bH^1_{\GG}(K_\ku,T)}{\bH^1_{\FF_0}(K_\ku,T)}\right)^+\right)=\\
+&\det\left(\bigoplus_{\ku\in\Sigma_{\FF\leq \FF_0<\GG}} \left(\frac{\bH^1_{\GG}(K_\ku,T)}{\bH^1_{\FF}(K_\ku,T)}\right)^+\right)\otimes\det\left(\bigoplus_{\ku\in\Sigma_{\FF\leq \FF_0<\GG}} \frac{\bH^1_{\FF_0}(K_\ku,T)}{\bH^1_{\FF}(K_\ku,T)}\right)\otimes\\
+&\det\left(\bigoplus_{\ku\in\Sigma_{\FF_0< \FF\leq\GG}} \left(\frac{\bH^1_{\GG}(K_\ku,T)}{\bH^1_{\FF}(K_\ku,T)}\right)^+\right)\otimes\det\left(\bigoplus_{\ku\in\Sigma_{\FF_0< \FF\leq\GG}} \left(\frac{\bH^1_{\FF}(K_\ku,T)}{\bH^1_{\FF_0}(K_\ku,T)}\right)^+\right)\\
+\end{aligned}\]
+Since $\FF\leq \GG$, the sets $\Sigma_{\GG<\FF_0}$ and $\Sigma_{\FF\leq \GG<\FF_0}\sqcup \Sigma_{\GG< \FF\leq\FF_0}$ coincide. Similarly, we can use Propositions \ref{prop:det_quotient} and \ref{prop:det_dual} to split the determinant as
+\[\begin{aligned}
+&\det\left(\bigoplus_{\ku\in \Sigma_{\GG<\FF_0}} \frac{\bH^1_{\FF_0}(K_\ku,T)}{\bH^1_{\GG}(K_\ku,T)}\right)=\\
+&\det\left(\bigoplus_{\ku\in\Sigma_{\FF\leq \GG<\FF_0}} \frac{\bH^1_{\FF_0}(K_\ku,T)}{\bH^1_{\FF}(K_\ku,T)}\right)\otimes\det\left(\bigoplus_{\ku\in\Sigma_{\FF\leq \GG<\FF_0}} \left(\frac{\bH^1_{\GG}(K_\ku,T)}{\bH^1_{\FF}(K_\ku,T)}\right)^+\right)\\
+\end{aligned}\]
+By grouping the different terms, we obtain that 
+\[\det(\LL_{\GG/\FF_0}^+)=\det(\LL_{\GG/\FF}^+)\otimes \det(\LL_{\FF/\FF_0}^+)\]
+
+\textcolor{red}{revise sign conventions with direct sums}
+\end{proof}
+
+\begin{proof}[Proof of Proposition \ref{prop:cartesian:map}]
+By Lemma \ref{lem:cartesian:det_split}, tensoring the map from Proposition \ref{prop:cartesian_bidual_map} with the identity on $\det(\LL_{\FF/\FF_0}^+)$, we obtain the desired map $\phi_{\GG/\FF}$.
+\end{proof}
+
+\begin{proposition}
+The assignment $\FF\to \bX_{\FF_0}(\FF)$ forms an inverse system indexed by the set of cartesian Selmer structure.
+\label{prop:cartesian:inverse_system}
+\end{proposition}
+
+\begin{proof}
+\textcolor{red}{do}
+\end{proof}
+
+\begin{definition}
+We define the set of cartesian systems as the elements in the inverse limit
+\[\CART_{\FF_0}=\varprojlim_\FF \bX_{\FF_0}(\FF)\]
+where the limit is taken over all cartesian Selmer structures.
+\label{def:cartesian_system}
+\end{definition}
+
+\subsection{Core cartesian Selmer structures}
+
+\begin{definition}
+A cartesian Selmer structure is called a \emph{core structure} when 
+\[\bH^1_{\FF^*}(K,T)=0\]
+\end{definition}
+
+\begin{proposition}
+Under Assumptions \ref{ass:patched:basic}, for every cartesian Selmer structure $\FF$, there is core structure $G$ such that $\FF\leq \GG$.
+\label{prop:cartesian:core_upper}
+\end{proposition}
+
+\begin{proof}
+    \textcolor{red}{complete}
+\end{proof}
+
+\begin{proposition}
+Let $\FF\leq \GG$ be two core Selmer structures. Then the map $\bX_{\FF_0}(\GG)\to \bX_{\FF_0}(\FF)$ is an isomorphism.
+\label{prop:cartesian:core_iso}
+\end{proposition}
+
+\begin{proof}
+\textcolor{red}{complete}
+\end{proof}
+
+Similarly to what happened with Kolyvagin and Stark systems, cartesian systems can be controlled by core Selmer structures.
+\begin{proposition}
+Let $\FF$ be a core Selmer structure. Then the map
+\[\CART_{\FF_0}\to \bX_{\FF_0}(\FF)\]
+\label{prop:cartesian_core}
+\end{proposition}
+
+\begin{proof}
+Let $c\in \bX_{\FF_0}(\FF)$. We will show that there is a unique $\varepsilon\in \CART$ such that $\varepsilon_{\FF}=c$.
+
+Let $\GG$ be a cartesian structure. By Proposition \ref{prop:cartesian:core_upper}, there is a core Selmer structure $\HH$ such that $\FF\leq \HH$ and $\GG\leq \HH$. Since the maps $\phi_{\HH,\FF}:\bX(\HH)\to \bX(\FF)$ is an isomorphism by Proposition \ref{prop:cartesian:core_iso}, the definition of the inverse limit implies that $\varepsilon_\GG$ is the image of the $\varepsilon_{\FF}$ under the map
+\[\phi_{\HH,\GG}\circ \phi_{\HH,\FF}^{-1}:\ \bX(\FF)\to \bX(\GG):\ \varepsilon_{\FF}\to \varepsilon_{\GG}\]
+Hence, the element is determined by $c$. Morevoer, this definition clearly defines an element of $\CART$, so the projection map is an isomorphism.
+\end{proof}
+
+We can now prove that the module of cartesian systems is free of rank one over $R$.
+
+\begin{proposition}
+Let $\FF$ be a core Selmer structure. Then $\bX_{\FF_0}(\FF)$ is a free, cyclic $R$-module.
+\end{proposition}
+
+\begin{proof}
+
+\end{proof}
+
+\begin{corollary}
+The module of cartesian systems $\CART_{\FF_0}$ is a free, cyclic $R$-module.
+\end{corollary}
+
+\section{Partial cartesian systems}
 
 \section{Higher dimensional Kolyvagin systems}
 
@@ -39,6 +162,8 @@ We assume the following assumptions:
 \begin{itemize}
 \item \namedlabel{nsTirred}{(T1)} $T/\m T$ is an irreducible $k[[G_K]]$-module.
 \item \namedlabel{nsTcoh}{(T3)} $H^1(K(T)_M/K,T)=H^1(K(T)_M/K,T^*)=0$.
+\item\namedlabel{Nsd}{(N1)} $T/\m T$ is not isomorphic to $T^*[\m]$ as $k[[G_K]]$-modules.
+\item\namedlabel{Nsur}{(N2)} The image of the homomorphism $R\to \textrm{End}(T)$ is contained in the image of $\Z_p[[G_\Q]]\to \textrm{End}(T)$.
 \end{itemize}
 \label{ass:nonsur}
 \end{assumption}
@@ -64,7 +189,7 @@ After fixing a generator of $\GG_\ell$, there is another canonical ismorphisms.
 \begin{definition}
 An element $\kn\in \NN$ is said to be \emph{admissible} if, for every $\ku\mid \kn$, the map 
 \[\loc_\ku:\ \bH^1_{\FF^{\kn/\ku}}(K,T)\to \bH^1_\f(K_\ku,T)\]
-We will denote the image of $\loc_\ku$ by $A_{\kn,\ku}$.
+Denote by $\AA$ the set of admissible $n\in \NN$. For every admissible $\kn\in \AA$, denote by $A_{\kn,\ku}$ the minimal indivisible free $R$-subgroup of $\bH^1_\f(K_\ku,T)$ containing $\Im(\loc_\ku)$.
 \end{definition}
 
 The next proposition gives a method to construct admissible products.
@@ -92,23 +217,23 @@ Definition \ref{def:kol} can be generalised to this setting with the only modifi
 
 \begin{definition}
 A \emph{$\tau$-Kolyvagin system} for a Selmer structure $\FF$
-$$\kappa=\left\{\kappa_n\in H^1_{\mathcal F(n)}(K,T):\ n\in \NN\right\}$$
-satisfying the following relation for every $n\in \NN$ and $\ell\in \PP$ not dividing $n$. By the definition of Selmer module, we have that 
+$$\kappa=\left\{\kappa_\kn\in H^1_{\mathcal F(\kn)}(K,T):\ \kn\in \AA_\tau\right\}$$
+satisfying the following relation for every $\kn\in \AA_\tau$ and $\ku\in \PP_\tau$ not dividing $\kn$. By the definition of Selmer module, we have that 
 \[\begin{array}{cc}
-\loc_\ell(\kappa_n)\in H^1_{\FF(n)}(K_\ell,T)=H^1_\f(K_\ell,T),\ &\loc_\ell(\kappa_{n\ell})\in H^1_{\FF(n\ell)}(K_\ell,T)=H^1_\tr(K_\ell,T)
+\loc_\ku(\kappa_\kn)\in H^1_{\FF(\kn)}(K_\ku,T)=H^1_\f(K_\ku,T),\ &\loc_\ell(\kappa_{\kn\ku})\in H^1_{\FF(\kn\ku)}(K_\ku,T)=H^1_\tr(K_\ku,T)
 \end{array}\]
 The collection $\kappa$ is a Kolyvagin system if the following is satisfied
 \begin{equation}
-\loc_\ell(\kappa_{n\ell})=\phi_\ell^{\fs}\circ \loc_\ell(\kappa_n)
+\loc_\ku(\kappa_{\kn\ku})=\phi_\ku^{\fs}\circ \loc_\ku(\kappa_\kn)
 \label{eq:kol_cond}
 \end{equation}
-for every $n\in \NN$ and $\ell\in \PP$ not dividing $n$.
+for every $\kn\in \AA_\tau$ and $\ku\in \PP_\tau$ not dividing $n$.
 \label{def:kol_tau}
 \end{definition}
 
 We will aim to construct a partial cartesian system from the classes $\kappa_n$, where $\kappa$ is a $\tau$-Kolyvagin systems and $n\in \NN_\tau$ is admissible.
 
-Recall that, when $n\in\NN_\tau$ is admissible, we had defined a free, cyclic $R$-submodule $A_{\kn,\ku}$ such that 
+Recall that, when $n\in\AA_\tau$ is admissible, we had defined a free, cyclic $R$-submodule $A_{\kn,\ku}$ such that 
 \[\loc_\ku\Bigl(H^1_{\FF^{\kn/\ku}}(K,T)\Bigr)\subset A_{\kn,\ku}\subset H^1_{\f}(K,T)\]
 
 \begin{proposition}
@@ -129,12 +254,32 @@ Let $\kn\in \NN$ be admissible. Define the Selmer structure $\FF[\kn]$ by the lo
 \end{definition}
 
 \begin{proposition}
-Let $\kappa\in \KS_\tau(T)$. For every admissible $n\in \NN_\tau$, $\kappa_n\in \bH^1_{\FF[n]}(K,T)$.
+Let $\kappa\in \KS_\tau(\FF)$. For every admissible $n\in \NN_\tau$, $\kappa_n\in \bH^1_{\FF[n]}(K,T)$.
 \end{proposition}
 
 \begin{proof}
-
+For every $\ku\nmid\kn$, then
+\[\loc_\ku(\kappa_n)\in \bH^1_{\FF(n)}(K,T)=\bH^1_{\FF[n]}(K,T)\] 
+Alternatively, when $\ku\mid \kn$, we have that 
+\[\phi_\ku^\fs\circ \loc_\ku(\kappa_{\kn/\ku})=\loc_\ku(\kappa_kn)\]
+Since $\kn$ is admissible, the definition of $A_{\kn,\ku}$ implies that 
+\[\loc_\ku(\kappa_{\kn/ku})\in \loc_\ku\Bigl(\bH^1_{\FF(\kn/\ku)}(K,T)\Bigr)\subset \loc_\ku\Bigl(\bH^1_{\FF^{\kn/\ku}}(K,T)\Bigr)\subset A_n\]
+Therefore,
+\[\loc_\ku(\kappa_{\kn})\in \phi_\ku^{\fs}(A_\kn)\subset \bH^1_{\FF[n]}(K,T)\]
 \end{proof}
+
+We can also define partially relaxed and restricted Selmer structures at admissible elements.
+
+\begin{definition}
+Let $\ka,\kb,\kn\in \AA$ be admissible elements such that $\ka\mid \kn$, $\kb\mid \kn$ and $\ka$ and $\kb$ are pairwise coprime. The Selmer structure $\FF[\kn_\ka^\kb]$ is defined by the local conditions
+\[\left\{\begin{aligned}
+&\bH^1_{\FF[n_\ka^\kb]}(K_\ku,T)=B_n&\textrm{ if }\ku\mid \ka\\
+&\bH^1_{\FF[n_\ka^\kb]}(K_\ku,T)=\bH^1_\f(K_\ku,T)\oplus \phi_\ku^\fs(A_n)&\textrm{ if }\ku\mid \kb\\
+&\bH^1_{\FF[n_\ka^\kb]}(K_\ku,T)=B_n\oplus \phi_\ku^\fs(A_n)&\textrm{ if }\ku\mid \kn/\ka\kb\\
+&\bH^1_{\FF[n_\ka^\kb]}(K_\ku,T)=\bH^1_{\FF}(K_\ku,T)&\textrm{ if }\ku\nmid n\\
+\end{aligned}\right.\]
+\end{definition}
+
 
 
 
