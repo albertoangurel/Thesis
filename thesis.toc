@@ -91,40 +91,46 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.2}Partial cartesian systems}{64}{section.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Higher dimensional Kolyvagin systems}{64}{section.5.3}%
+\contentsline {section}{\numberline {5.3}Higher dimensional Kolyvagin systems}{66}{section.5.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Kolyvagin systems}{66}{section.5.4}%
+\contentsline {subsection}{\numberline {5.3.1}Higher dimensional Kolyvagin primes}{66}{subsection.5.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Selmer group of an elliptic curve}{69}{chapter.6}%
+\contentsline {subsection}{\numberline {5.3.2}Admissible elements}{66}{subsection.5.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.0.1}Main results}{69}{subsection.6.0.1}%
+\contentsline {subsection}{\numberline {5.3.3}Suitable higher dimensional Kolyvagin primes}{68}{subsection.5.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.0.2}Dual exponential map}{79}{subsection.6.0.2}%
+\contentsline {section}{\numberline {5.4}Kolyvagin systems}{69}{section.5.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.0.3}Twisting of Kato's Euler system}{83}{subsection.6.0.3}%
+\contentsline {chapter}{\numberline {6}Selmer group of an elliptic curve}{71}{chapter.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.0.4}Mazur-Tate elements and Kolyvagin derivative}{86}{subsection.6.0.4}%
+\contentsline {subsection}{\numberline {6.0.1}Main results}{71}{subsection.6.0.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.0.5}Image of Bloch-Kato dual exponential map}{91}{subsection.6.0.5}%
+\contentsline {subsection}{\numberline {6.0.2}Dual exponential map}{81}{subsection.6.0.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.0.6}Kato's Kolyvagin system}{93}{subsection.6.0.6}%
+\contentsline {subsection}{\numberline {6.0.3}Twisting of Kato's Euler system}{85}{subsection.6.0.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.0.7}Primitivity of Kato's Euler system and proof of theorem \ref {th:EK_IMC}}{94}{subsection.6.0.7}%
+\contentsline {subsection}{\numberline {6.0.4}Mazur-Tate elements and Kolyvagin derivative}{88}{subsection.6.0.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.0.8}Functional equation and proof of theorem \ref {th:EK_str}}{95}{subsection.6.0.8}%
+\contentsline {subsection}{\numberline {6.0.5}Image of Bloch-Kato dual exponential map}{93}{subsection.6.0.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.0.9}Examples}{96}{subsection.6.0.9}%
+\contentsline {subsection}{\numberline {6.0.6}Kato's Kolyvagin system}{95}{subsection.6.0.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Algebraic Preliminaries}{99}{appendix.A}%
+\contentsline {subsection}{\numberline {6.0.7}Primitivity of Kato's Euler system and proof of theorem \ref {th:EK_IMC}}{96}{subsection.6.0.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Fitting ideals}{99}{section.A.1}%
+\contentsline {subsection}{\numberline {6.0.8}Functional equation and proof of theorem \ref {th:EK_str}}{97}{subsection.6.0.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.2}Preliminaries on exterior powers}{100}{section.A.2}%
+\contentsline {subsection}{\numberline {6.0.9}Examples}{98}{subsection.6.0.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.2.1}Exterior powers over self-injective rings}{101}{subsection.A.2.1}%
+\contentsline {chapter}{\numberline {A}Algebraic Preliminaries}{101}{appendix.A}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.2.2}Exterior biduals over discrete valuation rings}{102}{subsection.A.2.2}%
+\contentsline {section}{\numberline {A.1}Fitting ideals}{101}{section.A.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.2.3}Exterior biduals over the Iwasawa algebra}{103}{subsection.A.2.3}%
+\contentsline {section}{\numberline {A.2}Preliminaries on exterior powers}{102}{section.A.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{References}{105}{theorem.A.2.14}%
+\contentsline {subsection}{\numberline {A.2.1}Exterior powers over self-injective rings}{103}{subsection.A.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.2.2}Exterior biduals over discrete valuation rings}{104}{subsection.A.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.2.3}Exterior biduals over the Iwasawa algebra}{105}{subsection.A.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{References}{107}{theorem.A.2.14}%

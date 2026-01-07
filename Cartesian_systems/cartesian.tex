@@ -3,7 +3,8 @@
 \section{The graph of cartesian Selmer structures}
 
 \begin{definition}
-We consider the graph $\CART$ whose vertices are the cartesian Selmer structures on $T$ and there is an arrow $\GG\to \FF$ joining two Selmer structures $\FF$ and $\GG$ whenever $\FF\leq \GG$.
+We consider the directed graph whose vertices are the cartesian Selmer structures on $T$ and there is an arrow $\GG\to \FF$ joining two Selmer structures $\FF$ and $\GG$ whenever $\FF\leq \GG$.
+\label{def:cartesian:graph}
 \end{definition}
 
 \begin{proposition}
@@ -126,6 +127,7 @@ Similarly to what happened with Kolyvagin and Stark systems, cartesian systems c
 \begin{proposition}
 Let $\FF$ be a core Selmer structure. Then the map
 \[\CART_{\FF_0}\to \bX_{\FF_0}(\FF)\]
+is an isomorphism.
 \label{prop:cartesian_core}
 \end{proposition}
 
@@ -141,6 +143,7 @@ We can now prove that the module of cartesian systems is free of rank one over $
 
 \begin{proposition}
 Let $\FF$ be a core Selmer structure. Then $\bX_{\FF_0}(\FF)$ is a free, cyclic $R$-module.
+\label{prop:cartesian_cyclic}
 \end{proposition}
 
 \begin{proof}
@@ -153,7 +156,81 @@ The module of cartesian systems $\CART_{\FF_0}$ is a free, cyclic $R$-module.
 
 \section{Partial cartesian systems}
 
+In practice, constructing a cartesian system is complicated, and we are only able to construct classes for a subgraph of the cartesian Selmer structures. The goal of this section will be to establish conditions on the subgraph that guarantee that a collection of classes in the subgraph extend (uniquely) to a cartesian system.
+
+\begin{definition}
+Let $G$ be a subgraph of the graph of cartesian Selmer structures in definition \ref{def:cartesian:graph}, denoted \emph{partial cartesian graph}. A \emph{partial cartesian system} for $G$ is an element of the inverse limit
+\[\CART_{\FF_0}(G)=\varprojlim_{\FF\in G} \bX_{\FF_0}(\FF)\]
+Therefore, a partial cartesian system is a collection of classes $\varepsilon_\FF$ for every $\FF\in G$ such that, for every arrow $\GG\to \FF$ in $G$, $\phi_{\GG,\FF}(\varepsilon_{\GG})=\varepsilon_{\FF}$.
+\end{definition}
+
+
+
+\begin{remark}
+For every partial cartesian graph, there is canonical restriction map
+\[\CART_{\FF_0}\to\CART_{\FF_0}(G)\]
+\label{rem:cartesian:partial_res}
+\end{remark}
+
+Kolyvagin and Stark systems are examples of partial cartesian systems.
+
+\textcolor{red}{Explain Kolyvagin and Stark systems}
+
+\begin{notation}
+For every subgraph $G$ of the cartesian Selmer structures. We denote by $G_0$ to the subgraph of $G$ whose vertices are the core cartesian Selmer structures in $G$ and the edges are the edges of $G$ connecting two of those structures. We also denote the enhanced graph $\widetilde G$ by adding, whenever there is an arrow in $G$, $\FF\to \GG$, joining two core structures, an arrow in the opposite direction, $\GG\to \FF$. The reason for doing so is Proposition \ref{prop:cartesian:core_iso}.
+\end{notation}
+
+\begin{proposition}
+Assume we have two paths
+\[\begin{aligned}
+& \FF\to \HH_1\to \cdots \HH_s\to \GG\\
+& FF \to \HH_1'\to \cdots \HH'_{s'} \to \GG
+\end{aligned}\]
+Then the maps $\bX_{\FF_0}\FF \to \bX_{\FF_0}(\GG)$ induced by both paths coincide.
+\end{proposition}
+
+\begin{proof}
+
+\end{proof}
+
+The next results concern about situations in which the map in Remark \ref{rem:cartesian:partial_res} is surjective.
+
+\begin{proposition}
+Let $G=G_0$ be a connected partial cartesian graph whose vertices are core structures. Then the map in Remark \ref{rem:cartesian:partial_res} is an isomorphism.
+\label{prop:cartesian:partial_core}
+\end{proposition}
+
+\begin{proof}
+For any two Selmer structures $\FF$ and $\GG$ in $G_0$, we can choose a path in $\widetilde G$.
+\[\FF\to \HH_1\to \cdots\to \HH_s\to \GG\]
+By Proposition \ref{prop:cartesian:core_iso}, there are isomorphisms
+\[\bX_{\FF_0}(\FF)\cong\bX_{\FF_0}(\HH_1)\cong \cdots \cong \bX_{\FF_0}(\HH_s)\cong \bX_{\FF_0}(\GG)\]
+For every $\varepsilon\in \CART_{\FF_0}(G_0)$, $\varepsilon_\FF$ and $\varepsilon_{\GG}$ are identified by this isomorphism. Hence, $\CART_{\FF_0}(G_0)$ is isomorphic to $\bX_{\FF_0}(\FF)$.
+
+Choose a core Selmer structure $\FF$. By Proposition \ref{prop:cartesian_core}, the map in Remark \ref{rem:cartesian:partial_res} is the following isomorphism.
+\[\CART_{\FF_0}\cong\bX_{\FF_0}(\FF)\cong \CART_{\FF_0}(G)\]
+\end{proof}
+
+\begin{proposition}
+Let $G$ be a non-empty partial cartesian graph
+\begin{itemize}
+    \item The graph $G_0$ is connected.
+    \item For every $\FF\in G$, there is some core Selmer structure $\GG\in G_0$ such that $\FF\leq \GG_0$.
+\end{itemize}
+Then the map in Remark \ref{rem:cartesian:partial_res} is an isomorphism.
+\label{prop:cartesian:partial_core_upper}
+\end{proposition}
+
+\begin{proof}
+The second assumption implies that $G_0$ is non-empty. By Proposition \ref{prop:cartesian:partial_core}, there is an isomorphism 
+\[\CART_{\FF_0}\to \CART_{\FF_0}(G_0)\]
+
+\textcolor{red}{complete}
+\end{proof}
+
 \section{Higher dimensional Kolyvagin systems}
+
+\subsection{Higher dimensional Kolyvagin primes}
 
 In this section, we assume the weaker version of Assumption \ref{ass:basic}.
 
@@ -162,8 +239,8 @@ We assume the following assumptions:
 \begin{itemize}
 \item \namedlabel{nsTirred}{(T1)} $T/\m T$ is an irreducible $k[[G_K]]$-module.
 \item \namedlabel{nsTcoh}{(T3)} $H^1(K(T)_M/K,T)=H^1(K(T)_M/K,T^*)=0$.
-\item\namedlabel{Nsd}{(N1)} $T/\m T$ is not isomorphic to $T^*[\m]$ as $k[[G_K]]$-modules.
-\item\namedlabel{Nsur}{(N2)} The image of the homomorphism $R\to \textrm{End}(T)$ is contained in the image of $\Z_p[[G_\Q]]\to \textrm{End}(T)$.
+\item\namedlabel{nsNsd}{(N1)} $T/\m T$ is not isomorphic to $T^*[\m]$ as $k[[G_K]]$-modules.
+\item\namedlabel{nsNsur}{(N2)} The image of the homomorphism $R\to \textrm{End}(T)$ is contained in the image of $\Z_p[[G_\Q]]\to \textrm{End}(T)$.
 \end{itemize}
 \label{ass:nonsur}
 \end{assumption}
@@ -172,6 +249,7 @@ We are not assuming the existence of $\tau$ such that $T/(\tau-1)T$ is a free, c
 
 \begin{notation}
 Fix some $\tau\in G_{K_M}$ such that $T/(\tau-1)T\cong R^d$, minimizing the exponent $d$.
+\label{not:tau}
 \end{notation}
 
 Similarly to Definition \ref{def:kolyvagin_primes}, we define the Kolyvagin primes $\ell\in \PP_\tau$ as those not belonging to $\Sigma_\FF$ and whose Frobenius automorphism is conjugate to $\tau$ in $\Gal(K(T)_M/K)$. We also denote by $\NN_\tau$ (resp. by $\NN_\tau^i$) to the set of square-free products of Kolyvagin primes (resp. square-free products of exactly $i$-primes).
@@ -180,11 +258,13 @@ Let $\ell\in \PP_\tau$. Since $\Frob_\ell$ is trivial in $\Gal(K_M/K)$, then \te
 \[H^1(K_\ell,T)=H^1_\f(K_\ell,T)\oplus H^1_\tr(K_\ell,T)\]
 which is a free $R$ module of rank $d$.
 
-Moreover, there is canonical isomorphisms
-\[H^1_\f(K_\ku, T)\cong T/(\Frob_\ku-1) T=T/(\tau-1) T\]
+For every $\ku=(\ell_i)_{i\in \N}\in \PP_{\tau}$, we have some freedom in the choices of the primes at $\overline Q$ above $\ell_i$. We can make this choices so $\Frob_\ku=\tau$ in $\Gal(K(T)_M/K)$, instead of being only conjugates. Then there is an isomorphism
+\[H^1_\f(K_\ku, T)\cong T/(\Frob_\ku-1) T=T/(\tau-1) T,\ c\mapsto c(\Frob_\ku)+(\tau-1)T\]
 
 After fixing a generator of $\GG_\ell$, there is another canonical ismorphisms.
 \[\phi_\ku^{\fs}:\ H^1_\f(K_\ku, T)\to H^1_\tr(K_\ku, T)\]
+
+\subsection{Admissible elements}
 
 \begin{definition}
 An element $\kn\in \NN$ is said to be \emph{admissible} if, for every $\ku\mid \kn$, the map 
@@ -194,12 +274,12 @@ Denote by $\AA$ the set of admissible $n\in \NN$. For every admissible $\kn\in \
 
 The next proposition gives a method to construct admissible products.
 \begin{proposition}
-Let $\ku_1,\ldots, \ku_s\in \PP$ be a set ok Kolyvagin ultraprimes satisfying that for all $i=1,\ldots, s$, 
+Let $\ku_1,\ldots, \ku_s\in \PP$ be a set of Kolyvagin ultraprimes satisfying that for all $i=1,\ldots, s$, 
 \begin{itemize}
     \item The image of $\loc_{\ku_i}:\bH^1_{\FF^{\ku_1\cdots\ku_{i-1}}}(K,T)\to \bH^1_{\f}(K_{\ku_i},T)$ is contained in a free rank $1$ $R$-submodule.
     \item For every $j\in \{1,\ldots, i-1\}$, we have that
-    \[\bH^1_{(\FF^*)_{(\ku_1\cdots\ku_{i})/\ku_j}^{\ku_j}}(K,T^*)+\bH^1_{(\FF^*)_{(\ku_1\cdots\ku_{i-1})/\ku_j}}(K,T^*)=\bH^1_{(\FF^*)^{\ku_j}_{(\ku_1\cdots\ku_{i-1})/\ku_j}}(K,T^*)\]
-    \[\textcolor{blue}{H^1_{(\FF^*)^{\ell_1\ldots\ell_{i-1}}_{\ell_i}}(K,T^*)+ H^1_{\FF^*_{\ell_1\cdots\ell_{i-1}}}(K,T^*)=H^1_{(\FF^*)^{\ell_1\ldots\ell_{i-1}}}(K,T^*)     }\]
+ 
+    \[\bH^1_{(\FF^*)^{\ku_1\ldots\ku_{i-1}}_{\ku_i}}(K,T^*)+ \bH^1_{\FF^*_{\ku_1\cdots\ku_{i-1}}}(K,T^*)=\bH^1_{(\FF^*)^{\ku_1\ldots\ku_{i-1}}}(K,T^*)     \]
 \end{itemize}
 Then $\kn:=\ku_1\cdots\ku_s$ is admissible.
 \end{proposition}
@@ -208,7 +288,68 @@ Then $\kn:=\ku_1\cdots\ku_s$ is admissible.
 Consider the exact sequence
 \[\xymatrix{\bH^1_{\FF^{\kn/\ku_i}_{\ku_i}}(K,T)\ar@{>->}[r] &  \bH^1_{\FF^{\kn/\ku_i}}(K,T)\ar[r] & \bH^1_\f(K_{\ku_i},T) \ar[r] & \bH^1_{(\FF^*)_{\kn/\ku_i}^{\ku_i}}(K,T^*)^\vee \ar@{->>}[r] &\bH^1_{(\FF^*)_{\kn/\ku_i}}(K,T^*)^\vee}\]
 
-Denote $r_i:=\ell_1\cdots \ell_{i-1}$ and $s_i:=\ell_{i+1}\cdots \ell_s$.\textcolor{red}{write}
+Denote $r_i:=\ku_1\cdots \ku_{i-1}$ and $s_i:=\ku_{i+1}\cdots \ku_s$. We claim that, for every $j=i+1,\ldots,s$, the images of the maps
+\[\begin{aligned}
+&\loc_{\ku_i}^*:\ \bH^1_{(\FF^*)_{r_i\ku_{i+1}\cdots \ku_{j-1}}^{\ku_i}}(K,T^*)&\to \bH^1_\s(K_{\ku_i},T^*)\\
+&\loc_{\ku_i}^*:\ \bH^1_{(\FF^*)_{r_i\ku_{i+1}\cdots \ku_{j-1}\ku_j}^{\ku_i}}(K,T^*)&\to \bH^1_\s(K_{\ku_i},T^*)
+\end{aligned}\]
+
+By the second assumption on the choice of the prime $\ku_j$ implies that 
+\[\bH^1_{(\FF^*)_{r_i\ku_{i+1}\cdots \ku_{j-1}\ku_j}^{\ku_i}}(K,T^*)+ H^1_{(\FF^*)_{\ku_1\cdots{\ku_{j-1}}}}(K,T^*)=\bH^1_{(\FF^*)_{r_i\ku_{i+1}\cdots \ku_{j-1}}^{\ku_i}}(K,T^*)\]
+Since the second summand is contained in the kernel of $\loc_{\ku_i}$, the images of both maps coincide. By induction, we can construct an exact sequence
+\[\xymatrix{\bH^1_{\FF^{\kn/\ku_i}_{\ku_i}}(K,T)\ar@{>->}[r] &  \bH^1_{\FF^{\kn/\ku_i}}(K,T)\ar[r] & \bH^1_\f(K_{\ku_i},T) \ar[r] & \bH^1_{(\FF^*)_{r_i}^{\ku_i}}(K,T^*)^\vee \ar@{->>}[r] &\bH^1_{(\FF^*)_{r_i}}(K,T^*)^\vee}\]
+Comparing it with the exact sequence
+\[\xymatrix{\bH^1_{\FF^{r_i}_{\ku_i}}(K,T)\ar@{>->}[r] &  \bH^1_{\FF^{r_i}}(K,T)\ar[r] & \bH^1_\f(K_{\ku_i},T) \ar[r] & \bH^1_{(\FF^*)_{r_i}^{\ku_i}}(K,T^*)^\vee \ar@{->>}[r] &\bH^1_{(\FF^*)_{r_i}}(K,T^*)^\vee}\]
+we can see that the images of the following maps coincide:
+\[\begin{aligned}
+&\loc_{\ku_i}:\ \bH^1_{\FF^{\kn/\ku_i}}(K,T)&\to \bH^1_{\f}(K_{\ku_i},T)\\
+&\loc_{\ku_i}:\ \bH^1_{\FF^{r_i}}(K,T)&\to \bH^1_{\f}(K_{\ku_i},T)
+\end{aligned}\]
+The image of the second map is contained one-dimensional, free $R$-module by the first assumption on the choice of the prime $\ku_i$. Hence the image of the first map is also contained in a one-dimensional, free $R$-module. Since that holds for every prime divisor of $\kn$, then $\kn$ is admissible.
+\end{proof}
+
+\subsection{Suitable higher dimensional Kolyvagin primes}
+
+The goal of this section is to adapt Proposition \ref{prop:cheb_nd} to higher dimensional Kolyvagin primes. We adapt the proof of \cite[Proposition 3.6.2]{MazurRubin} to this situation.
+
+\begin{proposition}
+Assume Assumptions \ref{ass:nonsur}. Let $C\subset \bH^1(K,T)$ be a finitely-generated $R$-module and let $D\subset \bH^1(K,T^*)$ be a cofinitely generated $R$-module. Assume $\tau\in G_{K_M}$ is as in Notation \ref{not:tau}. Assume we have maps
+\[\begin{array}{cc}
+\phi:\ C\to T/(\tau-1)T,\ \psi:\ D\to T^*/(\tau-1)T^*
+\end{array}\]
+Then there is a $\tau$-Kolyvagin ultraprime $\ku\in \PP_\tau$ such that the maps
+\[\begin{array}{cc}
+\loc_\ku:\  C\to T/(\tau-1)T,\ \ \loc_\ku^*:\ D\to T^*/(\tau-1)T^*
+\end{array}\]
+coincide with $\phi$ and $\psi$, respectively.
+\label{prop:cheb_nd_ns}    
+\end{proposition}
+
+\begin{proof}
+Since $C$ is finitely generated, there exists a square-free product of ultraprimes $\kn$ such that $C\subset \bH^1(K^\kn/K,T)$.
+
+Denote by $C_k$ the image of $C$ under the projection to $\bH^1(K,T/\m^k)$ and by $D_k$ the intersection of $D$ with $\bH^1(K,T^*)[\m^k]$. The assumptions on $C$ and $D$ imply that both $C_k$ and $D_k$ are finite. Since $C$ is finitely generated, it is compact, to it equal to 
+\[C=\varprojlim_k C_k\subset \varprojlim_k \bH^1(K^\kn/K,T/\m^k)\]
+From $\phi$ and $\psi$, we obtain the maps
+\[\begin{array}{cc}
+    \phi_n:\ \bH^1(K^{\kn}/K,T/\m^k)\to T/(\m^k,\tau-1)T,& \psi_m:\ \bH^1(K,T^*[\m^n])\to T^*[\m^k]/(\tau-1)T^*[\m^k]
+\end{array}\]
+
+Let $(n_i)_{i\in \N}$ be a sequence of square-free integers representing $\kn$. Then 
+\[\bH^1(K^{\kn}/K,T/\m^k)=\UU_i\Bigl(H^1(K^{n_i}/K,T/\m^k)\Bigr)\]
+
+\textcolor{red}{result needed}, there are subgroups $C_k^{(i)}\subset H^1(K^{n_i}/K,T/\m^k)$ such that 
+\[C_k=\UU_i\Bigl(C_k^{(i)}\Bigr)\]
+Since $C_k$ is finite, then $C_k\cong C_k^{(i)}$ for $\UU$-many $i$. Let $S_k$ be the set of indices for which this isomorphism holds. Then we have a decreasing sequence of sets $(S_k)\subset \UU$. \textcolor{red}{more comment}
+
+\textbf{Claim}: There exists a $\tau$-Kolyvagin prime $\ell_k^{i}\in \PP_{\tau}(T/\m^k)$ not dividing $n_i$ such that 
+\[\loc_{\ell_k^{i}}:\ C_{k}^{(i)}\hookrightarrow H^1(K^{n_i}/K,T/\m^k)\to H^1_{\f}(K_{\ell_k^{(i)}},T/m^k)=T/(\m^k,\tau-1)T\] coincides with $\phi_k$. Note that it implies that the map \textcolor{red}{proof required}
+\[\loc_{\ell_k^i}:\ C_{k'}^{(i)}\to T/(\m^{k'},\tau-1)\]
+coincides with $\phi_{k'}$.
+
+Consider the ultraprime $\ku$ represented by the sequence $(\ell_a^a)_{a\in \N}$. 
+
+\textcolor{red}{complete}
 \end{proof}
 
 \section{Kolyvagin systems}
