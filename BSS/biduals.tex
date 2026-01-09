@@ -145,7 +145,7 @@ For every $j\in\{1,\ldots, s\}$ and $a\in \N$, we can choose a Kolyvagin prime i
 Choose ultraprimes $\ku^1=(\ku^1_i)_{i\in \N},\ldots, \ku^s=(\ku^s_i)_{i\in \N}$ satisfying that $\ku^j_a=\ell_a^j$ for each $j=1,\ldots, s$ and $a\in S$.
 
 Define $n_{a}:=\ku_a^1\cdots\ku_a^s$ for each $a\in \N$. Then, we have that
-\[H^1_{(\FF_{a})^*_{n_a}}(K,\bT^*[\m])=0\ forall a\in S\]
+\[H^1_{(\FF_{a})^*_{n_a}}(K,\bT^*[\m])=0\ \forall a\in S\]
 If $\kn=\ku^1\cdots\ku^s$, Lemma \ref{prop:patched:selmer_torsion} implies that 
 \[\bH^1_{(\FF^*)_\kn}(K,\bT^*)[\m]=\bH^1_{(\FF^*)_\kn}(K,\bT^*[\m])=\UU_a\Bigl(H^1_{(\FF_{a})^*_{n_a}}(K,\bT^*[\m])=0\Bigr)=0\]
 \end{proof}
@@ -154,16 +154,20 @@ By combining choices of primes in the proofs of Propositions \ref{prop:iwasawa:c
 
 \begin{corollary}
 Let $\bT$ be a Galois representation over the Iwasawa algebra satisfying Assumptions \ref{ass:patched:basic} and let $\FF$ be a cartesian Selmer structure of positive core rank. Then there is some $\kn\in \NN$ such that
-\[\bH^1_{(\FF^*)_{(\kn)}}(K,\bT^*)=0\]
+\[\bH^1_{(\FF^*){\kn}}(K,\bT^*)=0\]
+while, for every ultraprime $\ku\mid \kn$, there is an equality
+\[\bH^1_{(\FF^*)(\ku)}(K,T^*)=\bH^1_{(\FF^*)_\ku}(K,T^*)\]
 \label{prop:iwasawa:cheb_dual_tr}
 \end{corollary}
 
 \begin{proof}
 By a combination of the proofs of Propositions \ref{prop:iwasawa:cheb:surjective} and \ref{prop:iwasawa:cheb_dual_res}, we can construct ultraprimes $\ku^1,\ldots, \ku^j$ such that 
-\[\loc_{\ku^j}:\ \bH^1_{\FF(\ku^1\cdots\ku^{j-1})}(K,\bT)\to \bH^1_\f(K_{\ku^j},\bT)\]
+\[\loc_{\ku^j}:\ \bH^1_{\FF}(K,\bT)\to \bH^1_\f(K_{\ku^j},\bT)\]
 is surjective for each $j=1,\ldots,s$ and 
 \[\bH^1_{(\FF^*)_\kn}(K,\bT^*)=0\]
-Indeed, we can construct the ultraprimes in Proposition \ref{prop:iwasawa:cheb_dual_res} individually satisfying Proposition \ref{prop:iwasawa:cheb:surjective}, since $\bH^1_{\FF(\ku^1\ldots\ku^{j-1})}(K,\bT)\neq 0$ since the core rank of $\FF(\ku^1\ldots\ku^{j-1})$ is positive. \textcolor{red}{complete}
+The surjectivity of $\loc_{\ku_j}$ and the global duality exact sequence in Proposition \ref{prop:patched:global_duality} imply that, for every $j=1,\ldots,s$,
+\[\bH^1_{(\FF^*)^\ku}(K,T^*)=\bH^1_{(\FF^*)}(K,T^*)\]
+\textcolor{red}{complete}
 \end{proof}
 
 
@@ -176,7 +180,7 @@ Indeed, we can construct the ultraprimes in Proposition \ref{prop:iwasawa:cheb_d
 
 Let $m,n\in \NN$ be square-free products of Kolyvagin ultraprimes such that $m\mid n$. There is an exact sequence
 \[\xymatrix{0\ar[r] & \bH^1_{\FF^m}(K,T)\ar[r] & \bH^1_{\FF^n}(K,T)\ar[r] & \prod_{\ell\mid \frac{n}{m}} \bH^1_{\s}(K_\ell,T)}\]
-By proposition \ref{prop:bidual_map}, this exact sequence induces a map
+By proposition \ref{prop:iwasawa:bidual_map}, this exact sequence induces a map
 \[\Phi_{n,m}:\ \bigcap^{r+\nu(n)} \bH^1_{\FF^n}(K,T)\to \bigcap^{r+\nu(m)} \bH^1_{\FF^m}(K,T)\]
 
 \begin{remark}
@@ -217,9 +221,12 @@ Definition \ref{def:stark_systems} might seem abstract, but the Stark systems ca
 A \emph{weak core vertex} of rank $r$ is a square-free product of ultraprimes $n\in \NN$ such that $\bH^1_{\FF^*_n}(\Q,\bT^*)=0$ and $\bH^1_{\FF^n}(\Q,\bT)$ is a free $\Lambda$-module of rank $r+\nu(n)$.
 \end{definition}
 
-\textcolor{red}{prove existence of weak core vertices}
+We will assume the existence of a core vertex.
 
-\textcolor{red}{comments on the rank}
+\begin{assumption}
+    There exist an integer $r$ and $n\in \NN$ such that $\bH^1_{\FF^*}(\Q,\bT^*)=0$ and $\bH^1_{\FF^n}(\Q,\bT)$ is a free $\Lambda$-module of rank $r+\nu(n)$.
+    \label{ass:core_vertex}
+\end{assumption}
 
 The main theorem of this section shows that the Starks systems are controlled by their values at weak core vertices.
 
@@ -231,16 +238,52 @@ is an isomorphism.
 \end{theorem}
 
 
+
+Before proving Theorem \ref{th:stark_core_projection}, we need to state some properties related to weak core vertices.
+
 \begin{lemma}
 Let $n\in \NN$ be a weak core vertex and let $m\in \NN$ be such that $n\mid m$. Then $m$ is also a weak core vertex.
-\label{lem:core_vertex_div}
+\label{lem:weak_core_vertex_div}
 \end{lemma}
 
 \begin{proof}
 Since $n\mid m$, then $\bH^1_{\FF_m}(\Q,T)$ is contained in $\bH^1_{\FF_n}(\Q,T)$, so it also vanishes. The exact sequence
 \[\xymatrix{0\ar[r] & \bH^1_{\FF^n}(\Q,\bT) \ar[r] & \bH^1_{\FF^m}(\Q,\bT) \ar[r] & \bigoplus_{\ku\mid \frac{m}{n}}\bH^1_s(\Q_{\ku},\bT)\ar[r] & 0}\]
-The first and third terms of this exact sequence are free modules of ranks $r+\nu(n)$ and $\nu(m)-\nu(n)$. Hence $\bH^1_{\FF^m}(\Q,\bT)$ is free of rank $r+\nu(n)$.
+The first and third terms of this exact sequence are free modules of ranks $r+\nu(n)$ and $\nu(m)-\nu(n)$. Hence, this exact sequence splits and thus $\bH^1_{\FF^m}(\Q,\bT)$ is free of rank $r+\nu(n)$.
 \end{proof}
+
+
+\begin{lemma}
+Let $m\in \NN$ satisfy that $H^1_{\FF_m}(K,T^*)=0$. If Assumption \ref{ass:core_vertex} holds true, then $m$ is a core vertex and
+\[H^1_{\FF^m}(K,T^*)\approx \Lambda^{r+\nu(m)}\]
+\end{lemma}
+
+\begin{proof}
+Let $n\in \NN$ be the core vertex given by Assumption \ref{ass:core_vertex} $s\in \NN$ be a vertex divisible by $\textrm{lcm}(m,n)$. By Lemma \ref{lem:weak_core_vertex_div}, $s$ is also a core vertex and
+\[\bH^1_{\FF^s}(K,T)\approx \Lambda^{r+\nu(s)}\]
+
+By Proposition \ref{prop:global_duality}, there is an exact sequence
+\[\xymatrix{0\ar[r] & \bH^1_{\FF^n}(\Q,\bT)\ar[r]&\bH^1_{\FF^{r}}(\Q,\bT)\ar[r] & \bigoplus_{\ell\mid \frac{s}{n}}\bH^1_s(\Q_\ell, \bT) \ar[r] &0}\]
+The second and third modules of this short exact sequence are free $\Lambda$ modules of ranks $r+\nu(s)$ and $\nu(s)-\nu(n)$. Therefore, this sequence splits and 
+\[\bH^1_{\FF^m}(K,T^*)\approx \Lambda^{r+\nu(m)}\]
+\end{proof}
+
+
+
+\begin{lemma}
+For every $n\in \NN$, there exists a weak core vertex $n\in \NN$ such that $m\mid n$.
+\label{lem:weak_core_vertex_existence}
+\end{lemma}
+
+\begin{proof}
+A direct application of Proposition \ref{prop:iwasawa:cheb_dual_res} to the Selmer structure $(\FF^*)_m$ implies the existence of $n\in \NN$, divisible by $m$, such that 
+\[\bH^1_{(\FF^*)_n}(K,T^*)=0\]
+\end{proof}
+
+
+
+
+
 
 
 
@@ -259,10 +302,7 @@ which turns out to be an isomorphism since both are free $\Lambda$-modules of ra
 
 If we assume the existence of core vertices, we know that the module of Stark systems is free of rank one.
 
-\begin{assumption}
-    There exist an integer $r$ and $n\in \NN$ such that $\bH^1_{\FF^*}(\Q,\bT^*)=0$ and $\bH^1_{\FF^n}(\Q,\bT)$ is a free $\Lambda$-module of rank $r+\nu(n)$.
-    \label{ass:core_vertex}
-\end{assumption}
+
 
 \begin{corollary}
 Under assumption \ref{ass:core_vertex}, the module of Stark systems $\bSS(\FF)$ is a free $\Lambda$-module of rank one. The generators of $\bSS(\FF)$ are called \emph{primitive} Stark systems.
@@ -273,7 +313,7 @@ Let $\varepsilon=(\varepsilon)_{n\in \NN}$ be a generator of $\bSS(\FF)$. For ev
 \end{theorem}
 
 \begin{proof}
-By Assumption \ref{ass:core_vertex} and Lemma \ref{lem:core_vertex_div}, there exists a core vertex $n$ such that $m\mid n$, which leads to the following exact sequence
+By Assumption \ref{ass:core_vertex} and Lemma \ref{lem:weak_core_vertex_div}, there exists a core vertex $n$ such that $m\mid n$, which leads to the following exact sequence
 \[\xymatrix{0\ar[r] & \bH^1_{\FF^n}(K,\bT) \ar[r] & \bH^1_{\FF^m}(K,\bT)\ar[r] & \prod_{\ku\mid n/m} \bH^1_\s(K_\ku,\bT) \ar[r] & \bH^1_{\FF^*_m}(K,\bT^*)\ar[r] & 0}\]
 which induces a map 
 \[\phi_{n,m}:\ \bigcap^{r+\nu(n)} \bH^1_{\FF^n}(K,\bT)\to \bigcap^{r+\nu(m)} \bH^1_{\FF^m}(K,\bT)\]

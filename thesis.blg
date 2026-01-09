@@ -1,18 +1,18 @@
 [0] Config.pm:311> INFO - This is Biber 2.16
 [0] Config.pm:314> INFO - Logfile is 'thesis.blg'
-[101] biber-darwin:340> INFO - === Wed Jan  7, 2026, 02:14:08
-[127] Biber.pm:415> INFO - Reading 'thesis.bcf'
-[244] Biber.pm:952> INFO - Found 28 citekeys in bib section 0
-[259] Biber.pm:4340> INFO - Processing section 0
-[275] Biber.pm:4531> INFO - Looking for bibtex format file 'refs.bib' for section 0
-[280] bibtex.pm:1689> INFO - LaTeX decoding ...
-[338] bibtex.pm:1494> INFO - Found BibTeX data source 'refs.bib'
-[449] Utils.pm:395> WARN - ISBN '978-0-201-00361-0' in entry 'AtiyahMcDonald' is invalid - run biber with '--validate_datamodel' for details.
-[507] Utils.pm:395> WARN - BibTeX subsystem: /var/folders/g1/z84mbf9s6qd3r09nph4w515h0000gn/T/biber_tmp__kNE/8fe4c9854184545302f21ebf0d47516c_2181.utf8, line 256, warning: 1 characters of junk seen at toplevel
-[559] UCollate.pm:68> INFO - Overriding locale 'en-GB' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[559] UCollate.pm:68> INFO - Overriding locale 'en-GB' defaults 'variable = shifted' with 'variable = non-ignorable'
-[559] Biber.pm:4168> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-GB'
-[560] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-GB'
-[621] bbl.pm:654> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
-[636] bbl.pm:757> INFO - Output to thesis.bbl
-[636] Biber.pm:128> INFO - WARNINGS: 2
+[119] biber-darwin:340> INFO - === Fri Jan  9, 2026, 12:49:45
+[144] Biber.pm:415> INFO - Reading 'thesis.bcf'
+[428] Biber.pm:952> INFO - Found 28 citekeys in bib section 0
+[450] Biber.pm:4340> INFO - Processing section 0
+[471] Biber.pm:4531> INFO - Looking for bibtex format file 'refs.bib' for section 0
+[476] bibtex.pm:1689> INFO - LaTeX decoding ...
+[542] bibtex.pm:1494> INFO - Found BibTeX data source 'refs.bib'
+[683] Utils.pm:395> WARN - ISBN '978-0-201-00361-0' in entry 'AtiyahMcDonald' is invalid - run biber with '--validate_datamodel' for details.
+[747] Utils.pm:395> WARN - BibTeX subsystem: /var/folders/g1/z84mbf9s6qd3r09nph4w515h0000gn/T/biber_tmp_eR0B/8fe4c9854184545302f21ebf0d47516c_28197.utf8, line 256, warning: 1 characters of junk seen at toplevel
+[799] UCollate.pm:68> INFO - Overriding locale 'en-GB' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[799] UCollate.pm:68> INFO - Overriding locale 'en-GB' defaults 'variable = shifted' with 'variable = non-ignorable'
+[799] Biber.pm:4168> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-GB'
+[799] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-GB'
+[840] bbl.pm:654> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
+[854] bbl.pm:757> INFO - Output to thesis.bbl
+[855] Biber.pm:128> INFO - WARNINGS: 2

@@ -101,13 +101,13 @@ The proof of Theorem \ref{th:str_chi1} is divided in the following two lemmas:
 
 \begin{lemma}(\cite[Corollary 4.5.4.]{MazurRubin})
 Under Assumption \ref{ass:Rprin_chi1}, if $\kappa\in \KS(T)$ is a Kolyvagin system and $n\in \NN$, then
-\[\ind(\kappa_n)=\Fitt^0\Bigl(H^1_{\FF^*(n)}(K,T^*)\Bigr)\]
+\[\ind(\kappa_n)=\Fitt_0^R\Bigl(H^1_{\FF^*(n)}(K,T^*)\Bigr)\]
 \label{lem:kn_trn}
 \end{lemma}
 
 \begin{lemma}
 Under Assumption \ref{ass:Rprin_chi1}, then 
-\[\Fitt_i^R\Bigl(H^1_{\FF^*}(K,T^*)\Bigr)=\sum_{n\in \NN_i}\Fitt^0\Bigl(H^1_{(\FF^*)(n)}(K,T^*)\Bigr)\]
+\[\Fitt_i^R\Bigl(H^1_{\FF^*}(K,T^*)\Bigr)=\sum_{n\in \NN_i}\Fitt_0^R\Bigl(H^1_{(\FF^*)(n)}(K,T^*)\Bigr)\]
 \label{lem:fitti_fitt0trn}
 \end{lemma}
 
@@ -162,6 +162,7 @@ The method we will use for the computation of the Selmer module $H^1_{\FF}(K,T)$
 \begin{proposition}
 There exists a unique prime $\ell$ such that $H^1_{\FF}(K_q,T)\subsetneq H^1_{\GG}(K_q,T)$. Moreover, there is a non-canonical homomorphism
 \[H^1_{\GG/\FF}(K_q,T):=H^1_{\GG}(K_q,T)\Bigm/ H^1_{\FF}(K_q,T)\approx R\]
+\label{prop:cartesian_quotient_rk1}
 \end{proposition}
 
 \begin{proof}
@@ -181,13 +182,13 @@ For all other primes $q\neq \ell$, we can apply \cite[Lemma 1.1.5]{MazurRubin}, 
 is linearly dependent on $i$. Since it vanishes for $i=1$, then $H^1_{\FF}(K_q,T)=H^1_{\GG}(K_q,T)$.
 
 For the prime $\ell$, \cite[Lemma 1.1.5]{MazurRubin} implies that 
-\begin{equation}
-\length\Bigl(H^1_{\GG/\FF}(K_q,T)\Bigr)=\length(R)
-\end{equation}
 
-Consider he following composition, which coincides with the multiplication by $\pi^{k-1}$.
+\[\length\Bigl(H^1_{\GG/\FF}(K_q,T)\Bigr)=\length(R)\]
+
+
+Consider the following composition, which coincides with the multiplication by $\pi^{k-1}$.
 \[\xymatrix{H^1_{\GG/\FF}(K_\ell,T)\ar[r] & H^1_{\GG/\FF}(K_\ell,T\otimes k) \ar[r]^{\pi^{k-1}} & H^1_{\GG/\FF}(K_\ell,T)}\]
-The first map is surjective by the propagation of Selmer structures and the second one is injective since $\FF$ is cartesian. By the induction hypothesis, $H^1_{\GG/\FF}(K_\ell,T)$ is an $R$ of length $k$ whose $\m^{k-1}$-torsion induces a non-trivial quptient. Hence, the structure theorem implies that 
+The first map is surjective by the propagation of Selmer structures and the second one is injective since $\FF$ is cartesian. Hence, $H^1_{\GG/\FF}(K_\ell,T)$ is an $R$-module of length $k$ whose $\m^{k-1}$-torsion induces a non-trivial quotient. Hence, the structure theorem implies that 
 \[H^1_{\GG/\FF}(K_\ell,T)\cong R\qedhere\]
 \end{proof}
 
