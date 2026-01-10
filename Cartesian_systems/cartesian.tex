@@ -87,20 +87,7 @@ Since the map in Definition \ref{def:cartesian} respects this decomposition, the
 is injective, so $\GG$ is also cartesian.
 \end{proof}
 
-\textcolor{red}{do it with R being DVR}
-
-\section{The graph of cartesian Selmer structures}
-
-\begin{definition}
-We consider the directed graph whose vertices are the cartesian Selmer structures on $T$ and there is an arrow $\GG\to \FF$ joining two Selmer structures $\FF$ and $\GG$ whenever $\FF\leq \GG$.
-\label{def:cartesian:graph}
-\end{definition}
-
-\begin{proposition}
-Let $\FF\leq\GG$ be cartesian Selmer structures. Then the module
-\[\LL_{\GG/\FF}=\bigoplus_{\ku\in \UU(\Pb)} \bH^1_{\GG/\FF}(K_\ku,T)=\bigoplus_{\ku\in \UU(\Pb)} \frac{\bH^1_{\GG}(K_\ku,T)}{\bH^1_{\FF}(K_\ku,T)}\]
-is a free, finitely generated $R$-module of rank $\chi(\GG)-\chi(\FF)$.
-\end{proposition}
+\textcolor{red}{do it with R being DVR, below is a proof that might be useful}
 
 \begin{proof}
 Since $\GG$ is cartesian, the $R$-module
@@ -110,13 +97,64 @@ is torsion-free. Since $\LL_{\GG/\FF}$ is a finitely-generated submodule, it is 
 By Proposition \ref{prop:patched:core_rank_limit}, we see that the rank of $\LL_{\GG/\FF}$ is $\chi(\GG)-\chi(\FF)$.
 \end{proof}
 
-We want to extend the definition of $\LL_{\GG/\FF}$ for every pair of Selmer structures $\FF$ and $\GG$, not necessarily comparable.
+\section{Cartesian systems}
+
+
+\subsection{Local quotients}
+
+
+
+
+
+When $\FF\leq\GG$ are cartesian Selmer structures. We define the local quotient as
+\[\LL_{\GG/\FF}=\bigoplus_{\ku\in \UU(\Pb)} \bH^1_{\GG/\FF}(K_\ku,T)=\bigoplus_{\ku\in \UU(\Pb)} \frac{\bH^1_{\GG}(K_\ku,T)}{\bH^1_{\FF}(K_\ku,T)}\]
+which is a free, finitely generated $R$-module of rank $\chi(\GG)-\chi(\FF)$. We want to extend the definition of $\LL_{\GG/\FF}$ for every pair of Selmer structures $\FF$ and $\GG$, not necessarily comparable. In order to do that, we need to consider the intersection of Selmer structures.
+
+\begin{definition}
+Let $\FF$ and $\GG$ be two cartesian Selmer structures. Their \emph{cartesian intersection} $\FF\cap \GG$ is the Selmer structure defined by the local conditions
+\[\bH^1_{\FF\cap \GG}(K_\ku,T)=\bH^1_{\FF}(K_\ku, T)\cap \bH^1_{\GG}(K_\ku, T)\]
+\end{definition}
+
+
+
+
+\begin{proposition}
+Assume $R$ is a discrete valuation ring. If $\FF$ and $\GG$ are cartesian Selmer structures, for every ultraprime $\ku$, the set theoretic intersection of local conditions coincide with the cartesian intersection
+\[\bH^1_{\FF\cap \GG}(K_\ku,T)=\bH^1_{\FF}(K_\ku,T)\cap \bH^1_{\GG}(K_\ku,T)\]
+\label{prop:intersection_cartesian}
+\end{proposition}
+
+\begin{proof}   
+Let $\ku$ be an ultraprime. We need to see that the local condition $\bH^1_{\FF}(K_\ku,T)\cap \bH^1_{\GG}(K_\ku,T)$ is cartesian, i.e., that the quotient 
+\[\frac{\bH^1(K_\ku,T)}{\bH^1_{\FF}(K_\ku,T)\cap \bH^1_{\GG}(K_\ku,T)}\]
+is torsion-free.
+
+Let $c\in \bH^1(K_\ku,T)$ satisfying that $\pi^n c\in \bH^1_{\FF}(K_\ku,T)\cap \bH^1_{\GG}(K_\ku,T)$ for some natural number $n$. Since both $\FF$ and $\GG$ are cartesian, Definition \ref{def:patched_cartesian} implies that 
+\[c\in \bH^1_{\FF}(K_\ku,T)\cap \bH^1_{\GG}(K_\ku,T)\]
+Hence, $\bH^1_{\FF}(K_\ku,T)\cap \bH^1_{\GG}(K_\ku,T)$, so the set theoretic intersection coincides with the cartesian intersection.
+\end{proof}
+
+\begin{remark}
+Proposition \ref{prop:intersection_cartesian} is no longer true when the coefficient ring $R$ is artinian. The reason behind this is that the intersection of two free $R$-modules is not necessarily free.
+\label{rem:intersection_cartesian_artinian}
+\end{remark}
+
+
+We can now extend the definition of local quotient to any two cartesian Selmer structures, not necessarily related.
+
 \begin{definition}
 Let $\FF$ and $\GG$ be cartesian Selmer structures. We define the \emph{local quotient} as
-\[\LL_{\GG/\FF}:=\bigoplus_{\ku\in \Sigma_{\FF< \GG}} \frac{\bH^1_{\GG}(K_\ku,T)}{\bH^1_{\FF}(K_\ku,T)}\oplus \bigoplus_{\ku\in \Sigma_{\GG<\FF}} \left(\frac{\bH^1_{\FF}(K_\ku,T)}{\bH^1_{\GG}(K_\ku,T)}\right)^+\]
-where $\Sigma_{\FF<\GG}$ (resp. $\Sigma_{\GG<\FF}$) is the set of ultraprimes $\ku\in \Sigma_{\FF}\cup\Sigma_{\GG}$ such that $\bH^1_{\FF}(K_\ku,T)\subset \bH^1_{\GG}(K_\ku,T)$ (resp. $\bH^1_{\GG}(K_\ku,T)\subset \bH^1_{\FF}(K_\ku,T)$).
+\[\LL_{\GG/\FF}:=\bigoplus_{\ku\in \Sigma_{\FF}\cup\Sigma_{\GG}} \left[\frac{\bH^1_{\GG}(K_\ku,T)}{\bH^1_{\FF\cap \GG}(K_\ku,T)}\oplus \left(\frac{\bH^1_{\FF}(K_\ku,T)}{\bH^1_{\FF\cap \GG}(K_\ku,T)}\right)^+\right]\]
 \label{def:local_quotient}
 \end{definition}
+
+\begin{remark}
+By Proposition \ref{prop:cartesian_quotient}, $\LL_{\GG/\FF}$ is a free $R$-module. This fact is important for taking the determinant, as in Proposition \ref{prop:cartesian_bidual_map}. That is the reason why we defined the intersection as the maximal cartesian substructure, and not as the set-theoretic intersection.
+\end{remark}
+
+\subsection{The graph of cartesian Selmer structures}
+
+When $\FF\leq \GG$, the determinant of the local quotient fits into the following map between biduals of Selmer groups.
 
 \begin{proposition}
 Let $\FF\leq \GG$ be cartesian Selmer structures. There is a canonical homomorphism
@@ -127,6 +165,13 @@ Let $\FF\leq \GG$ be cartesian Selmer structures. There is a canonical homomorph
 \begin{proof}
 Since $\LL_{\GG/\FF}$ is a free $R$-module of rank $\chi(\GG)-\chi(\FF)$, Proposition \ref{prop:bidual_map_dvr_free} constructs the map $\phi_{\GG,\FF}$.
 \end{proof}
+
+The existence of this map motivates the following definition.
+
+\begin{definition}
+We consider the directed graph whose vertices are the cartesian Selmer structures on $T$ and there is an arrow $\GG\to \FF$ joining two Selmer structures $\FF$ and $\GG$ whenever $\FF\leq \GG$.
+\label{def:cartesian:graph}
+\end{definition}
 
 \begin{definition}
 Fix a base cartesian Selmer structure $\FF_0$. For every cartesian Selmer structure $\FF$, define
@@ -141,28 +186,36 @@ Fix a base cartesian Selmer structure $\FF_0$. For every cartesian Selmer struct
 
 In order to prove this result, we need the following lemma.
 \begin{lemma}
-Let $\FF$, $\GG$ and $\FF_0$ be cartesian Selmer structures such that $\FF\leq \GG$. Then there is a canonical isomorphism
+Let $\FF$, $\GG$ and $\FF_0$ be cartesian Selmer structures such that $\FF\leq \GG$. Then there is an isomorphism, canonical up to sign,
 \[\det(\LL_{\GG/\FF_0}^+)=\det(\LL_{\GG/\FF}^+)\otimes \det(\LL_{\FF/\FF_0}^+)\]
 \label{lem:cartesian:det_split}
 \end{lemma}
 
 \begin{proof}
-We can split the determinant of $\LL_{\GG/\FF}^+$ as
-\[\det\Bigl(\LL_{\GG/\FF_0}^+\Bigr)=\det\left(\bigoplus_{\ku\in \Sigma_{\FF_0< \GG}} \left(\frac{\bH^1_{\GG}(K_\ku,T)}{\bH^1_{\FF_0}(K_\ku,T)}\right)^+\right)\otimes  \det\left(\bigoplus_{\ku\in \Sigma_{\GG<\FF_0}} \frac{\bH^1_{\FF_0}(K_\ku,T)}{\bH^1_{\GG}(K_\ku,T)}\right)\]
-Here, all the summands are free $R$-modules, so we can identify them with their biduals. Since $\FF\leq \GG$, there is a partition $\Sigma_{\FF_0<\GG}=\Sigma_{\FF\leq \FF_0<\GG}\sqcup \Sigma_{\FF_0< \FF\leq\GG}$
-Hence we can use Propositions \ref{prop:det_quotient} and \ref{prop:det_dual} to split the first determinant as
+Denote $\Sigma:=\Sigma_{\FF}\cup\Sigma_{\GG}\cup\Sigma_{\FF_0}$. We can split the determinant of $\LL_{\GG/\FF}^+$ as
+\[\det\Bigl(\LL_{\GG/\FF_0}^+\Bigr)=\det\left(\bigoplus_{\ku\in \Sigma}\left(\frac{\bH^1_{\GG}(K_\ku,T)}{\bH^1_{\FF_0\cap \GG}(K_\ku,T)}\right)^+\right)\otimes\det\left(\bigoplus_{\ku\in \Sigma} \frac{\bH^1_{\FF_0}(K_\ku,T)}{\bH^1_{\FF_0\cap \GG}(K_\ku,T)}\right)\]
+Here, all the summands are free $R$-modules, so we can identify them with their biduals. Hence we can use Propositions \ref{prop:det_quotient} and \ref{prop:det_dual} to split the first determinant as
 \[\begin{aligned}
-&\det\left(\bigoplus_{\ku\in \Sigma_{\FF_0< \GG}} \left(\frac{\bH^1_{\GG}(K_\ku,T)}{\bH^1_{\FF_0}(K_\ku,T)}\right)^+\right)=\\
-&\det\left(\bigoplus_{\ku\in\Sigma_{\FF\leq \FF_0<\GG}} \left(\frac{\bH^1_{\GG}(K_\ku,T)}{\bH^1_{\FF}(K_\ku,T)}\right)^+\right)\otimes\det\left(\bigoplus_{\ku\in\Sigma_{\FF\leq \FF_0<\GG}} \frac{\bH^1_{\FF_0}(K_\ku,T)}{\bH^1_{\FF}(K_\ku,T)}\right)\otimes\\
-&\det\left(\bigoplus_{\ku\in\Sigma_{\FF_0< \FF\leq\GG}} \left(\frac{\bH^1_{\GG}(K_\ku,T)}{\bH^1_{\FF}(K_\ku,T)}\right)^+\right)\otimes\det\left(\bigoplus_{\ku\in\Sigma_{\FF_0< \FF\leq\GG}} \left(\frac{\bH^1_{\FF}(K_\ku,T)}{\bH^1_{\FF_0}(K_\ku,T)}\right)^+\right)\\
+\det\Bigl(\LL_{\GG/\FF_0}^+\Bigr)=&\det\left(\bigoplus_{\ku\in \Sigma}\left(\frac{\bH^1_{\GG}(K_\ku,T)}{\bH^1_{\FF_0\cap \FF\cap \GG}(K_\ku,T)}\right)^+\right)\otimes
+\det\left(\bigoplus_{\ku\in \Sigma}\frac{\bH^1_{\FF_0\cap\GG}(K_\ku,T)}{\bH^1_{\FF_0\cap\FF \cap \GG}(K_\ku,T)}\right)\otimes\\
+&\det\left(\bigoplus_{\ku\in \Sigma} \frac{\bH^1_{\FF_0}(K_\ku,T)}{\bH^1_{\FF_0\cap \FF\cap \GG}(K_\ku,T)}\right)\otimes
+\det\left(\bigoplus_{\ku\in \Sigma} \left(\frac{\bH^1_{\FF_0\cap \GG}(K_\ku,T)}{\bH^1_{\FF_0\cap \FF\cap \GG}(K_\ku,T)}\right)^+\right)
 \end{aligned}\]
-Since $\FF\leq \GG$, the sets $\Sigma_{\GG<\FF_0}$ and $\Sigma_{\FF\leq \GG<\FF_0}\sqcup \Sigma_{\GG< \FF\leq\FF_0}$ coincide. Similarly, we can use Propositions \ref{prop:det_quotient} and \ref{prop:det_dual} to split the determinant as
-\[\begin{aligned}
-&\det\left(\bigoplus_{\ku\in \Sigma_{\GG<\FF_0}} \frac{\bH^1_{\FF_0}(K_\ku,T)}{\bH^1_{\GG}(K_\ku,T)}\right)=\\
-&\det\left(\bigoplus_{\ku\in\Sigma_{\FF\leq \GG<\FF_0}} \frac{\bH^1_{\FF_0}(K_\ku,T)}{\bH^1_{\FF}(K_\ku,T)}\right)\otimes\det\left(\bigoplus_{\ku\in\Sigma_{\FF\leq \GG<\FF_0}} \left(\frac{\bH^1_{\GG}(K_\ku,T)}{\bH^1_{\FF}(K_\ku,T)}\right)^+\right)\\
-\end{aligned}\]
-By grouping the different terms, we obtain that 
-\[\det(\LL_{\GG/\FF_0}^+)=\det(\LL_{\GG/\FF}^+)\otimes \det(\LL_{\FF/\FF_0}^+)\]
+
+We can use Proposition \ref{prop:det_dual} to simplify
+\[\det\Bigl(\LL_{\GG/\FF_0}^+\Bigr)=\det\left(\bigoplus_{\ku\in \Sigma}\left(\frac{\bH^1_{\GG}(K_\ku,T)}{\bH^1_{\FF_0\cap \FF\cap \GG}(K_\ku,T)}\right)^+\right)\otimes\det\left(\bigoplus_{\ku\in \Sigma} \frac{\bH^1_{\FF_0}(K_\ku,T)}{\bH^1_{\FF_0\cap \FF\cap \GG}(K_\ku,T)}\right)\]
+
+Similarly,
+\[\det\Bigl(\LL_{\GG/\FF}^+\Bigr)=\det\left(\bigoplus_{\ku\in \Sigma}\left(\frac{\bH^1_{\GG}(K_\ku,T)}{\bH^1_{\FF_0\cap \FF\cap \GG}(K_\ku,T)}\right)^+\right)\otimes \det\left(\bigoplus_{\ku\in \Sigma} \frac{\bH^1_{\FF}(K_\ku,T)}{\bH^1_{\FF_0\cap \FF\cap \GG}(K_\ku,T)}\right)\otimes\]
+Same computation leads to
+\[\det\Bigl(\LL_{\FF/\FF_0}^+\Bigr)=\det\left(\bigoplus_{\ku\in \Sigma}\left(\frac{\bH^1_{\FF}(K_\ku,T)}{\bH^1_{\FF_0\cap \FF\cap \GG}(K_\ku,T)}\right)^+\right)\otimes\det\left(\bigoplus_{\ku\in \Sigma} \frac{\bH^1_{\FF_0}(K_\ku,T)}{\bH^1_{\FF_0\cap \FF\cap \GG}(K_\ku,T)}\right)\otimes\]
+
+By proposition \ref{prop:det_dual}, we have that 
+\[\det\left(\bigoplus_{\ku\in \Sigma} \frac{\bH^1_{\FF}(K_\ku,T)}{\bH^1_{\FF_0\cap \FF\cap \GG}(K_\ku,T)}\right)\otimes\det\left(\bigoplus_{\ku\in \Sigma}\left(\frac{\bH^1_{\FF}(K_\ku,T)}{\bH^1_{\FF_0\cap \FF\cap \GG}(K_\ku,T)}\right)^+\right)=R\]
+Therefore, 
+\[\det(\LL_{\GG/\FF}^+)\otimes \det(\LL_{\FF/\FF_0}^+)=\det\left(\bigoplus_{\ku\in \Sigma}\left(\frac{\bH^1_{\GG}(K_\ku,T)}{\bH^1_{\FF_0\cap \GG}(K_\ku,T)}\right)^+\right)\otimes\det\left(\bigoplus_{\ku\in \Sigma} \frac{\bH^1_{\FF_0}(K_\ku,T)}{\bH^1_{\FF_0\cap \GG}(K_\ku,T)}\right)\]
+Thus,
+\[\det\Bigl(\LL_{\GG/\FF_0}^+\Bigr)=\det(\LL_{\GG/\FF}^+)\otimes \det(\LL_{\FF/\FF_0}^+)\]
 
 \textcolor{red}{revise sign conventions with direct sums}
 \end{proof}
@@ -191,7 +244,7 @@ where the limit is taken over all cartesian Selmer structures.
 
 \begin{definition}
 A cartesian Selmer structure is called a \emph{core structure} when 
-\[\bH^1_{\FF^*}(K,T)=0\]
+\[H^1_{\FF^*}(K,T)=0\]
 \end{definition}
 
 \begin{proposition}
@@ -261,62 +314,107 @@ For every partial cartesian graph, there is canonical restriction map
 \label{rem:cartesian:partial_res}
 \end{remark}
 
+\begin{remark}
+Assume that $G$ contains a Selmer structure $\FF$ satisfying that
+\[\rank_R\ \bH^1_{\FF}(K,T^*)^\vee=0\]
+Then the map in Remark \ref{rem:cartesian:partial_res} is injective.
+\end{remark}
+
 Kolyvagin and Stark systems are examples of partial cartesian systems.
 
 \textcolor{red}{Explain Kolyvagin and Stark systems}
 
-\begin{notation}
-For every subgraph $G$ of the cartesian Selmer structures. We denote by $G_0$ to the subgraph of $G$ whose vertices are the core cartesian Selmer structures in $G$ and the edges are the edges of $G$ connecting two of those structures. We also denote the enhanced graph $\widetilde G$ by adding, whenever there is an arrow in $G$, $\FF\to \GG$, joining two core structures, an arrow in the opposite direction, $\GG\to \FF$. The reason for doing so is Proposition \ref{prop:cartesian:core_iso}.
-\end{notation}
+The goal of this section is to compute the module $\CART_{\FF_0}(G)$ for certain subgraphs $G$. For that reason, it is useful to express $G$ as the union of the following subgraphs.
+
+\begin{definition}
+Let $G$ be a subraph of the cartesian Selmer structures. For every $i\in \Z_{\geq 0}$, we denote by $G^{(i)}$ the subgraph of $G$ whose vertices are the Selmer structures $\FF$ in $G$ such that 
+\[\rank_R\ \bH^1_{\FF}(K,T^*)^\vee\leq i\]
+\end{definition}
+
+We aso define the cascades of the subgraphs $G_i$.
+
+\begin{definition}
+Let $F\subset G$ be a subgraph of $G$. We define the cascade $\widehat F$ of $F$ as the graph whose Selmer structures are the $\GG\in G$ such that there is another Selmer structure $\FF\in F$ such that there is an edge $\FF\to \GG$ in $G$.
+\end{definition}
+
+\subsection{Zero dimensional partial cartesian systems}
+
+We first study the partial cartesian systems in $G^{(0)}$. They depend on the defect of the Selmer structures.
+
+\begin{definition}
+Let $\FF\in G^{(0)}$ be a cartesian Selmer structure. We define the \emph{defect} of $\FF$ as 
+\[\delta(\FF):=\length\Bigl(\bH^1_{\FF^*}(K,T^*)\Bigr)\]
+\end{definition}
+
+\begin{remark}
+Note that $\delta(\FF)$ is finite when $\FF\in G^{(0)}$.
+\end{remark}
 
 \begin{proposition}
-Assume we have two paths
-\[\begin{aligned}
-& \FF\to \HH_1\to \cdots \to\HH_s\to \GG\\
-& \FF \to \HH_1'\to \cdots \to \HH'_{s'} \to \GG
-\end{aligned}\]
-Then the maps $\bX_{\FF_0}(\FF) \to \bX_{\FF_0}(\GG)$ induced by both paths coincide.
-\label{prop:cartesian:loops}
+Let $\FF\leq \GG$ be two cartesian Selmer structures in $G^{(0)}$. The map
+\[\bX_{\FF_0}(\GG)/\delta(\GG)\to \bX_{\FF_0}(\FF)/\delta(\FF)\]
 \end{proposition}
 
 \begin{proof}
-\textcolor{red}{write}
+\textcolor{red}{complete}
 \end{proof}
 
-The next results concern about situations in which the map in Remark \ref{rem:cartesian:partial_res} is surjective.
+\begin{corollary}
+Assume $G^{(0)}$ is connected. Then the partial cartesian systems $\CART_{\FF_0}(G^{(0)})$ are a free, cyclic $R$-module.
+\label{cor:cartesian:partial_rk0_free}
+\end{corollary}
+
+We can control the cokernel of the map in Remark \ref{rem:cartesian:partial_res} by the minimal defect of the elements in $G^{(0)}$.
+\begin{definition}
+Let $G$ be a subgraph of the cartesian structures. We define the \emph{defect} of $G$ as
+\[\delta(G)=\min\{\delta(\FF):\ \FF\in G^{(0)}\}\]
+\end{definition}
+
+\begin{corollary}
+When $G^{(0)}$ is connected, the cokernel of the map in Remark \ref{rem:cartesian:partial_res} has length equal to $\delta(G)$.
+\label{cor:cartesian:partial_rk0_ck}
+\end{corollary}
+
+When $G^{(0)}$ is not connected, $\CART_{\FF_0}(G^{(0)}$ contains a free copy for every connected component of $G^{(0)}$.
+\begin{corollary}
+Let $c(G^{(0)})$ denote the number of connected components of $G_0$. Then there is an isomorphism
+\[\CART_{\FF_0}(G^{(0)})=R^{c(G)}\]
+\end{corollary}
+
+\textcolor{red}{relate it to Selmer groups}
+
+\subsection{Higher dimensional partial cartesian systems}
+
+In most interesting cases, we expect partial cartesian systems to vanish completely in $G\setminus G_0$. However, this is not a general result for all subgraphs $G$, and will depend on some assumptions of $G$.
 
 \begin{proposition}
-Let $G=G_0$ be a connected partial cartesian graph whose vertices are core structures. Then the map in Remark \ref{rem:cartesian:partial_res} is an isomorphism.
-\label{prop:cartesian:partial_core}
+Let $\FF\in \widehat{G^{(i)}}\setminus G^{(i)}$ for some non-negative integer $i$. If $\varepsilon\in CART_{\FF_0}(G)$, then $\varepsilon_\FF=0$.
+\label{prop:cartesian:partial_cascade}
 \end{proposition}
 
 \begin{proof}
-For any two Selmer structures $\FF$ and $\GG$ in $G_0$, we can choose a path in $\widetilde G$.
-\[\FF\to \HH_1\to \cdots\to \HH_s\to \GG\]
-By Proposition \ref{prop:cartesian:core_iso}, there are isomorphisms
-\[\bX_{\FF_0}(\FF)\cong\bX_{\FF_0}(\HH_1)\cong \cdots \cong \bX_{\FF_0}(\HH_s)\cong \bX_{\FF_0}(\GG)\]
-For every $\varepsilon\in \CART_{\FF_0}(G_0)$, $\varepsilon_\FF$ and $\varepsilon_{\GG}$ are identified by this isomorphism. Hence, $\CART_{\FF_0}(G_0)$ is isomorphic to $\bX_{\FF_0}(\FF)$.
-
-Choose a core Selmer structure $\FF$. By Proposition \ref{prop:cartesian_core}, the map in Remark \ref{rem:cartesian:partial_res} is the following isomorphism.
-\[\CART_{\FF_0}\cong\bX_{\FF_0}(\FF)\cong \CART_{\FF_0}(G)\]
+\textcolor{red}{complete}
 \end{proof}
 
+In order to extend the above result to Selmer structures which are not in the cascades of smaller ranks, we can use the following result.
+
 \begin{proposition}
-Let $G$ be a non-empty partial cartesian graph
-\begin{itemize}
-    \item The graph $G_0$ is connected.
-    \item For every $\FF\in G$, there is some core Selmer structure $\GG\in G_0$ such that $\FF\leq \GG$ and the arrow $\GG\to \FF$ is in $G$.
-\end{itemize}
-Then the map in Remark \ref{rem:cartesian:partial_res} is an isomorphism.
-\label{prop:cartesian:partial_core_upper}
+Let $\FF\in G\setminus G^{(i)}$ for some non-negative integer $i$. Assume there are Selmer structures $\HH_1,\ldots,\HH_s\in \widehat{G^{(i)}}$ with arrows $\FF\to \HH_1,\ldots,\FF\to \HH_s$ such that the map
+\[\bX_{\FF_0}(\FF)\to \bigoplus_{i=1}^s \bX_{\FF_0}(\HH_i)\]
+If $\varepsilon \in \CART_{\FF_0}(G)$, then $\varepsilon_{\FF}=0$.
+\label{prop:cartesian:partial_injective}
 \end{proposition}
 
 \begin{proof}
-The second assumption implies that $G_0$ is non-empty. By Proposition \ref{prop:cartesian:partial_core}, there is an isomorphism 
-\[\CART_{\FF_0}\to \CART_{\FF_0}(G_0)\]
-
-For every $\FF$ in $G$, choose a core Selmer structure $\GG\in G_0$ with an arrow $\GG\to \FF$ in $G$. If $\varepsilon \in \CART_{\FF_0}(G)$, then $\varepsilon_{\FF}=\phi_{\GG,\FF}(\varepsilon_{\GG})$. By Proposition \ref{prop:cartesian:loops}, for any other such $\GG'\in G_0$, we have that $\phi_{\GG,\FF}(\varepsilon_{\GG})=\phi_{\GG',\FF'}(\varepsilon_{\GG'})$, so this defines a well defined partial cartesian system on $G$.
+For every $j=1,\ldots, s$, we have that $\HH_j\leq \FF$, so there is a surjective map
+\[\bH^1_{(\HH_j)^*}(K,T^*)\twoheadrightarrow \bH^1_{(\FF)^*}(K,T^*)\]
+Therefore $\HH_j\notin G^{(i)}$, so Proposition \ref{prop:cartesian:partial_cascade} implies that $\varepsilon_{\HH_j}=0$. Then,
+\[\varepsilon_{\FF}\in \ker\biggl(\bX_{\FF_0}(\FF)\to \bigoplus_{i=1}^s \bX_{\FF_0}(\HH_i)\biggr)=\{0\}\]
 \end{proof}
+
+
+
+
 
 \section{Higher dimensional Kolyvagin systems}
 
@@ -348,57 +446,83 @@ Let $\ell\in \PP_\tau$. Since $\Frob_\ell$ is trivial in $\Gal(K_M/K)$, then \te
 \[H^1(K_\ell,T)=H^1_\f(K_\ell,T)\oplus H^1_\tr(K_\ell,T)\]
 which is a free $R$ module of rank $d$.
 
-For every $\ku=(\ell_i)_{i\in \N}\in \PP_{\tau}$, we have some freedom in the choices of the primes at $\overline Q$ above $\ell_i$. We can make this choices so $\Frob_\ku=\tau$ in $\Gal(K(T)_M/K)$, instead of being only conjugates. Then there is an isomorphism
-\[H^1_\f(K_\ku, T)\cong T/(\Frob_\ku-1) T=T/(\tau-1) T,\ c\mapsto c(\Frob_\ku)+(\tau-1)T\]
+For every $\ell\in \PP_{\tau}$, we have some freedom in the choices of the primes at $\overline Q$ above $\ell$. We can make this choices so $\Frob_\ell=\tau$ in $\Gal(K(T)_M/K)$, instead of being only conjugates. Then there is an isomorphism
+\[H^1_\f(K_\ell, T)\cong T/(\Frob_\ell-1) T=T/(\tau-1) T,\ c\mapsto c(\Frob_\ell)+(\tau-1)T\]
 
 After fixing a generator of $\GG_\ell$, there is another canonical ismorphisms.
-\[\phi_\ku^{\fs}:\ H^1_\f(K_\ku, T)\to H^1_\tr(K_\ku, T)\]
+\[\phi_\ell^{\fs}:\ H^1_\f(K_\ell, T)\to H^1_\tr(K_\ell, T)\]
 
 \subsection{Admissible elements}
 
 \begin{definition}
-An element $\kn\in \NN$ is said to be \emph{admissible} if, for every $\ku\mid \kn$, the map 
-\[\loc_\ku:\ \bH^1_{\FF^{\kn/\ku}}(K,T)\to \bH^1_\f(K_\ku,T)\]
-Denote by $\AA$ the set of admissible $n\in \NN$. For every admissible $\kn\in \AA$, denote by $A_{\kn,\ku}$ the minimal indivisible free $R$-subgroup of $\bH^1_\f(K_\ku,T)$ containing $\Im(\loc_\ku)$.
-\end{definition}
+An element $\kn\in \NN$ is said to be \emph{admissible} if, for every $\ku\mid n$, the image of the map 
+\[\loc_\ell:\ H^1_{\FF^{\kn}}(K,T)\to H^1_\f(K_\ku,T)\]
+ is a free, cyclic $R$-submodule.
+ \end{definition}
 
-The next proposition gives a method to construct admissible products.
+\begin{notation}
+Denote by $\AA_\tau$ the set of admissible $n\in \NN_\tau$. For every admissible $n\in \AA_\tau$, denote by $A_{n,\ell}$ the minimal indivisible free $R$-subgroup of $H^1_\f(K_\ell,T)$ containing $\Im(\loc_\ell )$. Furthermore, denote $\AA_i=\AA\cap \NN_i$.
+\end{notation}
+
+We now show a way to construct admissible vertices.
+
 \begin{proposition}
-Let $\ku_1,\ldots, \ku_s\in \PP$ be a set of Kolyvagin ultraprimes satisfying that for all $i=1,\ldots, s$, 
+Assume $\kn\in \AA_\tau$ and $\ku\in \PP_{\tau}$ satisfy the following:
 \begin{itemize}
-    \item The image of $\loc_{\ku_i}:\bH^1_{\FF^{\ku_1\cdots\ku_{i-1}}}(K,T)\to \bH^1_{\f}(K_{\ku_i},T)$ is a free rank $1$ $R$-submodule.
-    \item For every $j\in \{1,\ldots, i-1\}$, we have that
-    \[\bH^1_{(\FF^*)^{\ku_1\ldots\ku_{i-1}}_{\ku_i}}(K,T^*)+ \bH^1_{(\FF^*)_{\ku_1\cdots\ku_{i-1}}}(K,T^*)=\bH^1_{(\FF^*)^{\ku_1\ldots\ku_{i-1}}}(K,T^*)     \]
+    \item The image of the map $\loc_{\ku}:H^1_{\FF^\kn}(K,T)\to H^1_{\f}(K_{\ku},T)$ is a free, cyclic $R$-submodule.
+    \item $H^1_{(\FF^*)^{\kn}_{\ku}}(K,T^*)+ H^1_{(\FF^*)_{\kn}}(K,T^*)=H^1_{(\FF^*)^{\kn}}(K,T^*)$.
 \end{itemize}
-Then $\kn:=\ku_1\cdots\ku_s$ is admissible.
-\label{prop:admissible_condition}
+Then $\kn\ku \in \AA$.
 \end{proposition}
 
 \begin{proof}
-Consider the exact sequence
-\[\xymatrix{\bH^1_{\FF^{\kn/\ku_i}_{\ku_i}}(K,T)\ar@{>->}[r] &  \bH^1_{\FF^{\kn/\ku_i}}(K,T)\ar[r] & \bH^1_\f(K_{\ku_i},T) \ar[r] & \bH^1_{(\FF^*)_{\kn/\ku_i}^{\ku_i}}(K,T^*)^\vee \ar@{->>}[r] &\bH^1_{(\FF^*)_{\kn/\ku_i}}(K,T^*)^\vee}\]
-
-Denote $r_i:=\ku_1\cdots \ku_{i-1}$ and $s_i:=\ku_{i+1}\cdots \ku_s$. We claim that, for every $j=i+1,\ldots,s$, the images of the maps
+Let $\kq\in \PP_{\tau}$ be a prime divisor of $\kn$. Consider the exact sequence
+\[\xymatrix{H^1_{\FF^{\kn\ku/\kq}_{\kq}}(K,T)\ar@{>->}[r] &  H^1_{\FF^{\kn\ku/\kq}}(K,T)\ar[r] & H^1_\f(K_\kq,T) \ar[r] & H^1_{(\FF^*)_{\kn\ku/\kq}^{\kq}}(K,T^*)^\vee \ar@{->>}[r] &H^1_{(\FF^*)_{\kn\ku/\kq}}(K,T^*)^\vee}\]
+By the second assumption on the choice of the prime $\ku$ implies that 
+\[H^1_{(\FF^*)_{\kn\ku}^{\kq}}(K,T^*)+ H^1_{(\FF^*)_{\kn}}(K,T^*)=H^1_{(\FF^*)^\kq}(K,T^*)\]
+The equality implies that the images of the following maps coincide
 \[\begin{aligned}
-&\loc_{\ku_i}^*:\ \bH^1_{(\FF^*)_{r_i\ku_{i+1}\cdots \ku_{j-1}}^{\ku_i}}(K,T^*)&\to \bH^1_\s(K_{\ku_i},T^*)\\
-&\loc_{\ku_i}^*:\ \bH^1_{(\FF^*)_{r_i\ku_{i+1}\cdots \ku_{j-1}\ku_j}^{\ku_i}}(K,T^*)&\to \bH^1_\s(K_{\ku_i},T^*)
+&\loc_{\kq}^*:\ \bH^1_{(\FF^*)_{\kn\ku/\kq}^{\kq}}(K,T^*)&\to \bH^1_\s(K_\kq,T^*)\\
+&\loc_{\kq}^*:\ \bH^1_{(\FF^*)_{\kn/\kq}^{\kq}}(K,T^*)&\to \bH^1_\s(K_\kq,T^*)
 \end{aligned}\]
 
-By the second assumption on the choice of the prime $\ku_j$ implies that 
-\[\bH^1_{(\FF^*)_{r_i\ku_{i+1}\cdots \ku_{j-1}\ku_j}^{\ku_i}}(K,T^*)+ H^1_{(\FF^*)_{\ku_1\cdots{\ku_{j-1}}}}(K,T^*)=\bH^1_{(\FF^*)_{r_i\ku_{i+1}\cdots \ku_{j-1}}^{\ku_i}}(K,T^*)\]
-Since the second summand is contained in the kernel of $\loc_{\ku_i}$, the images of both maps coincide. By induction, we can construct an exact sequence
-\[\xymatrix{\bH^1_{\FF^{\kn/\ku_i}_{\ku_i}}(K,T)\ar@{>->}[r] &  \bH^1_{\FF^{\kn/\ku_i}}(K,T)\ar[r] & \bH^1_\f(K_{\ku_i},T) \ar[r] & \bH^1_{(\FF^*)_{r_i}^{\ku_i}}(K,T^*)^\vee \ar@{->>}[r] &\bH^1_{(\FF^*)_{r_i}}(K,T^*)^\vee}\]
-Comparing it with the exact sequence
-\[\xymatrix{\bH^1_{\FF^{r_i}_{\ku_i}}(K,T)\ar@{>->}[r] &  \bH^1_{\FF^{r_i}}(K,T)\ar[r] & \bH^1_\f(K_{\ku_i},T) \ar[r] & \bH^1_{(\FF^*)_{r_i}^{\ku_i}}(K,T^*)^\vee \ar@{->>}[r] &\bH^1_{(\FF^*)_{r_i}}(K,T^*)^\vee}\]
-we can see that the images of the following maps coincide:
-\[\begin{aligned}
-&\loc_{\ku_i}:\ \bH^1_{\FF^{\kn/\ku_i}}(K,T)&\to \bH^1_{\f}(K_{\ku_i},T)\\
-&\loc_{\ku_i}:\ \bH^1_{\FF^{r_i}}(K,T)&\to \bH^1_{\f}(K_{\ku_i},T)
-\end{aligned}\]
-The image of the second map is contained one-dimensional, free $R$-module by the first assumption on the choice of the prime $\ku_i$. Hence the image of the first map is also contained in a one-dimensional, free $R$-module. Since that holds for every prime divisor of $\kn$, then $\kn$ is admissible.
+Therefore, there is an exact sequence obtained from the one above
+\[\xymatrix{H^1_{\FF^{\kn\ku/\kq}_{\kq}}(K,T)\ar@{>->}[r] &  H^1_{\FF^{\kn\ku/\kq}}(K,T)\ar[r] & H^1_\f(K_\kq,T) \ar[r] & H^1_{(\FF^*)_{\kn/\kq}^{\kq}}(K,T^*)^\vee \ar@{->>}[r] &H^1_{(\FF^*)_{\kn/\kq}}(K,T^*)^\vee}\]
+We can compare it with the following exact sequence obtained from global duality
+\[\xymatrix{H^1_{\FF^{\kn/\kq}_{\kq}}(K,T)\ar@{>->}[r] &  H^1_{\FF^{\kn/\kq}}(K,T)\ar[r] & H^1_\f(K_\kq,T) \ar[r] & H^1_{(\FF^*)_{\kn/\kq}^{\kq}}(K,T^*)^\vee \ar@{->>}[r] &H^1_{(\FF^*)_{\kn/\kq}}(K,T^*)^\vee}\]
+The comparison shows that 
+\[A_{\kn\ku,\kq}=\loc_\kq\Bigl(H^1_{\FF^{\kn\ku/\kq}}(K,T)\Bigr)=\loc_\ell\Bigl(H^1_{\FF^{\kn/\kq}}(K,T)\Bigr)=A_{\kn,\kq}\]
+
+Therefore, $\kn\ell$ is admissible.
 \end{proof}
 
+
+
+
+
+
 \subsection{Suitable higher dimensional Kolyvagin primes}
+
+The goal of this section is to adapt Proposition \ref{prop:cheb_nd} to higher dimensional Kolyvagin primes. We adapt the proof of \cite[Proposition 3.6.2]{MazurRubin} to this situation.
+
+\begin{proposition}
+Let $C\subset H^1(K,T)$ and $D\subset H^1(K,T)$ and consider maps
+\[\begin{array}{cc}
+\phi:\ C\to T/(\tau-1)T,\ \psi:\ D\to T^*/(\tau-1)T^*
+\end{array}\]
+Then there is a subset $\QQ\subset \PP_\tau$ of positive density such that, for all $\ell\in \Q$, the localization maps
+\[\begin{aligned}
+    &\loc_\ell:\ C\subset H^1(K,T)\to H^1(K_\ell, T)\cong T/(\tau-1)T\\
+    &\loc_\ell^*:\ D\subset H^1(K,T^*)\to H^1(K_\ell, T^*)\cong T^*/(\tau-1)T^*\\
+\end{aligned}\]
+coincide with $\phi$ and $\psi$, respectively.
+\label{prop:cheb_nd_ns}
+\end{proposition}
+
+
+
+
+
 
 The goal of this section is to adapt Proposition \ref{prop:cheb_nd} to higher dimensional Kolyvagin primes. We adapt the proof of \cite[Proposition 3.6.2]{MazurRubin} to this situation.
 
@@ -422,7 +546,7 @@ Denote by $C_k$ the image of $C$ under the projection to $\bH^1(K,T/\m^k)$ and b
 \[C=\varprojlim_k C_k\subset \varprojlim_k \bH^1(K^\kn/K,T/\m^k)\]
 From $\phi$ and $\psi$, we obtain the maps
 \[\begin{array}{cc}
-    \phi_k:\ \bH^1(K^{\kn}/K,T/\m^k)\to T/(\m^k,\tau-1)T,& \psi_k:\ \bH^1(K,T^*[\m^n])\to T^*[\m^k]/(\tau-1)T^*[\m^k]
+    \phi_n:\ \bH^1(K^{\kn}/K,T/\m^k)\to T/(\m^k,\tau-1)T,& \psi_m:\ \bH^1(K,T^*[\m^n])\to T^*[\m^k]/(\tau-1)T^*[\m^k]
 \end{array}\]
 
 Let $(n_i)_{i\in \N}$ be a sequence of square-free integers representing $\kn$. Then 
@@ -432,25 +556,19 @@ Let $(n_i)_{i\in \N}$ be a sequence of square-free integers representing $\kn$. 
 \[C_k=\UU_i\Bigl(C_k^{(i)}\Bigr)\]
 Since $C_k$ is finite, then $C_k\cong C_k^{(i)}$ for $\UU$-many $i$. Let $S_k$ be the set of indices for which this isomorphism holds. Then we have a decreasing sequence of sets $(S_k)\subset \UU$. \textcolor{red}{more comment}
 
-For every $i\in S_k$, the isomorphism $ C_k^{(i)}\cong C_k$ induces a map
-\[\phi_k^{i}:\ C_k^{(i)}\subset H^1(K^{n_i}/K,T/\m^k)\to T/(\m^k,\tau-1)T\]
-
 \textbf{Claim}: There exists a $\tau$-Kolyvagin prime $\ell_k^{i}\in \PP_{\tau}(T/\m^k)$ not dividing $n_i$ such that 
 \[\loc_{\ell_k^{i}}:\ C_{k}^{(i)}\hookrightarrow H^1(K^{n_i}/K,T/\m^k)\to H^1_{\f}(K_{\ell_k^{(i)}},T/m^k)=T/(\m^k,\tau-1)T\] coincides with $\phi_k$. Note that it implies that the map \textcolor{red}{proof required}
 \[\loc_{\ell_k^i}:\ C_{k'}^{(i)}\to T/(\m^{k'},\tau-1)\]
 coincides with $\phi_{k'}$.
 
-Consider the ultraprime $\ku$ represented by the sequence $(\ell_a^a)_{a\in \N}$. For every $a\in S_a\cap \N_{\geq a}$, the map
-\[\loc_{\ell_a^a}:\ C_k^{(a)}\subset H^1(K^{n_a}/K,T/\m^k)\to \bH^1(K_{\ell_a^a},T/\m^k)\]
-coincides with $\phi_k^{(a)}$.
+Consider the ultraprime $\ku$ represented by the sequence $(\ell_a^a)_{a\in \N}$. 
 
-Therefore, the map
-\[\loc_\ku:\ \bH^1(K^{\kn}/K,T/\m^k)\to \bH^1(K_\ku,T/\m^k)\cong T/(m^k,\tau-1) T\]
-coincides with $\phi_{k}$. By taking limits, the map
-\[\loc_{\ku}:\ \bH^1(K^{\kn}/K,T)\to  \bH^1(K_\ku,T)\cong T/(\tau-1) T\]
-
-\textcolor{red}{complete the dual side}
+\textcolor{red}{complete}
 \end{proof}
+
+
+
+
 
 
 
@@ -536,6 +654,66 @@ Let $\ka,\kb,\kn\in \AA$ be admissible elements such that $\ka\mid \kn$, $\kb\mi
 
 \textcolor{red}{check subspaces when increasing $n$}
 
+\subsection{The graph of admissible elements}
+
+\begin{definition}
+We denote the graph $A$ of admissible Selmer structures to the graph whose vertices are the (cartesian) Selmer structures
+\[\{\FF[\kn]:\ \kn\in \AA_{\tau}\}\cup \{\FF[\kn_\ku]: \kn\ku\in \AA_{\tau}\}\]
+The edges of this graph are built, from any $n\ku\in A_{\tau}$, by
+\[\begin{array}{cc}
+\FF[\kn]\to \FF[\kn_\ku],\ & \FF[\kn\ku]\to \FF[\kn_\ku]
+\end{array}\]
+\end{definition}
+\label{red}{definition of $\FF$}
+
+\begin{theorem}
+Let $\GG\in \AA\setminus \AA^{(0)}$. If $\varepsilon\in \CART_{\FF}(A)$, then $\varepsilon_{\GG}=0$.
+\end{theorem}
+
+The key of the proof is to show that, for every $\FF[\kn]\in A$ such that $\FF[\kn]\notin A^{(0)}$, then $\GG$ satisfies the conditions in Proposition \ref{prop:cartesian:partial_injective}.
+
+\begin{lemma}
+Let $\kn\in \AA_{\tau}$ be an admissible element such that $\FF[\kn]\in A^{(i+1)}\setminus A^{(i)})$ for some non-negative integer $i$. Then there are ultraprimes $\ku_1,\ldots,\ku_s$ such that $\FF[\kn_{\ku_i}]\in \widehat{A^{(i)}}$ and the map 
+\[\bX_{\FF}(\FF[\kn])\hookrightarrow  \bigoplus_{i=1}^s \bX_{\FF}(\FF[\kn_{\ku_i}])\]
+is injective.
+\end{lemma}
+
+\begin{proof}
+By \ref{prop:patched:core_rank_limit} (\textcolor{red}{perhaps more results}), we have that $\bH^1_{\FF[\kn]}(K,T)$ is a finitely generated, free $R$-module. Let $\{c_1,\ldots,c_s\}$ be a minimal set of generators. Choose a maximal cyclic $R$-submodule $M$ of $T/(\tau-1)T$ and consider a surjective map
+\[\phi_i:\ \bH^1_{\FF^\kn}\to M\]
+such that $\phi_i(c_i)$ generates $M$ and $\phi(c_j)=0$ for every $j\neq i$.
+
+Since $\rank_R\ \bH^1_{\FF[\kn]}(K,T^*)^\vee=i+1\geq 1$, then $\bH^1_{\FF[\kn]}(K,T^*)$ contains a $R$-divisible submodule $Z$. Let $N$ be $R$-submodule of $T^*/(\tau-1) T^*$ of corank one and not contained in the annihilator of $\phi_{fs}(M)$ under the canonical pairing. Fix an isomorphism $Z\cong N$. Since $Z$ is divisible, there is a map 
+\[\psi:\ \bH^1_{\FF^\kn}(K,T^*)\to N\]
+extending the above homomorphism such that 
+\[\ker\psi+Z=\bH^1_{\FF^\kn}(K,T^*)\]
+
+By Proposition \ref{prop:cheb_nd_ns}, there is an ultraprime $\ku_i$ such that the maps
+\[\begin{array}{cc}
+    \loc_{\ku_i}:\ \bH^1_{\FF^\kn}(k,T)\to T/(\tau-1)T,\ &\loc_{\ku_i}^*:\ \bH^1_{\FF^\kn}(k,T^*)\to T^*/(\tau-1)T^*
+\end{array}\]
+coincide with $\phi_i$ and $\psi$, respectively.
+
+\textcolor{red}{bidual maps in rank one} The map
+\[\bX_{\FF}(\FF[\kn])\hookrightarrow  \bigoplus_{i=1}^s \bX_{\FF}(\FF[\kn_{\ku_i}])\]
+is injective by construction. Hence, we only need to check that $\FF[\kn_{\ku_i}]$ is in the cascade $\widehat{A^{(i)}}$, or equivalently, that 
+\[\rank_R\ \bH^1_{\FF[\kn\ku_i]^*}(K,T^*)^\vee\leq i\]
+
+By Lemma \ref{lem:hd:tr_res} \textcolor{red}{below}, we have that 
+\[\bH^1_{\FF[\kn\ku_i]^*}(K,T^*)=\bH^1_{\FF[\kn_{\ku_i}]^*}(K,T^*)\]
+By the construction of $\ku_i$, the latter coincides with
+\[\bH^1_{\FF[\kn_{\ku_i}]^*}(K,T^*)=\ker(\psi)\cap \bH^1_{\FF[\kn]^*}(K,T^*)\]
+Hence,
+\[\rank_R\ \bH^1_{\FF[\kn{\ku_i}]^*}(K,T^*)^\vee=\rank_R\ \bH^1_{\FF[\kn_{\ku_i}]^*}(K,T^*)=i\qedhere\]
+\end{proof}
+
+\begin{corollary}
+Assume there is a $\tau$-Kolyvagin system such that $\kappa_1\neq 0$. Then 
+\[\rank_R H^1_{\FF^*}(K,T^*)=0\]
+\end{corollary}
+
+
+
 \subsection{Paths of admissible elements}
 
 \begin{lemma}
@@ -584,6 +762,23 @@ whose image is exactly $A$. The assumptions on the dual Selmer group imply the e
 
 \textcolor{red}{complete}
 \end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

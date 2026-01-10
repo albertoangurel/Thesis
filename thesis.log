@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.8)  9 JAN 2026 14:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.8)  10 JAN 2026 21:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -520,7 +520,9 @@ Package: arydshln 2019/02/21 v1.76
 \adl@clb=\count318
 \adl@everyvbox=\toks54
 \adl@LTpagetotal=\dimen319
-) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymatrix.code.tex
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/comment/comment.sty
+\CommentStream=\write5
+ Excluding comment 'comment') (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymatrix.code.tex
 File: tikzlibrarymatrix.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 ) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
 File: tikzlibraryarrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
@@ -528,7 +530,7 @@ File: tikzlibraryarrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 File: pgflibraryarrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \arrowsize=\dimen320
 ))
-LaTeX Info: Redefining \Gl2 on input line 31.
+LaTeX Info: Redefining \Gl2 on input line 32.
 \symmcy=\mathgroup6
 \c@theorem=\count319
 \c@theorem*=\count320
@@ -604,7 +606,7 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \bibparsep=\skip69
 \bibhang=\skip70
 \blx@bcfin=\read5
-\blx@bcfout=\write5
+\blx@bcfout=\write6
 \blx@langwohyphens=\language88
 \c@mincomprange=\count364
 \c@maxcomprange=\count365
@@ -773,10 +775,10 @@ File: csquotes.cfg
 Package: hyperref 2021-02-27 v7.00k Hypertext links for LaTeX
  (/usr/local/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-) (/usr/local/texlive/2021/texmf-dist/tex/generic/pdfescape/pdfescape.sty
-Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/hycolor/hycolor.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
@@ -869,6 +871,9 @@ File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count462
 \l__pdf_internal_box=\box70
 ) (/Users/alberto/Documents/PhD/Thesis/thesis.aux (/Users/alberto/Documents/PhD/Thesis/Selmer/selmer.aux) (/Users/alberto/Documents/PhD/Thesis/Kolyvagin_systems/kol_sys.aux) (/Users/alberto/Documents/PhD/Thesis/Patched_cohomology/patched.aux) (/Users/alberto/Documents/PhD/Thesis/BSS/biduals.aux) (/Users/alberto/Documents/PhD/Thesis/Cartesian_systems/cartesian.aux
+
+LaTeX Warning: Label `prop:cheb_nd_ns' multiply defined.
+
 
 LaTeX Warning: Label `eq:kol_cond' multiply defined.
 
@@ -978,7 +983,7 @@ Package biblatex Info: ... and expl3
  (/usr/local/texlive/2021/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty (/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-2020-10-01.sty (/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.tex)))
 Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
 )
-\openout5 = `thesis.bcf'.
+\openout6 = `thesis.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'thesis.bbl' found.
@@ -999,8 +1004,8 @@ LaTeX Info: Redefining \ref on input line 5.
 LaTeX Info: Redefining \pageref on input line 5.
 LaTeX Info: Redefining \nameref on input line 5.
  (/Users/alberto/Documents/PhD/Thesis/thesis.out) (/Users/alberto/Documents/PhD/Thesis/thesis.out)
-\@outlinefile=\write6
-\openout6 = `thesis.out'.
+\@outlinefile=\write7
+\openout7 = `thesis.out'.
 
  (/usr/local/texlive/2021/texmf-dist/tex/generic/stringenc/se-pdfdoc.def
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
@@ -1010,8 +1015,8 @@ File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
 
 ] (/Users/alberto/Documents/PhD/Thesis/thesis.toc [3])
-\tf@toc=\write7
-\openout7 = `thesis.toc'.
+\tf@toc=\write8
+\openout8 = `thesis.toc'.
 
  [4]
 \openout2 = `Selmer/selmer.aux'.
@@ -1214,96 +1219,100 @@ Overfull \hbox (19.7755pt too wide) detected at line 19
 []
  []
 
-<xymatrix 3x1 89> [61] <xymatrix 3x1 89> [62] <xymatrix 5x1 158> [63] [64] [65] [66] [67] [68] <xymatrix 5x1 158>
-Overfull \hbox (65.06674pt too wide) detected at line 379
+<xymatrix 3x1 89> [61] <xymatrix 3x1 89> [62] <xymatrix 5x1 158> [63] [64] [65] [66] [67] [68] [69] [70] <xymatrix 5x1 158>
+Overfull \hbox (60.19754pt too wide) detected at line 480
 []
  []
 
 <xymatrix 5x1 158>
-Overfull \hbox (49.6365pt too wide) detected at line 390
+Overfull \hbox (52.78415pt too wide) detected at line 490
 []
  []
 
 <xymatrix 5x1 158>
-Overfull \hbox (33.97873pt too wide) detected at line 392
+Overfull \hbox (45.37076pt too wide) detected at line 492
 []
  []
 
-[69]
-Overfull \hbox (27.27464pt too wide) detected at line 426
+[71]
+Overfull \hbox (30.67284pt too wide) detected at line 550
 []
  []
 
-[70] [71] [72] <xymatrix 5x1 158> [73]) [74]
+[72] [73] [74] [75] <xymatrix 5x1 158> [76]
+
+LaTeX Warning: Reference `prop:admissible_condition' on page 77 undefined on input line 752.
+
+) [77]
 \openout2 = `Ell_cur/ell_cur.aux'.
 
- (/Users/alberto/Documents/PhD/Thesis/Ell_cur/ell_cur.tex
+ (/Users/alberto/Documents/PhD/Thesis/Ell_cur/ell_cur.tex [78
+
+
+
+
+]
 Chapter 6.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 4.
 
 
-LaTeX Warning: Reference `Hffr' on page 75 undefined on input line 24.
+LaTeX Warning: Reference `Hffr' on page 79 undefined on input line 24.
 
 
-LaTeX Warning: Reference `Hprimes' on page 75 undefined on input line 24.
+LaTeX Warning: Reference `Hprimes' on page 79 undefined on input line 24.
 
-[75
+[79]
 
+LaTeX Warning: Reference `sec:lambda' on page 80 undefined on input line 64.
 
+[80]
 
+LaTeX Warning: Reference `th:MC_ind' on page 81 undefined on input line 101.
 
-]
+[81] [82]
 
-LaTeX Warning: Reference `sec:lambda' on page 76 undefined on input line 64.
+LaTeX Warning: Reference `sec:global' on page 83 undefined on input line 162.
 
-[76]
+[83] [84]
 
-LaTeX Warning: Reference `th:MC_ind' on page 77 undefined on input line 101.
+LaTeX Warning: Reference `def:BK_str' on page 85 undefined on input line 246.
 
-[77] [78]
+[85]
 
-LaTeX Warning: Reference `sec:global' on page 79 undefined on input line 162.
+LaTeX Warning: Reference `def:theta' on page 86 undefined on input line 300.
 
-[79] [80]
+[86]
 
-LaTeX Warning: Reference `def:BK_str' on page 81 undefined on input line 246.
-
-[81]
-
-LaTeX Warning: Reference `def:theta' on page 82 undefined on input line 300.
-
-[82]
-
-LaTeX Warning: Reference `th:kur_par' on page 83 undefined on input line 350.
+LaTeX Warning: Reference `th:kur_par' on page 87 undefined on input line 350.
 
 
-LaTeX Warning: Reference `th:kur' on page 83 undefined on input line 350.
+LaTeX Warning: Reference `th:kur' on page 87 undefined on input line 350.
 
 
-LaTeX Warning: Reference `Hffr' on page 83 undefined on input line 357.
+LaTeX Warning: Reference `Hffr' on page 87 undefined on input line 357.
 
 
-LaTeX Warning: Reference `Hprimes' on page 83 undefined on input line 357.
+LaTeX Warning: Reference `Hprimes' on page 87 undefined on input line 357.
 
 
-LaTeX Warning: Reference `sec:global' on page 83 undefined on input line 357.
+LaTeX Warning: Reference `sec:global' on page 87 undefined on input line 357.
 
 
-LaTeX Warning: Reference `Hffr' on page 83 undefined on input line 362.
+LaTeX Warning: Reference `Hffr' on page 87 undefined on input line 362.
 
 
-LaTeX Warning: Reference `Hchev' on page 83 undefined on input line 362.
+LaTeX Warning: Reference `Hchev' on page 87 undefined on input line 362.
 
 
-LaTeX Warning: Reference `Hprimes' on page 83 undefined on input line 362.
+LaTeX Warning: Reference `Hprimes' on page 87 undefined on input line 362.
 
 
-LaTeX Warning: Reference `Hirred' on page 83 undefined on input line 366.
+LaTeX Warning: Reference `Hirred' on page 87 undefined on input line 366.
 
 
-LaTeX Warning: Reference `Hsur' on page 83 undefined on input line 366.
+LaTeX Warning: Reference `Hsur' on page 87 undefined on input line 366.
 
 
 Overfull \hbox (11.99771pt too wide) in paragraph at lines 394--395
@@ -1311,9 +1320,9 @@ Overfull \hbox (11.99771pt too wide) in paragraph at lines 394--395
  []
 
 
-LaTeX Warning: Reference `Hcoh0' on page 83 undefined on input line 396.
+LaTeX Warning: Reference `Hcoh0' on page 87 undefined on input line 396.
 
-[83]
+[87]
 Overfull \hbox (0.6535pt too wide) detected at line 400
 \OML/cmm/m/it/10.95 H[][]\U/msb/m/n/10.95 Q[]\OML/cmm/m/it/10.95 ; T \OMS/cmsy/m/n/10.95 
  O[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ^^_\OT1/cmr/m/n/10.95 )[] [] \OML/cmm/m/it/10.95 H[][]\U/msb/m/n/10.95 Q[]\OML/cmm/m/it/10.95 ; T[] \OMS/cmsy/m/n/10.95 
@@ -1330,151 +1339,151 @@ Overfull \hbox (20.04353pt too wide) detected at line 405
  []
 
 
-LaTeX Warning: Reference `Hcartesian' on page 84 undefined on input line 406.
+LaTeX Warning: Reference `Hcartesian' on page 88 undefined on input line 406.
 
 
-LaTeX Warning: Reference `Hcore0' on page 84 undefined on input line 410.
+LaTeX Warning: Reference `Hcore0' on page 88 undefined on input line 410.
 
 
-LaTeX Warning: Reference `Hloc' on page 84 undefined on input line 410.
+LaTeX Warning: Reference `Hloc' on page 88 undefined on input line 410.
 
 
-LaTeX Warning: Reference `th:kur_par' on page 84 undefined on input line 418.
+LaTeX Warning: Reference `th:kur_par' on page 88 undefined on input line 418.
 
 
-LaTeX Warning: Reference `th:kur' on page 84 undefined on input line 418.
+LaTeX Warning: Reference `th:kur' on page 88 undefined on input line 418.
 
-[84] <xymatrix 5x1 158>
+[88] <xymatrix 5x1 158>
 Overfull \hbox (6.85155pt too wide) detected at line 443
 []
  []
 
-<xymatrix 6x1 196> [85]
+<xymatrix 6x1 196> [89]
 Overfull \hbox (12.53667pt too wide) detected at line 492
 [][]\OML/cmm/m/it/10.95 e[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ^^P[]\OT1/cmr/m/n/10.95 ) = []\OML/cmm/m/it/10.95 e[][][][]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ^^P[]\OT1/cmr/m/n/10.95 )[] = []\OML/cmm/m/it/10.95 e[][]\OT1/cmr/m/n/10.95 (\OMS/cmsy/m/n/10.95 ^^@\OT1/cmr/m/n/10.95 1)[]\OML/cmm/m/it/10.95 ^^P[][] \OT1/cmr/m/n/10.95 = []\OML/cmm/m/it/10.95 e[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ^^P[]\OT1/cmr/m/n/10.95 )
  []
 
-[86] [87] [88] [89] [90] [91] [92] [93]
+[90] [91] [92] [93] [94] [95] [96] [97]
 
-LaTeX Warning: Reference `def:kol_der' on page 94 undefined on input line 857.
-
-
-LaTeX Warning: Reference `prop:rub442' on page 94 undefined on input line 882.
-
-[94]
-
-LaTeX Warning: Reference `eq:kol_der' on page 95 undefined on input line 910.
-
-[95] [96] <xymatrix 5x1 158> [97] [98]
-
-LaTeX Warning: Reference `eq:tilde_kappa_n' on page 99 undefined on input line 1114.
-
-[99]
-
-LaTeX Warning: Reference `th:wk_to_kol' on page 100 undefined on input line 1145.
+LaTeX Warning: Reference `def:kol_der' on page 98 undefined on input line 857.
 
 
-LaTeX Warning: Reference `th:wk_to_kol' on page 100 undefined on input line 1148.
+LaTeX Warning: Reference `prop:rub442' on page 98 undefined on input line 882.
+
+[98]
+
+LaTeX Warning: Reference `eq:kol_der' on page 99 undefined on input line 910.
+
+[99] [100] <xymatrix 5x1 158> [101] [102]
+
+LaTeX Warning: Reference `eq:tilde_kappa_n' on page 103 undefined on input line 1114.
+
+[103]
+
+LaTeX Warning: Reference `th:wk_to_kol' on page 104 undefined on input line 1145.
 
 
-LaTeX Warning: Reference `th:eul_to_kol_lambda' on page 100 undefined on input line 1161.
+LaTeX Warning: Reference `th:wk_to_kol' on page 104 undefined on input line 1148.
 
 
-LaTeX Warning: Reference `prop:lambda_kol_free' on page 100 undefined on input line 1163.
+LaTeX Warning: Reference `th:eul_to_kol_lambda' on page 104 undefined on input line 1161.
 
 
-LaTeX Warning: Reference `th:MC_ind' on page 100 undefined on input line 1163.
+LaTeX Warning: Reference `prop:lambda_kol_free' on page 104 undefined on input line 1163.
 
 
-LaTeX Warning: Reference `prop:lambda_kol_free' on page 100 undefined on input line 1165.
+LaTeX Warning: Reference `th:MC_ind' on page 104 undefined on input line 1163.
 
 
-LaTeX Warning: Reference `cor:kol_red_prim' on page 100 undefined on input line 1170.
+LaTeX Warning: Reference `prop:lambda_kol_free' on page 104 undefined on input line 1165.
 
 
-LaTeX Warning: Reference `lem:dinf' on page 100 undefined on input line 1170.
+LaTeX Warning: Reference `cor:kol_red_prim' on page 104 undefined on input line 1170.
 
 
-LaTeX Warning: Reference `cor:kol_red_loc' on page 100 undefined on input line 1174.
+LaTeX Warning: Reference `lem:dinf' on page 104 undefined on input line 1170.
 
 
-LaTeX Warning: Reference `th:kur_par' on page 100 undefined on input line 1174.
+LaTeX Warning: Reference `cor:kol_red_loc' on page 104 undefined on input line 1174.
 
 
-LaTeX Warning: Reference `th:kur' on page 100 undefined on input line 1174.
-
-[100]
-
-LaTeX Warning: Reference `th:kur' on page 101 undefined on input line 1180.
+LaTeX Warning: Reference `th:kur_par' on page 104 undefined on input line 1174.
 
 
-LaTeX Warning: Reference `th:kur' on page 101 undefined on input line 1180.
+LaTeX Warning: Reference `th:kur' on page 104 undefined on input line 1174.
+
+[104]
+
+LaTeX Warning: Reference `th:kur' on page 105 undefined on input line 1180.
 
 
-LaTeX Warning: Reference `th:kur' on page 101 undefined on input line 1182.
+LaTeX Warning: Reference `th:kur' on page 105 undefined on input line 1180.
 
 
-LaTeX Warning: Reference `th:kur' on page 101 undefined on input line 1184.
+LaTeX Warning: Reference `th:kur' on page 105 undefined on input line 1182.
 
 
-LaTeX Warning: Reference `th:kur' on page 101 undefined on input line 1192.
+LaTeX Warning: Reference `th:kur' on page 105 undefined on input line 1184.
 
 
-LaTeX Warning: Reference `th:kur_par' on page 101 undefined on input line 1192.
-
-[101]
-
-LaTeX Warning: Reference `th:kur_par' on page 102 undefined on input line 1226.
+LaTeX Warning: Reference `th:kur' on page 105 undefined on input line 1192.
 
 
-LaTeX Warning: Reference `th:kur_par' on page 102 undefined on input line 1229.
+LaTeX Warning: Reference `th:kur_par' on page 105 undefined on input line 1192.
 
-[102] [103]
+[105]
+
+LaTeX Warning: Reference `th:kur_par' on page 106 undefined on input line 1226.
+
+
+LaTeX Warning: Reference `th:kur_par' on page 106 undefined on input line 1229.
+
+[106] [107]
 Overfull \hbox (19.75671pt too wide) in paragraph at lines 1299--1300
 []\OT1/cmr/m/n/10.95 Overall, as-sum-ing the fi-nite-ness of the Tate-Shafarevich group, we know that $[](\OML/cmm/m/it/10.95 E\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 K\OT1/cmr/m/n/10.95 )) =
  []
 
-) [104]
+) [108]
 \openout2 = `Preliminaries/algebra.aux'.
 
  (/Users/alberto/Documents/PhD/Thesis/Preliminaries/algebra.tex
 Appendix A.
-<xymatrix 4x1 127> <xymatrix 4x1 127> [105
+<xymatrix 4x1 127> <xymatrix 4x1 127> [109
 
 
 
 
-] [106] <xymatrix 4x1 134> <xymatrix 4x1 134>
+] [110] <xymatrix 4x1 134> <xymatrix 4x1 134>
 Overfull \hbox (12.47319pt too wide) detected at line 121
 \OML/cmm/m/it/10.95 ^^^[] \OT1/cmr/m/n/10.95 :  [] \OML/cmm/m/it/10.95 M[] \OMS/cmsy/m/n/10.95 ! [] \OML/cmm/m/it/10.95 N[] \OT1/cmr/m/n/10.95 :  \OML/cmm/m/it/10.95 m[] \OMS/cmsy/m/n/10.95 ^ [] ^ \OML/cmm/m/it/10.95 m[] \OMS/cmsy/m/n/10.95 7! []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 m[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^ [] ^ []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 m[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^ \OML/cmm/m/it/10.95 "[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 e[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^ [] ^ \OML/cmm/m/it/10.95 "[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 e[]\OT1/cmr/m/n/10.95 )
  []
 
-[107] <xymatrix 4x1 134> <xymatrix 4x1 134> <xymatrix 4x1 120> <xymatrix 4x1 134> [108] <xymatrix 4x1 120>
+[111] <xymatrix 4x1 134> <xymatrix 4x1 134> <xymatrix 4x1 120> <xymatrix 4x1 134> [112] <xymatrix 4x1 120>
 
-LaTeX Warning: Reference `prop:bidual_map' on page 109 undefined on input line 186.
+LaTeX Warning: Reference `prop:bidual_map' on page 113 undefined on input line 186.
 
 <xymatrix 4x1 120>
 
-LaTeX Warning: Reference `prop:bidual_map' on page 109 undefined on input line 217.
+LaTeX Warning: Reference `prop:bidual_map' on page 113 undefined on input line 217.
 
-[109] <xymatrix 4x1 120> <xymatrix 4x1 120> <xymatrix 6x1 196>
+[113] <xymatrix 4x1 120> <xymatrix 4x1 120> <xymatrix 6x1 196>
 
-LaTeX Warning: Reference `prop:bidual_map' on page 110 undefined on input line 235.
+LaTeX Warning: Reference `prop:bidual_map' on page 114 undefined on input line 235.
 
 <xymatrix 4x1 127>
 
-LaTeX Warning: Reference `prop:bidual_map' on page 110 undefined on input line 242.
+LaTeX Warning: Reference `prop:bidual_map' on page 114 undefined on input line 242.
 
-) [110]
+) [114]
 Overfull \hbox (10.2244pt too wide) in paragraph at lines 38--38
 \OT1/cmr/m/it/10.95 Arith-metic al-geb-raic geo-metry (Texel, 1989)\OT1/cmr/m/n/10.95 . Vol. 89. Progr. Math. Birkh^^?auser
  []
 
-[111
+[115
 
 
 
-] [112] (/Users/alberto/Documents/PhD/Thesis/thesis.aux (/Users/alberto/Documents/PhD/Thesis/Selmer/selmer.aux) (/Users/alberto/Documents/PhD/Thesis/Kolyvagin_systems/kol_sys.aux) (/Users/alberto/Documents/PhD/Thesis/Patched_cohomology/patched.aux) (/Users/alberto/Documents/PhD/Thesis/BSS/biduals.aux) (/Users/alberto/Documents/PhD/Thesis/Cartesian_systems/cartesian.aux) (/Users/alberto/Documents/PhD/Thesis/Ell_cur/ell_cur.aux) (/Users/alberto/Documents/PhD/Thesis/Preliminaries/algebra.aux))
+] [116] (/Users/alberto/Documents/PhD/Thesis/thesis.aux (/Users/alberto/Documents/PhD/Thesis/Selmer/selmer.aux) (/Users/alberto/Documents/PhD/Thesis/Kolyvagin_systems/kol_sys.aux) (/Users/alberto/Documents/PhD/Thesis/Patched_cohomology/patched.aux) (/Users/alberto/Documents/PhD/Thesis/BSS/biduals.aux) (/Users/alberto/Documents/PhD/Thesis/Cartesian_systems/cartesian.aux) (/Users/alberto/Documents/PhD/Thesis/Ell_cur/ell_cur.aux) (/Users/alberto/Documents/PhD/Thesis/Preliminaries/algebra.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -1482,24 +1491,24 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: D17A733243543321EC1FD491060CE40A;5922.
+(rerunfilecheck)             Checksum: 8206FCCD8E50C8F767C929BE46D97BF1;6384.
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34055 strings out of 478994
- 611811 string characters out of 5858185
- 1415955 words of memory out of 5000000
- 50332 multiletter control sequences out of 15000+600000
+ 34131 strings out of 478994
+ 613053 string characters out of 5858185
+ 1414999 words of memory out of 5000000
+ 50378 multiletter control sequences out of 15000+600000
  425842 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  118i,22n,119p,3296b,2235s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cyrillic/wncyr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/xypic/xycmat10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/xypic/xycmbt10.pfb>
-Output written on /Users/alberto/Documents/PhD/Thesis/thesis.pdf (112 pages, 769430 bytes).
+Output written on /Users/alberto/Documents/PhD/Thesis/thesis.pdf (116 pages, 778976 bytes).
 PDF statistics:
- 1992 PDF objects out of 2073 (max. 8388607)
- 1827 compressed objects within 19 object streams
- 569 named destinations out of 1000 (max. 500000)
- 565 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2061 PDF objects out of 2073 (max. 8388607)
+ 1892 compressed objects within 19 object streams
+ 595 named destinations out of 1000 (max. 500000)
+ 605 words of extra memory for PDF output out of 10000 (max. 10000000)
 
