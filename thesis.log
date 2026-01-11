@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.8)  10 JAN 2026 21:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.8)  11 JAN 2026 01:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1234,24 +1234,19 @@ Overfull \hbox (45.37076pt too wide) detected at line 492
 []
  []
 
-[71]
-Overfull \hbox (30.67284pt too wide) detected at line 550
+[71] [72]
+Overfull \hbox (30.67284pt too wide) detected at line 579
 []
  []
 
-[72] [73] [74] [75] <xymatrix 5x1 158> [76]
+[73] [74] [75] [76] <xymatrix 5x1 158>
 
-LaTeX Warning: Reference `prop:admissible_condition' on page 77 undefined on input line 752.
+LaTeX Warning: Reference `prop:admissible_condition' on page 77 undefined on input line 781.
 
-) [77]
+[77]) [78]
 \openout2 = `Ell_cur/ell_cur.aux'.
 
- (/Users/alberto/Documents/PhD/Thesis/Ell_cur/ell_cur.tex [78
-
-
-
-
-]
+ (/Users/alberto/Documents/PhD/Thesis/Ell_cur/ell_cur.tex
 Chapter 6.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
@@ -1263,7 +1258,12 @@ LaTeX Warning: Reference `Hffr' on page 79 undefined on input line 24.
 
 LaTeX Warning: Reference `Hprimes' on page 79 undefined on input line 24.
 
-[79]
+[79
+
+
+
+
+]
 
 LaTeX Warning: Reference `sec:lambda' on page 80 undefined on input line 64.
 
@@ -1497,18 +1497,18 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34131 strings out of 478994
- 613053 string characters out of 5858185
- 1414999 words of memory out of 5000000
- 50378 multiletter control sequences out of 15000+600000
+ 34132 strings out of 478994
+ 613055 string characters out of 5858185
+ 1415005 words of memory out of 5000000
+ 50379 multiletter control sequences out of 15000+600000
  425842 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  118i,22n,119p,3296b,2235s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cyrillic/wncyr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/xypic/xycmat10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/xypic/xycmbt10.pfb>
-Output written on /Users/alberto/Documents/PhD/Thesis/thesis.pdf (116 pages, 778976 bytes).
+Output written on /Users/alberto/Documents/PhD/Thesis/thesis.pdf (116 pages, 781686 bytes).
 PDF statistics:
- 2061 PDF objects out of 2073 (max. 8388607)
- 1892 compressed objects within 19 object streams
+ 2063 PDF objects out of 2073 (max. 8388607)
+ 1894 compressed objects within 19 object streams
  595 named destinations out of 1000 (max. 500000)
  605 words of extra memory for PDF output out of 10000 (max. 10000000)
 

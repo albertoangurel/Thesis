@@ -436,7 +436,7 @@ We assume the following assumptions:
 We are not assuming the existence of $\tau$ such that $T/(\tau-1)T$ is a free, cyclic $R$-module. However, there always exist $\tau\in G_K$ such that $T/(\tau-1)T$ is a free $R$-module of rank $d$.
 
 \begin{notation}
-Fix some $\tau\in G_{K_M}$ such that $T/(\tau-1)T\cong R^d$, minimizing the exponent $d$.
+Fix some $\tau\in G_{K_M}$ such that $T/(\tau-1)T\cong R^d$, where $d$ is a positive integer.
 \label{not:tau}
 \end{notation}
 
@@ -493,7 +493,7 @@ We can compare it with the following exact sequence obtained from global duality
 The comparison shows that 
 \[A_{\kn\ku,\kq}=\loc_\kq\Bigl(H^1_{\FF^{\kn\ku/\kq}}(K,T)\Bigr)=\loc_\ell\Bigl(H^1_{\FF^{\kn/\kq}}(K,T)\Bigr)=A_{\kn,\kq}\]
 
-Therefore, $\kn\ell$ is admissible.
+Therefore, $\kn\ku$ is admissible.
 \end{proof}
 
 
@@ -518,6 +518,35 @@ Then there is a subset $\QQ\subset \PP_\tau$ of positive density such that, for 
 coincide with $\phi$ and $\psi$, respectively.
 \label{prop:cheb_nd_ns}
 \end{proposition}
+
+\begin{proof}
+By assumption \ref{nsTcoh}, the restriction map
+\[C\hookrightarrow H^1(K,T)\hookrightarrow H^1(K(T)_M/K,T)^{\Gal(K(T)_M/K)}=\Hom_{R[[G_\Q]]}\Bigl(G_{K(T)_M},T\Bigr)\]
+is injective. Moreover, the projection
+\[\Hom_{R[[G_\Q]]}\Bigl(G_{K(T)_M},T\Bigr)\to \Hom_{R[[G_\Q]]}\Bigl(G_{K(T)_M},T/(\tau-1)T\Bigr)\]
+is also injective. Indeed, for any $f$ in the kernel of this map, its image is a $G_\Q$-stable $R$-module contained in $(\tau-1)T$. By \ref{nsTirred}, there is no nonzero such modules.
+
+Let $F_C$ be the minimal extension such that the image of $C$ factors through
+\[C\hookrightarrow \Hom_{R[[G_\Q]]}\Bigl(\Gal(F_C/K(T)_M),T/(\tau-1)T\Bigr)\]
+
+This isomorphism induces a bilinear map, which itself induces another homomorphims
+\[ev:\ \Gal(F_C/K(T)_M)\to \Hom_R(C,T/(\tau-1)T)\]
+
+\textbf{Claim}: The above homorphism $\ev$ is surjective.
+
+\textcolor{red}{Prove claim}
+
+Note that, although $\tau\notin G_{K(T)_M}$, the homomorphism
+\[\ev(\tau):\ C\to T/(\tau-1)T,\ c\mapsto c(\tau)\]
+ is well defined, independently of the cocycles chosen. By the claim, we can find $\gamma\in \Gal(F_C/K(T)_M)$ such that 
+\[\ev(\gamma)=\phi-\ev(\tau)\]
+
+Let $\QQ$ be the set of primes, unramified in $\Gal(F_C/K)$, such that $\Frob_\ell$ is conjugate to $\tau\gamma$ in $\Gal(F_C/K)$. Choosing appropriately the prime above $\ell$ at $F_C$, we can assume that $\Frob_\ell=\tau\gamma$. The map 
+\[C\to H^1_\f(\Q_\ell,)\cong T/(\Frob_\ell-1)T =T/(\tau-1)T\]
+is, by the cocycle relation, 
+\[\ev(\Frob_\ell)=\ev(\tau\gamma)=\tau ev(\gamma)+ev(\tau)=\phi\]
+    \textcolor{red}{complete}
+\end{proof}
 
 
 

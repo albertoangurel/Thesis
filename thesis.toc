@@ -109,11 +109,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.4.3}Suitable higher dimensional Kolyvagin primes}{72}{subsection.5.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.5}Kolyvagin systems}{73}{section.5.5}%
+\contentsline {section}{\numberline {5.5}Kolyvagin systems}{74}{section.5.5}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.5.1}The graph of admissible elements}{75}{subsection.5.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.5.2}Paths of admissible elements}{76}{subsection.5.5.2}%
+\contentsline {subsection}{\numberline {5.5.2}Paths of admissible elements}{77}{subsection.5.5.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {6}Selmer group of an elliptic curve}{79}{chapter.6}%
 \defcounter {refsection}{0}\relax 
